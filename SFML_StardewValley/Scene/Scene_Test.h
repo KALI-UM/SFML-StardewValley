@@ -1,6 +1,6 @@
 #pragma once
 
-class SpriteObject;
+class Player;
 class Scene_Test:
 	public SceneBase
 {
@@ -13,7 +13,7 @@ public:
 	void Enter() override;
 	void Update(float dt) override;
 
-	SpriteObject* temp;
+	Player* temp;
 	Animator animator;
 };
 

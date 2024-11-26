@@ -114,7 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\SimCity2000;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\SimCity2000;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
+    <ClCompile Include="StardewValley\Player.cpp" />
     <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp" />
     <ClCompile Include="Framework\Drawable\DGameObject.cpp" />
@@ -195,6 +196,7 @@
   <ItemGroup>
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
+    <ClInclude Include="StardewValley\Player.h" />
     <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\DAtlasSprite.h" />
     <ClInclude Include="Framework\Drawable\DGameObject.h" />
