@@ -14,6 +14,7 @@ SpriteObject::~SpriteObject()
 bool SpriteObject::Initialize()
 {
     m_Sprite = new DSprite(m_TextureId);
+    m_Sprite->SetDebugDraw(false);
     SetDrawable(m_Sprite);
     return false;
 }
