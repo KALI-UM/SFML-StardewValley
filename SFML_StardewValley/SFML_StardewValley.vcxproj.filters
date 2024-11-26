@@ -33,12 +33,6 @@
     <ClCompile Include="pch.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SimCity2000\TileGrid.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\Tile.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\Drawable\ColorPalette.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -129,55 +123,7 @@
     <ClCompile Include="Framework\DataTable.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SimCity2000\TileResTable.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileResData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\SimCityCursor.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\Scene_SimCityInGame.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileModel.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileView.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileController.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileViewChild.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\TileAttTable.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\Building.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\BuildingGenerator.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\PowerPlantBuilding.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\Scene_SimCityMain.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\SimCityGameSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\NormalBuilding.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\Drawable\DGameObject.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\SimCityButtonBar.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Drawable\sfAtlasSprite.cpp">
@@ -186,39 +132,18 @@
     <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SimCity2000\SimCitySubButton.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\EducationBuilding.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\PublicServiceBuilding.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\RecreationBuilding.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="SimCity2000\SimCityMenuBar.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Framework\Animator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Framework\AnimationClip.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Scene_Test.cpp">
+    <ClCompile Include="Scene\Scene_Test.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileGrid.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\Tile.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Drawable\ColorPalette.h">
@@ -335,55 +260,7 @@
     <ClInclude Include="Framework\DataTable.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SimCity2000\TileResTable.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileResData.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\SimCityCursor.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\Scene_SimCityInGame.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileModel.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileView.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileController.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileViewChild.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\TileAttTable.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\Building.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\BuildingGenerator.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\PowerPlantBuilding.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\Scene_SimCityMain.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\SimCityGameSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\NormalBuilding.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\Drawable\DGameObject.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\SimCityButtonBar.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Drawable\sfAtlasSprite.h">
@@ -392,28 +269,13 @@
     <ClInclude Include="Framework\Drawable\DAtlasSprite.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="SimCity2000\SimCitySubButton.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\EducationBuilding.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\PublicServiceBuilding.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\RecreationBuilding.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="SimCity2000\SimCityMenuBar.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Framework\AnimationClip.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Framework\Animator.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Scene_Test.h">
+    <ClInclude Include="Scene\Scene_Test.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

@@ -33,5 +33,3 @@ inline T* DataTableManager::Get(DataTable::DataId id)
 }
 
 #define DATATABLE_MGR (DataTableManager::GetInstance())
-#define DATATABLE_TILERES (DATATABLE_MGR->Get<TileResTable>(DataTable::DataId::TileRes))
-#define DATATABLE_TILEATT (DATATABLE_MGR->Get<TileAttTable>(DataTable::DataId::TileAtt))

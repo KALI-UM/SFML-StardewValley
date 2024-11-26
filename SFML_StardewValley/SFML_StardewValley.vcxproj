@@ -152,12 +152,9 @@
   <ItemGroup>
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
-    <ClCompile Include="Scene_Test.cpp" />
-    <ClCompile Include="SimCity2000\Building.cpp" />
-    <ClCompile Include="SimCity2000\BuildingGenerator.cpp" />
+    <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp" />
     <ClCompile Include="Framework\Drawable\DGameObject.cpp" />
-    <ClCompile Include="SimCity2000\EducationBuilding.cpp" />
     <ClCompile Include="Framework\DataTable.cpp" />
     <ClCompile Include="Framework\DataTableManager.cpp" />
     <ClCompile Include="Framework\Drawable\ColorPalette.cpp" />
@@ -172,11 +169,7 @@
     <ClCompile Include="Framework\Drawable\DText.cpp" />
     <ClCompile Include="Framework\Drawable\DThickLine.cpp" />
     <ClCompile Include="Framework\Drawable\sfLine.cpp" />
-    <ClCompile Include="SimCity2000\PublicServiceBuilding.cpp" />
-    <ClCompile Include="SimCity2000\RecreationBuilding.cpp" />
     <ClCompile Include="Framework\Drawable\sfAtlasSprite.cpp" />
-    <ClCompile Include="SimCity2000\SimCityMenuBar.cpp" />
-    <ClCompile Include="SimCity2000\SimCitySubButton.cpp" />
     <ClCompile Include="Framework\Drawable\DTile.cpp" />
     <ClCompile Include="Framework\Collider.cpp" />
     <ClCompile Include="Framework\Framework.cpp" />
@@ -193,37 +186,18 @@
     <ClCompile Include="Framework\CoreGameObject\MouseCursor.cpp" />
     <ClCompile Include="Framework\CoreGameObject\SpriteObject.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="SimCity2000\NormalBuilding.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SimCity2000\PowerPlantBuilding.cpp" />
-    <ClCompile Include="Scene\Scene_SimCityInGame.cpp" />
     <ClCompile Include="Framework\SoundManager.cpp" />
-    <ClCompile Include="SimCity2000\SimCityCursor.cpp" />
-    <ClCompile Include="Scene\Scene_SimCityMain.cpp" />
-    <ClCompile Include="SimCity2000\SimCityButtonBar.cpp" />
-    <ClCompile Include="SimCity2000\SimCityGameSystem.cpp" />
-    <ClCompile Include="SimCity2000\TileAttTable.cpp" />
-    <ClCompile Include="SimCity2000\TileViewChild.cpp" />
-    <ClCompile Include="SimCity2000\Tile.cpp" />
-    <ClCompile Include="SimCity2000\TileController.cpp" />
-    <ClCompile Include="SimCity2000\TileGrid.cpp" />
-    <ClCompile Include="SimCity2000\TileModel.cpp" />
-    <ClCompile Include="SimCity2000\TileResData.cpp" />
-    <ClCompile Include="SimCity2000\TileResTable.cpp" />
-    <ClCompile Include="SimCity2000\TileView.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
-    <ClInclude Include="Scene_Test.h" />
-    <ClInclude Include="SimCity2000\Building.h" />
-    <ClInclude Include="SimCity2000\BuildingGenerator.h" />
+    <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\DAtlasSprite.h" />
     <ClInclude Include="Framework\Drawable\DGameObject.h" />
-    <ClInclude Include="SimCity2000\EducationBuilding.h" />
     <ClInclude Include="Framework\DataTable.h" />
     <ClInclude Include="Framework\DataTableManager.h" />
     <ClInclude Include="Framework\Drawable\ColorPalette.h" />
@@ -239,11 +213,7 @@
     <ClInclude Include="Framework\Drawable\DThickLine.h" />
     <ClInclude Include="Framework\Drawable\sfLine.h" />
     <ClInclude Include="Drawable_headers.h" />
-    <ClInclude Include="SimCity2000\PublicServiceBuilding.h" />
-    <ClInclude Include="SimCity2000\RecreationBuilding.h" />
     <ClInclude Include="Framework\Drawable\sfAtlasSprite.h" />
-    <ClInclude Include="SimCity2000\SimCityMenuBar.h" />
-    <ClInclude Include="SimCity2000\SimCitySubButton.h" />
     <ClInclude Include="Framework\Drawable\DTile.h" />
     <ClInclude Include="Framework\Collider.h" />
     <ClInclude Include="Framework\Framework.h" />
@@ -266,24 +236,8 @@
     <ClInclude Include="Framework\CoreGameObject\SpriteObject.h" />
     <ClInclude Include="GameObject_headers.h" />
     <ClInclude Include="Managers_header.h" />
-    <ClInclude Include="SimCity2000\NormalBuilding.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="SimCity2000\PowerPlantBuilding.h" />
-    <ClInclude Include="Scene\Scene_SimCityInGame.h" />
     <ClInclude Include="Framework\SoundManager.h" />
-    <ClInclude Include="SimCity2000\SimCityCursor.h" />
-    <ClInclude Include="Scene\Scene_SimCityMain.h" />
-    <ClInclude Include="SimCity2000\SimCityButtonBar.h" />
-    <ClInclude Include="SimCity2000\SimCityGameSystem.h" />
-    <ClInclude Include="SimCity2000\TileAttTable.h" />
-    <ClInclude Include="SimCity2000\TileViewChild.h" />
-    <ClInclude Include="SimCity2000\Tile.h" />
-    <ClInclude Include="SimCity2000\TileController.h" />
-    <ClInclude Include="SimCity2000\TileGrid.h" />
-    <ClInclude Include="SimCity2000\TileModel.h" />
-    <ClInclude Include="SimCity2000\TileResData.h" />
-    <ClInclude Include="SimCity2000\TileResTable.h" />
-    <ClInclude Include="SimCity2000\TileView.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

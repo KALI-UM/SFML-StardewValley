@@ -1,5 +1,11 @@
 #pragma once
-#include "Tile.h"
+
+enum class TileShapeType
+{
+	Convex,
+	Diamond,
+	Rectangle,
+};
 
 class sfTile :public sf::Drawable, public sf::Transformable
 {
