@@ -24,8 +24,7 @@ protected:
 	float m_RealDeltaTime = 0.f;
 	float m_FixedTimeStamp = 0.02f;
 	float m_FixedTimePrev = 0.f;
-
-	sf::Color m_BackColor = sf::Color::Black;
+	sf::Color m_BackColor=sf::Color::Black;
 
 public:
 	float GetTime() const { return m_Time; }
