@@ -5,26 +5,26 @@ int GameObject::m_GameObjectsCount = 1;
 int GameObject::m_IdNumber = 0;
 
 GameObject::GameObject()
-	:m_Id(m_IdNumber++), m_IsValid(true), m_IsMovable(true)
+	:m_Id(m_IdNumber++), m_IsActive(true), m_IsMovable(true)
 {
 	Transform::Init(nullptr);
 	m_GameObjectsCount++;
 }
 
 GameObject::GameObject(const GameObject& other)
-	:m_Id(m_IdNumber++), m_IsValid(other.m_IsValid), m_IsMovable(other.m_IsMovable)
+	:m_Id(m_IdNumber++), m_IsActive(other.m_IsActive), m_IsMovable(other.m_IsMovable)
 {
 	Transform::Init(other, nullptr);
 	m_GameObjectsCount++;
 }
 
 GameObject::GameObject(GameObject&& other)noexcept
-	:m_Id(other.m_Id), m_IsValid(other.m_IsValid), m_Drawables(other.m_Drawables), m_IsMovable(other.m_IsMovable)
+	:m_Id(other.m_Id), m_IsActive(other.m_IsActive), m_Drawables(other.m_Drawables), m_IsMovable(other.m_IsMovable)
 {
 	//¹Ì¿Ï
 	Transform::Init(other, nullptr);
 	other.m_Drawables.clear();
-	other.SetIsValid(false);
+	other.SetIsActive(false);
 }
 
 GameObject::~GameObject()
@@ -58,7 +58,7 @@ void GameObject::UPDATE(float dt)
 
 	for (auto& child : m_ChildrenObjs)
 	{
-		if (child->GetIsValid())
+		if (child->GetIsActive())
 		{
 			child->UPDATE(dt);
 		}
@@ -77,7 +77,7 @@ void GameObject::LATEUPDATE(float dt)
 
 void GameObject::FIXEDUPDATE(float dt)
 {
-	FixeUpdate(dt);
+	FixedUpdate(dt);
 
 	for (auto& child : m_ChildrenObjs)
 	{
@@ -150,7 +150,7 @@ void GameObject::LateUpdate(float dt)
 {
 }
 
-void GameObject::FixeUpdate(float dt)
+void GameObject::FixedUpdate(float dt)
 {
 }
 
@@ -172,13 +172,13 @@ void GameObject::Release()
 
 bool GameObject::GetIsVisible() const
 {
-	return m_IsVisible && GetIsValid() && GetDrawbleCount() != 0;
+	return m_IsVisible && GetIsActive() && GetDrawbleCount() != 0;
 }
 
 bool GameObject::GetIsVisible(size_t index) const
 {
 	//return GetIsValid() && GetDrawable(index) && GetDrawable(index)->GetIsVisible();
-	return m_IsValid && m_IsVisible && GetDrawableObj(index) && GetDrawableObj(index)->GetIsValid();
+	return m_IsActive && m_IsVisible && GetDrawableObj(index) && GetDrawableObj(index)->GetIsValid();
 }
 
 void GameObject::SetParentObj(GameObject* parent, bool isTransformParent)
@@ -230,7 +230,7 @@ DrawableObject* GameObject::GetDrawableObj(const std::string& name) const
 	return nullptr;
 }
 
-void GameObject::SetDrawable(DrawableObject* dobj, bool isChild)
+void GameObject::SetDrawableObj(DrawableObject* dobj, bool isChild)
 {
 	if (isChild)
 		this->Transform::SetChild(dobj);

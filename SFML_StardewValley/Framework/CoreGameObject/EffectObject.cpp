@@ -59,7 +59,7 @@ bool EffectObject::Initialize()
 {
 	for (auto& drawable : m_Particles)
 	{
-		SetDrawable(drawable);
+		SetDrawableObj(drawable);
 	}
 
 	return true;
@@ -67,7 +67,7 @@ bool EffectObject::Initialize()
 
 void EffectObject::Reset()
 {
-	SetIsValid(false);
+	SetIsActive(false);
 	m_PlayTime = 0;
 }
 
@@ -81,7 +81,7 @@ void EffectObject::Update(float dt)
 
 void EffectObject::Effect(float duration, const sf::Vector2f& point, float speed)
 {
-	SetIsValid(true);
+	SetIsActive(true);
 	m_Duration = duration;
 	m_Position = point;
 	m_Speed = speed;

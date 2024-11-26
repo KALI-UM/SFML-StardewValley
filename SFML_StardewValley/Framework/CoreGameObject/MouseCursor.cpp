@@ -19,7 +19,7 @@ bool MouseCursor::Initialize()
 
 	m_CursorSprite = new DSprite(m_TextureId);
 	m_CursorSprite->SetPriorityType(DrawPriorityType::Custom, 100);
-	SetDrawable(m_CursorSprite);
+	SetDrawableObj(m_CursorSprite);
 	return true;
 }
 

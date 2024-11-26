@@ -24,8 +24,8 @@ public:
 	void IMGUIUPDATE();
 	void RELEASE();
 
-	void SetIsValid(bool valid) { m_IsValid = valid; };
-	bool GetIsValid()const { return m_IsValid; }
+	void SetIsActive(bool active) { m_IsActive = active; };
+	bool GetIsActive()const { return m_IsActive; }
 	void SetIsVisible(bool visible) { m_IsVisible = visible; }
 	bool GetIsVisible()const;
 	bool GetIsVisible(size_t index)const;
@@ -36,7 +36,7 @@ public:
 
 	DrawableObject* GetDrawableObj(size_t index = 0) const;
 	DrawableObject* GetDrawableObj(const std::string& name) const;
-	void SetDrawable(DrawableObject* dobj, bool isChild = true);
+	void SetDrawableObj(DrawableObject* dobj, bool isChild = true);
 	int GetDrawbleCount()const { return (int)m_Drawables.size(); }
 
 	//bool GetIsDrawSelf() const { return m_IsDrawSelf; }
@@ -50,7 +50,7 @@ protected:
 	virtual void Reset();
 	virtual void Update(float dt);
 	virtual void LateUpdate(float dt);
-	virtual void FixeUpdate(float dt);
+	virtual void FixedUpdate(float dt);
 	virtual void PreRender();
 	virtual void PostRender();
 	virtual void ImGuiUpdate();
@@ -60,7 +60,7 @@ protected:
 	GameObject* m_ParentObj=nullptr;
 	std::list<GameObject*>		m_ChildrenObjs;
 private:
-	bool			m_IsValid;
+	bool			m_IsActive;
 	//bool			m_IsDrawSelf;
 	bool			m_IsVisible = true;
 	const bool		m_IsMovable;

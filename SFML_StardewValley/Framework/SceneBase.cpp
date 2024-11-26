@@ -70,7 +70,7 @@ void SceneBase::UPDATE(float dt)
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
-			if (gobj->GetIsValid() && !gobj->GetIsChildObj())
+			if (gobj->GetIsActive() && !gobj->GetIsChildObj())
 				gobj->UPDATE(dt);
 		}
 	Update(dt);
@@ -81,7 +81,7 @@ void SceneBase::LATEUPDATE(float dt)
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
-			if (gobj->GetIsValid() && !gobj->GetIsChildObj())
+			if (gobj->GetIsActive() && !gobj->GetIsChildObj())
 				gobj->LATEUPDATE(dt);
 		}
 	LateUpdate(dt);
@@ -93,7 +93,7 @@ void SceneBase::FIXEDUPDATE(float dt)
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
-			if (gobj->GetIsValid() && !gobj->GetIsChildObj())
+			if (gobj->GetIsActive() && !gobj->GetIsChildObj())
 				gobj->FIXEDUPDATE(dt);
 		}
 	FixedUpdate(dt);
@@ -104,7 +104,7 @@ void SceneBase::IMGUIUPDATE()
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
-			if (gobj->GetIsValid())
+			if (gobj->GetIsActive())
 				gobj->IMGUIUPDATE();
 		}
 	ImGuiUpdate();

@@ -17,8 +17,8 @@ bool ButtonObject::Initialize()
 	m_ButtonText->SetOutlineColor(sf::Color::Black);
 	m_ButtonText->SetOutlineThickness(1);
 	m_ButtonText->SetOriginCenter();
-	SetDrawable(m_ButtonSprite);
-	SetDrawable(m_ButtonText);
+	SetDrawableObj(m_ButtonSprite);
+	SetDrawableObj(m_ButtonText);
 
 	return true;
 }
