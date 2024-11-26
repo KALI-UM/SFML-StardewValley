@@ -106,6 +106,137 @@ bool Utils::CircleContainPoint(const sf::Vector2f& center, float radius, const s
 	return SqrtMagnitude(center - pos) <= radius * radius;
 }
 
+float Utils::SqrMagnitude(const sf::Vector2f& vec)
+{
+	return vec.x * vec.x + vec.y * vec.y;
+}
+
+float Utils::Magnitude(const sf::Vector2f& vec)
+{
+	return std::sqrtf(SqrMagnitude(vec));
+}
+
+void Utils::Normailize(sf::Vector2f& vec)
+{
+	float mag = Magnitude(vec);
+	if (mag != 0.f)
+		vec /= mag;
+}
+
+sf::Vector2f Utils::GetNormal(const sf::Vector2f& vec)
+{
+	float mag = Magnitude(vec);
+	if (mag == 0)
+		return vec;
+	return vec / mag;
+}
+
+float Utils::Distance(const sf::Vector2f& p1, const sf::Vector2f& p2)
+{
+	return Magnitude(p2 - p1);
+}
+
+float Utils::Dot(const sf::Vector2f& a, const sf::Vector2f& b)
+{
+    return a.x * b.x + a.y * b.y;
+}
+
+
+bool Utils::CheckCollision(const sf::RectangleShape& shapeA, const sf::RectangleShape& shapeB)
+{
+    auto pointsA = GetShapePoints(shapeA);
+    auto pointsB = GetShapePoints(shapeB);
+    return PolygonsIntersect(pointsA, shapeA.getTransform(), pointsB, shapeB.getTransform());
+}
+
+bool Utils::CheckCollision(const sf::Sprite& shapeA, const sf::Sprite& shapeB)
+{
+    auto pointsA = GetShapePoints(shapeA);
+    auto pointsB = GetShapePoints(shapeB);
+    return PolygonsIntersect(pointsA, shapeA.getTransform(), pointsB, shapeB.getTransform());
+}
+
+bool Utils::PointInTransformBounds(const sf::Transformable& transformable, const sf::FloatRect& localBounds, const sf::Vector2f point)
+{
+    sf::Transform inverse = transformable.getInverseTransform();
+    sf::Vector2f localPoint = inverse.transformPoint(point);
+    return localBounds.contains(localPoint);
+}
+
+std::vector<sf::Vector2f> Utils::GetShapePoints(const sf::RectangleShape& shape)
+{
+    sf::FloatRect localBounds = shape.getLocalBounds();
+    return GetRectanglePointsFromBounds(localBounds);
+}
+
+std::vector<sf::Vector2f> Utils::GetShapePoints(const sf::Sprite& shape)
+{
+    sf::FloatRect localBounds = shape.getLocalBounds();
+    return GetRectanglePointsFromBounds(localBounds);
+}
+
+std::vector<sf::Vector2f> Utils::GetRectanglePointsFromBounds(const sf::FloatRect& localBounds)
+{
+    std::vector<sf::Vector2f> points(4);
+    points[0] = sf::Vector2f(localBounds.left, localBounds.top);
+    points[1] = sf::Vector2f(localBounds.left + localBounds.width, localBounds.top);
+    points[2] = sf::Vector2f(localBounds.left + localBounds.width, localBounds.top + localBounds.height);
+    points[3] = sf::Vector2f(localBounds.left, localBounds.top + localBounds.height);
+    return points;
+}
+
+bool Utils::PolygonsIntersect(const std::vector<sf::Vector2f>& polygonA, const sf::Transform& transformA, const std::vector<sf::Vector2f>& polygonB, const sf::Transform& transformB)
+{
+    std::vector<sf::Vector2f> axes;
+    int countA = polygonA.size();
+    for (int i = 0; i < countA; ++i)
+    {
+        sf::Vector2f p1 = transformA.transformPoint(polygonA[i]);
+        sf::Vector2f p2 = transformA.transformPoint(polygonA[(i + 1) % countA]);
+        sf::Vector2f edge = p2 - p1;
+        sf::Vector2f normal(-edge.y, edge.x);
+        axes.push_back(Utils::GetNormal(normal));
+    }
+
+    int countB = polygonB.size();
+    for (int i = 0; i < countB; ++i)
+    {
+        sf::Vector2f p1 = transformB.transformPoint(polygonB[i]);
+        sf::Vector2f p2 = transformB.transformPoint(polygonB[(i + 1) % countB]);
+        sf::Vector2f edge = p2 - p1;
+        sf::Vector2f normal(-edge.y, edge.x);
+        axes.push_back(Utils::GetNormal(normal));
+    }
+
+    for (const auto& axis : axes)
+    {
+        float minA = std::numeric_limits<float>::max();
+        float maxA = std::numeric_limits<float>::lowest();
+        for (const auto& point : polygonA)
+        {
+            sf::Vector2f transformedPoint = transformA.transformPoint(point);
+            float projection = Dot(axis, transformedPoint);
+            minA = std::min(minA, projection);
+            maxA = std::max(maxA, projection);
+        }
+
+        float minB = std::numeric_limits<float>::max();
+        float maxB = std::numeric_limits<float>::lowest();
+        for (const auto& point : polygonB)
+        {
+            sf::Vector2f transformedPoint = transformB.transformPoint(point);
+            float projection = Dot(axis, transformedPoint);
+            minB = std::min(minB, projection);
+            maxB = std::max(maxB, projection);
+        }
+
+        if (maxA < minB || maxB < minA)
+        {
+            return false;
+        }
+    }
+    return true;
+}
 
 
 //sf::Vector2f Utils::CLerp(const sf::Vector2f& left, const sf::Vector2f& right, float radius, float ratio, bool clamp)

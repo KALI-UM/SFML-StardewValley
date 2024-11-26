@@ -56,4 +56,27 @@ public:
 
 	static bool CircleCollisionCheck(const sf::Vector2f& p1, float radius1, const sf::Vector2f& p2, float radius2);
 	static bool CircleContainPoint(const sf::Vector2f& center, float radius, const sf::Vector2f& pos);
+
+	// Math
+	static float SqrMagnitude(const sf::Vector2f& vec);
+	static float Magnitude(const sf::Vector2f& vec);
+
+	static void Normailize(sf::Vector2f& vec);
+	static sf::Vector2f GetNormal(const sf::Vector2f& vec);
+	static float Distance(const sf::Vector2f& p1, const sf::Vector2f& p2);
+
+	static float Dot(const sf::Vector2f& a, const sf::Vector2f& b);
+
+	// Ãæµ¹
+	static bool CheckCollision(const sf::RectangleShape& shapeA, const sf::RectangleShape& shapeB);
+	static bool CheckCollision(const sf::Sprite& shapeA, const sf::Sprite& shapeB);
+	static bool PointInTransformBounds(const sf::Transformable& transformable,
+		const sf::FloatRect& localBounds, const sf::Vector2f point);
+
+	static std::vector<sf::Vector2f> GetShapePoints(const sf::RectangleShape& shape);
+	static std::vector<sf::Vector2f> GetShapePoints(const sf::Sprite& shape);
+
+	static std::vector<sf::Vector2f> GetRectanglePointsFromBounds(const sf::FloatRect& localBounds);
+	static bool PolygonsIntersect(const std::vector<sf::Vector2f>& polygonA, const sf::Transform& transformA,
+		const std::vector<sf::Vector2f>& polygonB, const sf::Transform& transformB);
 };
