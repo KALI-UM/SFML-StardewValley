@@ -152,9 +152,10 @@
   <ItemGroup>
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
+    <ClCompile Include="Scene_TileTest.cpp" />
     <ClCompile Include="StardewValley\Player.cpp" />
     <ClCompile Include="Scene\Scene_Test.cpp" />
-    <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp" />
+    <ClCompile Include="Framework\Drawable\D9SliceSprite.cpp" />
     <ClCompile Include="Framework\Drawable\DGameObject.cpp" />
     <ClCompile Include="Framework\DataTable.cpp" />
     <ClCompile Include="Framework\DataTableManager.cpp" />
@@ -170,7 +171,7 @@
     <ClCompile Include="Framework\Drawable\DText.cpp" />
     <ClCompile Include="Framework\Drawable\DThickLine.cpp" />
     <ClCompile Include="Framework\Drawable\sfLine.cpp" />
-    <ClCompile Include="Framework\Drawable\sfAtlasSprite.cpp" />
+    <ClCompile Include="Framework\Drawable\sf9SliceSprite.cpp" />
     <ClCompile Include="Framework\Drawable\DTile.cpp" />
     <ClCompile Include="Framework\Collider.cpp" />
     <ClCompile Include="Framework\Framework.cpp" />
@@ -192,13 +193,20 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\SoundManager.cpp" />
+    <ClCompile Include="StardewValley\Tile.cpp" />
+    <ClCompile Include="StardewValley\TileGrid.cpp" />
+    <ClCompile Include="StardewValley\TileModel.cpp" />
+    <ClCompile Include="StardewValley\TileView.cpp" />
+    <ClCompile Include="StardewValley\TileViewChild.cpp" />
+    <ClCompile Include="TileTexCoordTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
+    <ClInclude Include="Scene_TileTest.h" />
     <ClInclude Include="StardewValley\Player.h" />
     <ClInclude Include="Scene\Scene_Test.h" />
-    <ClInclude Include="Framework\Drawable\DAtlasSprite.h" />
+    <ClInclude Include="Framework\Drawable\D9SliceSprite.h" />
     <ClInclude Include="Framework\Drawable\DGameObject.h" />
     <ClInclude Include="Framework\DataTable.h" />
     <ClInclude Include="Framework\DataTableManager.h" />
@@ -215,7 +223,7 @@
     <ClInclude Include="Framework\Drawable\DThickLine.h" />
     <ClInclude Include="Framework\Drawable\sfLine.h" />
     <ClInclude Include="Drawable_headers.h" />
-    <ClInclude Include="Framework\Drawable\sfAtlasSprite.h" />
+    <ClInclude Include="Framework\Drawable\sf9SliceSprite.h" />
     <ClInclude Include="Framework\Drawable\DTile.h" />
     <ClInclude Include="Framework\Collider.h" />
     <ClInclude Include="Framework\Framework.h" />
@@ -240,6 +248,12 @@
     <ClInclude Include="Managers_header.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Framework\SoundManager.h" />
+    <ClInclude Include="StardewValley\Tile.h" />
+    <ClInclude Include="StardewValley\TileGrid.h" />
+    <ClInclude Include="StardewValley\TileModel.h" />
+    <ClInclude Include="StardewValley\TileView.h" />
+    <ClInclude Include="StardewValley\TileViewChild.h" />
+    <ClInclude Include="TileTexCoordTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

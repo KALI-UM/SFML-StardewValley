@@ -55,10 +55,10 @@ void TargetRect::SliceRect(int x, int y)
 	{
 		for (int i = 0; i < x; i++)
 		{
-			m_SubRect[j][i]->SetFloatRect(sf::FloatRect(m_Size.getPosition().x + i * (m_Size.width /x),
-				m_Size.getPosition().y + j * (m_Size.height / y), 
-				m_Size.width / x, 
-				m_Size.height / y));
+			m_SubRect[j][i]->SetFloatRect(sf::FloatRect(m_Size.getPosition().x + (float)i * (m_Size.width / (float)x),
+				m_Size.getPosition().y + (float)j * (m_Size.height / (float)y),
+				m_Size.width / (float)x,
+				m_Size.height / (float)y));
 		}
 	}
 }

@@ -187,11 +187,13 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##tlx"))
 	{
 		m_Rect[0]--;
+		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##tlx"))
 	{
 		m_Rect[0]++;
+		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x);
 	}
 
 	if (ImGui::InputFloat("Y##tl", &m_Rect[1]))
@@ -202,11 +204,14 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##tly"))
 	{
 		m_Rect[1]--;
+		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##tly"))
 	{
 		m_Rect[1]++;
+		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y);
+
 	}
 
 	if (ImGui::InputFloat("W##width", &m_Rect[2]))
@@ -217,11 +222,14 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##width"))
 	{
 		m_Rect[2]--;
+		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x);
+
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##width"))
 	{
 		m_Rect[2]++;
+		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x);
 	}
 
 	if (ImGui::InputFloat("H##height", &m_Rect[3]))
@@ -232,11 +240,13 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##height"))
 	{
 		m_Rect[3]--;
+		m_Rect[3] = Utils::Clamp(m_Rect[3], (float)0, (float)m_TargetSprite->GetTextureSize().y);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##height"))
 	{
 		m_Rect[3]++;
+		m_Rect[3] = Utils::Clamp(m_Rect[3], (float)0, (float)m_TargetSprite->GetTextureSize().y);
 	}
 
 	ImGui::NewLine();
@@ -280,6 +290,10 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 		std::cout << newRow[i] << ",";
 	std::cout << newRow[newRow.size() - 1] << std::endl;
 
+	sf::Image originalImage = TEXTURE_MGR->GetByFilepath("target/" + m_CurrentFilePath)->copyToImage();
+	SaveAsPng(slicerId, sf::IntRect(rect[0], rect[1], rect[2], rect[3]), originalImage);
+
+	//여러장이었을 때
 	if (m_SliceXCount != 1 || m_SliceYCount != 1)
 	{
 		temp.clear();
@@ -311,10 +325,31 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 				for (int i = 0; i < newRowChild.size() - 1; i++)
 					std::cout << newRowChild[i] << ",";
 				std::cout << newRowChild[newRowChild.size() - 1] << std::endl;
+
+				SaveAsPng(childId, sf::IntRect(std::stoi(newRowChild[2]), std::stoi(newRowChild[3]), std::stoi(newRowChild[4]), std::stoi(newRowChild[5])), originalImage);
 			}
 		}
 	}
 
 	// 수정된 데이터를 저장
 	doc.Save("output/AtlasSlicer.csv");
+}
+
+void Scene_Slice::SaveAsPng(const std::string& id, const sf::IntRect& rect, const sf::Image& image)
+{
+	sf::IntRect cropArea = rect;
+
+	// 텍스처의 잘라낼 영역을 Image로 추출
+	//sf::Image originalImage = TEXTURE_MGR->GetByFilepath("target/" + m_CurrentFilePath)->copyToImage();
+	sf::Image croppedImage;
+
+	// 잘라낸 영역만큼 새로운 이미지를 생성
+	croppedImage.create(cropArea.width, cropArea.height);
+	croppedImage.copy(image, 0, 0, cropArea);
+
+	// 잘라낸 이미지를 PNG로 저장
+	if (!croppedImage.saveToFile("output/" + id + ".png"))
+	{
+		std::cerr << "PNG Fail!" << std::endl;
+	}
 }

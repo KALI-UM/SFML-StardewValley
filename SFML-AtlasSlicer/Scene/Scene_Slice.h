@@ -16,7 +16,7 @@ public:
 	void ShowSceneImgui() override;
 
 	void Save(const std::string& id, const std::string& filepath, float rect[]);
-
+	void SaveAsPng(const std::string& id, const sf::IntRect& rect, const sf::Image& image);
 private:
 
 	SpriteObject* m_Target;
