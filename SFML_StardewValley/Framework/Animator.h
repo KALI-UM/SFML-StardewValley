@@ -31,7 +31,7 @@ protected:
 	std::queue<std::string> playeQueue;
 
 	AnimationClip* currentClip;
-	sf::Sprite* sprite;
+	DSprite* sprite;
 
 	bool isPlaying = false;
 	int currentFrame = 0;
@@ -46,7 +46,7 @@ public:
 	Animator() = default;
 	~Animator() = default;
 
-	void SetTarget(sf::Sprite* target) { sprite = target; }
+	void SetTarget(DSprite* target) { sprite = target; }
 	void AddEvent(const std::string& id, int frame, std::function<void()> action);
 	void ClearEvent() { events.clear(); }
 

@@ -10,24 +10,18 @@ enum class Axis
 
 struct AxisInfo
 {
-	Axis m_Axis;
-
-	std::set<int> m_PositiveKeys;
-	std::set<int> m_NegativeKeys;
-
-	float m_Sensitivity = 10;
-	float m_Value = 0;
+	Axis axis;
+	std::list<int> positives;		// 1.0f
+	std::list<int> negatives;		// -1.0f
+	float sensi = 10.f;
+	float value = 0.f;
 
 	void AddKey(bool positive, int code)
 	{
 		if (positive)
-		{
-			m_PositiveKeys.insert(code);
-		}
+			positives.push_back(code);
 		else
-		{
-			m_NegativeKeys.insert(code);
-		}
+			negatives.push_back(code);
 	}
 };
 
@@ -58,20 +52,18 @@ public:
 	float GetAxis(Axis axis) const;
 	float GetAxisRaw(Axis axis) const;
 private:
-	bool GetKeyDownKM(int key) const;
-	bool GetKeyUpKM(int key) const;
-	bool GetKeyKM(int key) const;
 
 	bool GetIsValidKey(int key) const;
 	bool GetIsValidMouse(int key) const;
 
-	std::bitset<sf::Keyboard::KeyCount + sf::Mouse::ButtonCount>		m_HeldKey;
-	std::bitset<sf::Keyboard::KeyCount + sf::Mouse::ButtonCount>		m_DownKey;
-	std::bitset<sf::Keyboard::KeyCount + sf::Mouse::ButtonCount>		m_UpKey;
-	//std::bitset<sf::Mouse::ButtonCount>		m_HeldMouse;
-	//std::bitset<sf::Mouse::ButtonCount>		m_DownMouse;
-	//std::bitset<sf::Mouse::ButtonCount>		m_UpMouse;
-	std::vector<AxisInfo>							m_Axis;
+	bool Contains(const std::list<int>& list, int code) const;
+	void Remove(std::list<int>& list, int code);
+
+	std::list<int> downKeys;
+	std::list<int> heldKeys;
+	std::list<int> upKeys;
+
+	std::unordered_map<Axis, AxisInfo> axisInfoMap;
 
 	std::vector<sf::Vector2i>						m_MouseDownPosition;
 };

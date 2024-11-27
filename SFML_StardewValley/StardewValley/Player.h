@@ -36,5 +36,7 @@ public:
 	void PostRender();
 	void ImGuiUpdate();
 	void Release();
+
+	void AnimationClips();
 };
 
