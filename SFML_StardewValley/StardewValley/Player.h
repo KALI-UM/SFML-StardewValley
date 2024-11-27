@@ -2,7 +2,24 @@
 
 class Player : public GameObject
 {
+
 public:
+	enum class Direction {
+		up,
+		down,
+		left,
+		right,
+	};
+	enum class Action {
+		idle,
+		move,
+		interaction,
+	};
+	enum class IsVisibleItem {
+		visibleItem,
+		invisibleItem,
+	};
+
 	struct ClipInfo
 	{
 		std::string idle;
@@ -23,6 +40,10 @@ protected:
 	ClipInfo* currentClipInfo = nullptr;
 
 	Animator animator;
+    
+	bool isActiveWeapon = false;
+	//std::map<Movement, AnimationState> movementAnimations;
+
 public:
 	Player();
 	~Player();
@@ -38,5 +59,12 @@ public:
 	void Release();
 
 	void AnimationClips();
+	
+	std::string GetAnimationClipIdByDAI();
+
+protected:
+	Direction m_CurrDir;
+	Action m_CurrAction;
+	IsVisibleItem m_CurrEquip;
 };
 

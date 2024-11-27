@@ -42,6 +42,7 @@ protected:
 	float accumTime = 0.f;
 	float speed = 1.f;
 
+	std::map<std::string, AnimationClip>* m_PlayerAniClip;
 public:
 	Animator() = default;
 	~Animator() = default;
@@ -49,6 +50,8 @@ public:
 	void SetTarget(DSprite* target) { sprite = target; }
 	void AddEvent(const std::string& id, int frame, std::function<void()> action);
 	void ClearEvent() { events.clear(); }
+
+	void SetPlayerAniClip(std::map<std::string, AnimationClip>* clips);
 
 	//void AddEvent(const AnimationEvent& ev)
 	//{ 

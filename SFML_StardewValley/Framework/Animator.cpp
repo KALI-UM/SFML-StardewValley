@@ -12,6 +12,12 @@ void Animator::AddEvent(const std::string& id, int frame, std::function<void()> 
 	events[key].actions.push_back(action);
 }
 
+void Animator::SetPlayerAniClip(std::map<std::string, AnimationClip>* clips)
+{
+	m_PlayerAniClip = clips;
+}
+
+
 void Animator::Update(float dt)
 {
 	if (!isPlaying)
@@ -62,7 +68,8 @@ void Animator::Update(float dt)
 
 void Animator::Play(const std::string& clipId, bool clearQueue)
 {
-	Play(ANI_CLIP_MGR->GetByFilepath(clipId), clearQueue);
+	//Play(ANI_CLIP_MGR->GetByFilepath(clipId), clearQueue);
+	Play(&m_PlayerAniClip->find(clipId)->second, clearQueue);
 }
 
 void Animator::Play(AnimationClip* clip, bool clearQueue)

@@ -1,12 +1,12 @@
 ID,FPS,"LoopType(0: Single, 1:Loop)",,
-Idle,10,"1",,
+Idle,10,1,,
 ,,,,
-TEXTURE ID,LEFT,"TOP",WIDTH,HEIGHT
-graphics/sprite_sheet.png,0,"0",120,120
-graphics/sprite_sheet.png,120,"0",120,120
-graphics/sprite_sheet.png,240,"0",120,120
-graphics/sprite_sheet.png,360,"0",120,120
-graphics/sprite_sheet.png,480,"0",120,120
-graphics/sprite_sheet.png,600,"0",120,120
-graphics/sprite_sheet.png,720,"0",120,120
-graphics/sprite_sheet.png,840,"0",120,120
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/sprite_sheet.png,0,0,120,120
+graphics/sprite_sheet.png,120,0,120,120
+graphics/sprite_sheet.png,240,0,120,120
+graphics/sprite_sheet.png,360,0,120,120
+graphics/sprite_sheet.png,480,0,120,120
+graphics/sprite_sheet.png,600,0,120,120
+graphics/sprite_sheet.png,720,0,120,120
+graphics/sprite_sheet.png,840,0,120,120
