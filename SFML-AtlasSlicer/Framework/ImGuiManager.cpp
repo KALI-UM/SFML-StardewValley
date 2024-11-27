@@ -123,24 +123,24 @@ void ImGuiManager::End()
 
 void ImGuiManager::ShowDemo()
 {
-	bool show_demo_window = true;
-	// ImGui::ShowDemoWindow(&show_demo_window);
-	static float f = 0.0f;
-	static int counter = 0;
+	//bool show_demo_window = true;
+	//// ImGui::ShowDemoWindow(&show_demo_window);
+	//static float f = 0.0f;
+	//static int counter = 0;
 
-	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	//ImGuiIO& io = ImGui::GetIO(); (void)io;
 
-	bool blockInput = true; 
+	//bool blockInput = true; 
 
-	ImGui::Begin("Hello, world!");
-	ImGui::SliderFloat("float", &f, 0.0f, 1.0f);         
-	if (ImGui::Button("Button"))                          
-		counter++;
-	ImGui::SameLine();
-	ImGui::Text("counter = %d", counter);
+	//ImGui::Begin("Hello, world!");
+	//ImGui::SliderFloat("float", &f, 0.0f, 1.0f);         
+	//if (ImGui::Button("Button"))                          
+	//	counter++;
+	//ImGui::SameLine();
+	//ImGui::Text("counter = %d", counter);
 
-	ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
-	ImGui::End();
+	//ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / io.Framerate, io.Framerate);
+	//ImGui::End();
 
 	ShowSceneImGui();
 }

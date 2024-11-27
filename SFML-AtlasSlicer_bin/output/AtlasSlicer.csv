@@ -1,1 +1,10 @@
-id,filepath,x,y,width,height
+id,filename,x,y,width,height
+sprite_sheet.png#Ruby,sprite_sheet.png,0,0,959,120
+sprite_sheet.png#Ruby_X0Y0,sprite_sheet.png,0,0,119,120
+sprite_sheet.png#Ruby_X1Y0,sprite_sheet.png,120,0,119,120
+sprite_sheet.png#Ruby_X2Y0,sprite_sheet.png,240,0,119,120
+sprite_sheet.png#Ruby_X3Y0,sprite_sheet.png,360,0,119,120
+sprite_sheet.png#Ruby_X4Y0,sprite_sheet.png,480,0,119,120
+sprite_sheet.png#Ruby_X5Y0,sprite_sheet.png,600,0,119,120
+sprite_sheet.png#Ruby_X6Y0,sprite_sheet.png,720,0,119,120
+sprite_sheet.png#Ruby_X7Y0,sprite_sheet.png,840,0,119,120

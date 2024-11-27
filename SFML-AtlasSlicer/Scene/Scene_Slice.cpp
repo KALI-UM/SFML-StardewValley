@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Scene_Slice.h"
 #include "TargetRect.h"
+#include "TileGrid.h"
 #include "rapidcsv.h"
 
 Scene_Slice::Scene_Slice()
@@ -15,8 +16,16 @@ Scene_Slice::~Scene_Slice()
 bool Scene_Slice::Initialize()
 {
 	SetViewNeedPriority(0, false);
-	m_Target = AddGameObject(0, new SpriteObject(""));
+	m_Target = AddGameObject(0, new SpriteObject("keyboard.png"));
 	m_TargetRect = AddGameObject(0, new TargetRect());
+	m_Grid = AddGameObject(0, new TileGrid());
+	m_Grid->SetCellCount({ 1000, 1000 });
+	m_Grid->SetCellSize({ 10,10 });
+
+	auto guide = AddGameObject(m_UILayerIndex, new SpriteObject("keyboard.png"));
+	guide->setScale(0.5, 0.5);
+	guide->setPosition(0, GAME_MGR->GetWindow()->getSize().y * 0.8f);
+
 	return false;
 }
 
@@ -34,32 +43,31 @@ void Scene_Slice::Enter()
 
 void Scene_Slice::Update(float dt)
 {
-	if (!ImGuiManager::IsImGuiWindowHasFocus())
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::LBracket))
 	{
-		if (INPUT_MGR->GetKeyDown(sf::Keyboard::LBracket))
-		{
-			GAME_MGR->SetViewZoom(0, 0.5f);
-		}
-		else if (INPUT_MGR->GetKeyDown(sf::Keyboard::RBracket))
-		{
-			GAME_MGR->SetViewZoom(0, 2.0f);
-		}
+		GAME_MGR->SetViewZoom(0, 0.5f);
+	}
+	else if (INPUT_MGR->GetKeyDown(sf::Keyboard::RBracket))
+	{
+		GAME_MGR->SetViewZoom(0, 2.0f);
+	}
 
-		GAME_MGR->MoveView(0, { 0, -INPUT_MGR->GetAxisRaw(Axis::Vertical) * 5 });
-		GAME_MGR->MoveView(0, { INPUT_MGR->GetAxisRaw(Axis::Horizontal) * 5,0 });
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
+	{
+		GAME_MGR->SetViewCenter(0, INPUT_MGR->GetMouseViewPos(0));
+	}
 
-		if (m_IsSlicingNow)
+	if (m_IsSlicingNow)
+	{
+		if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left))
 		{
-			if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left))
-			{
-				m_TargetRect->SetRect(GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)),
-					INPUT_MGR->GetMouseViewPos(0));
+			m_TargetRect->SetRect(GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)),
+				INPUT_MGR->GetMouseViewPos(0));
 
-				m_Rect[0] = GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)).x;
-				m_Rect[1] = GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)).y;
-				m_Rect[2] = INPUT_MGR->GetMouseViewPos(0).x - m_Rect[0];
-				m_Rect[3] = INPUT_MGR->GetMouseViewPos(0).y - m_Rect[1];
-			}
+			m_Rect[0] = GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)).x;
+			m_Rect[1] = GAME_MGR->GetScreenToViewPos(0, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left)).y;
+			m_Rect[2] = INPUT_MGR->GetMouseViewPos(0).x - m_Rect[0];
+			m_Rect[3] = INPUT_MGR->GetMouseViewPos(0).y - m_Rect[1];
 		}
 
 		if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
@@ -68,17 +76,58 @@ void Scene_Slice::Update(float dt)
 		}
 	}
 
-	m_TargetRect->SetRect(sf::FloatRect(m_Rect[0], m_Rect[1], m_Rect[2], m_Rect[3]));
+	if (INPUT_MGR->GetKey(sf::Keyboard::F1))
+	{
+		m_Rect[0]--;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F2))
+	{
+		m_Rect[0]++;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F3))
+	{
+		m_Rect[1]--;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F4))
+	{
+		m_Rect[1]++;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F5))
+	{
+		m_Rect[2]--;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F6))
+	{
+		m_Rect[2]++;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F7))
+	{
+		m_Rect[3]--;
+	}
+	if (INPUT_MGR->GetKey(sf::Keyboard::F8))
+	{
+		m_Rect[3]++;
+	}
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::G))
+	{
+		m_Grid->SetIsVisible(!m_Grid->GetIsVisible());
+	}
 
+	m_TargetRect->SetRect(sf::FloatRect(m_Rect[0], m_Rect[1], m_Rect[2], m_Rect[3]));
 }
 
 void Scene_Slice::ShowSceneImgui()
 {
+	ImGuiManager::SetImGuiWindowHasFocus(false);
+
 	ImGui::Begin("Slicer");
 	ImGui::Text("FilePath");
 	ImGui::Text("target\\");
 	ImGui::SameLine();
-	ImGui::InputText("##FilePathString", m_FilePathBuff, IM_ARRAYSIZE(m_FilePathBuff));
+	if (ImGui::InputText("##FilePathString", m_FilePathBuff, IM_ARRAYSIZE(m_FilePathBuff)))
+	{
+		ImGuiManager::SetImGuiWindowHasFocus(true);
+	}
 
 	if (ImGui::Button("Sprtie Load"))
 	{
@@ -86,18 +135,54 @@ void Scene_Slice::ShowSceneImgui()
 		m_FilePathBuff[0] = '\0';
 		m_TargetSprite->SetTexture("target\\" + m_CurrentFilePath, true);
 	}
-	ImGui::Text("Current file : %s", m_CurrentFilePath);
+	ImGui::Text("Current file : %s", m_CurrentFilePath.c_str());
 
 	ImGui::Text("Sprite Clip Id");
 	if (ImGui::InputText("##IdString", m_IdBuff, IM_ARRAYSIZE(m_IdBuff)))
 	{
 		m_CurrentId = m_IdBuff;
+		ImGuiManager::SetImGuiWindowHasFocus(true);
 	}
-	ImGui::Text("Current Id : %s", m_CurrentId);
+	ImGui::Text("Current Id : %s", m_CurrentId.c_str());
 
 	ImGui::Checkbox("Slice", &m_IsSlicingNow);
+	ImGui::SameLine();
+	ImGui::Text("X : %d", m_SliceXCount);
+	ImGui::SameLine();
+	if (ImGui::Button("-##XCount"))
+	{
+		m_SliceXCount--;
+		m_SliceXCount = Utils::Clamp(m_SliceXCount, 1, 10000);
+		m_TargetRect->SliceRect(m_SliceXCount, m_SliceYCount);
+	}
+	ImGui::SameLine();
+	if (ImGui::Button("+##XCount"))
+	{
+		m_SliceXCount++;
+		m_SliceXCount = Utils::Clamp(m_SliceXCount, 1, 10000);
+		m_TargetRect->SliceRect(m_SliceXCount, m_SliceYCount);
+	}
+	ImGui::SameLine();
+	ImGui::Text("Y : %d", m_SliceYCount);
+	ImGui::SameLine();
+	if (ImGui::Button("-##YCount"))
+	{
+		m_SliceYCount--;
+		m_SliceYCount = Utils::Clamp(m_SliceYCount, 1, 1000);
+		m_TargetRect->SliceRect(m_SliceXCount, m_SliceYCount);
+	}
+	ImGui::SameLine();
+	if (ImGui::Button("+##YCount"))
+	{
+		m_SliceYCount++;
+		m_SliceYCount = Utils::Clamp(m_SliceYCount, 1, 1000);
+		m_TargetRect->SliceRect(m_SliceXCount, m_SliceYCount);
+	}
 
-	ImGui::InputFloat("X##tl", &m_Rect[0]);
+	if (ImGui::InputFloat("X##tl", &m_Rect[0]))
+	{
+		ImGuiManager::SetImGuiWindowHasFocus(true);
+	}
 	ImGui::SameLine();
 	if (ImGui::Button("-##tlx"))
 	{
@@ -109,7 +194,10 @@ void Scene_Slice::ShowSceneImgui()
 		m_Rect[0]++;
 	}
 
-	ImGui::InputFloat("Y##tl", &m_Rect[1]);
+	if (ImGui::InputFloat("Y##tl", &m_Rect[1]))
+	{
+		ImGuiManager::SetImGuiWindowHasFocus(true);
+	}
 	ImGui::SameLine();
 	if (ImGui::Button("-##tly"))
 	{
@@ -121,7 +209,10 @@ void Scene_Slice::ShowSceneImgui()
 		m_Rect[1]++;
 	}
 
-	ImGui::InputFloat("W##width", &m_Rect[2]);
+	if (ImGui::InputFloat("W##width", &m_Rect[2]))
+	{
+		ImGuiManager::SetImGuiWindowHasFocus(true);
+	}
 	ImGui::SameLine();
 	if (ImGui::Button("-##width"))
 	{
@@ -133,7 +224,10 @@ void Scene_Slice::ShowSceneImgui()
 		m_Rect[2]++;
 	}
 
-	ImGui::InputFloat("H##height", &m_Rect[3]);
+	if (ImGui::InputFloat("H##height", &m_Rect[3]))
+	{
+		ImGuiManager::SetImGuiWindowHasFocus(true);
+	}
 	ImGui::SameLine();
 	if (ImGui::Button("-##height"))
 	{
@@ -145,12 +239,13 @@ void Scene_Slice::ShowSceneImgui()
 		m_Rect[3]++;
 	}
 
+	ImGui::NewLine();
 	if (ImGui::Button("Save Texcoord"))
 	{
 		Save(m_CurrentId, m_CurrentFilePath, m_Rect);
 	}
 
-
+	ImGui::Text("BackColor");
 	if (ImGui::ColorEdit3("Color", m_Color))
 	{
 		FRAMEWORK->SetBackColor(sf::Color(m_Color[0] * 255, m_Color[1] * 255, m_Color[2] * 255));
@@ -160,20 +255,66 @@ void Scene_Slice::ShowSceneImgui()
 	ImGui::End();
 }
 
-void Scene_Slice::Save(const std::string& id, const std::string& filepath, float rect[])
+void Scene_Slice::Save(const std::string& id, const std::string& filename, float rect[])
 {
-
-	rapidcsv::Document doc("filePath");
-	doc.RemoveRow(id);
+	rapidcsv::Document doc("output/AtlasSlicer.csv");
+	std::string slicerId = filename + "#" + id;
+	std::vector<std::string> temp = doc.GetColumn<std::string>(0);
+	auto it = std::find(temp.begin(), temp.end(), slicerId);
+	if (it != temp.end())
+	{
+		std::cout << "Remove Prev data[" << slicerId << "...\n";
+		doc.RemoveRow(it - temp.begin());
+	}
 
 	// 새로운 행 추가
 	std::vector<std::string> newRow;
-	newRow.push_back(id);
-	newRow.push_back(filepath);
+	newRow.push_back(slicerId);
+	newRow.push_back(filename);
 	for (int i = 0; i < 4; i++)
-		newRow.push_back(std::to_string(rect[i]));
+		newRow.push_back(std::to_string((int)rect[i]));
 	doc.InsertRow(doc.GetRowCount(), newRow);
 
+	std::cout << "Save : ";
+	for (int i = 0; i < newRow.size() - 1; i++)
+		std::cout << newRow[i] << ",";
+	std::cout << newRow[newRow.size() - 1] << std::endl;
+
+	if (m_SliceXCount != 1 || m_SliceYCount != 1)
+	{
+		temp.clear();
+		for (int j = 0; j < m_SliceYCount; j++)
+		{
+			for (int i = 0; i < m_SliceXCount; i++)
+			{
+				std::vector<std::string> newRowChild;
+				std::string childId = slicerId + "_X" + std::to_string(i) + "Y" + std::to_string(j);
+				temp = doc.GetColumn<std::string>(0);
+				auto it2 = std::find(temp.begin(), temp.end(), childId);
+				if (it2 != temp.end())
+				{
+					std::cout << "Remove Prev data[" << childId << "]...\n";
+					doc.RemoveRow(it2 - temp.begin());
+				}
+
+				newRowChild.push_back(childId);
+				newRowChild.push_back(filename);
+
+				const auto& subrect = m_TargetRect->GetSubRect(i, j);
+				newRowChild.push_back(std::to_string((int)subrect.left));
+				newRowChild.push_back(std::to_string((int)subrect.top));
+				newRowChild.push_back(std::to_string((int)subrect.width));
+				newRowChild.push_back(std::to_string((int)subrect.height));
+				doc.InsertRow(doc.GetRowCount(), newRowChild);
+
+				std::cout << "Save : ";
+				for (int i = 0; i < newRowChild.size() - 1; i++)
+					std::cout << newRowChild[i] << ",";
+				std::cout << newRowChild[newRowChild.size() - 1] << std::endl;
+			}
+		}
+	}
+
 	// 수정된 데이터를 저장
-	doc.Save("filePath");
+	doc.Save("output/AtlasSlicer.csv");
 }

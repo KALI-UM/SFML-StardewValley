@@ -64,12 +64,12 @@ void Framework::Do()
 			if (event.type == sf::Event::GainedFocus) {
 				// 포커스 얻음
 				//m_MainWindow.setMouseCursorVisible(false);
-				ImGuiManager::SetImGuiWindowHasFocus(true);
+				//ImGuiManager::SetImGuiWindowHasFocus(true);
 			}
 			else if (event.type == sf::Event::LostFocus) {
 				// 포커스 잃음
 				//m_MainWindow.setMouseCursorVisible(true); // 필요시 켤 수 있음
-				ImGuiManager::SetImGuiWindowHasFocus(false);
+				//ImGuiManager::SetImGuiWindowHasFocus(false);
 			}
 		}
 
