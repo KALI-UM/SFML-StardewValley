@@ -114,7 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)magic_enum;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)magic_enum;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>

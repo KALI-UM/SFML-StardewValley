@@ -2,9 +2,8 @@
 
 enum class TileShapeType
 {
-	Convex,
-	Diamond,
-	Rectangle,
+	Single,
+	Multiple,
 };
 
 class sfTile :public sf::Drawable, public sf::Transformable
@@ -28,9 +27,10 @@ private:
 };
 
 class DTile :
-    public DrawableObject
+	public DrawableObject
 {
 public:
+	DTile();
 	DTile(sf::Texture* tex);
 	DTile(const std::string& filepath);
 	DTile(const sf::Vector2f& position, sf::Texture* tex);
@@ -39,12 +39,12 @@ public:
 	DTile(DTile&& other);
 	virtual ~DTile();
 
-	void SetShapeLot(const TileShapeType& shape, const sf::Vector2u& lot);
-	void SetTexture(sf::Texture* tex, TileShapeType type = TileShapeType::Convex, const sf::Vector2u& lot = { 1,1 });
-	void SetTexture(const std::string& filepath, TileShapeType type = TileShapeType::Convex, const sf::Vector2u& lot = {1,1});
-	sf::Vector2u GetTextureSize()const;
-	void SetOrigin(OriginType type, const sf::Vector2f& detail);
+	void SetTexture(sf::Texture* tex);
+	void SetTexture(const std::string& filepath);
+	void SetTexureRect(const sf::IntRect& rect);
+	void SetTexureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
 
+	sf::Vector2u GetTextureSize()const;
 
 	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
@@ -58,11 +58,12 @@ public:
 	void SetOutlineColor(const sf::Color& color);
 	void SetOutlineColor(int r, int g, int b, int a = 255);
 private:
-	float			m_Unit = 64;
+	float			m_Unit = 16;
 	TileShapeType	m_ShapeType;
 	sfTile			m_Tile;
 
-protected:
+	void SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex);
+	void SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect);
 
 };
 

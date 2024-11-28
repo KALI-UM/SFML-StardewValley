@@ -2,6 +2,7 @@
 #include "SceneBase.h"
 class TargetRect;
 class TileGrid;
+
 class Scene_Slice :
     public SceneBase
 {
@@ -36,5 +37,6 @@ private:
 	int m_SliceYCount=1;
 	float m_Rect[4];
 	float m_Color[3] = { 1,1,1 };
+	int m_Unit = 10;
 };
 

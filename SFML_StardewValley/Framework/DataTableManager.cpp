@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "DataTableManager.h"
+#include "TileTexCoordTable.h"
 
 DataTableManager::~DataTableManager()
 {
@@ -9,8 +10,8 @@ DataTableManager::~DataTableManager()
 bool DataTableManager::Initialize()
 {
 	Release();
-
 	bool result = true;
+	m_DataTables.insert({ DataTable::DataId::TileTexRes, new TileTexCoordTable() });
 
 	for (auto t : m_DataTables)
 	{

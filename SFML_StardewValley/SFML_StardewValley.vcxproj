@@ -114,7 +114,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;$(SolutionDir)magic_enum;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -135,7 +135,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);YAML_CPP_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)SFML-2.6.1\include;$(SolutionDir)ImGui;$(SolutionDir)$(ProjectName)\;$(SolutionDir)$(ProjectName)\Framework;$(SolutionDir)$(ProjectName)\Framework\CoreGameObject;$(SolutionDir)$(ProjectName)\Framework\Drawable;$(SolutionDir)$(ProjectName)\Scene;$(SolutionDir)$(ProjectName)\StardewValley;$(SolutionDir)magic_enum;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
@@ -152,7 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
-    <ClCompile Include="Scene_TileTest.cpp" />
+    <ClCompile Include="Scene\Scene_TileTest.cpp" />
     <ClCompile Include="StardewValley\Player.cpp" />
     <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\D9SliceSprite.cpp" />
@@ -193,17 +193,21 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Framework\SoundManager.cpp" />
-    <ClCompile Include="StardewValley\Tile.cpp" />
-    <ClCompile Include="StardewValley\TileGrid.cpp" />
-    <ClCompile Include="StardewValley\TileModel.cpp" />
-    <ClCompile Include="StardewValley\TileView.cpp" />
-    <ClCompile Include="StardewValley\TileViewChild.cpp" />
+    <ClCompile Include="StardewValley\Tile\ButtonBar.cpp" />
+    <ClCompile Include="StardewValley\Tile\SubButtonBar.cpp" />
+    <ClCompile Include="StardewValley\Tile\Tile.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileController.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileGrid.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileModel.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileMapSystem.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileView.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileViewChild.cpp" />
     <ClCompile Include="TileTexCoordTable.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
-    <ClInclude Include="Scene_TileTest.h" />
+    <ClInclude Include="Scene\Scene_TileTest.h" />
     <ClInclude Include="StardewValley\Player.h" />
     <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\D9SliceSprite.h" />
@@ -248,11 +252,15 @@
     <ClInclude Include="Managers_header.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Framework\SoundManager.h" />
-    <ClInclude Include="StardewValley\Tile.h" />
-    <ClInclude Include="StardewValley\TileGrid.h" />
-    <ClInclude Include="StardewValley\TileModel.h" />
-    <ClInclude Include="StardewValley\TileView.h" />
-    <ClInclude Include="StardewValley\TileViewChild.h" />
+    <ClInclude Include="StardewValley\Tile\ButtonBar.h" />
+    <ClInclude Include="StardewValley\Tile\SubButtonBar.h" />
+    <ClInclude Include="StardewValley\Tile\Tile.h" />
+    <ClInclude Include="StardewValley\Tile\TileController.h" />
+    <ClInclude Include="StardewValley\Tile\TileGrid.h" />
+    <ClInclude Include="StardewValley\Tile\TileModel.h" />
+    <ClInclude Include="StardewValley\Tile\TileMapSystem.h" />
+    <ClInclude Include="StardewValley\Tile\TileView.h" />
+    <ClInclude Include="StardewValley\Tile\TileViewChild.h" />
     <ClInclude Include="TileTexCoordTable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

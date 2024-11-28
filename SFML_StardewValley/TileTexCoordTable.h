@@ -1,5 +1,5 @@
 #pragma once
-#include "Tile.h"
+#include "Tile/Tile.h"
 
 class TileTexCoordTable :
     public DataTable
@@ -11,7 +11,7 @@ public:
     bool Load() override;
     void Release() override;
 
-    const sf::IntRect& GetTexIntRect(const ID& id) const;
+    const TEXRECT& GetTexIntRect(const ID& id) const;
     const sf::FloatRect& GetTexFloatRect(const ID& id) const;
     const TileTexRes& GetTileTexRes(const ID& id) const;
 
@@ -20,5 +20,6 @@ protected:
     static TileTexRes m_Empty;
 
     std::string m_TileFilePath = "tile/";
+   sf::Vector2i Get2Number(const std::string& str, const std::string& separator);
 };
 

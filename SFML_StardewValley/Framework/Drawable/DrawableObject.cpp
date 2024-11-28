@@ -109,3 +109,8 @@ sf::Vector2u DrawableObject::GetTextureSize() const
 {
 	return sf::Vector2u(0, 0);
 }
+
+const sf::IntRect& DrawableObject::GetTextureRect() const
+{
+	return sf::IntRect();
+}

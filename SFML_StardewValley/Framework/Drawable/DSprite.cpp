@@ -104,6 +104,11 @@ sf::Vector2u DSprite::GetTextureSize() const
 	return m_Sprite.getTexture() ? m_Sprite.getTexture()->getSize() : sf::Vector2u(0, 0);
 }
 
+const sf::IntRect& DSprite::GetTextureRect() const
+{
+	return m_Sprite.getTextureRect();
+}
+
 sf::Color DSprite::GetColor() const
 {
 	return m_Sprite.getColor();

@@ -3,6 +3,7 @@
 #include "TargetRect.h"
 #include "TileGrid.h"
 #include "rapidcsv.h"
+#include "typeinfo"
 
 Scene_Slice::Scene_Slice()
 	:SceneBase("Slice", 2, 2)
@@ -15,12 +16,15 @@ Scene_Slice::~Scene_Slice()
 
 bool Scene_Slice::Initialize()
 {
+	rapidcsv::Document doc("output/AtlasSlicer.csv", rapidcsv::LabelParams(-1, -1));
+	m_Unit = doc.GetCell<int>(1,0);
+
 	SetViewNeedPriority(0, false);
 	m_Target = AddGameObject(0, new SpriteObject("keyboard.png"));
 	m_TargetRect = AddGameObject(0, new TargetRect());
 	m_Grid = AddGameObject(0, new TileGrid());
 	m_Grid->SetCellCount({ 1000, 1000 });
-	m_Grid->SetCellSize({ 10,10 });
+	m_Grid->SetCellSize({ (float)m_Unit,(float)m_Unit });
 
 	auto guide = AddGameObject(m_UILayerIndex, new SpriteObject("keyboard.png"));
 	guide->setScale(0.5, 0.5);
@@ -267,7 +271,7 @@ void Scene_Slice::ShowSceneImgui()
 
 void Scene_Slice::Save(const std::string& id, const std::string& filename, float rect[])
 {
-	rapidcsv::Document doc("output/AtlasSlicer.csv");
+	rapidcsv::Document doc("output/AtlasSlicer.csv", rapidcsv::LabelParams(1, -1));
 	std::string slicerId = filename + "#" + id;
 	std::vector<std::string> temp = doc.GetColumn<std::string>(0);
 	auto it = std::find(temp.begin(), temp.end(), slicerId);
@@ -276,11 +280,12 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 		std::cout << "Remove Prev data[" << slicerId << "...\n";
 		doc.RemoveRow(it - temp.begin());
 	}
-
 	// 새로운 행 추가
 	std::vector<std::string> newRow;
 	newRow.push_back(slicerId);
 	newRow.push_back(filename);
+	newRow.push_back(std::to_string((int)rect[2] / m_Unit) + "x" + std::to_string((int)rect[3] / m_Unit));
+	newRow.push_back("0,0");
 	for (int i = 0; i < 4; i++)
 		newRow.push_back(std::to_string((int)rect[i]));
 	doc.InsertRow(doc.GetRowCount(), newRow);
@@ -315,6 +320,8 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 				newRowChild.push_back(filename);
 
 				const auto& subrect = m_TargetRect->GetSubRect(i, j);
+				newRowChild.push_back(std::to_string((int)subrect.width / m_Unit) + "x" + std::to_string((int)subrect.height / m_Unit));
+				newRowChild.push_back(std::to_string(i) + "," + std::to_string(j));
 				newRowChild.push_back(std::to_string((int)subrect.left));
 				newRowChild.push_back(std::to_string((int)subrect.top));
 				newRowChild.push_back(std::to_string((int)subrect.width));
@@ -326,7 +333,7 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 					std::cout << newRowChild[i] << ",";
 				std::cout << newRowChild[newRowChild.size() - 1] << std::endl;
 
-				SaveAsPng(childId, sf::IntRect(std::stoi(newRowChild[2]), std::stoi(newRowChild[3]), std::stoi(newRowChild[4]), std::stoi(newRowChild[5])), originalImage);
+				SaveAsPng(childId, sf::IntRect(std::stoi(newRowChild[4]), std::stoi(newRowChild[5]), std::stoi(newRowChild[6]), std::stoi(newRowChild[7])), originalImage);
 			}
 		}
 	}

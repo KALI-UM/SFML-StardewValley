@@ -178,7 +178,7 @@ bool GameObject::GetIsVisible() const
 bool GameObject::GetIsVisible(size_t index) const
 {
 	//return GetIsValid() && GetDrawable(index) && GetDrawable(index)->GetIsVisible();
-	return m_IsActive && m_IsVisible && GetDrawableObj(index) && GetDrawableObj(index)->GetIsValid();
+	return m_IsActive && m_IsVisible && GetDrawableObj(index) && GetDrawableObj(index)->GetIsValid()&& GetDrawableObj(index)->GetIsVisible();
 }
 
 void GameObject::SetParentObj(GameObject* parent, bool isTransformParent)

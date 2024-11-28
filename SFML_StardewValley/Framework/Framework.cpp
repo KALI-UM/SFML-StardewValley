@@ -32,7 +32,7 @@ void Framework::Initialize(int width, int height, const std::string& name)
 	SOUND_MGR->Initialize();
 	INPUT_MGR->Initialize();
 	GAME_MGR->Initialize(&m_MainWindow);
-	//ImGuiManager::Init(&m_MainWindow);
+	ImGuiManager::Init(&m_MainWindow);
 
 	SOUND_MGR->SetGlobalVolume(80);
 }
@@ -57,7 +57,7 @@ void Framework::Do()
 		{
 			if (event.type == sf::Event::Closed)
 				m_MainWindow.close();
-			//ImGuiManager::PollEvent(event);
+			ImGuiManager::PollEvent(event);
 			INPUT_MGR->UpdateEvent(event);
 			GAME_MGR->UpdateEvent(event);
 
@@ -92,9 +92,9 @@ void Framework::Do()
 		GAME_MGR->Render();
 
 		{ // ImGui Layer
-	/*		ImGuiManager::Begin(dt);
+			ImGuiManager::Begin(dt);
 			GAME_MGR->ImGuiUpdate();
-			ImGuiManager::End();*/
+			ImGuiManager::End();
 		}
 
 		m_MainWindow.display();
