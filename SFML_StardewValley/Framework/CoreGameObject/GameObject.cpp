@@ -4,22 +4,22 @@
 int GameObject::m_GameObjectsCount = 1;
 int GameObject::m_IdNumber = 0;
 
-GameObject::GameObject()
-	:m_Id(m_IdNumber++), m_IsActive(true), m_IsMovable(true)
+GameObject::GameObject(const std::string& name)
+	:m_Id(m_IdNumber++),m_Name(name), m_IsActive(true), m_IsMovable(true)
 {
 	Transform::Init(nullptr);
 	m_GameObjectsCount++;
 }
 
 GameObject::GameObject(const GameObject& other)
-	:m_Id(m_IdNumber++), m_IsActive(other.m_IsActive), m_IsMovable(other.m_IsMovable)
+	:m_Id(m_IdNumber++), m_Name(other.m_Name+"_copy"), m_IsActive(other.m_IsActive), m_IsMovable(other.m_IsMovable)
 {
 	Transform::Init(other, nullptr);
 	m_GameObjectsCount++;
 }
 
 GameObject::GameObject(GameObject&& other)noexcept
-	:m_Id(other.m_Id), m_IsActive(other.m_IsActive), m_Drawables(other.m_Drawables), m_IsMovable(other.m_IsMovable)
+	:m_Id(other.m_Id), m_Name(other.m_Name + "_copy"), m_IsActive(other.m_IsActive), m_Drawables(other.m_Drawables), m_IsMovable(other.m_IsMovable)
 {
 	//¹Ì¿Ï
 	Transform::Init(other, nullptr);

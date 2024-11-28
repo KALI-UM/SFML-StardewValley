@@ -71,6 +71,11 @@ DRectangle::~DRectangle()
 {
 }
 
+const sf::Vector2f& DRectangle::GetSize()
+{
+	return m_Rectangle.getSize();
+}
+
 void DRectangle::SetSize(const sf::Vector2f& widthheight)
 {
 	m_Rectangle.setSize(widthheight);

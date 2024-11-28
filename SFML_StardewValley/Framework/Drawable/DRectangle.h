@@ -14,6 +14,7 @@ public:
 	DRectangle(DRectangle&& other);
 	virtual ~DRectangle();
 
+	const sf::Vector2f& GetSize();
 	void SetSize(const sf::Vector2f& widthheight);
 	void SetFloatRect(const sf::FloatRect& frect);
 	sf::FloatRect GetGlobalBounds()const;

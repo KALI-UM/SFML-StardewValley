@@ -82,7 +82,6 @@ public:
 	//void Pause(bool pause);
 
 	void SetFrame(const AnimationFrame& frame);
-
 	const std::string& GetCurrentClipId() const 
 	{
 		if (currentClip == nullptr)
@@ -90,4 +89,3 @@ public:
 		return currentClip->id;
 	}
 };
-

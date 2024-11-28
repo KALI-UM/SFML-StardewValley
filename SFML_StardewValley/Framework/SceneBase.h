@@ -64,6 +64,22 @@ public:
 		return gameObject;
 	}
 
+	template <typename T>
+	T* FindGameObject(int layerIndex, const std::string& name)
+	{
+		if(name=="")
+			return nullptr;
+		auto layerit = GetGameObjectsLayerIter(layerIndex);
+		for (auto& currgobj : layerit)
+		{
+			if (currgobj->m_Name == name)
+				return dynamic_cast<T*>(currgobj);
+		}
+		std::cout << "FindGameObject(" << layerIndex << "," << name << ") Fail" << std::endl;
+		return nullptr;
+	}
+
+
 protected:
 	void SetLayerViewIndex(int layerIndex, int viewIndex);
 	void SetViewNeedPriority(int viewIndex, bool needPriority);

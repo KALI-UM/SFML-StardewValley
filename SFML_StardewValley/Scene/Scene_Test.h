@@ -1,6 +1,8 @@
 #pragma once
 
 class Player;
+class PlayerStatusUi;
+
 class Scene_Test:
 	public SceneBase
 {
@@ -15,5 +17,6 @@ public:
 
 	Player* temp;
 	Animator animator;
+	PlayerStatusUi* statusUi;
 };
 

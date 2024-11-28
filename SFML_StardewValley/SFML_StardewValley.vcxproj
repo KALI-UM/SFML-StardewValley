@@ -152,6 +152,7 @@
   <ItemGroup>
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
+    <ClCompile Include="StardewValley\PlayerStatusUi.cpp" />
     <ClCompile Include="StardewValley\Player.cpp" />
     <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp" />
@@ -196,6 +197,7 @@
   <ItemGroup>
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
+    <ClInclude Include="StardewValley\PlayerStatusUi.h" />
     <ClInclude Include="StardewValley\Player.h" />
     <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\DAtlasSprite.h" />

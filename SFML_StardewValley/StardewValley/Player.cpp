@@ -2,7 +2,8 @@
 #include "Player.h"
 
 
-Player::Player()
+Player::Player(const std::string& name)
+	:GameObject(name)
 {
 }
 
@@ -26,37 +27,27 @@ bool Player::Initialize()
 void Player::Reset()
 {
 	animator.Play(&temp["IdleDowninVisible"]);
-	
 }
 
 void Player::Update(float dt)
 {
 	animator.Update(dt);
+	Staminagauge();
 
-	direction.x = INPUT_MGR->GetAxis(Axis::Horizontal);
-	direction.y = INPUT_MGR->GetAxis(Axis::Vertical);
-	float mag = Utils::Magnitude(direction);
-	if (mag >= 1.f)
+	switch (m_CurrAction)
 	{
-		Utils::Normailize(direction);
-		m_CurrAction = Action::move;
-		std::cout << "(x : " << direction.x << ", y : " << direction.y << ")" << std::endl;
-
-		if (direction.x > 0)
-			m_CurrDir = Direction::right;
-		else if(direction.x < 0)
-			m_CurrDir = Direction::left;
-
-		if (direction.y > 0)
-			m_CurrDir = Direction::down;
-		else if (direction.y < 0)
-			m_CurrDir = Direction::up;
+	case Action::idle:
+		UpdateIdle(dt);
+		break;
+	case Action::move:
+		UpdateMove(dt);
+		break;
+	case Action::interaction:
+		UpdateInter(dt);
+		break;
 	}
-	else if (mag == 0)
-	{
-		m_CurrAction = Action::idle;
-	}
-	setPosition(getPosition() + direction * speed * dt);
+
+	
 	if (direction.x != 0.f || direction.y != 0.f)
 	{
 		auto min = std::min_element(clipInfos.begin(), clipInfos.end(),
@@ -64,21 +55,12 @@ void Player::Update(float dt)
 			{
 				float d1 = Utils::Distance(direction, lhs.point);
 				float d2 = Utils::Distance(direction, rhs.point);
-				//if (d1 < d2) {
-				//	m_CurrDir = Direction::down;
-				//}
-				//if (d1 > d2) {
-				//	m_CurrDir = Direction::up;
-				//}
 				return d1 < d2;
 			}
 		);
 		currentClipInfo = &(*min);
 	}
 
-	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
-		m_CurrAction = Action::interaction;
-	}
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Right)) {
 		isActiveWeapon = !isActiveWeapon;
 	}
@@ -91,17 +73,78 @@ void Player::Update(float dt)
 		m_CurrEquip = IsVisibleItem::visibleItem;
 	}
 
-
 	const auto& clipId = GetAnimationClipIdByDAI();
 
 	if (animator.GetCurrentClipId() != clipId)
 	{
-		animator.Play(&temp[clipId]);
+		animator.Play(&temp[clipId], true);
+	}
+}
+
+void Player::UpdateIdle(float dt)
+{
+	direction.x = INPUT_MGR->GetAxisRaw(Axis::Horizontal);
+	direction.y = INPUT_MGR->GetAxisRaw(Axis::Vertical);
+	float mag = Utils::Magnitude(direction);
+
+	if (mag == 0)
+	{
+		m_CurrAction = Action::idle;
+	}
+	if (mag >= 1.f)
+	{
+		m_CurrAction = Action::move;
+	}
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
+		m_CurrAction = Action::interaction;
+		stamina--;
+	}
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::E)) {
+		m_CurrAction = Action::wateringAction;
+		stamina--;
 	}
 
-
-
+	if (stamina == 0) {
+		m_CurrAction = Action::staminaExhausted;
+	}
 }
+
+void Player::UpdateMove(float dt)
+{
+	direction.x = INPUT_MGR->GetAxisRaw(Axis::Horizontal);
+	direction.y = INPUT_MGR->GetAxisRaw(Axis::Vertical);
+	float mag = Utils::Magnitude(direction);
+
+	Utils::Normailize(direction);
+
+	if (direction.x > 0)
+		m_CurrDir = Direction::right;
+	else if (direction.x < 0)
+		m_CurrDir = Direction::left;
+
+	if (direction.y > 0)
+		m_CurrDir = Direction::down;
+	else if (direction.y < 0)
+		m_CurrDir = Direction::up;
+
+	if (mag == 0)
+	{
+		m_CurrAction = Action::idle;
+	}
+	setPosition(getPosition() + direction * speed * dt);
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
+		m_CurrAction = Action::interaction;
+	}
+}
+
+void Player::UpdateInter(float dt)
+{
+	if (stamina == 0) {
+		m_CurrAction = Action::staminaExhausted;
+	}
+}
+
+
 
 void Player::LateUpdate(float dt)
 {
@@ -222,10 +265,10 @@ void Player::AnimationClips()
 		AnimationClip clip;
 		clip.id = "InterDownVisible";
 		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Loop;
+		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
-			clip.frames.push_back({ textureId, {i * width, height * 3, width, height } });
+			clip.frames.push_back({ textureId, {i * width, height * 3 + 4, width, height } });
 		}
 		temp.insert({ "InterDownVisible", clip });
 	}
@@ -233,10 +276,10 @@ void Player::AnimationClips()
 		AnimationClip clip;
 		clip.id = "InterSideVisible";
 		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Loop;
+		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
-			clip.frames.push_back({ textureId, {i * width, height * 4, width, height } });
+			clip.frames.push_back({ textureId, {i * width, height * 4 + 4, width, height } });
 		}
 		temp.insert({ "InterSideVisible", clip });
 	}
@@ -244,10 +287,10 @@ void Player::AnimationClips()
 		AnimationClip clip;
 		clip.id = "InterUpVisible";
 		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Loop;
+		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
-			clip.frames.push_back({ textureId, {i * width, height * 5, width, height } });
+			clip.frames.push_back({ textureId, {i * width, height * 5 + 4 , width, height } });
 		}
 		temp.insert({ "InterUpVisible", clip });
 	}
@@ -342,6 +385,73 @@ void Player::AnimationClips()
 		}
 		temp.insert({ "MoveUpVisible", clip });
 	}
+	{
+		AnimationClip clip;
+		clip.id = "WaterDownVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 5; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 10, width, height } });
+		}
+		temp.insert({ "WaterDownVisible", clip });
+	}
+	{
+		AnimationClip clip;
+		clip.id = "WaterSideVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 5; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 9, width, height } });
+		}
+		temp.insert({ "WaterSideVisible", clip });
+	}
+	{
+		AnimationClip clip;
+		clip.id = "WaterUpVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 5; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 11, width, height } });
+		}
+		temp.insert({ "WaterUpVisible", clip });
+	} 
+	{
+		AnimationClip clip;
+		clip.id = "ExhaustDownVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 6; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
+		}
+		temp.insert({ "ExhaustDownVisible", clip });
+	}
+	{
+		AnimationClip clip;
+		clip.id = "ExhaustSideVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 6; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
+		}
+		temp.insert({ "ExhaustSideVisible", clip });
+	}
+	{
+		AnimationClip clip;
+		clip.id = "ExhaustUpVisible";
+		clip.fps = 10;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 6; ++i)
+		{
+			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
+		}
+		temp.insert({ "ExhaustUpVisible", clip });
+	}
+
 
 	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, Utils::GetNormal({1.f, -1.f}) });
 	clipInfos.push_back({ "IdleUpinVisible", "MoveUpinVisible", false, {0.f, -1.f} });
@@ -356,6 +466,18 @@ void Player::AnimationClips()
 
 
 	animator.SetTarget(body);
+
+	animator.AddEvent("InterUpVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("InterSideVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("InterDownVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
+
+	animator.AddEvent("WaterDownVisible", 4, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("WaterSideVisible", 4, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("WaterUpVisible", 4, [&]() {this->m_CurrAction = Action::idle; });
+
+	animator.AddEvent("ExhaustDownVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
+	animator.AddEvent("ExhaustSideVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
+	animator.AddEvent("ExhaustUpVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
 }
 
 std::string Player::GetAnimationClipIdByDAI()
@@ -373,6 +495,11 @@ std::string Player::GetAnimationClipIdByDAI()
 	case Player::Action::interaction:
 		id += "Inter";
 		break;
+	case Player::Action::wateringAction:
+		id += "Water";
+		break;
+	case Player::Action::staminaExhausted:
+		id += "Exhaust";
 	default:
 		break;
 	}
@@ -410,6 +537,17 @@ std::string Player::GetAnimationClipIdByDAI()
 	}
 
 	return id;
+}
+
+float Player::Staminagauge()
+{
+	if (stamina < 0) {
+		value = 0.0f;
+	}
+	else {
+		value = (float)stamina / maxStamina;
+	}
+	return value;
 }
 
 

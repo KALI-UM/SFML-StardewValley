@@ -14,6 +14,8 @@ public:
 		idle,
 		move,
 		interaction,
+		wateringAction,
+		staminaExhausted,
 	};
 	enum class IsVisibleItem {
 		visibleItem,
@@ -34,6 +36,10 @@ protected:
 
 	sf::Vector2f direction;
 	float speed = 500.f;
+	int maxStamina = 20;
+	int stamina = maxStamina;
+
+	float value = 0.f;
 
 	std::map<std::string, AnimationClip> temp;
 	std::vector<ClipInfo> clipInfos;
@@ -44,13 +50,21 @@ protected:
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
 
+
+
 public:
-	Player();
+	Player(const std::string& name);
 	~Player();
 
 	bool Initialize();
 	void Reset();
 	void Update(float dt);
+
+	void UpdateIdle(float dt);
+	void UpdateMove(float dt);
+	void UpdateInter(float dt);
+     
+
 	void LateUpdate(float dt);
 	void FixedUpdate(float dt);
 	void PreRender();
@@ -62,9 +76,11 @@ public:
 	
 	std::string GetAnimationClipIdByDAI();
 
+	float Staminagauge();
+
 protected:
 	Direction m_CurrDir;
-	Action m_CurrAction;
+	Action m_CurrAction = Action::idle;
 	IsVisibleItem m_CurrEquip;
 };
 

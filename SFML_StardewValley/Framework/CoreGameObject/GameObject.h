@@ -7,8 +7,9 @@ class GameObject : public Transform
 {
 public:
 	const int	m_Id;
+	const std::string m_Name;
 public:
-	GameObject();
+	GameObject(const std::string& name="");
 	GameObject(const GameObject& other);
 	GameObject(GameObject&& other) noexcept;
 	virtual ~GameObject();
