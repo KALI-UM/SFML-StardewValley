@@ -5,9 +5,15 @@ class Player;
 class PlayerStatusUi : public GameObject
 {
 protected:
+
 	DSprite* StaminaUi;
 	DRectangle* Staminabar;
 	Player* player;
+	DSprite* dashboardInfo;
+	DSprite* ClockHands;
+
+	float count = 0;
+
 public:
 	PlayerStatusUi();
 	~PlayerStatusUi();
