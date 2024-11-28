@@ -61,7 +61,7 @@ void PlayerStatusUi::Update(float dt)
 		Staminabar->SetFillColor(ColorPalette::Green);
 	}
     count += dt;
-	ClockHands->setRotation(std::numbers::pi * 0.5f * count);
+	ClockHands->setRotation(std::numbers::pi * 1.f * count);
 	std::cout << "(" << ClockHands->getRotation() << ")" << std::endl;
 }
 
