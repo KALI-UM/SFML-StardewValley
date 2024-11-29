@@ -53,6 +53,8 @@ void Scene_TileTest::Enter()
 {
 	ImGuiManager::SetShowDemo(true);
 	FRAMEWORK->SetBackColor(ColorPalette::White);
+
+	m_ButtonBar->setScale(2, 2);
 	/*GAME_MGR->SetViewZoom(m_UIViewIndex, 0.8f);
 	GAME_MGR->SetViewCenter(m_UIViewIndex, {300,300 });*/
 }
@@ -85,7 +87,7 @@ void Scene_TileTest::ShowSceneImgui()
 	static bool visiblelayer[(int)TileLayer::Max] = { true, true,true,true,true };
 	if (ImGui::Checkbox(m_Layers[0].c_str(), &visiblelayer[0]))
 	{
-		m_TileView->SetTileLayerVisible((TileLayer)1, visiblelayer[0]);
+		m_TileView->SetTileLayerVisible((TileLayer)0, visiblelayer[0]);
 	}
 	if (ImGui::Checkbox(m_Layers[1].c_str(), &visiblelayer[1]))
 	{

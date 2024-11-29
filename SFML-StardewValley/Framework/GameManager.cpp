@@ -13,7 +13,7 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	bool success = true;
 	success &= DATATABLE_MGR->Initialize();
 	success &= SCENE_MGR->Initialize();
-	Scene_Test* lobby = new Scene_Test();
+	Scene_TileTest* lobby = new Scene_TileTest();
 	SCENE_MGR->PushScene(lobby);
 	SCENE_MGR->SetCurrentScene(lobby->GetName());
 	lobby->RESET();
