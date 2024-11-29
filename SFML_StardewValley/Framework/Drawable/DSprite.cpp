@@ -95,13 +95,18 @@ void DSprite::SetTextureRect(const sf::IntRect& rect)
 
 void DSprite::SetOrigin(OriginType type, const sf::Vector2f& detail)
 {
-	setOrigin(((m_Sprite.getTextureRect().getSize().x / 2) * ((int)type % 3)) + detail.x,
-		((m_Sprite.getTextureRect().getSize().y / 2) * ((int)type / 3)) + detail.y);
+	setOrigin(((m_Sprite.getTextureRect().width / 2) * ((int)type % 3)) + detail.x,
+		((m_Sprite.getTextureRect().height / 2) * ((int)type / 3)) + detail.y);
 }
 
 sf::Vector2u DSprite::GetTextureSize() const
 {
 	return m_Sprite.getTexture() ? m_Sprite.getTexture()->getSize() : sf::Vector2u(0, 0);
+}
+
+const sf::IntRect& DSprite::GetTextureRect() const
+{
+	return m_Sprite.getTextureRect();
 }
 
 sf::Color DSprite::GetColor() const

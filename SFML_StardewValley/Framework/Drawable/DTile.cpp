@@ -1,11 +1,10 @@
 #include "pch.h"
 #include "DTile.h"
 
-
 sfTile::sfTile()
 {
-	m_Vertices.resize(5);
-	m_Vertices.setPrimitiveType(sf::TriangleStrip);
+	m_Vertices.resize(4);
+	m_Vertices.setPrimitiveType(sf::Quads);
 }
 
 sfTile::~sfTile()
@@ -51,6 +50,11 @@ void sfTile::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	states.transform *= getTransform(); // getTransform() is defined by sf::Transformable
 	states.texture = m_Texture;
 	target.draw(m_Vertices, states);
+}
+
+DTile::DTile()
+	:DrawableObject(DataType::Shape, &m_Tile, &m_Tile)
+{
 }
 
 DTile::DTile(sf::Texture* tex)
@@ -117,89 +121,54 @@ DTile::~DTile()
 {
 }
 
-void DTile::SetShapeLot(const TileShapeType& shape, const sf::Vector2u& lot)
+void DTile::SetTexture(sf::Texture* tex)
 {
-	//if (m_ShapeType == shape && m_Tile.m_LotSize == lot)return;
-	m_ShapeType = shape;
-	m_Tile.m_LotSize = lot;
-
-	auto lot_float = m_Tile.m_LotSize.To<float>();
-	lot_float.y = (float)GetTextureSize().y / m_Unit;
-	switch (m_ShapeType)
-	{
-	case TileShapeType::Convex:
-	{
-		m_Tile.m_Vertices.resize(5);
-		m_Tile.m_Vertices[0].position = { 0,0 };
-		m_Tile.m_Vertices[1].position = { 0 , lot_float.y - lot_float.x * 0.25f };
-		m_Tile.m_Vertices[2].position = { lot_float.x ,0 };
-		m_Tile.m_Vertices[3].position = { lot_float.x * 0.5f , lot_float.y };
-		m_Tile.m_Vertices[4].position = { lot_float.x ,lot_float.y - lot_float.x * 0.25f };
-	}
-	break;
-	case TileShapeType::Diamond:
-	{
-		m_Tile.m_Vertices.resize(4);
-		m_Tile.m_Vertices[0].position = { 0 , lot_float.y - lot_float.x * 0.25f };
-		m_Tile.m_Vertices[1].position = { lot_float.x * 0.5f , lot_float.y };
-		m_Tile.m_Vertices[2].position = { lot_float.x * 0.5f,lot_float.y * 0.5f };
-		m_Tile.m_Vertices[3].position = { lot_float.x , lot_float.y - lot_float.x * 0.25f };
-	}
-	break;
-	case TileShapeType::Rectangle:
-		m_Tile.m_Vertices.resize(4);
-		m_Tile.m_Vertices[0].position = { 0 , 0 };
-		m_Tile.m_Vertices[1].position = { lot_float.x ,0 };
-		m_Tile.m_Vertices[2].position = { lot_float.x ,lot_float.y };
-		m_Tile.m_Vertices[3].position = { 0, lot_float.y };
-		break;
-	default:
-		break;
-	}
-
-	for (int i = 0; i < m_Tile.m_Vertices.getVertexCount(); i++)
-	{
-		m_Tile.m_Vertices[i].position *= m_Unit;
-		m_Tile.m_Vertices[i].texCoords = m_Tile.m_Vertices[i].position += sf::Vector2f(-1, -1);
-	}
-}
-
-void DTile::SetTexture(sf::Texture* tex, TileShapeType type, const sf::Vector2u& lot)
-{
-	if (lot == sf::Vector2u(0, 0) || !tex)
-	{
-		m_IsValid = false;
-		return;
-	}
-
 	if (tex)
 	{
 		m_IsValid = true;
 		m_Tile.setTexture(*tex);
-		SetShapeLot(type, lot);
 	}
 }
 
-void DTile::SetTexture(const std::string& filepath, TileShapeType type, const sf::Vector2u& lot)
+void DTile::SetTexture(const std::string& filepath)
 {
-	if (filepath == "")
-		SetTexture(nullptr, type, lot);
-	else
-		SetTexture(ResourceManager<sf::Texture>::GetInstance()->GetByFilepath(filepath), type, lot);
+	if (filepath == "")return;
+	SetTexture(TEXTURE_MGR->GetByFilepath(filepath));
+}
+
+void DTile::SetTexureRect(const sf::IntRect& rect)
+{
+	m_ShapeType = TileShapeType::Single;
+	m_Tile.m_Vertices.resize(4);
+	m_Tile.m_LotSize = { 0,0 };
+	SetVerticesPositionByTileIndex(0, { 0,0 });
+	SetVerticesTexCoordByIntRect(0, rect);
+}
+
+void DTile::SetTexureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles)
+{
+	if (rects.size() == 0)
+	{
+		SetTexureRect(*rects.begin());
+		return;
+	}
+
+	m_Tile.m_Vertices.resize(rects.size() * 4);
+	m_Tile.m_LotSize = { 0,0 };
+	auto rectit = rects.begin();
+	auto tileit = tiles.begin();
+	for (int i = 0; i < rects.size(); i++)
+	{
+		SetVerticesPositionByTileIndex(i, *tileit);
+		SetVerticesTexCoordByIntRect(i, *rectit);
+		tileit++;
+		rectit++;
+	}
 }
 
 sf::Vector2u DTile::GetTextureSize() const
 {
 	return m_Tile.getTexture() ? m_Tile.getTexture()->getSize() : sf::Vector2u(0, 0);
-}
-
-void DTile::SetOrigin(OriginType type, const sf::Vector2f& detail)
-{
-	if (m_Tile.getTexture())
-		setOrigin(((GetTextureSize().x / 2) * ((int)type % 3)) + detail.x,
-			((GetTextureSize().y / 2) * ((int)type / 3)) + detail.y);
-	else
-		DrawableObject::SetOrigin(type, detail);
 }
 
 sf::FloatRect DTile::GetGlobalBounds() const
@@ -255,4 +224,28 @@ void DTile::SetOutlineColor(const sf::Color& color)
 void DTile::SetOutlineColor(int r, int g, int b, int a)
 {
 	SetOutlineColor(sf::Color(r, g, b, a));
+}
+
+void DTile::SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex)
+{
+	m_Tile.m_LotSize.x = std::max(m_Tile.m_LotSize.x, (unsigned int)tileIndex.x + 1);
+	m_Tile.m_LotSize.y = std::max(m_Tile.m_LotSize.y, (unsigned int)tileIndex.y + 1);
+
+	m_Tile.m_Vertices[quadIndex * 4].position = sf::Vector2f(0, 0) + tileIndex.To<float>();
+	m_Tile.m_Vertices[quadIndex * 4 + 1].position = sf::Vector2f(1, 0) + tileIndex.To<float>();
+	m_Tile.m_Vertices[quadIndex * 4 + 2].position = sf::Vector2f(1, 1) + tileIndex.To<float>();
+	m_Tile.m_Vertices[quadIndex * 4 + 3].position = sf::Vector2f(0, 1) + tileIndex.To<float>();
+
+	m_Tile.m_Vertices[quadIndex * 4].position *= m_Unit;
+	m_Tile.m_Vertices[quadIndex * 4 + 1].position *= m_Unit;
+	m_Tile.m_Vertices[quadIndex * 4 + 2].position *= m_Unit;
+	m_Tile.m_Vertices[quadIndex * 4 + 3].position *= m_Unit;
+}
+
+void DTile::SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect)
+{
+	m_Tile.m_Vertices[quadIndex * 4].texCoords = sf::Vector2f(rect.getPosition());
+	m_Tile.m_Vertices[quadIndex * 4 + 1].texCoords = sf::Vector2f(rect.getPosition()) + sf::Vector2f(rect.width, 0);
+	m_Tile.m_Vertices[quadIndex * 4 + 2].texCoords = sf::Vector2f(rect.getPosition()) + sf::Vector2f(rect.width, rect.height);
+	m_Tile.m_Vertices[quadIndex * 4 + 3].texCoords = sf::Vector2f(rect.getPosition()) + sf::Vector2f(0, rect.height);
 }

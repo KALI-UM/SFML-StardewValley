@@ -126,10 +126,10 @@
     <ClCompile Include="Framework\Drawable\DGameObject.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Drawable\sfAtlasSprite.cpp">
+    <ClCompile Include="Framework\Drawable\sf9SliceSprite.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Drawable\DAtlasSprite.cpp">
+    <ClCompile Include="Framework\Drawable\D9SliceSprite.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Framework\Animator.cpp">
@@ -145,6 +145,57 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="StardewValley\PlayerStatusUi.cpp">
+		<Filter>소스 파일</Filter>
+	</ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileView.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileViewChild.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\Tile.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TexCoordTable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileModel.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileGrid.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene\Scene_TileTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileController.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\TileMapSystem.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\SubButtonBar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Tile\ButtonBar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Tool.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Hoe.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDataTable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Crop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Seed.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -269,10 +320,10 @@
     <ClInclude Include="Framework\Drawable\DGameObject.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Drawable\sfAtlasSprite.h">
+    <ClInclude Include="Framework\Drawable\sf9SliceSprite.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Drawable\DAtlasSprite.h">
+    <ClInclude Include="Framework\Drawable\D9SliceSprite.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Framework\AnimationClip.h">
@@ -288,6 +339,58 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="StardewValley\PlayerStatusUi.h">
+		<Filter>헤더 파일</Filter>
+	</ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileView.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileViewChild.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\Tile.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TexCoordTable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileModel.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileGrid.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene\Scene_TileTest.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileController.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\TileMapSystem.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\SubButtonBar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Tile\ButtonBar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Item.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Tool.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Hoe.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDataTable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Crop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Seed.h">
+>>>>>>> Tile-develop
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

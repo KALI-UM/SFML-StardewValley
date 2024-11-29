@@ -21,6 +21,7 @@ public:
 	void SetTextureRect(const sf::IntRect& rect);
 	void SetOrigin(OriginType type, const sf::Vector2f& detail = sf::Vector2f(0, 0));
 	sf::Vector2u GetTextureSize() const;
+	const sf::IntRect& GetTextureRect() const;
 	sf::Color GetColor() const;
 	void SetColor(const sf::Color& color);
 	void SetColor(int r, int g, int b, int a = 255);

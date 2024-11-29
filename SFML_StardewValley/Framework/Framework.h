@@ -25,6 +25,8 @@ protected:
 	float m_FixedTimeStamp = 0.02f;
 	float m_FixedTimePrev = 0.f;
 
+	sf::Color m_BackColor = sf::Color::Black;
+
 public:
 	float GetTime() const { return m_Time; }
 	float GetDeltaTime() const { return m_DeltaTime; }
@@ -33,6 +35,7 @@ public:
 
 	void SetTimeScale(float newTimeScale) { m_TimeScale = newTimeScale; }
 	float GetTimeScale() const { return m_TimeScale; }
+	void SetBackColor(const sf::Color& color) { m_BackColor = color; }
 
 	virtual void Initialize(int width, int height, const std::string& name);
 	virtual void Do();

@@ -42,6 +42,8 @@ public:
 	}
 
 	bool GetIsValid()const { return m_IsValid; }
+	void SetIsVisible(bool visible) { m_IsVisible = visible; }
+	bool GetIsVisible()const { return m_IsVisible; }
 
 	virtual void Update(float dt) {};
 	virtual void ImGuiUpdate() {};
@@ -59,6 +61,7 @@ public:
 	sf::Vector2f GetBoundPointPosition(int index) const;
 
 	virtual sf::Vector2u GetTextureSize()const;
+	virtual const sf::IntRect& GetTextureRect()const;
 	virtual sf::FloatRect GetGlobalBounds()const = 0;
 	virtual sf::FloatRect GetLocalBounds()const = 0;
 
@@ -75,8 +78,9 @@ public:
 	const DataType m_DataType;
 protected:
 	bool					m_IsValid;
+	bool					m_IsVisible = true;
 	std::string				m_Name;
-	sf::Drawable* m_Drawable;
+	sf::Drawable*			m_Drawable;
 	sf::Transformable* m_Transform;
 
 	DrawPriorityType	m_PriorityType = DrawPriorityType::Y;

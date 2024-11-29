@@ -1,0 +1,7 @@
+id,name,type,iconId,equipId
+Hoe,Hoe,Tool,Tools.png#HoeIcon,Tools.png#Hoe
+Pickaxe,Pickaxe,Tool,Tools.png#PickaxeIcon,Tools.png#Pickaxe
+Axe,Axe,Tool,Tools.png#AxeIcon,Tools.png#Axe
+WateringCan,Watering Can,Tool,Tools.png#WateringCanIcon,Tools.png#WateringCan
+CarrotSeed,Carrot Seeds,Crop,Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X28Y10,Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X28Y10
+Carrot,Carrot,Crop,Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X24Y10,Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X24Y10
