@@ -3,7 +3,7 @@
 #include "TargetRect.h"
 #include "TileGrid.h"
 #include "rapidcsv.h"
-#include "typeinfo"
+#include <direct.h>
 
 Scene_Slice::Scene_Slice()
 	:SceneBase("Slice", 2, 2)
@@ -296,11 +296,23 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 	std::cout << newRow[newRow.size() - 1] << std::endl;
 
 	sf::Image originalImage = TEXTURE_MGR->GetByFilepath("target/" + m_CurrentFilePath)->copyToImage();
-	SaveAsPng(slicerId, sf::IntRect(rect[0], rect[1], rect[2], rect[3]), originalImage);
+	SaveAsPng("", slicerId, sf::IntRect(rect[0], rect[1], rect[2], rect[3]), originalImage);
 
 	//여러장이었을 때
 	if (m_SliceXCount != 1 || m_SliceYCount != 1)
 	{
+		std::string filepath = "output/" + slicerId;
+
+		int nResult = mkdir(filepath.c_str());
+		if (nResult == 0)
+		{
+			std::cout << "folder : " + filepath <<" - mkdir" << std::endl;
+		}
+		else if (nResult == -1)
+		{
+			std::cout << "folder : " + filepath << " - exist" << std::endl;
+		}
+
 		temp.clear();
 		for (int j = 0; j < m_SliceYCount; j++)
 		{
@@ -333,7 +345,7 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 					std::cout << newRowChild[i] << ",";
 				std::cout << newRowChild[newRowChild.size() - 1] << std::endl;
 
-				SaveAsPng(childId, sf::IntRect(std::stoi(newRowChild[4]), std::stoi(newRowChild[5]), std::stoi(newRowChild[6]), std::stoi(newRowChild[7])), originalImage);
+				SaveAsPng(slicerId, childId, sf::IntRect(std::stoi(newRowChild[4]), std::stoi(newRowChild[5]), std::stoi(newRowChild[6]), std::stoi(newRowChild[7])), originalImage);
 			}
 		}
 	}
@@ -342,7 +354,7 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 	doc.Save("output/AtlasSlicer.csv");
 }
 
-void Scene_Slice::SaveAsPng(const std::string& id, const sf::IntRect& rect, const sf::Image& image)
+void Scene_Slice::SaveAsPng(const std::string filepath, const std::string& id, const sf::IntRect& rect, const sf::Image& image)
 {
 	sf::IntRect cropArea = rect;
 
@@ -355,7 +367,7 @@ void Scene_Slice::SaveAsPng(const std::string& id, const sf::IntRect& rect, cons
 	croppedImage.copy(image, 0, 0, cropArea);
 
 	// 잘라낸 이미지를 PNG로 저장
-	if (!croppedImage.saveToFile("output/" + id + ".png"))
+	if (!croppedImage.saveToFile("output/"+filepath+"/" + id + ".png"))
 	{
 		std::cerr << "PNG Fail!" << std::endl;
 	}

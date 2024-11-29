@@ -29,12 +29,12 @@ void TileMapSystem::Update(float dt)
 {
 }
 
-void TileMapSystem::BuildTilesById(const std::list<CellIndex> tiles, const ID& id)
+void TileMapSystem::BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id)
 {
 	mcv_Model->SetTiles(tiles, m_CurrLayer,id);
 }
 
-void TileMapSystem::BuildTilesById(const CellIndex& tile, const ID& id)
+void TileMapSystem::BuildTilesById(const CellIndex& tile, const TEXID& id)
 {
 	mcv_Model->SetTile(tile, m_CurrLayer, id);
 }

@@ -1,21 +1,10 @@
 #pragma once
 
 typedef sf::Vector2i CellIndex;
-
 typedef sf::Vector2u LOT;
-typedef std::string ID;
+typedef std::string TEXID;
 typedef std::string FILEPATH;
 typedef sf::IntRect TEXRECT;
-
-struct TileTexRes
-{
-	ID id;
-	FILEPATH filepath;
-	LOT lotSize;
-	CellIndex index;
-	TEXRECT texcoord;
-	std::vector<std::vector<ID>> children;
-};
 
 enum class TileLayer
 {
@@ -38,7 +27,7 @@ struct TileInfo
 {
 	CellIndex		index;
 	CellIndex		ower;
-	ID				id;
+	TEXID			id;
 	LOT	lotSize = {1,1};
 	CollisionType	collision;
 };
@@ -47,11 +36,10 @@ struct TileInfo
 class Tile
 {
 public:
-
-	static std::string GetCollisionTypeToString(CollisionType type);
-	static CollisionType GetStringToCollisionType(const std::string& str);
-	static std::string GetTileLayerToString(TileLayer layer);
-	static TileLayer GetStringToTileLayer(const std::string str);
+	static std::string CollisionTypeToString(CollisionType type);
+	static CollisionType StringToCollisionType(const std::string& str);
+	static std::string TileLayerToString(TileLayer layer);
+	static TileLayer StringToTileLayer(const std::string str);
 
 	static const CellIndex d[8];
 

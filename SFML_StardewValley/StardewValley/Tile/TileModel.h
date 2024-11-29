@@ -31,12 +31,12 @@ public:
 	bool IsValidTileIndex(const CellIndex& tileIndex) const;
 	const TileInfo& GetTileInfo(const TileLayer& depth, const CellIndex& tileIndex) const;
 
-	void SetTiles(const std::list<CellIndex>& tiles, const TileLayer& layer, const ID& id);
-	void SetTile(const CellIndex& tileIndex, const TileLayer& layer, const ID& id, bool isTrueTile = true);
+	void SetTiles(const std::list<CellIndex>& tiles, const TileLayer& layer, const TEXID& id);
+	void SetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id, bool isTrueTile = true);
 protected:
 public:
 	bool IsPossibleToPass(const CellIndex& tileIndex);
-	bool IsPossibleToSetTile(const CellIndex& tileIndex, const TileLayer& layer, const ID& id);
+	bool IsPossibleToSetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id);
 protected:
 	std::vector<std::vector<std::vector<TileInfo>>>		m_TileInfos;
 

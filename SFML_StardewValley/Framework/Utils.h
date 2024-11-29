@@ -20,7 +20,6 @@ public:
 	template <typename T>
 	static T Clamp(const T& v, const T& min, const T& max)
 	{
-		T value;
 		if (v < min)return min;
 		if (v > max)return max;
 		return v;

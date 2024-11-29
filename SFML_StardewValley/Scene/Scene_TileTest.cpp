@@ -44,7 +44,7 @@ bool Scene_TileTest::Initialize()
 	m_TileController->SetButtonBar(m_ButtonBar);
 
 	for (int i = 0; i < (int)TileLayer::Max; i++)
-		m_Layers.push_back(Tile::GetTileLayerToString((TileLayer)i));
+		m_Layers.push_back(Tile::TileLayerToString((TileLayer)i));
 
 	return false;
 }

@@ -4,7 +4,7 @@
 #include "Tile/TileModel.h"
 #include "Tile/TileView.h"
 #include "Tile/ButtonBar.h"
-#include "TileTexCoordTable.h"
+#include "TexCoordTable.h"
 
 TileController::TileController(TileMapSystem* sys, TileModel* model, TileView* view, int viewIndex)
 	:m_TileMapSystem(sys), mcv_Model(model), mcv_View(view), m_ViewIndex(viewIndex)
@@ -436,9 +436,9 @@ void TileController::SetNXMTiles(const sf::Vector2u& lot, const CellIndex& cente
 		startIndex = centerIndex + sf::Vector2i(-2, -1);
 	}
 
-	for (int j = startIndex.y; j < startIndex.y + lot.y; j++)
+	for (int j = startIndex.y; j < startIndex.y + (int)lot.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + lot.x; i++)
+		for (int i = startIndex.x; i < startIndex.x + (int)lot.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			if (checkPossible)
@@ -450,9 +450,9 @@ void TileController::SetNXMTiles(const sf::Vector2u& lot, const CellIndex& cente
 		}
 	}
 
-	for (int j = startIndex.y; j < startIndex.y + lot.y; j++)
+	for (int j = startIndex.y; j < startIndex.y + (int)lot.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + lot.x; i++)
+		for (int i = startIndex.x; i < startIndex.x + (int)lot.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			PushToSelectingTiles(currIndex);

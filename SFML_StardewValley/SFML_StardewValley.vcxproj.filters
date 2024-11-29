@@ -153,7 +153,7 @@
     <ClCompile Include="StardewValley\Tile\Tile.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TileTexCoordTable.cpp">
+    <ClCompile Include="TexCoordTable.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="StardewValley\Tile\TileModel.cpp">
@@ -175,6 +175,24 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="StardewValley\Tile\ButtonBar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Tool.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Hoe.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemDataTable.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Crop.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="StardewValley\Item\Seed.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -326,7 +344,7 @@
     <ClInclude Include="StardewValley\Tile\Tile.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="TileTexCoordTable.h">
+    <ClInclude Include="TexCoordTable.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="StardewValley\Tile\TileModel.h">
@@ -348,6 +366,24 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="StardewValley\Tile\ButtonBar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Item.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Tool.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Hoe.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemDataTable.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Crop.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="StardewValley\Item\Seed.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

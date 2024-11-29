@@ -4,7 +4,7 @@
 #include "TileViewChild.h"
 #include "TileGrid.h";
 #include "DTile.h"
-#include "TileTexCoordTable.h"
+#include "TexCoordTable.h"
 
 TileView::TileView(TileModel* model)
 	:mcv_Model(model)
@@ -94,7 +94,7 @@ sf::Vector2f TileView::GetTileCoordinatedPos(const sf::Vector2f& pos) const
 CellIndex TileView::GetTileCoordinatedIndex(const sf::Vector2f& pos, bool isTilepos) const
 {
 	sf::Vector2f tilepos = isTilepos ? pos : GetTileCoordinatedPos(pos);
-	return sf::Vector2i(tilepos.x / mcv_Model->m_CellSize.x, tilepos.y / mcv_Model->m_CellSize.y);
+	return sf::Vector2f(tilepos.x / (float)mcv_Model->m_CellSize.x, tilepos.y / (float)mcv_Model->m_CellSize.y).To<int>();
 }
 
 //sf::Vector2f TileView::GetTileCoordinatedCenterPosByTileIndex(const CellIndex& tileIndex)
@@ -141,7 +141,7 @@ void TileView::UpdateTileSprite()
 
 		currTile->SetTexture(currTexRes.filepath);
 		currTile->SetTexureRect(currTexRes.texcoord);
-		currTile->SetOrigin(OriginType::TL, m_TileOffset);
+		currTile->SetOrigin(OriginType::BL, m_TileOffset);
 		m_SpriteUpdateQueue.pop();
 	}
 }

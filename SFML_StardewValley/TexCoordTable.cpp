@@ -1,25 +1,25 @@
 #include "pch.h"
-#include "TileTexCoordTable.h"
+#include "TexCoordTable.h"
 
-TileTexRes TileTexCoordTable::m_Empty = TileTexRes();
+TexRes TexCoordTable::m_Empty = TexRes();
 
 
-TileTexCoordTable::TileTexCoordTable()
-	:DataTable(DataId::TileTexRes, "datatables/AtlasSlicer.csv")
+TexCoordTable::TexCoordTable()
+	:DataTable(DataId::TexId, "datatables/AtlasSlicer.csv")
 {
 }
 
-TileTexCoordTable::~TileTexCoordTable()
+TexCoordTable::~TexCoordTable()
 {
 }
 
-bool TileTexCoordTable::Load()
+bool TexCoordTable::Load()
 {
 	Release();
 	rapidcsv::Document doc(m_FilePath, rapidcsv::LabelParams(1, -1));
 	for (int j = 0; j < doc.GetRowCount(); j++)
 	{
-		TileTexRes curr;
+		TexRes curr;
 		curr.id = doc.GetCell<std::string>("id", j);
 		auto it = m_TileTexCoord.find(curr.id);
 		if (it != m_TileTexCoord.end())
@@ -30,12 +30,12 @@ bool TileTexCoordTable::Load()
 		curr.filepath = m_TileFilePath + doc.GetCell<std::string>("filename", j);
 		curr.lotSize = Get2Number(doc.GetCell<std::string>("lot", j), "x").To<unsigned int>();
 		curr.index = Get2Number(doc.GetCell<std::string>("index", j), ",");
-		curr.texcoord.left = doc.GetCell<float>("left", j);
-		curr.texcoord.top = doc.GetCell<float>("top", j);
-		curr.texcoord.width = doc.GetCell<float>("width", j);
-		curr.texcoord.height = doc.GetCell<float>("height", j);
+		curr.texcoord.left = doc.GetCell<int>("left", j);
+		curr.texcoord.top = doc.GetCell<int>("top", j);
+		curr.texcoord.width = doc.GetCell<int>("width", j);
+		curr.texcoord.height = doc.GetCell<int>("height", j);
 		if (curr.lotSize != sf::Vector2u(1, 1))
-			curr.children = std::vector<std::vector<ID>>(curr.lotSize.y, std::vector<std::string>(curr.lotSize.x));
+			curr.children = std::vector<std::vector<TEXID>>(curr.lotSize.y, std::vector<std::string>(curr.lotSize.x));
 		m_TileTexCoord.insert({ curr.id , curr });
 	}
 
@@ -57,12 +57,12 @@ bool TileTexCoordTable::Load()
 	return true;
 }
 
-void TileTexCoordTable::Release()
+void TexCoordTable::Release()
 {
 	m_TileTexCoord.clear();
 }
 
-const sf::IntRect& TileTexCoordTable::GetTexIntRect(const ID& id) const
+const sf::IntRect& TexCoordTable::GetTexIntRect(const TEXID& id) const
 {
 	auto it = m_TileTexCoord.find(id);
 	if (it == m_TileTexCoord.end())
@@ -71,12 +71,12 @@ const sf::IntRect& TileTexCoordTable::GetTexIntRect(const ID& id) const
 		return it->second.texcoord;
 }
 
-const sf::FloatRect& TileTexCoordTable::GetTexFloatRect(const ID& id) const
+const sf::FloatRect& TexCoordTable::GetTexFloatRect(const TEXID& id) const
 {
 	return sf::FloatRect(GetTexIntRect(id));
 }
 
-const TileTexRes& TileTexCoordTable::GetTileTexRes(const ID& id) const
+const TexRes& TexCoordTable::GetTileTexRes(const TEXID& id) const
 {
 	auto it = m_TileTexCoord.find(id);
 	if (it == m_TileTexCoord.end())
@@ -85,7 +85,7 @@ const TileTexRes& TileTexCoordTable::GetTileTexRes(const ID& id) const
 		return it->second;
 }
 
-sf::Vector2i TileTexCoordTable::Get2Number(const std::string& str, const std::string& separator)
+sf::Vector2i TexCoordTable::Get2Number(const std::string& str, const std::string& separator)
 {
 	auto xIndex = str.find_first_of(separator);
 	if (xIndex == std::string::npos)

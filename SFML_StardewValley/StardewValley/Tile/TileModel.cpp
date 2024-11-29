@@ -37,7 +37,7 @@ const TileInfo& TileModel::GetTileInfo(const TileLayer& layer, const CellIndex& 
 	return m_TileInfos[(int)layer][tileIndex.y][tileIndex.x];
 }
 
-void TileModel::SetTiles(const std::list<CellIndex>& tiles, const TileLayer& layer, const ID& id)
+void TileModel::SetTiles(const std::list<CellIndex>& tiles, const TileLayer& layer, const TEXID& id)
 {
 	for (auto& currIndex : tiles)
 	{
@@ -45,7 +45,7 @@ void TileModel::SetTiles(const std::list<CellIndex>& tiles, const TileLayer& lay
 	}
 }
 
-void TileModel::SetTile(const CellIndex& tileIndex, const TileLayer& layer, const ID& id, bool isTrueTile)
+void TileModel::SetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id, bool isTrueTile)
 {
 	m_TileInfos[(int)layer][tileIndex.y][tileIndex.x].id = id;
 	RequestUpdateTile(layer, tileIndex);
@@ -224,7 +224,7 @@ bool TileModel::IsPossibleToPass(const CellIndex& tileIndex)
 	return passable;
 }
 
-bool TileModel::IsPossibleToSetTile(const CellIndex& tileIndex, const TileLayer& layer, const ID& id)
+bool TileModel::IsPossibleToSetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id)
 {
 	return true;
 }

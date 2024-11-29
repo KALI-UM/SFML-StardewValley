@@ -2,7 +2,7 @@
 #include "TileViewChild.h"
 #include "TileView.h"
 #include "TileModel.h"
-#include "TileTexCoordTable.h"
+#include "TexCoordTable.h"
 #include "DTile.h"
 
 TileViewChild::TileViewChild(TileView* view)
@@ -22,9 +22,9 @@ bool TileViewChild::Initialize()
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
 
 	m_TileDrawable = std::vector<std::vector<DTile*>>(cellCount.y, std::vector<DTile*>(cellCount.x));
-	for (int j = 0; j < cellCount.y; j++)
+	for (int j = 0; j < (int)cellCount.y; j++)
 	{
-		for (int i = 0; i < cellCount.x; i++)
+		for (int i = 0; i < (int)cellCount.x; i++)
 		{
 			DTile* tileSprite = new DTile();
 			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
@@ -42,9 +42,9 @@ void TileViewChild::Reset()
 	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
 
-	for (int j = 0; j < cellCount.y; j++)
+	for (int j = 0; j < (int)cellCount.y; j++)
 	{
-		for (int i = 0; i < cellCount.x; i++)
+		for (int i = 0; i < (int)cellCount.x; i++)
 		{
 			auto& tileSprite = m_TileDrawable[j][i];
 			const auto& tileInfo = mcv_View->GetModel()->GetTileInfo(m_Layer, { i,j });
