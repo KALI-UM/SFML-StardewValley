@@ -38,5 +38,6 @@ private:
 	float m_Rect[4];
 	float m_Color[3] = { 1,1,1 };
 	int m_Unit = 10;
+	
 };
 

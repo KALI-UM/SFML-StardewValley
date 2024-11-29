@@ -33,5 +33,5 @@ inline T* DataTableManager::Get(DataTable::DataId id)
 }
 
 #define DATATABLE_MGR (DataTableManager::GetInstance())
-#define TILETEXRESTABLE_MGR (DATATABLE_MGR->Get<TexCoordTable>(DataTable::DataId::TexId))
+#define TEXRESTABLE_MGR (DATATABLE_MGR->Get<TexCoordTable>(DataTable::DataId::TexId))
 #define ITEMDATATABLE_MGR (DATATABLE_MGR->Get<ItemDataTable>(DataTable::DataId::ItemData))

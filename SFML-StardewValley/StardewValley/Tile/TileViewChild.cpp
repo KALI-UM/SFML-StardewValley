@@ -48,7 +48,7 @@ void TileViewChild::Reset()
 		{
 			auto& tileSprite = m_TileDrawable[j][i];
 			const auto& tileInfo = mcv_View->GetModel()->GetTileInfo(m_Layer, { i,j });
-			const auto& texres = TILETEXRESTABLE_MGR->GetTileTexRes(tileInfo.id);
+			const auto& texres = TEXRESTABLE_MGR->GetTileTexRes(tileInfo.id);
 
 			tileSprite->SetTexture(texres.filepath);
 			tileSprite->SetTexureRect(texres.texcoord);

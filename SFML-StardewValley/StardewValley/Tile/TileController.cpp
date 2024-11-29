@@ -313,12 +313,12 @@ void TileController::SetButtonTile(int x, int y)
 	m_ButtonTileY = Utils::Clamp(y, 0, 56);
 
 	std::string buttonid = "OutdoorsSpring.png#Spring";
-	auto tileres = TILETEXRESTABLE_MGR->GetTileTexRes(buttonid);
+	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(buttonid);
 
 	for (int i = (int)Action::SetTile0; i < (int)Action::Max; i++)
 	{
 		int index = i - (int)Action::SetTile0;
-		m_ButtonBar->SetButtonTex(tileres.filepath, (Action)(i), TILETEXRESTABLE_MGR->GetTexIntRect(tileres.children[m_ButtonTileY + index / 8][m_ButtonTileX + index % 8]));
+		m_ButtonBar->SetButtonTex(tileres.filepath, (Action)(i), TEXRESTABLE_MGR->GetTexIntRect(tileres.children[m_ButtonTileY + index / 8][m_ButtonTileX + index % 8]));
 		m_ButtonBar->SetButtonFunc((Action)(i), std::bind(&TileMapSystem::SetCurrId, m_TileMapSystem, tileres.children[m_ButtonTileY + index / 8][m_ButtonTileX + index % 8]));
 	}
 }

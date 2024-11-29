@@ -37,8 +37,8 @@ public:
 	~Item() {};
 
 	const ITEMID	m_ItemId;
-	const ItemType	m_ItemType = ItemType::Other;
-	const StackType	m_StackType = StackType::Stackable;
+	const ItemType	m_ItemType;
+	const StackType	m_StackType;
 
 public:
 	bool Initialize() final;

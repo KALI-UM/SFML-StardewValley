@@ -34,7 +34,7 @@ protected:
     std::unordered_map<TEXID, TexRes> m_TileTexCoord;
     static TexRes m_Empty;
 
-    std::string m_TileFilePath = "tile/";
+    std::string m_TileFilePath = "graphics/";
    sf::Vector2i Get2Number(const std::string& str, const std::string& separator);
 };
 

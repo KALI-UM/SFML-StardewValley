@@ -137,7 +137,7 @@ void TileView::UpdateTileSprite()
 		sf::Vector2i& currIndex = m_SpriteUpdateQueue.front().second;
 		auto& currTile = m_LayerViews[(int)currlayer]->m_TileDrawable[currIndex.y][currIndex.x];
 		auto& currTileInfo = mcv_Model->GetTileInfo(currlayer, currIndex);
-		auto& currTexRes = TILETEXRESTABLE_MGR->GetTileTexRes(currTileInfo.id);
+		auto& currTexRes = TEXRESTABLE_MGR->GetTileTexRes(currTileInfo.id);
 
 		currTile->SetTexture(currTexRes.filepath);
 		currTile->SetTexureRect(currTexRes.texcoord);
