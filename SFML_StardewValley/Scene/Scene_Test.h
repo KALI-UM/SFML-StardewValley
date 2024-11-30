@@ -2,6 +2,7 @@
 
 class Player;
 class PlayerStatusUi;
+class Hoe;
 
 class Scene_Test:
 	public SceneBase
@@ -18,5 +19,6 @@ public:
 	Player* temp;
 	Animator animator;
 	PlayerStatusUi* statusUi;
+	Hoe* hoe;
 };
 
