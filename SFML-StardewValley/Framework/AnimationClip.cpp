@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "AnimationClip.h"
 #include "rapidcsv.h"
+#include "TexCoordTable.h"
 
 bool AnimationClip::loadFromFile(const std::string& filePath)
 {
@@ -22,3 +23,25 @@ bool AnimationClip::loadFromFile(const std::string& filePath)
 
 	return true;
 }
+
+bool AnimationClip::loadFromTexId(const std::string& clipId, AnimationLoopTypes looptype, int fps, const std::string& texId)
+{
+	id = clipId;
+	this->fps = fps;
+	loopType = looptype;
+
+	frames.clear();
+	const TexRes& currTexres = TEXRESTABLE_MGR->GetTileTexRes(texId);
+	if (currTexres.children.size() == 0) {
+		frames.push_back(AnimationFrame(currTexres.filepath, currTexres.texcoord));
+	}
+
+	else {
+		for (int i = 0; i < currTexres.children.size(); i++) {
+			const TexRes& childTexres = TEXRESTABLE_MGR->GetTileTexRes(currTexres.children[0][i]);
+			frames.push_back(AnimationFrame(childTexres.filepath, childTexres.texcoord));
+		}
+	}
+	return false;
+}
+

@@ -1,4 +1,5 @@
 #pragma once
+#include "Item/Hoe.h"
 
 class Player : public GameObject
 {
@@ -41,9 +42,10 @@ protected:
 
 	float value = 0.f;
 
+	Hoe* hoe;
+
 	std::map<std::string, AnimationClip> temp;
 	std::vector<ClipInfo> clipInfos;
-	ClipInfo* currentClipInfo = nullptr;
 
 	Animator animator;
     
@@ -77,6 +79,10 @@ public:
 	std::string GetAnimationClipIdByDAI();
 
 	float Staminagauge();
+
+	Player::Direction GetDirection();
+	
+	void GetHoe(Hoe* hoe);
 
 protected:
 	Direction m_CurrDir;

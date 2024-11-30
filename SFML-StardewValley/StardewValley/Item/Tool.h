@@ -7,6 +7,7 @@ class Tool :
 {
 protected:
 	Tool(const ITEMID& itemId);
+	
 public:
 	~Tool() {};
 
@@ -15,7 +16,6 @@ public:
 	virtual void ToolAction(Player* const player) = 0;								//자식에서 툴액션을 정의해줍셔
 	int GetEnergyCost() const { return m_EnergyCost; }
 protected:
-	void UseEnergy(Player* const player);
 
 	int m_EnergyCost = 2;
 };

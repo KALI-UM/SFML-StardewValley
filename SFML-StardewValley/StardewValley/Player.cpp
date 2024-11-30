@@ -15,11 +15,12 @@ bool Player::Initialize()
 {
 	AnimationClips();
 	animator.SetPlayerAniClip(&temp);
-
+	
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
 	body->setScale({ 2.f, 2.f });
+	body->SetPriorityType(DrawPriorityType::Custom, 0);
 	return true;
 
 }
@@ -58,7 +59,6 @@ void Player::Update(float dt)
 				return d1 < d2;
 			}
 		);
-		currentClipInfo = &(*min);
 	}
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Right)) {
@@ -97,11 +97,12 @@ void Player::UpdateIdle(float dt)
 	}
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		m_CurrAction = Action::interaction;
+		hoe->Use(this);
 		stamina--;
 	}
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::E)) {
 		m_CurrAction = Action::wateringAction;
-		stamina--;
+		stamina -- ;
 	}
 
 	if (stamina == 0) {
@@ -264,7 +265,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterDownVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -275,7 +276,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterSideVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -286,7 +287,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterUpVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -297,7 +298,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackDownVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -308,7 +309,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackSideVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -319,7 +320,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackUpVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -500,6 +501,7 @@ std::string Player::GetAnimationClipIdByDAI()
 		break;
 	case Player::Action::staminaExhausted:
 		id += "Exhaust";
+		break;
 	default:
 		break;
 	}
@@ -550,5 +552,15 @@ float Player::Staminagauge()
 	return value;
 }
 
+Player::Direction Player::GetDirection()
+{
+	return m_CurrDir;
+}
+
+void Player::GetHoe(Hoe* hoe)
+{
+	this->hoe = hoe;
+
+}
 
 

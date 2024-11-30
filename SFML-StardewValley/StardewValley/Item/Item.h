@@ -18,7 +18,7 @@ struct ItemDataRes
 	NAME name;
 	ItemType type;
 	TEXID iconTexId;
-	TEXID equipTexId;
+	std::vector<TEXID> equipTexId;
 };
 
 enum class StackType
@@ -41,7 +41,7 @@ public:
 	const StackType	m_StackType;
 
 public:
-	bool Initialize() final;
+	bool Initialize();
 
 	virtual void Use(Player* const player) = 0;				//use함수를 자식 아이템들이 재정의해서 사용할 것입니다.
 
@@ -50,7 +50,7 @@ protected:
 	int			m_Count = 1;
 
 	TEXID		m_IconTexId;
-	TEXID		m_EquipTexId;				//방향별 어찌할건지는 추후...
+	std::vector<TEXID>		m_EquipTexIds;				//방향별 어찌할건지는 추후...
 
 public:
 	inline static const int m_StackMax = 64;

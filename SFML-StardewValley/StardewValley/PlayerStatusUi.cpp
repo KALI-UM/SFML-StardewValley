@@ -2,6 +2,7 @@
 #include "PlayerStatusUi.h"
 #include "Player.h"
 #include <numbers>
+
 PlayerStatusUi::PlayerStatusUi()
 {
 }
@@ -17,6 +18,7 @@ bool PlayerStatusUi::Initialize()
 	Staminabar = new DRectangle(sf::FloatRect(0, 0, 12, 85), ColorPalette::Transparent, 1, ColorPalette::Green);
 	dashboardInfo = new DSprite("graphics/Stardew Valley - Clock.png");
 	ClockHands = new DSprite("graphics/Stardew Valley_Clock_hands.png");
+
 	SetDrawableObj(StaminaUi);
 	StaminaUi->SetPriorityType(DrawPriorityType::Custom, 0);
 	SetDrawableObj(Staminabar);
@@ -25,6 +27,7 @@ bool PlayerStatusUi::Initialize()
 	dashboardInfo->SetPriorityType(DrawPriorityType::Custom, 2);
 	SetDrawableObj(ClockHands);
 	ClockHands->SetPriorityType(DrawPriorityType::Custom, 3);
+
 	StaminaUi->SetDebugDraw(false);
 	Staminabar->SetDebugDraw(false);
 	dashboardInfo->SetDebugDraw(false);

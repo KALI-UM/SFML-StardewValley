@@ -29,7 +29,7 @@ bool ItemDataTable::Load()
 		curr.name =doc.GetCell<std::string>("name", j);
 		curr.type = Item::StringToItemType(doc.GetCell<std::string>("type", j));
 		curr.iconTexId = doc.GetCell<std::string>("iconId", j);
-		curr.equipTexId = doc.GetCell<std::string>("equipId", j);	
+		DataTable::SetStringToVectorElements(doc.GetCell<std::string>("equipId", j), curr.equipTexId);
 
 		m_ItemData.insert({ curr.id, curr });
 	}
