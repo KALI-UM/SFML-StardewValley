@@ -23,6 +23,7 @@ bool TileMapSystem::Initialize()
 
 void TileMapSystem::Reset()
 {
+	m_CurrLayer = TileLayer::Back;
 }
 
 void TileMapSystem::Update(float dt)
@@ -31,7 +32,7 @@ void TileMapSystem::Update(float dt)
 
 void TileMapSystem::BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id)
 {
-	mcv_Model->SetTiles(tiles, m_CurrLayer,id);
+	mcv_Model->SetTiles(tiles, m_CurrLayer, id);
 }
 
 void TileMapSystem::BuildTilesById(const CellIndex& tile, const TEXID& id)
@@ -41,10 +42,31 @@ void TileMapSystem::BuildTilesById(const CellIndex& tile, const TEXID& id)
 
 void TileMapSystem::LoadTileLayerFile(TileLayer layer)
 {
+	m_CurrLayer = layer;
+	rapidcsv::Document doc("datatables/tileInfo_layer" + std::to_string((int)layer) + ".csv", rapidcsv::LabelParams(-1, -1));
+	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
+	{
+		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
+		{
+			std::string strings = doc.GetCell<std::string>(i,j);
+			BuildTilesById({ i,j }, strings);		
+		}
+	}
 }
 
 void TileMapSystem::SaveTileLayerFile(TileLayer layer)
 {
+	rapidcsv::Document doc("", rapidcsv::LabelParams(-1, -1));
+	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
+	{
+		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
+		{
+			const TileInfo& currInfo = mcv_Model->GetTileInfo(layer, { i,j });
+			std::string strings = currInfo.id;
+			doc.SetCell(i, j, strings);
+		}
+	}
+	doc.Save("datatables/tileInfo_layer" + std::to_string((int)layer) + ".csv");
 }
 
 void TileMapSystem::InitializeActionSet()

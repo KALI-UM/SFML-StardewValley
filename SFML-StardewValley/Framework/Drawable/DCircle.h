@@ -13,7 +13,6 @@ public:
 
 	void SetRadius(float r);
 	void SetPointCount(int cnt);
-	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
 private:
 	sf::CircleShape m_Circle;

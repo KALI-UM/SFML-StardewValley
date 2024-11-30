@@ -2,10 +2,10 @@
 #include "SceneBase.h"
 
 SceneBase::SceneBase(const std::string& name, unsigned int layercnt, int viewcnt)
-	:m_ViewCnt(viewcnt+1), m_Name(name), m_UILayerIndex(layercnt), m_UIViewIndex(viewcnt)
+	:m_ViewCnt(viewcnt + 1), m_Name(name), m_UILayerIndex(layercnt), m_UIViewIndex(viewcnt)
 {
-	m_GameObjects.resize(layercnt+1);
-	m_LayerIndex.resize(layercnt+1);
+	m_GameObjects.resize(layercnt + 1);
+	m_LayerIndex.resize(layercnt + 1);
 	m_ViewInfo.resize(m_ViewCnt);
 	for (int i = 0; i < m_ViewCnt; i++)
 	{
@@ -214,6 +214,17 @@ void SceneBase::SetViewNeedPriority(int viewIndex, bool needPriority)
 	m_ViewInfo[viewIndex].needPriority = needPriority;
 }
 
+void SceneBase::RenderViewToRenderTexture(int viewindex, sf::RenderTexture& texture)
+{
+	for (int layerIndex = 0; layerIndex < m_GameObjects.size(); layerIndex++)
+	{
+		if (viewindex == m_LayerIndex[layerIndex]->viewIndex)
+			PushLayerToDrawQueNoCulling(layerIndex);
+	}
+
+	GAME_MGR->RenderViewToRenderTexture(viewindex, texture);
+}
+
 void SceneBase::RemoveGameObject(GameObjectInfo gobj)
 {
 	m_WantsToRemove.push(gobj);
@@ -233,59 +244,155 @@ void SceneBase::PushToDrawQue()
 {
 	for (int layerIndex = 0; layerIndex < m_GameObjects.size(); layerIndex++)
 	{
+#ifdef _DEBUG
+		if (GAME_MGR->GetGameMode() == GameMode::Debug)
+		{
+			PushLayerToDrawQueDebugQue(layerIndex);
+			continue;
+		}
+#endif // _DEBUG
+		PushLayerToDrawQue(layerIndex);
+	}
+}
+
+void SceneBase::PushLayerToDrawQueDebugQue(int layerIndex)
+{
+	int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
+	bool needPriority = m_ViewInfo[viewIndex].needPriority;
+
+	if (needPriority)
+	{
+		//순위경쟁이 있는 view
 		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
 		{
-			int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
-			bool needPriority = m_ViewInfo[viewIndex].needPriority;
-			if (gobj->GetIsVisible())
-			{
-				//if (gobj->GetIsDrawSelf())
-				//{
-				//	//게임오브젝트 내의 DrawableObject를 직접 드로우한다
-				//	//GAME_MGR->PushDrawableObject(viewIndex, gobj);
-				//	//를 하고싶음
-				//}
-				//else
-				//{
+			if (!gobj->GetIsVisible())continue;
 
-				if (needPriority)
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
 				{
-					//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
-					for (int i = 0; i < gobj->GetDrawbleCount(); i++)
-					{
-						if (gobj->GetIsVisible(i))
-						{
-							DrawableObject* dobj = gobj->GetDrawableObj(i);
-							if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
-							{
-								GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
-#ifdef _DEBUG
-								if (dobj->GetDebugDraw())
-									GAME_MGR->PushDebugDrawObject(viewIndex, dobj->GetDebugDraw());
-#endif // _DEBUG
-							}
-						}
-					}
+					GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
+					//디버그 객체를 그린다
+					if (dobj->GetDebugDraw())
+						GAME_MGR->PushDebugDrawObject(viewIndex, dobj->GetDebugDraw());
 				}
-				else
+			}
+		}
+	}
+	else
+	{
+		//순위경쟁이 없는 view
+		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
+		{
+			if (!gobj->GetIsVisible())continue;
+
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
 				{
-					for (int i = 0; i < gobj->GetDrawbleCount(); i++)
-					{
-						if (gobj->GetIsVisible(i))
-						{
-							DrawableObject* dobj = gobj->GetDrawableObj(i);
-							if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
-							{
-								GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
-#ifdef _DEBUG
-								if (dobj->GetDebugDraw())
-									GAME_MGR->PushDebugDrawObject(viewIndex, dobj->GetDebugDraw());
-#endif // _DEBUG
-							}
-						}
-					}
+					GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
+					//디버그 객체를 그린다
+					if (dobj->GetDebugDraw())
+						GAME_MGR->PushDebugDrawObject(viewIndex, dobj->GetDebugDraw());
 				}
-				//}
+			}
+		}
+	}
+}
+
+void SceneBase::PushLayerToDrawQueNoCulling(int layerIndex)
+{
+	int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
+	bool needPriority = m_ViewInfo[viewIndex].needPriority;
+
+	if (needPriority)
+	{
+		//순위경쟁이 있는 view
+		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
+		{
+			if (!gobj->GetIsVisible())continue;
+
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
+
+			}
+		}
+	}
+	else
+	{
+		//순위경쟁이 없는 view
+		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
+		{
+			if (!gobj->GetIsVisible())continue;
+
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
+
+			}
+		}
+	}
+}
+
+void SceneBase::PushLayerToDrawQue(int layerIndex)
+{
+	int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
+	bool needPriority = m_ViewInfo[viewIndex].needPriority;
+
+	if (needPriority)
+	{
+		//순위경쟁이 있는 view
+		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
+		{
+			if (!gobj->GetIsVisible())continue;
+
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				{
+					GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
+				}
+			}
+		}
+	}
+	else
+	{
+		//순위경쟁이 없는 view
+		for (auto& gobj : GetGameObjectsLayerIter(layerIndex))
+		{
+			if (!gobj->GetIsVisible())continue;
+
+			//게임오브젝트 내의 DrawableObject를 드로우큐에 넣는다
+			for (int i = 0; i < gobj->GetDrawbleCount(); i++)
+			{
+				if (!gobj->GetIsVisible(i)) continue;
+
+				DrawableObject* dobj = gobj->GetDrawableObj(i);
+				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				{
+					GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
+				}
 			}
 		}
 	}

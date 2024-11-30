@@ -62,7 +62,7 @@ public:
 
 	virtual sf::Vector2u GetTextureSize()const;
 	virtual const sf::IntRect& GetTextureRect()const;
-	virtual sf::FloatRect GetGlobalBounds()const = 0;
+	virtual sf::FloatRect GetGlobalBounds()const;
 	virtual sf::FloatRect GetLocalBounds()const = 0;
 
 	virtual sf::Color GetColor() const = 0;
@@ -81,10 +81,10 @@ protected:
 	bool					m_IsVisible = true;
 	std::string				m_Name;
 	sf::Drawable*			m_Drawable;
-	sf::Transformable* m_Transform;
+	sf::Transformable*		m_Transform;
 
 	DrawPriorityType	m_PriorityType = DrawPriorityType::Y;
-	float				m_PriorityValue;
+	float				m_PriorityValue = 0;
 private:
 
 

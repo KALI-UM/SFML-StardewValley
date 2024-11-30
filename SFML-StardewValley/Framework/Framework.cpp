@@ -25,7 +25,6 @@ void Framework::Initialize(int width, int height, const std::string& name)
 	//DrawMenuBar(hwnd);
 	SetWindowTheme(hwnd, L" ", L" ");
 
-	
 
 	Utils::Initialize();
 

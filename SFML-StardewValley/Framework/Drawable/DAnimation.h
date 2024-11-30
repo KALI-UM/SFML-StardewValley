@@ -26,7 +26,6 @@ public:
 	virtual void SetOutlineColor(const sf::Color& color);				//SetColor客 悼老
 	virtual void SetOutlineColor(int r, int g, int b, int a = 255);		//SetColor客 悼老
 	
-	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
 
 	sf::Vector2u GetTextureSize()const;

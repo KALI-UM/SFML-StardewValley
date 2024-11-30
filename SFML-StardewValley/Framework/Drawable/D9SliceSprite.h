@@ -12,7 +12,6 @@ public:
 	D9SliceSprite(D9SliceSprite&& other);
 	virtual ~D9SliceSprite();
 
-	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
 
 	void SetTexture(sf::Texture* tex);

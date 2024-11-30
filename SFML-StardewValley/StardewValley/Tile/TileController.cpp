@@ -309,8 +309,8 @@ void TileController::SetCurrCusor(Action btt)
 
 void TileController::SetButtonTile(int x, int y)
 {
-	m_ButtonTileX = Utils::Clamp(x, 0, 41);
-	m_ButtonTileY = Utils::Clamp(y, 0, 56);
+	m_ButtonTileX = Utils::Clamp(x, 0, 41-8);
+	m_ButtonTileY = Utils::Clamp(y, 0, 56-8);
 
 	std::string buttonid = "OutdoorsSpring.png#Spring";
 	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(buttonid);

@@ -65,6 +65,8 @@ public:
 	void PushDrawableObject_Q(int viewindex, DrawableObject* dobj);
 	void PushDebugDrawObject(int viewindex, DebugInfo* dobj);
 
+	void RenderViewToRenderTexture(int viewindex, sf::RenderTexture& texture);
+
 	const GameMode& GetGameMode()const;
 
 
@@ -80,7 +82,7 @@ private:
 		sf::FloatRect						viewRect;
 		bool								needPriority;
 		std::priority_queue<DrawableObject*, std::vector<DrawableObject*>, PriorityComp> drawQue_PQ;
-		std::queue<DrawableObject*> drawQue_Q;
+		std::queue<DrawableObject*>			drawQue_Q;
 	};
 	std::vector<ViewDrawInfo>				m_Views;
 

@@ -1,6 +1,5 @@
 #pragma once
 
-class Layer;
 class GameObject;
 class SceneBase
 {
@@ -83,6 +82,7 @@ public:
 protected:
 	void SetLayerViewIndex(int layerIndex, int viewIndex);
 	void SetViewNeedPriority(int viewIndex, bool needPriority);
+	void RenderViewToRenderTexture(int viewindex, sf::RenderTexture& texture);
 
 private:
 	const std::string							m_Name;
@@ -101,6 +101,9 @@ private:
 	std::vector<std::list<LayerInfo>::iterator> m_LayerIndex;
 
 	void PushToDrawQue();
+	void PushLayerToDrawQueDebugQue(int layerIndex);
+	void PushLayerToDrawQueNoCulling(int layerIndex);
+	void PushLayerToDrawQue(int layerIndex);
 
 	void RegisterGameObject();
 	void RemoveGameObject();

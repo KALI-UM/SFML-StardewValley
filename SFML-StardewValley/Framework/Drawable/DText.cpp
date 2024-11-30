@@ -151,9 +151,3 @@ sf::FloatRect DText::GetLocalBounds() const
 {
 	return m_Text.getLocalBounds();
 }
-
-sf::FloatRect DText::GetGlobalBounds() const
-{
-	return m_Text.getGlobalBounds();
-}
-

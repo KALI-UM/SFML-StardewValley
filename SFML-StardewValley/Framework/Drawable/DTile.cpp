@@ -171,11 +171,6 @@ sf::Vector2u DTile::GetTextureSize() const
 	return m_Tile.getTexture() ? m_Tile.getTexture()->getSize() : sf::Vector2u(0, 0);
 }
 
-sf::FloatRect DTile::GetGlobalBounds() const
-{
-	return m_Tile.getGlobalBounds();
-}
-
 sf::FloatRect DTile::GetLocalBounds() const
 {
 	return m_Tile.getLocalBounds();

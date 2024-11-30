@@ -30,6 +30,10 @@ void Item::LoadItemData()
 	{
 		m_ItemName = itemdata.name;
 		m_IconTexId = itemdata.iconTexId;
+		for (auto& equiptexId : itemdata.equipTexId)
+		{
+			m_EquipTexIds.push_back(equiptexId);
+		}
 	}
 }
 

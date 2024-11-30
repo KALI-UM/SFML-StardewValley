@@ -27,7 +27,7 @@ bool Scene_TileTest::Initialize()
 	SetLayerViewIndex(3, 0);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel({ 128,128 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel({ 50,60 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
 	m_TileView->SetTileLayerView(TileLayer::Back, AddGameObject(0, new TileViewChild(m_TileView)));
 	m_TileView->SetTileLayerView(TileLayer::Buildings, AddGameObject(1, new TileViewChild(m_TileView)));
@@ -43,8 +43,11 @@ bool Scene_TileTest::Initialize()
 	m_ButtonBar = AddGameObject(m_UILayerIndex, new ButtonBar(m_UIViewIndex));
 	m_TileController->SetButtonBar(m_ButtonBar);
 
+	m_MiniMap = AddGameObject(m_UILayerIndex, new SpriteObject());
+
 	for (int i = 0; i < (int)TileLayer::Max; i++)
 		m_Layers.push_back(Tile::TileLayerToString((TileLayer)i));
+
 
 	return false;
 }
@@ -53,20 +56,35 @@ void Scene_TileTest::Enter()
 {
 	ImGuiManager::SetShowDemo(true);
 	FRAMEWORK->SetBackColor(ColorPalette::White);
-
+	m_MiniMapTexture.create(GAME_MGR->GetView(0)->getSize().x, GAME_MGR->GetView(0)->getSize().y);
+	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
+	m_MiniMap->setScale(0.2f, 0.2f);
+	m_MiniMap->setPosition(42, 400);
+	
 	m_ButtonBar->setScale(2, 2);
-	/*GAME_MGR->SetViewZoom(m_UIViewIndex, 0.8f);
-	GAME_MGR->SetViewCenter(m_UIViewIndex, {300,300 });*/
 }
 
 void Scene_TileTest::Update(float dt)
 {
 }
 
+void Scene_TileTest::PostRender()
+{
+	m_TileGrid->SetIsVisible(false);
+	RenderViewToRenderTexture(0, m_MiniMapTexture);
+	m_TileGrid->SetIsVisible(true);
+}
+
 void Scene_TileTest::ShowSceneImgui()
 {
-	ImGui::Begin("Layer Window");
 	static int currIndex = 0;
+	ImGui::Begin("Layer Window");
+
+	if (ImGui::Button("Save"))
+	{
+		m_TileMapSystem->SaveTileLayerFile((TileLayer)currIndex);
+	}
+
 	if (ImGui::BeginCombo("Layer", m_Layers[currIndex].c_str()))
 	{
 		for (int i = 0; i < m_Layers.size(); i++) {

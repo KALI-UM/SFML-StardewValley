@@ -119,16 +119,17 @@ public:
 
 	void BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id);
 	void BuildTilesById(const CellIndex& tile, const TEXID& id);
-protected:
+
 	void LoadTileLayerFile(TileLayer layer);
 	void SaveTileLayerFile(TileLayer layer);
 
+protected:
 	void InitializeActionSet();
 
 	Action m_CurrAction;
 	TEXID	m_CurrTileTexId;
 	TileLayer m_CurrLayer;
-	std::list<std::pair<CellIndex, TEXID>>				m_PrevTileId;				//되돌리기를 위해 저장한다
+	//std::list<std::pair<CellIndex, TEXID>>				m_PrevTileId;				//되돌리기를 위해 저장한다
 
 public:
 	void SetCurrTileLayer(TileLayer layer) { m_CurrLayer = layer; };

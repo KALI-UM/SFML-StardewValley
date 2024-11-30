@@ -18,7 +18,7 @@ struct ItemDataRes
 	NAME name;
 	ItemType type;
 	TEXID iconTexId;
-	TEXID equipTexId;
+	std::vector<TEXID> equipTexId;
 };
 
 enum class StackType
@@ -50,7 +50,7 @@ protected:
 	int			m_Count = 1;
 
 	TEXID		m_IconTexId;
-	TEXID		m_EquipTexId;				//방향별 어찌할건지는 추후...
+	std::vector<TEXID>		m_EquipTexIds;				//방향별 어찌할건지는 추후...
 
 public:
 	inline static const int m_StackMax = 64;

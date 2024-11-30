@@ -46,11 +46,6 @@ sf::FloatRect D9SliceSprite::GetLocalBounds() const
 	return m_Sprite.getLocalBounds();
 }
 
-sf::FloatRect D9SliceSprite::GetGlobalBounds() const
-{
-	return m_Sprite.getGlobalBounds();
-}
-
 void D9SliceSprite::SetTexture(sf::Texture* tex)
 {
 	if (tex)

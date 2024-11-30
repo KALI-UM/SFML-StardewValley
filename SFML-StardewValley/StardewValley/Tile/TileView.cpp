@@ -2,7 +2,7 @@
 #include "TileView.h"
 #include "TileModel.h"
 #include "TileViewChild.h"
-#include "TileGrid.h";
+#include "TileGrid.h"
 #include "DTile.h"
 #include "TexCoordTable.h"
 

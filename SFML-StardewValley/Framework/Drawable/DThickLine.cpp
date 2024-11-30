@@ -105,11 +105,6 @@ void DThickLine::SetThickness(float thick)
 	}
 }
 
-sf::FloatRect DThickLine::GetGlobalBounds() const
-{
-	return m_ThickLine.getGlobalBounds();
-}
-
 sf::FloatRect DThickLine::GetLocalBounds() const
 {
 	return m_ThickLine.getLocalBounds();

@@ -60,7 +60,8 @@ void GameManager::Render()
 			auto& currDrawQue = m_Views[i].drawQue_PQ;
 			while (!currDrawQue.empty())
 			{
-				m_MainWindow->draw(*currDrawQue.top()->GetDrawable());
+				auto& curr = currDrawQue.top();
+				m_MainWindow->draw(*curr->GetDrawable(), curr->getParentTransform());
 				currDrawQue.pop();
 			}
 		}
@@ -69,10 +70,13 @@ void GameManager::Render()
 			auto& currDrawQue = m_Views[i].drawQue_Q;
 			while (!currDrawQue.empty())
 			{
-				m_MainWindow->draw(*currDrawQue.front()->GetDrawable());
+				auto& curr = currDrawQue.front();
+				m_MainWindow->draw(*curr->GetDrawable(), curr->getParentTransform());
 				currDrawQue.pop();
 			}
 		}
+
+
 #ifdef _DEBUG
 		m_MainWindow->setView(m_DebugViews[i].view);
 		auto& currDebugDrawQue = m_DebugViews[i].drawQue;
@@ -83,6 +87,7 @@ void GameManager::Render()
 		}
 #endif // _DEBUG
 	}
+
 	m_MainWindow->setView(defaultView);
 	SCENE_MGR->PostRender();
 }
@@ -227,6 +232,32 @@ void GameManager::PushDrawableObject_Q(int viewindex, DrawableObject* dobj)
 void GameManager::PushDebugDrawObject(int viewindex, DebugInfo* dobj)
 {
 	m_DebugViews[viewindex].drawQue.push(dobj);
+}
+
+void GameManager::RenderViewToRenderTexture(int viewindex, sf::RenderTexture& texture)
+{
+	texture.clear(sf::Color::Yellow);
+
+	if (m_Views[viewindex].needPriority)
+	{
+		auto& currDrawQue = m_Views[viewindex].drawQue_PQ;
+		while (!currDrawQue.empty())
+		{
+			auto& curr = currDrawQue.top();
+			texture.draw(*curr->GetDrawable(), curr->getParentTransform());
+			currDrawQue.pop();
+		}
+	}
+	else
+	{
+		auto& currDrawQue = m_Views[viewindex].drawQue_Q;
+		while (!currDrawQue.empty())
+		{
+			auto& curr = currDrawQue.front();
+			texture.draw(*curr->GetDrawable(), curr->getParentTransform());
+			currDrawQue.pop();
+		}
+	}
 }
 
 const GameMode& GameManager::GetGameMode() const

@@ -20,6 +20,7 @@ public:
 	//void ShowSceneImgui() override;
 	//void LateUpdate(float dt) override;
 	//void FixedUpdate(float dt) override;
+	void PostRender()override;
 	//void Release() override;
 
 	void ShowSceneImgui() override;
@@ -31,6 +32,9 @@ protected:
 	TileController*		m_TileController;
 	TileView*			m_TileView;
 	ButtonBar*			m_ButtonBar;
+
+	sf::RenderTexture	m_MiniMapTexture;
+	SpriteObject*		m_MiniMap;
 
 	std::vector<std::string> m_Layers;
 

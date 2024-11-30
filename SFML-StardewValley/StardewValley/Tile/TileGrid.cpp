@@ -16,16 +16,16 @@ bool TileGrid::Initialize()
 {
 	std::vector<sf::Vector2f> rowPoints;
 	std::vector<sf::Vector2f> colPoints;
-	for (int i = 0; i < (int)m_CellCount.x; i++)
+	for (int i = 0; i <= (int)m_CellCount.x; i++)
 	{
 		rowPoints.push_back({ 0,					i * m_CellSize.y });
-		rowPoints.push_back({ m_CellSize.x * m_CellCount.x,	i * m_CellSize.y });
+		rowPoints.push_back({ m_CellSize.x * m_CellCount.y,	i * m_CellSize.y });
 
 	}
-	for (int i = 0; i < (int)m_CellCount.y; i++)
+	for (int i = 0; i <= (int)m_CellCount.y; i++)
 	{
 		colPoints.push_back({ i * m_CellSize.x,		0 });
-		colPoints.push_back({ i * m_CellSize.x ,	m_CellSize.y * m_CellCount.y });
+		colPoints.push_back({ i * m_CellSize.x ,	m_CellSize.y * m_CellCount.x });
 	}
 	m_RowLine = new DLine(rowPoints.data(), rowPoints.size(), sf::Color::Red, false);
 	m_ColLine = new DLine(colPoints.data(), colPoints.size(), sf::Color::Blue, false);
@@ -36,11 +36,9 @@ bool TileGrid::Initialize()
 	{
 		for (int i = 0; i < (int)m_CellCount.x; i++)
 		{
-			DText* text = new DText("core/DOSGothic.ttf", "(" + std::to_string(i) + "," + std::to_string(j) + ")", 5);
+			DText* text = new DText("core/DOSGothic.ttf", "(" + std::to_string(i) + "," + std::to_string(j) + ")", 10);
 			text->SetDebugDraw(false);
 			text->SetColor(ColorPalette::Black);
-			text->SetOutlineThickness(1);
-			text->SetOutlineColor(ColorPalette::White);
 			text->setLocalPosition({ i * m_CellSize.x, j * m_CellSize.y });
 			m_Texts.push_back(text);
 			SetDrawableObj(text);

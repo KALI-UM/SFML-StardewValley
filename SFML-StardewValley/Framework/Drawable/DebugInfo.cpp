@@ -25,7 +25,7 @@ void DebugInfo::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	states.transform = m_RectTransform;
 	target.draw(m_Rectangle, states);
-	states.transform = m_XTransform; // getTransform() is defined by sf::Transformable
+	//states.transform = m_XTransform; // getTransform() is defined by sf::Transformable
 	target.draw(m_X, states);
 }
 
@@ -34,8 +34,8 @@ void DebugInfo::Update(const sf::FloatRect& localBound, const sf::Transform& tra
 	m_Rectangle.setSize(localBound.getSize());
 	m_Rectangle.setPosition(localBound.getPosition());
 	m_RectTransform = transform;
-	m_XTransform = sf::Transform::Identity;
-	m_XTransform.translate(m_Position);
+	//m_XTransform = sf::Transform::Identity;
+	//m_XTransform.translate(m_Position);
 }
 
 void DebugInfo::setColor(const sf::Color& color)

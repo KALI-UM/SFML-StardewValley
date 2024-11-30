@@ -114,3 +114,8 @@ const sf::IntRect& DrawableObject::GetTextureRect() const
 {
 	return sf::IntRect();
 }
+
+sf::FloatRect DrawableObject::GetGlobalBounds() const
+{
+	return getTransform().transformRect(GetLocalBounds());
+}

@@ -46,7 +46,6 @@ public:
 
 	sf::Vector2u GetTextureSize()const;
 
-	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
 	sf::Color GetColor() const;								//GetFillColor客 悼老		
 	void SetColor(const sf::Color& color);					//SetFillColor客 悼老

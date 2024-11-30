@@ -13,7 +13,23 @@ SpriteObject::~SpriteObject()
 
 bool SpriteObject::Initialize()
 {
-    m_Sprite = new DSprite(m_TextureId);
+    m_Sprite = new DSprite();
     SetDrawableObj(m_Sprite);
     return false;
+}
+
+void SpriteObject::Reset()
+{
+    if (m_TextureId != "")
+        SetTexture(m_TextureId);
+}
+
+void SpriteObject::SetTexture(const std::string& filepath)
+{
+    m_Sprite->SetTexture(filepath, true);
+}
+
+void SpriteObject::SetTexture(const sf::Texture* tex)
+{
+    m_Sprite->SetTexture(tex, true);
 }

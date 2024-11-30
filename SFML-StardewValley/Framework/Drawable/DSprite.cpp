@@ -69,12 +69,7 @@ sf::FloatRect DSprite::GetLocalBounds() const
 	return m_Sprite.getLocalBounds();
 }
 
-sf::FloatRect DSprite::GetGlobalBounds() const
-{
-	return m_Sprite.getGlobalBounds();
-}
-
-void DSprite::SetTexture(sf::Texture* tex, bool resetRect)
+void DSprite::SetTexture(const sf::Texture* tex, bool resetRect)
 {
 	if (tex)
 	{

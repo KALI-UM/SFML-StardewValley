@@ -13,10 +13,9 @@ public:
 	DSprite(DSprite&& other);
 	virtual ~DSprite();
 
-	sf::FloatRect GetGlobalBounds()const;
 	sf::FloatRect GetLocalBounds()const;
 
-	void SetTexture(sf::Texture* tex, bool resetRect = false);
+	void SetTexture(const sf::Texture* tex, bool resetRect = false);
 	void SetTexture(const std::string& filepath, bool resetRect = false);
 	void SetTextureRect(const sf::IntRect& rect);
 	void SetOrigin(OriginType type, const sf::Vector2f& detail = sf::Vector2f(0, 0));
