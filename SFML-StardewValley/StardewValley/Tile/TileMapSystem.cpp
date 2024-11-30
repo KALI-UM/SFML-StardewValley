@@ -23,7 +23,7 @@ bool TileMapSystem::Initialize()
 
 void TileMapSystem::Reset()
 {
-	m_CurrLayer = TileLayer::Back;
+	m_CurrLayer = TileLayer::Terrain;
 }
 
 void TileMapSystem::Update(float dt)

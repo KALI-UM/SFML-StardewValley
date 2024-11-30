@@ -27,13 +27,12 @@ bool TileViewChild::Initialize()
 		for (int i = 0; i < (int)cellCount.x; i++)
 		{
 			DTile* tileSprite = new DTile();
-			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
-			tileSprite->setLocalPosition({ (i)*cellSize.x, (j + 1) * cellSize.y });
+			tileSprite->setLocalPosition({ (i+0.5f)*cellSize.x, (j+1.0f) * cellSize.y });
 			SetDrawableObj(tileSprite);
 			m_TileDrawable[j][i] = tileSprite;
 		}
 	}
-	
+
 	return true;
 }
 
@@ -83,7 +82,7 @@ void TileViewChild::Release()
 
 void TileViewChild::ColorizeTile(const sf::Color& color, const CellIndex& tileIndex)
 {
-	auto tile =  m_TileDrawable[tileIndex.y][tileIndex.x];
+	auto tile = m_TileDrawable[tileIndex.y][tileIndex.x];
 	tile->SetFillColor(color);
 	m_ColorizedTiles.push(tileIndex);
 }

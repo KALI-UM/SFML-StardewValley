@@ -7,7 +7,7 @@
 
 void Framework::Initialize(int width, int height, const std::string& name)
 {
-	m_MainWindow.create(sf::VideoMode(width, height), name, sf::Style::None);
+	m_MainWindow.create(sf::VideoMode(width, height), name, sf::Style::Default);
 
 	//sf::Cursor cursor;
 	//// 만약 사용자 정의 커서가 있다면 해제
@@ -23,7 +23,7 @@ void Framework::Initialize(int width, int height, const std::string& name)
 	//HMENU hMenu = LoadMenu(GetModuleHandle(NULL), MAKEINTRESOURCE(IDR_MENU1));
 	//SetMenu(hwnd, hMenu);
 	//DrawMenuBar(hwnd);
-	SetWindowTheme(hwnd, L" ", L" ");
+	//SetWindowTheme(hwnd, L" ", L" ");
 
 
 	Utils::Initialize();

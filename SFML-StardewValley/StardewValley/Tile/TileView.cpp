@@ -141,7 +141,7 @@ void TileView::UpdateTileSprite()
 
 		currTile->SetTexture(currTexRes.filepath);
 		currTile->SetTexureRect(currTexRes.texcoord);
-		currTile->SetOrigin(OriginType::BL, m_TileOffset);
+		currTile->SetOrigin(OriginType::BC, m_TileOffset);
 		m_SpriteUpdateQueue.pop();
 	}
 }

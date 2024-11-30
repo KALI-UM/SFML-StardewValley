@@ -23,8 +23,12 @@ public:
 protected:
 	std::string m_BarTexId;
 
-	D9SliceSprite* m_Bar;
+	D9SliceSprite*	m_Bar;
+	DTile*				m_CurrTile;
+	std::list<TEXID>	m_SelectingTiles;
+
 	std::vector<DTile*> m_Buttons;
+
 	std::vector <std::function<void()>> m_ButtonFuncs;
 
 	int m_ViewIndex = 0;

@@ -303,7 +303,7 @@ void Scene_Slice::Save(const std::string& id, const std::string& filename, float
 	{
 		std::string filepath = "output/" + slicerId;
 
-		int nResult = mkdir(filepath.c_str());
+		int nResult = _mkdir(filepath.c_str());
 		if (nResult == 0)
 		{
 			std::cout << "folder : " + filepath <<" - mkdir" << std::endl;

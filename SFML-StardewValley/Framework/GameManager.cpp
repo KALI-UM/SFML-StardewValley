@@ -29,6 +29,12 @@ void GameManager::Release()
 
 void GameManager::UpdateEvent(const sf::Event& ev)
 {
+	//기본적으로 기본 0번뷰와 ui뷰만 수정한다
+	if (ev.type == sf::Event::Resized)
+	{
+		SetViewSize(0, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
+		SetViewSize(SCENE_MGR->GetCurrentScene()->m_UIViewIndex, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
+	}
 }
 
 void GameManager::Update(float dt)
@@ -236,7 +242,7 @@ void GameManager::PushDebugDrawObject(int viewindex, DebugInfo* dobj)
 
 void GameManager::RenderViewToRenderTexture(int viewindex, sf::RenderTexture& texture)
 {
-	texture.clear(sf::Color::Yellow);
+	texture.clear(sf::Color::Transparent);
 
 	if (m_Views[viewindex].needPriority)
 	{

@@ -36,6 +36,8 @@ protected:
 	sf::RenderTexture	m_MiniMapTexture;
 	SpriteObject*		m_MiniMap;
 
+	MouseCursor*		m_Cursor;
+
 	std::vector<std::string> m_Layers;
 
 };

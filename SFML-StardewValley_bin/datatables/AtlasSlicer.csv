@@ -3624,3 +3624,20 @@ Tools.png#WateringCanDown,Tools.png,2x2,"0,0",0,208,32,32
 Tools.png#WateringCanDown_X0Y0,Tools.png,1x2,"0,0",0,208,16,32
 Tools.png#WateringCanDown_X1Y0,Tools.png,1x2,"1,0",16,208,16,32
 Tools.png#WateringCanUp,Tools.png,1x2,"0,0",64,208,16,32
+"Menu Elements.png#DefaultUISet","Menu Elements.png",4x4,"0,0",0,0,64,64
+"Menu Elements.png#DefaultUISet_X0Y0","Menu Elements.png",1x1,"0,0",0,0,16,16
+"Menu Elements.png#DefaultUISet_X1Y0","Menu Elements.png",1x1,"1,0",16,0,16,16
+"Menu Elements.png#DefaultUISet_X2Y0","Menu Elements.png",1x1,"2,0",32,0,16,16
+"Menu Elements.png#DefaultUISet_X3Y0","Menu Elements.png",1x1,"3,0",48,0,16,16
+"Menu Elements.png#DefaultUISet_X0Y1","Menu Elements.png",1x1,"0,1",0,16,16,16
+"Menu Elements.png#DefaultUISet_X1Y1","Menu Elements.png",1x1,"1,1",16,16,16,16
+"Menu Elements.png#DefaultUISet_X2Y1","Menu Elements.png",1x1,"2,1",32,16,16,16
+"Menu Elements.png#DefaultUISet_X3Y1","Menu Elements.png",1x1,"3,1",48,16,16,16
+"Menu Elements.png#DefaultUISet_X0Y2","Menu Elements.png",1x1,"0,2",0,32,16,16
+"Menu Elements.png#DefaultUISet_X1Y2","Menu Elements.png",1x1,"1,2",16,32,16,16
+"Menu Elements.png#DefaultUISet_X2Y2","Menu Elements.png",1x1,"2,2",32,32,16,16
+"Menu Elements.png#DefaultUISet_X3Y2","Menu Elements.png",1x1,"3,2",48,32,16,16
+"Menu Elements.png#DefaultUISet_X0Y3","Menu Elements.png",1x1,"0,3",0,48,16,16
+"Menu Elements.png#DefaultUISet_X1Y3","Menu Elements.png",1x1,"1,3",16,48,16,16
+"Menu Elements.png#DefaultUISet_X2Y3","Menu Elements.png",1x1,"2,3",32,48,16,16
+"Menu Elements.png#DefaultUISet_X3Y3","Menu Elements.png",1x1,"3,3",48,48,16,16

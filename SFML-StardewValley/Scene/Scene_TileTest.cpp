@@ -27,8 +27,9 @@ bool Scene_TileTest::Initialize()
 	SetLayerViewIndex(3, 0);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel({ 50,60 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel({ 60,50 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
+	m_TileView->SetTileLayerView(TileLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView)));
 	m_TileView->SetTileLayerView(TileLayer::Back, AddGameObject(0, new TileViewChild(m_TileView)));
 	m_TileView->SetTileLayerView(TileLayer::Buildings, AddGameObject(1, new TileViewChild(m_TileView)));
 	m_TileView->SetTileLayerView(TileLayer::Paths, AddGameObject(1, new TileViewChild(m_TileView)));
@@ -58,8 +59,9 @@ void Scene_TileTest::Enter()
 	FRAMEWORK->SetBackColor(ColorPalette::White);
 	m_MiniMapTexture.create(GAME_MGR->GetView(0)->getSize().x, GAME_MGR->GetView(0)->getSize().y);
 	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
-	m_MiniMap->setScale(0.2f, 0.2f);
-	m_MiniMap->setPosition(42, 400);
+	
+	m_MiniMap->setScale(0.3f, -0.3f);
+	m_MiniMap->setPosition(10, 900);
 	
 	m_ButtonBar->setScale(2, 2);
 }
@@ -80,9 +82,9 @@ void Scene_TileTest::ShowSceneImgui()
 	static int currIndex = 0;
 	ImGui::Begin("Layer Window");
 
-	if (ImGui::Button("Save"))
+	if (ImGui::Button("Eraser"))
 	{
-		m_TileMapSystem->SaveTileLayerFile((TileLayer)currIndex);
+		m_TileMapSystem->SetCurrId("");
 	}
 
 	if (ImGui::BeginCombo("Layer", m_Layers[currIndex].c_str()))
@@ -102,7 +104,12 @@ void Scene_TileTest::ShowSceneImgui()
 		ImGui::EndCombo();
 	}
 
-	static bool visiblelayer[(int)TileLayer::Max] = { true, true,true,true,true };
+	if (ImGui::Button("Save"))
+	{
+		m_TileMapSystem->SaveTileLayerFile((TileLayer)currIndex);
+	}
+
+	static bool visiblelayer[(int)TileLayer::Max] = { true, true,true,true,true,true };
 	if (ImGui::Checkbox(m_Layers[0].c_str(), &visiblelayer[0]))
 	{
 		m_TileView->SetTileLayerVisible((TileLayer)0, visiblelayer[0]);
@@ -123,6 +130,9 @@ void Scene_TileTest::ShowSceneImgui()
 	{
 		m_TileView->SetTileLayerVisible((TileLayer)4, visiblelayer[4]);
 	}
-
+	if (ImGui::Checkbox(m_Layers[5].c_str(), &visiblelayer[5]))
+	{
+		m_TileView->SetTileLayerVisible((TileLayer)5, visiblelayer[5]);
+	}
 	ImGui::End();
 }

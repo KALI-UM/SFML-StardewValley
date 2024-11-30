@@ -83,8 +83,6 @@ void Transform::SetParent(Transform* parent)
 		m_Parent->SetChild(this);
 }
 
-
-
 sf::Vector2f Transform::getPosition() const
 {
 	return DecomposePosition(m_GlobalTransform);

@@ -56,18 +56,27 @@ void ButtonBar::Update(float dt)
 		return;
 	}
 
-	for (int i = 0; i < m_ButtonCount; i++)
-	{
-		if (m_Buttons[i]->GetGlobalBounds().contains(currMousePos) && INPUT_MGR->GetMouseDown(sf::Mouse::Left))
-		{
-			m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::White);
-			m_CurrButtonIndex = i;
-			m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::Gray);
 
-			if (m_ButtonFuncs[m_CurrButtonIndex])
-				m_ButtonFuncs[m_CurrButtonIndex]();
+	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
+	{
+		sf::Vector2f prevMousePos = GAME_MGR->GetScreenToViewPos(m_ViewIndex, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left));
+		sf::FloatRect mouserect(currMousePos, currMousePos - prevMousePos);
+
+		for (int i = 0; i < m_ButtonCount; i++)
+		{
+			if (m_Buttons[i]->GetGlobalBounds().intersects(mouserect))
+			{
+				m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::White);
+				m_CurrButtonIndex = i;
+				m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::Gray);
+
+				if (m_ButtonFuncs[m_CurrButtonIndex])
+					m_ButtonFuncs[m_CurrButtonIndex]();
+			}
 		}
 	}
+
+	
 }
 
 void ButtonBar::Release()
