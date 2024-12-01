@@ -145,7 +145,6 @@ void Scene_TileEditor::ViewLayerImgui()
 	{
 		m_TileView->SetTileLayerVisible((TileViewLayer)5, visiblelayer[5]);
 	}
-
 	ImGui::End();
 }
 
