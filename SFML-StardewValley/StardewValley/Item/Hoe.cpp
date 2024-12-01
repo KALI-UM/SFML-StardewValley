@@ -22,14 +22,14 @@ bool Hoe::Initialize()
 	sprite->SetIsVisible(false);
 	effectSprite = new DSprite();
 	effectSprite->SetIsVisible(false);
-	effectSprite->setScale({ 1.3f,1.4f });
 	AnimationClips();
-	setScale({ 2.0f,2.3f });
 	SetDrawableObj(sprite);
 	SetDrawableObj(effectSprite);
 	sprite->SetDebugDraw(false);
 	effectSprite->SetDebugDraw(false);
+
 	return true;
+
 }
 
 void Hoe::ToolAction(Player* const player)
@@ -62,12 +62,14 @@ void Hoe::ToolAction(Player* const player)
 	}
 	if (player->GetDirection() == Player::Direction::down && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
 		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
+			sprite->setScale({2.3f, 2.3f});
+			effectSprite->setScale({ 2.3f,2.3f });
 			sprite->SetIsVisible(true);
 			effectSprite->SetIsVisible(true);
 			animator.Play(&temp["Down"], true);
 			effectAnimator.Play(&temp2["DownEffect"], true);
 			sprite->setPosition({ player->getPosition().x - 10.f, player->getPosition().y - 40.f });
-			effectSprite->setPosition(player->getPosition().x + 10.f, player->getPosition().y +10.f);
+			effectSprite->setPosition(player->getPosition().x + 12.f, player->getPosition().y- 7.f);
 			effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
 			sprite->SetPriorityType(DrawPriorityType::Custom, 2);
 			std::cout << value << std::endl;
@@ -93,7 +95,7 @@ void Hoe::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "DownEffect";
-		clip.fps = 10;
+		clip.fps = 8;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 4; ++i)
 		{
@@ -123,8 +125,6 @@ void Hoe::Update(float dt)
 		sprite->SetIsVisible(false);
 		time = 0.f;
 	}
-	
-	
 }
 
 void Hoe::GetPlayer(Player* player) {

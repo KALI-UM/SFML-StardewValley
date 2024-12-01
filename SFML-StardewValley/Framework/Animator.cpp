@@ -108,7 +108,7 @@ void Animator::SetFrame(const AnimationFrame& frame)
 {
 	//sprite->setTexture(*TEXTURE_MGR->GetByFilepath(frame.texId));
 	//sprite->setTextureRect(frame.texCoord);
-	sprite->SetTexture(frame.texId);
+	sprite->SetTexture(frame.texId, true);
 	sprite->SetTextureRect(frame.texCoord);
 	sprite->SetOrigin(OriginType::BC);
 }
