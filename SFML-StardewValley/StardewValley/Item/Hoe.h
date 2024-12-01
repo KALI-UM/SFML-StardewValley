@@ -17,7 +17,7 @@ protected:
 
     float count = 0.f;
     float time = 0.f;
-    float delay = 0.6f;
+    float delay = 0.65f;
     
     float value = 0.f;
     float speed = 0.f;

@@ -40,9 +40,16 @@ void Hoe::ToolAction(Player* const player)
 
 	if (player->GetDirection() == Player::Direction::up &&player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
 		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
+			sprite->setScale({ 2.3f, 2.3f });
+			effectSprite->setScale({ 2.3f,2.3f });
 			sprite->SetIsVisible(true);
+			effectSprite->SetIsVisible(true);
+			sprite->setPosition({ player->getPosition().x, player->getPosition().y- 35.f });
+			effectSprite->setPosition(player->getPosition().x + 1.f, player->getPosition().y - 42.f);
 			animator.Play(&temp["Up"], true);
-			sprite->SetPriorityType(DrawPriorityType::Custom, 0);
+			effectAnimator.Play(&temp2["UpEffect"], true);
+			sprite->SetPriorityType(DrawPriorityType::Custom, -1);
+			effectSprite->SetPriorityType(DrawPriorityType::Custom, 0);
 			
 		}
 	}
@@ -72,7 +79,6 @@ void Hoe::ToolAction(Player* const player)
 			effectSprite->setPosition(player->getPosition().x + 12.f, player->getPosition().y- 7.f);
 			effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
 			sprite->SetPriorityType(DrawPriorityType::Custom, 2);
-			std::cout << value << std::endl;
 		}
 	}
 }
@@ -102,14 +108,26 @@ void Hoe::AnimationClips()
 			clip.frames.push_back({ "graphics/HoeDownEffect.png", {i * width, 0, width, height}});
 		}
 		temp2.insert({ "DownEffect", clip });
+	} 
+	{
+		AnimationClip clip;
+		clip.id = "UpEffect";
+		clip.fps = 7;
+		clip.loopType = AnimationLoopTypes::Single;
+		for (int i = 0; i < 4; ++i)
+		{
+			clip.frames.push_back({ "graphics/HoeUpEffect.png", {i * 16, 0, 16, 20} });
+		}
+		temp2.insert({ "UpEffect", clip });
 	}
 
 	animator.SetTarget(sprite);
 	effectAnimator.SetTarget(effectSprite);
 
-	animator.AddEvent("Up", 1, [&]() {if (time == 0) { time = FRAMEWORK->GetTime(); } });
+	animator.AddEvent("Up", 1, [&]() {if (time == 0) { time = FRAMEWORK->GetTime(); } sprite->setPosition({ player->getPosition().x, player->getPosition().y + 10.f }); });
 	animator.AddEvent("Down", 1, [&]() {if (time == 0) { time = FRAMEWORK->GetTime(); } sprite->setPosition({ player->getPosition().x, player->getPosition().y + 10.f }); });
 	effectAnimator.AddEvent("DownEffect", 3, [&]() {effectSprite->SetIsVisible(false); });
+	effectAnimator.AddEvent("UpEffect", 3, [&]() {effectSprite->SetIsVisible(false); });
 }
 
 void Hoe::Update(float dt)
