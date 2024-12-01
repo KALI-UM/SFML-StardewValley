@@ -7,14 +7,22 @@ class Hoe :
 {
 protected:
     Animator animator;
+    Animator effectAnimator;
     DSprite* sprite;
+    DSprite* effectSprite;
+    Player* player;
 
     std::map<std::string, AnimationClip> temp;
+    std::map<std::string, AnimationClip> temp2;
 
     float count = 0.f;
     float time = 0.f;
-    float delay = 2.f;
+    float delay = 0.7f;
+    
+    float value = 0.f;
+    float speed = 0.f;
 
+    
 public:
 
     Hoe();
@@ -26,5 +34,6 @@ public:
 
     void AnimationClips();
     void Update(float dt);
+    void GetPlayer(Player* player);
 };
 

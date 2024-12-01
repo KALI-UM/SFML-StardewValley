@@ -52,8 +52,6 @@ protected:
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
 
-
-
 public:
 	Player(const std::string& name);
 	~Player();
@@ -81,8 +79,11 @@ public:
 	float Staminagauge();
 
 	Player::Direction GetDirection();
+
+	Player::IsVisibleItem GetIsVisibleItem();
 	
 	void GetHoe(Hoe* hoe);
+	void SetAction(Action newAction);
 
 protected:
 	Direction m_CurrDir;

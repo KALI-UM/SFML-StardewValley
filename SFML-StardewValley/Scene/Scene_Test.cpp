@@ -26,6 +26,7 @@ bool Scene_Test::Initialize()
 void Scene_Test::Reset()
 {
 	temp->GetHoe(hoe);
+	hoe->GetPlayer(temp);
 }
 
 void Scene_Test::Enter()
@@ -36,7 +37,7 @@ void Scene_Test::Enter()
 
 void Scene_Test::Update(float dt)
 {
-	
+
 
 	if (temp != nullptr)
 	{
@@ -44,5 +45,5 @@ void Scene_Test::Update(float dt)
 	}
 	statusUi->setPosition(sf::Vector2f(GAME_MGR->GetWindow()->getSize().x-100, GAME_MGR->GetWindow()->getSize().y - 100));
 
-	
+
 }
