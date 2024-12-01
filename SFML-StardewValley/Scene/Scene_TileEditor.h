@@ -6,24 +6,25 @@ class TileModel;
 class TileController;
 class TileView;
 class ButtonBar;
-class Scene_TileTest :
+class Scene_TileEditor :
     public SceneBase
 {
 public:
-    Scene_TileTest();
-    ~Scene_TileTest();
+    Scene_TileEditor();
+    ~Scene_TileEditor();
 
 	bool Initialize() override;
 	//void Reset() override;
 	void Enter() override;
 	void Update(float dt) override;
-	//void ShowSceneImgui() override;
 	//void LateUpdate(float dt) override;
 	//void FixedUpdate(float dt) override;
 	void PostRender()override;
 	//void Release() override;
 
 	void ShowSceneImgui() override;
+	void ViewLayerImgui();
+	void CollLayerImgui();
 
 protected:
 	TileGrid*			m_TileGrid;

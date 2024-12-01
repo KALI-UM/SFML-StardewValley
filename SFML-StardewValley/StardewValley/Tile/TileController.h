@@ -12,7 +12,7 @@ enum class ControlStatus
 	None,
 	Place,
 	Destroy,
-	Drag,
+	Collision,
 };
 
 class TileController
@@ -34,6 +34,8 @@ public:
 	//void FixeUpdate(float dt) override;
 	//void Release() override;
 
+	void SetControlStatus(ControlStatus status);
+
 	void SetGridTextSize();
 	void SetButtonBar(ButtonBar* bar);
 
@@ -44,8 +46,9 @@ public:
 
 	void UpdateNone(float dt);
 	void UpdatePlace(float dt);
-	void UpdateDestroy(float dt);
 	void UpdateDrag(float dt);
+	void UpdateDestroy(float dt);
+	void UpdateCollision(float dt);
 
 	void SetButtonTile(int x, int y);
 	void Set1x1Tile(const CellIndex& tileIndex, bool checkPossible = true);
@@ -53,7 +56,7 @@ public:
 	void SetRangeIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible = true);
 	void SetNXMTiles(const sf::Vector2u& lot, const CellIndex& centerIndex, bool checkPossible = true);
 
-	void PushToSelectingTiles(const CellIndex& tileIndex);
+	void PushToSelectingTiles(const CellIndex& tileIndex, const LOT& lot = {1,1});
 protected:
 	ControlStatus	m_CurrStatus = ControlStatus::Place;
 
@@ -67,5 +70,7 @@ protected:
 	float			m_Zoom=10;
 	int				m_ButtonTileX = 0;
 	int				m_ButtonTileY = 0;
+public:
+	CollisionType	m_CurrCollType;
 };
 

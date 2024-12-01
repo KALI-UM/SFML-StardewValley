@@ -1,6 +1,9 @@
 #pragma once
 
 enum class Action;
+
+typedef sf::Vector2i CellIndex;
+
 class D9SliceSprite;
 class SubButtonBar;
 class DTile;
@@ -16,24 +19,27 @@ public:
 	void Update(float dt)override;
 	void Release()override;
 
-	void SetButtonTex(const std::string& filepath, Action action, const sf::IntRect& rect);
-	void SetButtonFunc(Action action, std::function<void()> func);
+	void SetButtonTex(const CellIndex& bttIndex, const std::string& texId);
+	DTile* const GetCurrButtonTile() const { return m_CurrTile; }
+	const std::list<std::string>& GetCurrTexIds();
 	bool GetHasFocus()const { return m_HasFocus; }
 
 protected:
 	std::string m_BarTexId;
 
-	D9SliceSprite*	m_Bar;
+	D9SliceSprite*		m_Bar;
 	DTile*				m_CurrTile;
-	std::list<TEXID>	m_SelectingTiles;
+	std::list<CellIndex>	m_SelectingButtons;
+	std::list<sf::IntRect>	m_CurrCoords;
+	std::list<CellIndex>	m_CurrIndices;
+	std::list<std::string>	m_CurrTexIds;
 
-	std::vector<DTile*> m_Buttons;
+	std::vector<std::vector<DTile*>> m_Buttons;
+	std::vector<std::vector<std::string>> m_ButtonTexIds;
+	std::vector<std::vector<sf::IntRect>> m_ButtonTexCoords;
 
-	std::vector <std::function<void()>> m_ButtonFuncs;
-
+	sf::Vector2f m_PrevMouseDown;
 	int m_ViewIndex = 0;
-	int m_ButtonCount = 88;
-	int m_CurrButtonIndex = 0;
 
 private:
 	bool			m_HasFocus = false;

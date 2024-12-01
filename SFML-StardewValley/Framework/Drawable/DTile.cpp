@@ -136,7 +136,7 @@ void DTile::SetTexture(const std::string& filepath)
 	SetTexture(TEXTURE_MGR->GetByFilepath(filepath));
 }
 
-void DTile::SetTexureRect(const sf::IntRect& rect)
+void DTile::SetTextureRect(const sf::IntRect& rect)
 {
 	m_ShapeType = TileShapeType::Single;
 	m_Tile.m_Vertices.resize(4);
@@ -145,11 +145,11 @@ void DTile::SetTexureRect(const sf::IntRect& rect)
 	SetVerticesTexCoordByIntRect(0, rect);
 }
 
-void DTile::SetTexureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles)
+void DTile::SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles)
 {
 	if (rects.size() == 0)
 	{
-		SetTexureRect(*rects.begin());
+		SetTextureRect(*rects.begin());
 		return;
 	}
 

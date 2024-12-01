@@ -117,23 +117,28 @@ public:
 	void Reset() override;
 	void Update(float dt) override;
 
+	void BuildTilesById(const std::list<CellIndex> tiles, const LOT& lot, const std::list <TEXID>& ids);
 	void BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id);
 	void BuildTilesById(const CellIndex& tile, const TEXID& id);
 
-	void LoadTileLayerFile(TileLayer layer);
-	void SaveTileLayerFile(TileLayer layer);
+	void LoadTileViewLayerFile(TileViewLayer layer);
+	void SaveTileViewLayerFile(TileViewLayer layer);
+
+	void LoadTileCollisionLayerFile();
+	void SaveTileCollisionLayerFile();
+
 
 protected:
-	void InitializeActionSet();
 
 	Action m_CurrAction;
 	TEXID	m_CurrTileTexId;
-	TileLayer m_CurrLayer;
+	TileViewLayer m_CurrLayer;
+
 	//std::list<std::pair<CellIndex, TEXID>>				m_PrevTileId;				//되돌리기를 위해 저장한다
 
 public:
-	void SetCurrTileLayer(TileLayer layer) { m_CurrLayer = layer; };
-	const TileLayer& GetCurrTileLayer()const { return m_CurrLayer; }
+	void SetCurrTileLayer(TileViewLayer layer) { m_CurrLayer = layer; };
+	const TileViewLayer& GetCurrTileLayer()const { return m_CurrLayer; }
 	void SetCurrAction(Action action) { m_CurrAction = action; };
 	const Action& GetCurrAction() const { return m_CurrAction; }
 	void SetCurrId(const TEXID& id) { m_CurrTileTexId = id; }

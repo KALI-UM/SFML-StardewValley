@@ -21,27 +21,38 @@ public:
 
 	const sf::Vector2f m_CellSize;
 	const sf::Vector2u m_CellCount;
-	const int m_MaxLayer = (int)TileLayer::Max;
 
-	void InitializeTileInfoLayer(const TileLayer& layer);
+	void InitializeTileViewInfoLayer(const TileViewLayer& layer);
+	void InitializeTileCollInfoLayer(const TileCollLayer& layer);
 
-	void SetTileUpdateFunc(std::function<void(const TileLayer&, const CellIndex&)> func) { m_WhenNeedsToUpdateTileFunc = func; };
+	void SetTileUpdateFunc(std::function<void(const TileViewLayer&, const CellIndex&)> func) { m_WhenNeedsToUpdateTileFunc = func; };
+	void SetTileColorizeFunc(std::function<void(const sf::Color& color, const CellIndex&)> func) { m_WhenNeedsToColorizeTileFunc = func; };
 	//void SetTempEffectTileUpdateFunc(std::function<void(const CellIndex&)> func) { m_WhenNeedsToUpdateTempEffectTileFunc = func; };
 
 	bool IsValidTileIndex(const CellIndex& tileIndex) const;
-	const TileInfo& GetTileInfo(const TileLayer& depth, const CellIndex& tileIndex) const;
+	const TileViewInfo& GetTileViewInfo(const TileViewLayer& layer, const CellIndex& tileIndex) const;
+	const TileCollInfo& GetTileCollInfo(const TileCollLayer& layer, const CellIndex& tileIndex) const;
 
-	void SetTiles(const std::list<CellIndex>& tiles, const TileLayer& layer, const TEXID& id);
-	void SetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id, bool isTrueTile = true);
+	void SetTiles(const std::list<CellIndex>& tiles, const TileViewLayer& layer, const TEXID& id);
+	void SetTile(const CellIndex& tileIndex, const TileViewLayer& layer, const TEXID& id, bool isTrueTile = true);
+	void SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, CollisionType type);
+	void SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, CollisionType type);
+
+	void CollisionTypeMode(const TileCollLayer& layer, CollisionType type);
+
 protected:
 public:
 	bool IsPossibleToPass(const CellIndex& tileIndex);
-	bool IsPossibleToSetTile(const CellIndex& tileIndex, const TileLayer& layer, const TEXID& id);
+	bool IsPossibleToSetTile(const CellIndex& tileIndex, const TileViewLayer& layer, const TEXID& id);
 protected:
-	std::vector<std::vector<std::vector<TileInfo>>>		m_TileInfos;
+	std::vector<std::vector<std::vector<TileViewInfo>>>		m_TileViewInfos;
+	std::vector<std::vector<std::vector<TileCollInfo>>>		m_TileCollInfos;
 
-	std::function<void(const TileLayer&, const CellIndex&)> m_WhenNeedsToUpdateTileFunc;
-	void RequestUpdateTile(const TileLayer& layer, const CellIndex& tileIndex);
+	std::function<void(const TileViewLayer&, const CellIndex&)> m_WhenNeedsToUpdateTileFunc;
+	std::function<void(const sf::Color& color, const CellIndex&)> m_WhenNeedsToColorizeTileFunc;
+	void RequestUpdateTile(const TileViewLayer& layer, const CellIndex& tileIndex);
+	void RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex);
+
 	//std::function<void(const CellIndex&)> m_WhenNeedsToUpdateTempEffectTileFunc;
 	//void RequestTempEffectTile(const CellIndex& tileIndex);
 

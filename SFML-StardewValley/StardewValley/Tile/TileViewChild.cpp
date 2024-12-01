@@ -46,11 +46,11 @@ void TileViewChild::Reset()
 		for (int i = 0; i < (int)cellCount.x; i++)
 		{
 			auto& tileSprite = m_TileDrawable[j][i];
-			const auto& tileInfo = mcv_View->GetModel()->GetTileInfo(m_Layer, { i,j });
+			const auto& tileInfo = mcv_View->GetModel()->GetTileViewInfo(m_Layer, { i,j });
 			const auto& texres = TEXRESTABLE_MGR->GetTileTexRes(tileInfo.id);
 
 			tileSprite->SetTexture(texres.filepath);
-			tileSprite->SetTexureRect(texres.texcoord);
+			tileSprite->SetTextureRect(texres.texcoord);
 			tileSprite->SetDebugDraw(false);
 			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
 		}

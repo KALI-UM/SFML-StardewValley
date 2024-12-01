@@ -25,10 +25,10 @@ public:
 	//void FixeUpdate(float dt) override;
 	void PostRender();
 	void Release() override;
-	void SetTileLayerView(const TileLayer& layer, TileViewChild* child);
+	void SetTileLayerView(const TileViewLayer& layer, TileViewChild* child);
 	void SetTileGrid(TileGrid* grid);
 	void SetGridTextSize(float zoom);
-	void SetTileLayerVisible(const TileLayer& layer, bool visible);
+	void SetTileLayerVisible(const TileViewLayer& layer, bool visible);
 
 	void			SetTileTransform(const sf::Vector2f& zero, const sf::Transform& trans);
 	sf::Transform	GetTileTransform() const { return m_TileTransform; }
@@ -38,14 +38,16 @@ public:
 	//sf::Vector2f	GetTileCoordinatedCenterPosByTileIndex(const CellIndex& tileIndex);
 	//int				GetDrawableIndexByTileIndex(const CellIndex& tileIndex) const;
 
-	void ColorizeTile(const sf::Color& color, const TileLayer& layer, const CellIndex& tileIndex);
-	void ColorizeTile(const sf::Color& color, const TileLayer& layer, const std::list<CellIndex>& tiles);
+	void ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const CellIndex& tileIndex);
+	void ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const LOT& lot = {1,1});
+	void ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const std::list<CellIndex>& tiles);
+	void ColorizeAllTiles(const sf::Color& color, const std::list<CellIndex>& tiles);
 
 protected:
 	sf::Transform	m_TileTransform;
 	TileGrid*		m_TileGrid;
-	void PushToSpriteUpdateQue(const TileLayer& depth, const CellIndex& tileIndex);
-	std::queue<std::pair<TileLayer, CellIndex>> m_SpriteUpdateQueue;
+	void PushToSpriteUpdateQue(const TileViewLayer& depth, const CellIndex& tileIndex);
+	std::queue<std::pair<TileViewLayer, CellIndex>> m_SpriteUpdateQueue;
 
 
 	void UpdateTileSprite();

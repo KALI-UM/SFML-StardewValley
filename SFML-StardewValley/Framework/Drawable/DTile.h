@@ -39,10 +39,12 @@ public:
 	DTile(DTile&& other);
 	virtual ~DTile();
 
+	const sf::Vector2u& GetLot()const { return m_Tile.m_LotSize; };
+
 	void SetTexture(sf::Texture* tex);
 	void SetTexture(const std::string& filepath);
-	void SetTexureRect(const sf::IntRect& rect);
-	void SetTexureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
+	void SetTextureRect(const sf::IntRect& rect);
+	void SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
 
 	sf::Vector2u GetTextureSize()const;
 

@@ -10,8 +10,9 @@ TileView::TileView(TileModel* model)
 	:mcv_Model(model)
 {
 	mcv_Model->SetTileUpdateFunc(std::bind(&TileView::PushToSpriteUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
+	mcv_Model->SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, this, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1,1)));
 	//mcv_Model->SetTempEffectTileUpdateFunc(std::bind(&TileView::PushToTempEffectUpdateQue, this, std::placeholders::_1));
-	m_LayerViews.resize(mcv_Model->m_MaxLayer);
+	m_LayerViews.resize((int)TileViewLayer::Max);
 }
 
 TileView::~TileView()
@@ -49,7 +50,7 @@ void TileView::Release()
 {
 }
 
-void TileView::SetTileLayerView(const TileLayer& layer, TileViewChild* child)
+void TileView::SetTileLayerView(const TileViewLayer& layer, TileViewChild* child)
 {
 	GameObject::SetChildObj((GameObject*)child);
 	m_LayerViews[(int)layer] = child;
@@ -68,7 +69,7 @@ void TileView::SetGridTextSize(float zoom)
 	m_TileGrid->SetTextSize(zoom);
 }
 
-void TileView::SetTileLayerVisible(const TileLayer& layer, bool visible)
+void TileView::SetTileLayerVisible(const TileViewLayer& layer, bool visible)
 {
 	m_LayerViews[(int)layer]->SetIsVisible(visible);
 }
@@ -108,7 +109,7 @@ CellIndex TileView::GetTileCoordinatedIndex(const sf::Vector2f& pos, bool isTile
 //}
 
 
-void TileView::ColorizeTile(const sf::Color& color, const TileLayer& layer, const CellIndex& tileIndex)
+void TileView::ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const CellIndex& tileIndex)
 {
 	if (!mcv_Model->IsValidTileIndex(tileIndex))
 		return;
@@ -116,7 +117,21 @@ void TileView::ColorizeTile(const sf::Color& color, const TileLayer& layer, cons
 	m_LayerViews[(int)layer]->ColorizeTile(color, tileIndex);
 }
 
-void TileView::ColorizeTile(const sf::Color& color, const TileLayer& layer, const std::list<CellIndex>& tiles)
+void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const LOT& lot)
+{
+	for (int layer = 0; layer < (int)TileViewLayer::Max; layer++)
+	{
+		for (int loty = 0; loty < (int)lot.y; loty++)
+		{
+			for (int lotx = 0; lotx < (int)lot.x; lotx++)
+			{
+				ColorizeTile(color, (TileViewLayer)layer, tileIndex+sf::Vector2i(lotx, loty));
+			}
+		}
+	}
+}
+
+void TileView::ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const std::list<CellIndex>& tiles)
 {
 	for (auto it = tiles.begin(); it != tiles.end(); it++)
 	{
@@ -124,7 +139,15 @@ void TileView::ColorizeTile(const sf::Color& color, const TileLayer& layer, cons
 	}
 }
 
-void TileView::PushToSpriteUpdateQue(const TileLayer& depth, const CellIndex& tileIndex)
+void TileView::ColorizeAllTiles(const sf::Color& color, const std::list<CellIndex>& tiles)
+{
+	for (int layer = 0; layer < (int)TileViewLayer::Max; layer++)
+	{
+		ColorizeTile(color, (TileViewLayer)layer, tiles);
+	}
+}
+
+void TileView::PushToSpriteUpdateQue(const TileViewLayer& depth, const CellIndex& tileIndex)
 {
 	m_SpriteUpdateQueue.push({ depth, tileIndex });
 }
@@ -133,14 +156,14 @@ void TileView::UpdateTileSprite()
 {
 	while (!m_SpriteUpdateQueue.empty())
 	{
-		TileLayer& currlayer = m_SpriteUpdateQueue.front().first;
+		TileViewLayer& currlayer = m_SpriteUpdateQueue.front().first;
 		sf::Vector2i& currIndex = m_SpriteUpdateQueue.front().second;
 		auto& currTile = m_LayerViews[(int)currlayer]->m_TileDrawable[currIndex.y][currIndex.x];
-		auto& currTileInfo = mcv_Model->GetTileInfo(currlayer, currIndex);
+		auto& currTileInfo = mcv_Model->GetTileViewInfo(currlayer, currIndex);
 		auto& currTexRes = TEXRESTABLE_MGR->GetTileTexRes(currTileInfo.id);
 
 		currTile->SetTexture(currTexRes.filepath);
-		currTile->SetTexureRect(currTexRes.texcoord);
+		currTile->SetTextureRect(currTexRes.texcoord);
 		currTile->SetOrigin(OriginType::BC, m_TileOffset);
 		m_SpriteUpdateQueue.pop();
 	}

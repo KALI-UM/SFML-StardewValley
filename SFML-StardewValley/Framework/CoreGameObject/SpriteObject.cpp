@@ -15,6 +15,7 @@ bool SpriteObject::Initialize()
 {
     m_Sprite = new DSprite();
     SetDrawableObj(m_Sprite);
+  
     return false;
 }
 

@@ -18,24 +18,24 @@ CollisionType Tile::StringToCollisionType(const std::string& str)
 	}
 	else
 	{
-		return CollisionType::None;
+		return CollisionType::Passable;
 	}
 }
 
-std::string Tile::TileLayerToString(TileLayer layer)
+std::string Tile::TileViewLayerToString(TileViewLayer layer)
 {
 	return std::string(magic_enum::enum_name(layer).data());
 }
 
-TileLayer Tile::StringToTileLayer(const std::string str)
+TileViewLayer Tile::StringToTileViewLayer(const std::string str)
 {
-	auto layer_str = magic_enum::enum_cast<TileLayer>(str);
+	auto layer_str = magic_enum::enum_cast<TileViewLayer>(str);
 	if (layer_str.has_value())
 	{
 		return layer_str.value();
 	}
 	else
 	{
-		return TileLayer::Back;
+		return TileViewLayer::Terrain;
 	}
 }

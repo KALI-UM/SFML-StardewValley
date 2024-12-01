@@ -2,6 +2,7 @@
 #include "Tile/ButtonBar.h"
 #include "D9SliceSprite.h"
 #include "DTile.h"
+#include "TexCoordTable.h"
 
 ButtonBar::ButtonBar(int viewIndex)
 	:m_ViewIndex(viewIndex)
@@ -19,16 +20,26 @@ bool ButtonBar::Initialize()
 	m_Bar->SetPriorityType(DrawPriorityType::Custom, 1);
 	SetDrawableObj(m_Bar);
 
-	m_Buttons.resize(m_ButtonCount);
-	m_ButtonFuncs.resize(m_ButtonCount);
-	for (int i = 0; i < m_ButtonCount; i++)
+	m_Buttons = std::vector < std::vector<DTile*>>(10, std::vector<DTile*>(8));
+	for (int j = 0; j < 10; j++)
 	{
-		DTile* btt = new DTile();
-		btt->setLocalPosition(sf::Vector2f(i % 8, i / 8) * 16.0f + sf::Vector2f(10, 16));
-		m_Buttons[i] = btt;
-		btt->SetPriorityType(DrawPriorityType::Custom, 2);
-		SetDrawableObj(btt);
+		for (int i = 0; i < 8; i++)
+		{
+			DTile* btt = new DTile();
+			btt->setLocalPosition(sf::Vector2f(i, j) * 16.0f + sf::Vector2f(10, 16));
+			m_Buttons[j][i] = btt;
+			btt->SetPriorityType(DrawPriorityType::Custom, 2);
+			SetDrawableObj(btt);
+		}
 	}
+
+	m_ButtonTexIds = std::vector < std::vector<std::string>>(10, std::vector<std::string>(8));
+	m_ButtonTexCoords = std::vector < std::vector<sf::IntRect>>(10, std::vector<sf::IntRect>(8));
+
+	m_CurrTile = new DTile();
+	m_CurrTile->SetPriorityType(DrawPriorityType::Custom, 100);
+	m_CurrTile->setLocalPosition({ 16, 200 });
+	SetDrawableObj(m_CurrTile);
 
 	return true;
 }
@@ -56,40 +67,84 @@ void ButtonBar::Update(float dt)
 		return;
 	}
 
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
+	{
+		m_PrevMouseDown = currMousePos;
+	}
 
 	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
 	{
-		sf::Vector2f prevMousePos = GAME_MGR->GetScreenToViewPos(m_ViewIndex, INPUT_MGR->GetPrevMouseDown(sf::Mouse::Left));
-		sf::FloatRect mouserect(currMousePos, currMousePos - prevMousePos);
+		sf::Vector2f start(std::min(currMousePos.x, m_PrevMouseDown.x), std::min(currMousePos.y, m_PrevMouseDown.y));
+		sf::FloatRect mouserect(start, { std::fabsf(currMousePos.x - m_PrevMouseDown.x), std::fabsf(currMousePos.y - m_PrevMouseDown.y) });
 
-		for (int i = 0; i < m_ButtonCount; i++)
+		for (auto& prevselected : m_SelectingButtons)
 		{
-			if (m_Buttons[i]->GetGlobalBounds().intersects(mouserect))
-			{
-				m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::White);
-				m_CurrButtonIndex = i;
-				m_Buttons[m_CurrButtonIndex]->SetColor(ColorPalette::Gray);
+			m_Buttons[prevselected.y][prevselected.x]->SetColor(ColorPalette::White);
+		}
 
-				if (m_ButtonFuncs[m_CurrButtonIndex])
-					m_ButtonFuncs[m_CurrButtonIndex]();
+		m_SelectingButtons.clear();
+		m_CurrCoords.clear();
+		m_CurrIndices.clear();
+
+		for (int j = 0; j < 10; j++)
+		{
+			for (int i = 0; i < 8; i++)
+			{
+				if (m_Buttons[j][i]->GetGlobalBounds().intersects(mouserect))
+				{
+					m_SelectingButtons.push_back({ i,j });
+					m_Buttons[j][i]->SetColor(ColorPalette::Gray);
+				}
 			}
 		}
-	}
 
-	
+		if (m_SelectingButtons.size() != 0)
+		{
+			CellIndex offset(100, 100);
+			for (auto& selected : m_SelectingButtons)
+			{
+				m_CurrCoords.push_back(m_ButtonTexCoords[selected.y][selected.x]);
+				offset.x = std::min(offset.x, selected.x);
+				offset.y = std::min(offset.y, selected.y);
+			}
+			for (auto& selected : m_SelectingButtons)
+			{
+				m_CurrIndices.push_back(selected - offset);
+			}
+			m_CurrTile->SetTextureRect(m_CurrCoords, m_CurrIndices);
+		}
+	}
 }
 
 void ButtonBar::Release()
 {
 }
 
-void ButtonBar::SetButtonTex(const std::string& filepath, Action action, const sf::IntRect& rect)
+void ButtonBar::SetButtonTex(const CellIndex& bttIndex, const std::string& texId)
 {
-	m_Buttons[(int)action]->SetTexture(filepath);
-	m_Buttons[(int)action]->SetTexureRect(rect);
+	auto& texres = TEXRESTABLE_MGR->GetTileTexRes(texId);
+	m_Buttons[bttIndex.y][bttIndex.x]->SetTexture(texres.filepath);
+	m_Buttons[bttIndex.y][bttIndex.x]->SetTextureRect(texres.texcoord);
+
+	m_ButtonTexIds[bttIndex.y][bttIndex.x] = texId;
+	m_ButtonTexCoords[bttIndex.y][bttIndex.x] = texres.texcoord;
+
+	m_CurrTile->SetTexture(texres.filepath);
+	for (auto& prevselected : m_SelectingButtons)
+	{
+		m_Buttons[prevselected.y][prevselected.x]->SetColor(ColorPalette::White);
+	}
 }
 
-void ButtonBar::SetButtonFunc(Action action, std::function<void()> func)
+const std::list<std::string>& ButtonBar::GetCurrTexIds()
 {
-	m_ButtonFuncs[(int)action] = func;
+	if(m_SelectingButtons.size()== 0)
+		return m_CurrTexIds;
+
+	m_CurrTexIds.clear();
+	for (auto& currSelected : m_SelectingButtons)
+	{
+		m_CurrTexIds.push_back(m_ButtonTexIds[currSelected.y][currSelected.x]);
+	}
+	return m_CurrTexIds;
 }

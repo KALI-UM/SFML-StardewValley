@@ -5,8 +5,10 @@ typedef sf::Vector2u LOT;
 typedef std::string TEXID;
 typedef std::string FILEPATH;
 typedef sf::IntRect TEXRECT;
+typedef std::string EventID;
 
-enum class TileLayer
+//타일뷰 레이어
+enum class TileViewLayer
 {
 	Terrain,		//Terrain, water, 
 	Back,			//and basic features (like permanent paths).
@@ -19,28 +21,42 @@ enum class TileLayer
 
 enum class CollisionType
 {
+	Passable,
 	Block,
-	Enter,
-	None,
 };
 
-struct TileInfo
+//충돌 레이어
+enum class TileCollLayer
+{
+	Back,
+	Object,
+	Max,
+};
+
+struct TileViewInfo
 {
 	CellIndex		index;
 	CellIndex		ower;
 	TEXID			id;
 	LOT	lotSize = {1,1};
-	CollisionType	collision;
 };
 
+struct TileCollInfo
+{
+	CellIndex		index;
+	CellIndex		ower;
+
+	CollisionType collision;
+	std::list <EventID> collisionEvents;
+};
 
 class Tile
 {
 public:
 	static std::string CollisionTypeToString(CollisionType type);
 	static CollisionType StringToCollisionType(const std::string& str);
-	static std::string TileLayerToString(TileLayer layer);
-	static TileLayer StringToTileLayer(const std::string str);
+	static std::string TileViewLayerToString(TileViewLayer layer);
+	static TileViewLayer StringToTileViewLayer(const std::string str);
 
 	static const CellIndex d[8];
 

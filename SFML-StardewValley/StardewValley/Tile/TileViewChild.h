@@ -9,7 +9,7 @@ class TileViewChild
 	friend class TileView;
 protected:
 	TileView* mcv_View;
-	TileLayer m_Layer;
+	TileViewLayer m_Layer;
 public:
 	TileViewChild(TileView* view);
 	~TileViewChild();

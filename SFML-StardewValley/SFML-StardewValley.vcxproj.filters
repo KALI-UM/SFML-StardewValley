@@ -9,7 +9,7 @@
     <ClCompile Include="StardewValley\Item\Hoe.cpp" />
     <ClCompile Include="ItemDataTable.cpp" />
     <ClCompile Include="StardewValley\Item\Item.cpp" />
-    <ClCompile Include="Scene\Scene_TileTest.cpp" />
+    <ClCompile Include="Scene\Scene_TileEditor.cpp" />
     <ClCompile Include="StardewValley\Player.cpp" />
     <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\D9SliceSprite.cpp" />
@@ -68,7 +68,7 @@
     <ClInclude Include="StardewValley\Item\Hoe.h" />
     <ClInclude Include="ItemDataTable.h" />
     <ClInclude Include="StardewValley\Item\Item.h" />
-    <ClInclude Include="Scene\Scene_TileTest.h" />
+    <ClInclude Include="Scene\Scene_TileEditor.h" />
     <ClInclude Include="StardewValley\Player.h" />
     <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\D9SliceSprite.h" />

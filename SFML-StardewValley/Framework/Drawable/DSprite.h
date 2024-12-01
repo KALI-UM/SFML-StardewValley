@@ -30,7 +30,6 @@ public:
 	void SetFillColor(int r, int g, int b, int a = 255);		//SetColor客 悼老
 	void SetOutlineColor(const sf::Color& color);				//SetColor客 悼老
 	void SetOutlineColor(int r, int g, int b, int a = 255);		//SetColor客 悼老
-
 private:
 	sf::Sprite m_Sprite;
 };
