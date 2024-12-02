@@ -1,0 +1,5 @@
+ID,FPS,LOOPTYPE,,
+IdleDownVisible,18,0,,
+,,,,
+InterUpVisible,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,403,20,31

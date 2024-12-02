@@ -1,0 +1,5 @@
+id,fps,looptype,,
+IdleDowninVisible,10,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,0,20,31

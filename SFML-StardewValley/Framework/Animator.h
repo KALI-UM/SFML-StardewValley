@@ -27,6 +27,7 @@ struct AnimationEventHash
 class Animator
 {
 protected:
+	std::unordered_map<std::string, AnimationClip> clip;
 	std::unordered_map<std::pair<std::string, int>, AnimationEvent, AnimationEventHash> events;
 	std::queue<std::string> playeQueue;
 
@@ -48,6 +49,7 @@ public:
 	~Animator() = default;
 
 	void SetTarget(DSprite* target) { sprite = target; }
+	void AddClip(const AnimationClip& newClip);
 	void AddEvent(const std::string& id, int frame, std::function<void()> action);
 	void ClearEvent() { events.clear(); }
 

@@ -1,0 +1,9 @@
+ID,FPS,LOOPTYPE,,
+WaterUpVisible,10,0,,
+,,,,
+InterUpVisible,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,341,20,31
+graphics/farmer_base.png,20,341,20,31
+graphics/farmer_base.png,40,341,20,31
+graphics/farmer_base.png,60,341,20,31
+graphics/farmer_base.png,80,341,20,31

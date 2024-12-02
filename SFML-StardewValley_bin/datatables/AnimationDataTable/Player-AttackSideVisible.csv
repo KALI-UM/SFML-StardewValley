@@ -1,0 +1,11 @@
+ID,FPS,LOOPTYPE,,
+AttackSideVisible,18,0,,
+,,,,
+InterUpVisible,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,217,20,31
+graphics/farmer_base.png,20,217,20,31
+graphics/farmer_base.png,40,217,20,31
+graphics/farmer_base.png,60,217,20,31
+graphics/farmer_base.png,80,217,20,31
+graphics/farmer_base.png,100,217,20,31
+graphics/farmer_base.png,120,217,20,31

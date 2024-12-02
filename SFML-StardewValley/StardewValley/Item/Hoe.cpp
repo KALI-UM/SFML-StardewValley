@@ -53,20 +53,6 @@ void Hoe::ToolAction(Player* const player)
 			
 		}
 	}
-	if (player->GetDirection() == Player::Direction::left && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
-		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
-			sprite->SetIsVisible(true);
-			count;
-			setRotation(-(std::numbers::pi * 1.f * count));
-
-		}
-	}
-	if (player->GetDirection() == Player::Direction::right && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
-		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
-			sprite->SetIsVisible(true);
-
-		}
-	}
 	if (player->GetDirection() == Player::Direction::down && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
 		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
 			sprite->setScale({2.3f, 2.3f});
@@ -79,6 +65,7 @@ void Hoe::ToolAction(Player* const player)
 			effectSprite->setPosition(player->getPosition().x + 12.f, player->getPosition().y- 7.f);
 			effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
 			sprite->SetPriorityType(DrawPriorityType::Custom, 2);
+			
 		}
 	}
 }
@@ -135,7 +122,25 @@ void Hoe::Update(float dt)
 	sf::Vector2f playerPos = player->getPosition();
 	animator.Update(dt);
 	effectAnimator.Update(dt);
+	if (player->GetDirection() == Player::Direction::left && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
+		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
+			
+			const TexRes& curr = TEXRESTABLE_MGR->GetTileTexRes(m_EquipTexIds[1]);
+			
+			sprite->SetTexture(curr.filepath, true);
+			sprite->SetTextureRect(curr.texcoord);
+			sprite->SetIsVisible(true);
+			sprite->setPosition(playerPos);
+			count += dt;
+			//sprite->setRotation(-(std::numbers::pi * 10.f * count));
+		}
+	}
+	if (player->GetDirection() == Player::Direction::right && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
+		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left)) {
+			sprite->SetIsVisible(true);
 
+		}
+	}
 	if (time == 0) {
 		return;
 	}
