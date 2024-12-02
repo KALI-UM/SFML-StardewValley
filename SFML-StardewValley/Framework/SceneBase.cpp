@@ -56,6 +56,7 @@ void SceneBase::ENTER()
 {
 	ImGuiManager::SetShowDemo(false);
 	GAME_MGR->ResizeViews(m_ViewCnt);
+	FRAMEWORK->SetBackColor(ColorPalette::Black);
 	for (int i = 0; i < m_ViewCnt; i++)
 	{
 		GAME_MGR->SetViewNeedPriority(i, m_ViewInfo[i].needPriority);

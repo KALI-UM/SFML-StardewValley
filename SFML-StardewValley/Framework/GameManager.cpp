@@ -16,6 +16,9 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	Scene_InGameTest* lobby = new Scene_InGameTest();
 	SCENE_MGR->PushScene(lobby);
 	SCENE_MGR->SetCurrentScene(lobby->GetName());
+	Scene_TileEditor* editor = new Scene_TileEditor();
+	SCENE_MGR->PushScene(editor);
+
 	lobby->RESET();
 	lobby->ENTER();
 	return success;
@@ -41,10 +44,21 @@ void GameManager::Update(float dt)
 {
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F1))
 	{
+		std::cout << "Editor Scene\n";
+		SCENE_MGR->ChangeScene("TileEditor");
+	}
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F2))
+	{
+		std::cout << "Test Scene\n";
+		SCENE_MGR->ChangeScene("InGameTest");
+	}
+
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F5))
+	{
 		std::cout << "Play Mode - Debug\n";
 		m_GameMode = GameMode::Debug;
 	}
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F2))
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F6))
 	{
 		std::cout << "Play Mode - Normal\n";
 		m_GameMode = GameMode::Normal;
