@@ -71,6 +71,6 @@ protected:
 	int				m_ButtonTileX = 0;
 	int				m_ButtonTileY = 0;
 public:
-	CollisionType	m_CurrCollType;
+	ColliderType	m_CurrCollType;
 };
 

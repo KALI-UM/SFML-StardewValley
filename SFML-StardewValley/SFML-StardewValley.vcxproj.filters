@@ -58,6 +58,9 @@
     <ClCompile Include="StardewValley\Tile\TileViewChild.cpp" />
     <ClCompile Include="TexCoordTable.cpp" />
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
+    <ClCompile Include="Scene\Scene_InGameTest.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
+    <ClCompile Include="TileObject_Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -124,5 +127,8 @@
     <ClInclude Include="StardewValley\Tile\TileViewChild.h" />
     <ClInclude Include="TexCoordTable.h" />
     <ClInclude Include="StardewValley\Item\Tool.h" />
+    <ClInclude Include="Scene\Scene_InGameTest.h" />
+    <ClInclude Include="StardewValley\Tile\TileObject.h" />
+    <ClInclude Include="TileObject_Tree.h" />
   </ItemGroup>
 </Project>

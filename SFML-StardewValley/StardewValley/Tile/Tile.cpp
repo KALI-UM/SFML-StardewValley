@@ -4,21 +4,21 @@
 
 const CellIndex Tile::d[8] = { {-1,0}, {1,0}, {0,-1},{0,1} ,{ -1,-1 },{1,-1},{-1,1},{1,1} };
 
-std::string Tile::CollisionTypeToString(CollisionType type)
+std::string Tile::CollisionTypeToString(ColliderType type)
 {
 	return std::string(magic_enum::enum_name(type).data());
 }
 
-CollisionType Tile::StringToCollisionType(const std::string& str)
+ColliderType Tile::StringToCollisionType(const std::string& str)
 {
-	auto collision_str = magic_enum::enum_cast<CollisionType>(str);
+	auto collision_str = magic_enum::enum_cast<ColliderType>(str);
 	if (collision_str.has_value())
 	{
 		return collision_str.value();
 	}
 	else
 	{
-		return CollisionType::Passable;
+		return ColliderType::None;
 	}
 }
 

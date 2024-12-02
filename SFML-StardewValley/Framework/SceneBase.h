@@ -107,6 +107,5 @@ private:
 
 	void RegisterGameObject();
 	void RemoveGameObject();
-
 };
 

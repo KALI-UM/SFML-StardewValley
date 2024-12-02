@@ -3,7 +3,7 @@
 
 Collider::Collider()
 {
-	Transform::Init(nullptr);
+	Transform::Initialize(nullptr);
 }
 
 Collider::~Collider()

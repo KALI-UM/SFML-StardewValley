@@ -193,6 +193,7 @@
     <ClCompile Include="Framework\SoundManager.cpp" />
     <ClCompile Include="Scene\Scene_Slice.cpp" />
     <ClCompile Include="TargetRect.cpp" />
+    <ClCompile Include="TexCoordTable.cpp" />
     <ClCompile Include="TileGrid.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -243,6 +244,7 @@
     <ClInclude Include="Framework\SoundManager.h" />
     <ClInclude Include="Scene\Scene_Slice.h" />
     <ClInclude Include="TargetRect.h" />
+    <ClInclude Include="TexCoordTable.h" />
     <ClInclude Include="TileGrid.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

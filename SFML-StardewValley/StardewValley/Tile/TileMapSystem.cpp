@@ -128,7 +128,7 @@ void TileMapSystem::SaveTileCollisionLayerFile()
 		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
 		{
 			const TileCollInfo& currInfo = mcv_Model->GetTileCollInfo(TileCollLayer::Back, { i,j });
-			std::string strings = Tile::CollisionTypeToString(currInfo.collision);
+			std::string strings = Tile::CollisionTypeToString(currInfo.colliderType);
 			doc.SetCell(i, j, strings);
 		}
 	}

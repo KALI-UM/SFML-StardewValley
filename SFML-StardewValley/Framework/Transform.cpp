@@ -1,38 +1,14 @@
 #include "pch.h"
 #include "Transform.h"
 
-//Transform::Transform(sf::Transformable* transformable)
-//	//:m_T(transformable),
-//	//m_ParentPosition({ 0,0 }), m_LocalPosition(m_T->getPosition()),
-//	//m_ParentRotation(0), m_LocalRotation(m_T->getRotation()),
-//	//m_ParentScale({ 1,1 }), m_LocalScale(m_T->getScale())
-//{
-//}
-//
-//Transform::Transform(const Transform& other, sf::Transformable* transformable)
-//	//:m_T(transformable),
-//	//m_ParentPosition(other.getParentPosition()), m_LocalPosition(other.getLocalPosition()),
-//	//m_ParentRotation(other.getParentRotation()), m_LocalRotation(other.getLocalRotation()),
-//	//m_ParentScale(other.getParentScale()), m_LocalScale(other.getLocalScale())
-//{
-//}
-//
-//Transform::Transform(Transform&& other, sf::Transformable* transformable)
-//	//:m_T(transformable),
-//	//m_ParentPosition(other.getParentPosition()), m_LocalPosition(other.getLocalPosition()),
-//	//m_ParentRotation(other.getParentRotation()), m_LocalRotation(other.getLocalRotation()),
-//	//m_ParentScale(other.getParentScale()), m_LocalScale(other.getLocalScale())
-//{
-//}
-
-void Transform::Init(sf::Transformable* transformable)
+void Transform::Initialize(sf::Transformable* transformable)
 {
 	m_T = transformable;
 	if (!m_T)m_T = new sf::Transformable();
 	Reset();
 }
 
-void Transform::Init(const Transform& other, sf::Transformable* transformable)
+void Transform::Initialize(const Transform& other, sf::Transformable* transformable)
 {
 	m_T = transformable;
 	if (!m_T)m_T = new sf::Transformable();

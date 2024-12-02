@@ -61,7 +61,7 @@ void TileModel::SetTile(const CellIndex& tileIndex, const TileViewLayer& layer, 
 	RequestUpdateTile(layer, tileIndex);
 }
 
-void TileModel::SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, CollisionType type)
+void TileModel::SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, ColliderType type)
 {
 	for (auto& currIndex : tiles)
 	{
@@ -69,12 +69,12 @@ void TileModel::SetCollisions(const std::list<CellIndex>& tiles, const TileCollL
 	}
 }
 
-void TileModel::SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, CollisionType type)
+void TileModel::SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, ColliderType type)
 {
-	m_TileCollInfos[(int)layer][tileIndex.y][tileIndex.x].collision = type;
+	m_TileCollInfos[(int)layer][tileIndex.y][tileIndex.x].colliderType = type;
 }
 
-void TileModel::CollisionTypeMode(const TileCollLayer& layer, CollisionType type)
+void TileModel::CollisionTypeMode(const TileCollLayer& layer, ColliderType type)
 {
 	for (int j = 0; j < m_CellCount.y; j++)
 	{
@@ -82,9 +82,9 @@ void TileModel::CollisionTypeMode(const TileCollLayer& layer, CollisionType type
 		{
 			auto& currTileInfo = m_TileCollInfos[(int)layer][j][i];
 
-			if (type == CollisionType::Block && currTileInfo.collision == CollisionType::Block)
+			if (type == ColliderType::Block && currTileInfo.colliderType == ColliderType::Block)
 				RequestColorizeTile(sf::Color(255, 100, 100), { i,j });
-			else if(type == CollisionType::Passable && currTileInfo.collision == CollisionType::Passable)
+			else if(type != ColliderType::Block && currTileInfo.colliderType != ColliderType::Block)
 				RequestColorizeTile(sf::Color(100, 100, 255), { i,j });
 		}
 	}
@@ -120,8 +120,8 @@ void TileModel::InitializeTileCollInfoLayer(const TileCollLayer& layer)
 		{
 			auto& currTileInfo = m_TileCollInfos[(int)layer][j][i];
 			currTileInfo.index = { i,j };
-			currTileInfo.ower = currTileInfo.index;
-			currTileInfo.collision = CollisionType::Passable;
+			//currTileInfo.owner = currTileInfo.index;
+			currTileInfo.colliderType = ColliderType::None;
 		}
 	}
 }
@@ -131,7 +131,7 @@ bool TileModel::IsPossibleToPass(const CellIndex& tileIndex)
 	bool passable = true;
 	for (int layer = 0; layer < (int)TileCollLayer::Max; layer++)
 	{
-		passable &= CollisionType::Passable == m_TileCollInfos[layer][tileIndex.y][tileIndex.x].collision;
+		passable &= ColliderType::Block != m_TileCollInfos[layer][tileIndex.y][tileIndex.x].colliderType;
 	}
 	return passable;
 }

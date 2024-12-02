@@ -57,7 +57,10 @@ void Scene_TileEditor::Enter()
 {
 	ImGuiManager::SetShowDemo(true);
 	FRAMEWORK->SetBackColor(ColorPalette::White);
-	m_MiniMapTexture.create(GAME_MGR->GetView(0)->getSize().x, GAME_MGR->GetView(0)->getSize().y);
+
+	m_TileController->SetControlStatus(ControlStatus::Place);
+
+	m_MiniMapTexture.create(16*80, 16*64);
 	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
 	
 	m_MiniMap->setScale(0.3f, -0.3f);
@@ -155,7 +158,7 @@ void Scene_TileEditor::CollLayerImgui()
 	if (ImGui::Button("Place"))
 	{
 		m_TileController->SetControlStatus(ControlStatus::Collision);
-		m_TileController->m_CurrCollType = (CollisionType)currIndex;
+		m_TileController->m_CurrCollType = (ColliderType)currIndex;
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("BackToTileView"))
@@ -170,7 +173,7 @@ void Scene_TileEditor::CollLayerImgui()
 			bool isSelected = (currIndex == i);
 			if (ImGui::Selectable(collisionType[i].c_str(), isSelected)) {
 				currIndex = i; // 선택 변경
-				m_TileController->m_CurrCollType = (CollisionType)currIndex;
+				m_TileController->m_CurrCollType = (ColliderType)currIndex;
 			}
 
 			// 선택된 항목 강조 표시

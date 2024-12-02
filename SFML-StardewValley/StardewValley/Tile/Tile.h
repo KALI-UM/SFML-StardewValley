@@ -19,10 +19,11 @@ enum class TileViewLayer
 	Max,
 };
 
-enum class CollisionType
+enum class ColliderType
 {
-	Passable,
 	Block,
+	Trigger,
+	None,
 };
 
 //충돌 레이어
@@ -41,20 +42,20 @@ struct TileViewInfo
 	LOT	lotSize = {1,1};
 };
 
+class TileObject;
 struct TileCollInfo
 {
-	CellIndex		index;
-	CellIndex		ower;
+	CellIndex				index;
 
-	CollisionType collision;
-	std::list <EventID> collisionEvents;
+	ColliderType			colliderType;
+	std::list <TileObject*> owners;
 };
 
 class Tile
 {
 public:
-	static std::string CollisionTypeToString(CollisionType type);
-	static CollisionType StringToCollisionType(const std::string& str);
+	static std::string CollisionTypeToString(ColliderType type);
+	static ColliderType StringToCollisionType(const std::string& str);
 	static std::string TileViewLayerToString(TileViewLayer layer);
 	static TileViewLayer StringToTileViewLayer(const std::string str);
 

@@ -44,6 +44,7 @@ public:
 	void SetTexture(sf::Texture* tex);
 	void SetTexture(const std::string& filepath);
 	void SetTextureRect(const sf::IntRect& rect);
+	void SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& lot);
 	void SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
 
 	sf::Vector2u GetTextureSize()const;
@@ -58,13 +59,14 @@ public:
 	void SetFillColor(int r, int g, int b, int a = 255);
 	void SetOutlineColor(const sf::Color& color);
 	void SetOutlineColor(int r, int g, int b, int a = 255);
+
+	void SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex);
+	void SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect);
 private:
 	float			m_Unit = 16;
 	TileShapeType	m_ShapeType;
 	sfTile			m_Tile;
 
-	void SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex);
-	void SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect);
 
 };
 

@@ -5,8 +5,7 @@ class DataTable
 public:
 	enum class DataId
 	{
-		TileRes,
-		TileAtt,
+		TexId,
 	};
 
 	DataTable(DataId id, const std::string& filepath) :m_DataTableId(id), m_FilePath(filepath) {}

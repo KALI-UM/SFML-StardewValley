@@ -5,6 +5,7 @@
 //타일 데이터
 //타일 이미지가 변경되면 뷰에게 알려야한다.
 class TileController;
+class TileObject;
 class TileModel
 	:public GameObject
 {
@@ -26,8 +27,8 @@ public:
 	void InitializeTileCollInfoLayer(const TileCollLayer& layer);
 
 	void SetTileUpdateFunc(std::function<void(const TileViewLayer&, const CellIndex&)> func) { m_WhenNeedsToUpdateTileFunc = func; };
+	void SetTileObjUpdateFunc(std::function<void(const TileViewLayer&, const CellIndex&, TileObject*)> func) { m_WhenNeedsToUpdateTileObjFunc = func; };
 	void SetTileColorizeFunc(std::function<void(const sf::Color& color, const CellIndex&)> func) { m_WhenNeedsToColorizeTileFunc = func; };
-	//void SetTempEffectTileUpdateFunc(std::function<void(const CellIndex&)> func) { m_WhenNeedsToUpdateTempEffectTileFunc = func; };
 
 	bool IsValidTileIndex(const CellIndex& tileIndex) const;
 	const TileViewInfo& GetTileViewInfo(const TileViewLayer& layer, const CellIndex& tileIndex) const;
@@ -35,10 +36,10 @@ public:
 
 	void SetTiles(const std::list<CellIndex>& tiles, const TileViewLayer& layer, const TEXID& id);
 	void SetTile(const CellIndex& tileIndex, const TileViewLayer& layer, const TEXID& id, bool isTrueTile = true);
-	void SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, CollisionType type);
-	void SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, CollisionType type);
+	void SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, ColliderType type);
+	void SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, ColliderType type);
 
-	void CollisionTypeMode(const TileCollLayer& layer, CollisionType type);
+	void CollisionTypeMode(const TileCollLayer& layer, ColliderType type);
 
 protected:
 public:
@@ -49,6 +50,7 @@ protected:
 	std::vector<std::vector<std::vector<TileCollInfo>>>		m_TileCollInfos;
 
 	std::function<void(const TileViewLayer&, const CellIndex&)> m_WhenNeedsToUpdateTileFunc;
+	std::function<void(const TileViewLayer&, const CellIndex&, TileObject*)> m_WhenNeedsToUpdateTileObjFunc;
 	std::function<void(const sf::Color& color, const CellIndex&)> m_WhenNeedsToColorizeTileFunc;
 	void RequestUpdateTile(const TileViewLayer& layer, const CellIndex& tileIndex);
 	void RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex);

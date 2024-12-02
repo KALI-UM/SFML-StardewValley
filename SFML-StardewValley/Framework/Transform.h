@@ -10,15 +10,14 @@ namespace sf
 class Transform
 {
 protected:
-	void Init(sf::Transformable* transformable);
-	void Init(const Transform& other, sf::Transformable* transformable);
+	void Initialize(sf::Transformable* transformable);
+	void Initialize(const Transform& other, sf::Transformable* transformable);
 public:
 	void Reset();
 	void ResetLocalTransform();
 	void SetChild(Transform* child);
 	void RemoveChild(Transform* child);
 	void SetParent(Transform* parent);
-
 	
 	sf::Vector2f getPosition()const;
 	sf::Vector2f getLocalPosition()const { return m_T->getPosition(); }

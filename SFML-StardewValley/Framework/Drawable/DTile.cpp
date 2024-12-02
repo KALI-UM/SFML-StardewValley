@@ -145,6 +145,22 @@ void DTile::SetTextureRect(const sf::IntRect& rect)
 	SetVerticesTexCoordByIntRect(0, rect);
 }
 
+void DTile::SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& lot)
+{
+	m_Tile.m_Vertices.resize(4 * (int)lot.x * (int)lot.y);
+	m_Tile.m_LotSize = { 0,0 };
+
+	for (int loty = 0; loty < (int)lot.y; loty++)
+	{
+		for (int lotx = 0; lotx < (int)lot.x; lotx++)
+		{
+			SetVerticesPositionByTileIndex(lotx + loty * (int)lot.x, { lotx,loty });
+			SetVerticesTexCoordByIntRect(lotx + loty * (int)lot.x,
+				sf::IntRect(rect.left + rect.width / (int)lot.x * lotx, rect.top + rect.height / (int)lot.y * loty, rect.width / (int)lot.x, rect.top + rect.height / (int)lot.y));
+		}
+	}
+}
+
 void DTile::SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles)
 {
 	if (rects.size() == 0)
