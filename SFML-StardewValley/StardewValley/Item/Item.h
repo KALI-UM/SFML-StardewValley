@@ -41,7 +41,7 @@ public:
 	const StackType	m_StackType;
 
 public:
-	bool Initialize() final;
+	bool Initialize();
 
 	virtual void Use(Player* const player) = 0;				//use함수를 자식 아이템들이 재정의해서 사용할 것입니다.
 

@@ -8,11 +8,8 @@ Tool::Tool(const ITEMID& itemId)
 
 void Tool::Use(Player* const player)
 {
-	UseEnergy(player);
 	ToolAction(player);
+	
 }
 
-void Tool::UseEnergy(Player* const player)
-{
-	//에너지 소모하는 함수 주세요
-}
+

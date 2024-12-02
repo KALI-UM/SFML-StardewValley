@@ -15,11 +15,12 @@ bool Player::Initialize()
 {
 	AnimationClips();
 	animator.SetPlayerAniClip(&temp);
-
+	
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
 	body->setScale({ 2.f, 2.f });
+	body->SetPriorityType(DrawPriorityType::Custom, 1);
 	return true;
 
 }
@@ -58,7 +59,6 @@ void Player::Update(float dt)
 				return d1 < d2;
 			}
 		);
-		currentClipInfo = &(*min);
 	}
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Right)) {
@@ -83,29 +83,23 @@ void Player::Update(float dt)
 
 void Player::UpdateIdle(float dt)
 {
+
 	direction.x = INPUT_MGR->GetAxisRaw(Axis::Horizontal);
 	direction.y = INPUT_MGR->GetAxisRaw(Axis::Vertical);
 	float mag = Utils::Magnitude(direction);
 
-	if (mag == 0)
-	{
-		m_CurrAction = Action::idle;
-	}
 	if (mag >= 1.f)
 	{
-		m_CurrAction = Action::move;
+		SetAction(Action::move);
 	}
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
-		m_CurrAction = Action::interaction;
-		stamina--;
+		SetAction(Action::interaction);
 	}
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::E)) {
-		m_CurrAction = Action::wateringAction;
-		stamina--;
+		SetAction(Action::wateringAction);
 	}
-
 	if (stamina == 0) {
-		m_CurrAction = Action::staminaExhausted;
+		SetAction(Action::staminaExhausted);
 	}
 }
 
@@ -113,7 +107,6 @@ void Player::UpdateMove(float dt)
 {
 	direction.x = INPUT_MGR->GetAxisRaw(Axis::Horizontal);
 	direction.y = INPUT_MGR->GetAxisRaw(Axis::Vertical);
-	float mag = Utils::Magnitude(direction);
 
 	Utils::Normailize(direction);
 
@@ -121,26 +114,26 @@ void Player::UpdateMove(float dt)
 		m_CurrDir = Direction::right;
 	else if (direction.x < 0)
 		m_CurrDir = Direction::left;
-
 	if (direction.y > 0)
 		m_CurrDir = Direction::down;
 	else if (direction.y < 0)
 		m_CurrDir = Direction::up;
+	float mag = Utils::Magnitude(direction);
 
 	if (mag == 0)
 	{
-		m_CurrAction = Action::idle;
+		SetAction(Action::idle);
 	}
 	setPosition(getPosition() + direction * speed * dt);
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
-		m_CurrAction = Action::interaction;
+		SetAction(Action::interaction);
 	}
 }
 
 void Player::UpdateInter(float dt)
 {
 	if (stamina == 0) {
-		m_CurrAction = Action::staminaExhausted;
+		SetAction(Action::staminaExhausted);
 	}
 }
 
@@ -264,7 +257,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterDownVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -275,7 +268,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterSideVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -286,7 +279,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "InterUpVisible";
-		clip.fps = 8;
+		clip.fps = 18;
 		clip.loopType = AnimationLoopTypes::Single;
 		for (int i = 0; i < 6; ++i)
 		{
@@ -297,7 +290,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackDownVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -308,7 +301,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackSideVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -319,7 +312,7 @@ void Player::AnimationClips()
 	{
 		AnimationClip clip;
 		clip.id = "AttackUpVisible";
-		clip.fps = 10;
+		clip.fps = 20;
 		clip.loopType = AnimationLoopTypes::Loop;
 		for (int i = 0; i < 7; ++i)
 		{
@@ -500,6 +493,7 @@ std::string Player::GetAnimationClipIdByDAI()
 		break;
 	case Player::Action::staminaExhausted:
 		id += "Exhaust";
+		break;
 	default:
 		break;
 	}
@@ -550,5 +544,45 @@ float Player::Staminagauge()
 	return value;
 }
 
+Player::Direction Player::GetDirection()
+{
+	return m_CurrDir;
+}
+
+Player::IsVisibleItem Player::GetIsVisibleItem()
+{
+	return m_CurrEquip;
+}
+
+void Player::GetHoe(Hoe* hoe)
+{
+	this->hoe = hoe;
+
+}
+
+void Player::SetAction(Action newAction)
+{
+	Action prevAction = m_CurrAction;
+	m_CurrAction = newAction;
+
+	switch (m_CurrAction)
+	{
+	case Action::idle:
+
+		break;
+	case Action::move:
+		break;
+	case Action::interaction:
+		hoe->Use(this);
+		stamina--;
+		break;
+	case Action::wateringAction:
+		stamina--;
+		break;
+	case Action::staminaExhausted:
+
+		break;
+	}
+}
 
 

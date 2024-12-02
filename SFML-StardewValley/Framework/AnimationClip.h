@@ -25,5 +25,6 @@ struct AnimationClip
 	std::vector<AnimationFrame> frames;
 
 	bool loadFromFile(const std::string& filePath);
+	bool loadFromTexId(const std::string& clipId, AnimationLoopTypes looptype, int fps, const std::string& texId);
 };
 
