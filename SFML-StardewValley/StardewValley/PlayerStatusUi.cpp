@@ -42,7 +42,7 @@ void PlayerStatusUi::Reset()
 	Staminabar->setPosition(StaminaUi->getPosition());
 	Staminabar->SetOrigin(OriginType::TC);
 	Staminabar->setScale({ 1,-1 });
-	player = SCENE_MGR->GetCurrentScene()->FindGameObject<Player>(0, "Player");
+	player = SCENE_MGR->GetCurrentScene()->FindGameObject<Player>(3, "Player");
 	dashboardInfo->setScale({ 2.f, 2.f });
 	dashboardInfo->setPosition(StaminaUi->getPosition().x- 100, StaminaUi->getPosition().y - 700.f);
 	ClockHands->setPosition(dashboardInfo->getPosition().x + 41, dashboardInfo->getPosition().y+40);

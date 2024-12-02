@@ -25,6 +25,7 @@ bool TileController::Initialize()
 
 void TileController::Reset()
 {
+	if(m_ButtonBar)
 	SetButtonTile(m_ButtonTileX, m_ButtonTileY);
 }
 
@@ -37,7 +38,7 @@ void TileController::Update(float dt)
 
 	std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
 
-	if (!m_ButtonBar->GetHasFocus())
+	if (m_ButtonBar&&!m_ButtonBar->GetHasFocus())
 	{
 		switch (m_CurrStatus)
 		{
@@ -54,37 +55,41 @@ void TileController::Update(float dt)
 			UpdateCollision(dt);
 			break;
 		}
-	}
 
-
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::LBracket))
-	{
-		GAME_MGR->SetViewZoom(m_ViewIndex, 2.0f);
+		if (INPUT_MGR->GetKeyDown(sf::Keyboard::LBracket))
+		{
+			GAME_MGR->SetViewZoom(m_ViewIndex, 2.0f);
+		}
+		else if (INPUT_MGR->GetKeyDown(sf::Keyboard::RBracket))
+		{
+			GAME_MGR->SetViewZoom(m_ViewIndex, 0.5f);
+		}
+		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Up))
+		{
+			SetButtonTile(m_ButtonTileX, m_ButtonTileY - 1);
+		}
+		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Down))
+		{
+			SetButtonTile(m_ButtonTileX, m_ButtonTileY + 1);
+		}
+		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Left))
+		{
+			SetButtonTile(m_ButtonTileX - 1, m_ButtonTileY);
+		}
+		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Right))
+		{
+			SetButtonTile(m_ButtonTileX + 1, m_ButtonTileY);
+		}
+		if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
+		{
+			GAME_MGR->SetViewCenter(m_ViewIndex, INPUT_MGR->GetMouseViewPos(m_ViewIndex));
+		}
 	}
-	else if (INPUT_MGR->GetKeyDown(sf::Keyboard::RBracket))
+	else
 	{
-		GAME_MGR->SetViewZoom(m_ViewIndex, 0.5f);
+		UpdateNone(dt);
 	}
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::Up))
-	{
-		SetButtonTile(m_ButtonTileX, m_ButtonTileY - 1);
-	}
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::Down))
-	{
-		SetButtonTile(m_ButtonTileX, m_ButtonTileY + 1);
-	}
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::Left))
-	{
-		SetButtonTile(m_ButtonTileX - 1, m_ButtonTileY);
-	}
-	if (INPUT_MGR->GetKeyDown(sf::Keyboard::Right))
-	{
-		SetButtonTile(m_ButtonTileX + 1, m_ButtonTileY);
-	}
-	if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
-	{
-		GAME_MGR->SetViewCenter(m_ViewIndex, INPUT_MGR->GetMouseViewPos(m_ViewIndex));
-	}
+	
 }
 
 void TileController::SetControlStatus(ControlStatus status)
@@ -106,13 +111,7 @@ void TileController::SetButtonBar(ButtonBar* bar)
 
 void TileController::UpdateNone(float dt)
 {
-	/*if (m_TileMapSystem->GetCurrAction() == Action::Move)
-	{
-		if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
-		{
-			GAME_MGR->SetViewCenter(m_ViewIndex, INPUT_MGR->GetMouseViewPos(m_ViewIndex));
-		}
-	}*/
+	//플레이모드
 }
 
 void TileController::UpdatePlace(float dt)
@@ -125,7 +124,7 @@ void TileController::UpdatePlace(float dt)
 		m_SelectingTiles.clear();
 		return;
 	}
-	
+
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
 	{
 		m_DragStartTile = m_MouseOverlaidTile;
