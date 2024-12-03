@@ -8,7 +8,7 @@ class TileGrid;
 
 class Player;
 class PlayerStatusUi;
-class Hoe;
+class Item;
 
 class Scene_InGameTest :
     public SceneBase
@@ -37,6 +37,6 @@ protected:
 	Player* m_Player;
 	Animator m_PlayerAnimator;
 	PlayerStatusUi* m_PlayerStatusUi;
-	Hoe* m_TestItem;
+	Item* m_TestItem;
 };
 

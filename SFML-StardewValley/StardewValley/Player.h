@@ -42,7 +42,7 @@ protected:
 
 	float value = 0.f;
 
-	Hoe* hoe;
+	Tool* tool;
 
 	std::map<std::string, AnimationClip> temp;
 	std::vector<ClipInfo> clipInfos;
@@ -81,13 +81,17 @@ public:
 	Player::Direction GetDirection();
 
 	Player::IsVisibleItem GetIsVisibleItem();
-	
-	void GetHoe(Hoe* hoe);
+
+	void GetTool(Tool* tool);
+
 	void SetAction(Action newAction);
 
 protected:
 	Direction m_CurrDir;
 	Action m_CurrAction = Action::idle;
 	IsVisibleItem m_CurrEquip;
+
+
+	
 };
 

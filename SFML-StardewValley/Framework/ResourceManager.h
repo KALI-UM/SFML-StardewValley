@@ -30,6 +30,19 @@ public:
 		return false;
 	}
 
+	bool LoadByFilepath(const std::string& filepath, const std::string& id)
+	{
+		if (m_Resources.find(filepath) == m_Resources.end())
+		{
+			if (m_Resources.find(id) == m_Resources.end())
+			{
+				T* newRes = GetByFilepath(filepath, id);
+				return newRes;
+			}
+		}
+		return false;
+	}
+
 	bool UnloadByFilepath(const std::string& filepath)
 	{
 		if (!IsValidPath(filepath))
@@ -114,6 +127,10 @@ public:
 		auto it = m_Resources.find(filepath);
 		if (it == m_Resources.end())
 		{
+			it = m_Resources.find(id);
+				if (it != m_Resources.end())
+					return it->second;
+
 			T* newRes = new T();
 			std::cout << "RESOURCE LOADING::\"" << filepath << "\"		...	";
 			if (newRes->loadFromFile(filepath))
@@ -155,6 +172,7 @@ public:
 		}
 		return nullptr;
 	}
+
 };
 
 template<typename T>

@@ -1,5 +1,5 @@
 ID,FPS,LOOPTYPE,,
-InterSideinVisible,10,0,,
+IdleUpinVisible,10,0,,
 ,,,,
 TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
-graphics/farmer_base.png,0,31,20,31
+graphics/farmer_base.png,0,62,20,31

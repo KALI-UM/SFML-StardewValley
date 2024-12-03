@@ -36,7 +36,7 @@ protected:
 public:
 	~Item() {};
 
-	const ITEMID	m_ItemId;
+	const ITEMID	m_ItemId = "Hoe";
 	const ItemType	m_ItemType;
 	const StackType	m_StackType;
 

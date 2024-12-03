@@ -14,13 +14,13 @@ bool Player::Initialize()
 {
 	AnimationClips();
 	animator.SetPlayerAniClip(&temp);
-	
+
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
 	body->setScale({ 2.f, 2.f });
 	body->SetPriorityType(DrawPriorityType::Custom, 1);
-
+	
 	return true;
 
 }
@@ -48,7 +48,7 @@ void Player::Update(float dt)
 		break;
 	}
 
-	
+
 	if (direction.x != 0.f || direction.y != 0.f)
 	{
 		auto min = std::min_element(clipInfos.begin(), clipInfos.end(),
@@ -77,6 +77,7 @@ void Player::Update(float dt)
 
 	if (animator.GetCurrentClipId() != clipId)
 	{
+		std::cout << clipId << std::endl;
 		animator.Play(&temp[clipId], true);
 	}
 }
@@ -169,22 +170,15 @@ void Player::AnimationClips()
 	body = new DSprite();
 	SetDrawableObj(body);
 
-	ANI_CLIP_MGR->GetByFilepath("datatables/AnimationDataTable/Player-IdleDowninVisible.csv");
-	ANI_CLIP_MGR->GetByFilepath("datatables/AnimationDataTable/Player-IdleUpinVisible.csv");
-	ANI_CLIP_MGR->GetByFilepath("datatables/AnimationDataTable/Player-IdleSideinVisible.csv");
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, Utils::GetNormal({1.f, -1.f}) });
-	clipInfos.push_back({ "IdleUpinVisible", "MoveUpinVisible", false, {0.f, -1.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, Utils::GetNormal({-1.f, -1.f}) });
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, {1.f, 0.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, {-1.f, 0.f} });
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, Utils::GetNormal({1.f, 1.f}) });
-	clipInfos.push_back({ "IdleDowninVisible", "MoveDowninVisible", false, {0.f, 1.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, Utils::GetNormal({-1.f, 1.f}) });
-
-
+	rapidcsv::Document doc("datatables/AnimationDataTable/PlayerAnimationFileList.csv", rapidcsv::LabelParams(-1, -1));
+	std::vector<std::string> animationfilepath = doc.GetColumn<std::string>(0);
+	AnimationClip clip;
+	for (auto& curr : animationfilepath)
+	{
+		ANI_CLIP_MGR->LoadByFilepath(curr, clip.GetIdFromFilepath(curr));
+		clip.loadFromFile(curr);
+		temp.insert({ clip.GetIdFromFilepath(curr),  clip });
+	}
 	animator.SetTarget(body);
 
 	animator.AddEvent("InterUpVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
@@ -281,9 +275,9 @@ Player::IsVisibleItem Player::GetIsVisibleItem()
 	return m_CurrEquip;
 }
 
-void Player::GetHoe(Hoe* hoe)
+void Player::GetTool(Tool* tool)
 {
-	this->hoe = hoe;
+	this->tool = tool;
 
 }
 
@@ -300,7 +294,7 @@ void Player::SetAction(Action newAction)
 	case Action::move:
 		break;
 	case Action::interaction:
-		hoe->Use(this);
+		tool->Use(this);
 		stamina--;
 		break;
 	case Action::wateringAction:
@@ -311,5 +305,6 @@ void Player::SetAction(Action newAction)
 		break;
 	}
 }
+
 
 

@@ -6,12 +6,10 @@
     <ClCompile Include="Framework\AnimationClip.cpp" />
     <ClCompile Include="Framework\Animator.cpp" />
     <ClCompile Include="StardewValley\PlayerStatusUi.cpp" />
-    <ClCompile Include="StardewValley\Item\Hoe.cpp" />
     <ClCompile Include="ItemDataTable.cpp" />
     <ClCompile Include="StardewValley\Item\Item.cpp" />
     <ClCompile Include="Scene\Scene_TileEditor.cpp" />
     <ClCompile Include="StardewValley\Player.cpp" />
-    <ClCompile Include="Scene\Scene_Test.cpp" />
     <ClCompile Include="Framework\Drawable\D9SliceSprite.cpp" />
     <ClCompile Include="Framework\Drawable\DGameObject.cpp" />
     <ClCompile Include="Framework\DataTable.cpp" />
@@ -58,6 +56,7 @@
     <ClCompile Include="StardewValley\Tile\TileViewChild.cpp" />
     <ClCompile Include="TexCoordTable.cpp" />
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
+    <ClCompile Include="Scene\Scene_InGameTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -65,12 +64,10 @@
     <ClInclude Include="Framework\Animator.h" />
     <ClInclude Include="StardewValley\PlayerStatusUi.h" />
     <ClInclude Include="StardewValley\Item\Seed.h" />
-    <ClInclude Include="StardewValley\Item\Hoe.h" />
     <ClInclude Include="ItemDataTable.h" />
     <ClInclude Include="StardewValley\Item\Item.h" />
     <ClInclude Include="Scene\Scene_TileEditor.h" />
     <ClInclude Include="StardewValley\Player.h" />
-    <ClInclude Include="Scene\Scene_Test.h" />
     <ClInclude Include="Framework\Drawable\D9SliceSprite.h" />
     <ClInclude Include="Framework\Drawable\DGameObject.h" />
     <ClInclude Include="Framework\DataTable.h" />
@@ -124,5 +121,6 @@
     <ClInclude Include="StardewValley\Tile\TileViewChild.h" />
     <ClInclude Include="TexCoordTable.h" />
     <ClInclude Include="StardewValley\Item\Tool.h" />
+    <ClInclude Include="Scene\Scene_InGameTest.h" />
   </ItemGroup>
 </Project>

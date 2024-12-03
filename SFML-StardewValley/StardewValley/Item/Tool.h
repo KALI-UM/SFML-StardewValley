@@ -6,15 +6,28 @@ class Tool :
 	public Item
 {
 protected:
-	Tool(const ITEMID& itemId);
-	
+
+	Animator animator;
+	Animator effectAnimator;
+	DSprite* sprite;
+	DSprite* effectSprite;
+	Player* player;
+
+	std::map<std::string, AnimationClip> temp;
+
 public:
+	Tool(const ITEMID& itemId);
 	~Tool() {};
 
 	void Use(Player* const player);
 
-	virtual void ToolAction(Player* const player) = 0;								//자식에서 툴액션을 정의해줍셔
 	int GetEnergyCost() const { return m_EnergyCost; }
+
+	bool Initialize();
+
+	void AnimationClips();
+	void Update(float dt);
+	void GetPlayer(Player* player);
 protected:
 
 	int m_EnergyCost = 2;

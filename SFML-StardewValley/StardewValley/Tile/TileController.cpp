@@ -36,7 +36,7 @@ void TileController::Update(float dt)
 	if (m_MousePrevTile != m_MouseOverlaidTile)
 		m_PrevTile = m_MousePrevTile;
 
-	std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
+	//std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
 
 	if (m_ButtonBar&&!m_ButtonBar->GetHasFocus())
 	{

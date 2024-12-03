@@ -1,0 +1,9 @@
+id,fps,looptype,,
+HoeDown,15,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/HoeDown.png,0,0,19,42
+graphics/HoeDown.png,19,0,19,42
+graphics/HoeDown.png,35,0,20,42
+graphics/HoeDown.png,55,0,20,42
+graphics/HoeDown.png,75,0,20,42

@@ -5,12 +5,13 @@
 
 bool AnimationClip::loadFromFile(const std::string& filePath)
 {
-	rapidcsv::Document doc(filePath);
+	rapidcsv::Document doc(filePath, rapidcsv::LabelParams(0,-1));
 	id = doc.GetCell<std::string>(0, 0);
-	fps = doc.GetCell<int>(1, 0);	
+	fps = doc.GetCell<int>(1, 0);
 	loopType = (AnimationLoopTypes)doc.GetCell<int>(2, 0);
 
 	frames.clear();
+
 	for (int i = 3; i < doc.GetRowCount(); ++i)
 	{
 		auto row = doc.GetRow<std::string>(i);
@@ -43,5 +44,16 @@ bool AnimationClip::loadFromTexId(const std::string& clipId, AnimationLoopTypes 
 		}
 	}
 	return false;
+}
+
+std::string AnimationClip::GetIdFromFilepath(const std::string& filepath)
+{
+	auto it = filepath.find("-");
+
+	if (it != std::string::npos)
+	{
+		return filepath.substr(it + 1, filepath.length() - it - 5);
+	}
+	return "";
 }
 

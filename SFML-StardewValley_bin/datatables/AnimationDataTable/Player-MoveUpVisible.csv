@@ -1,9 +1,12 @@
 ID,FPS,LOOPTYPE,,
-WaterDownVisible,18,0,,
+MoveUpVisible,18,0,,
 ,,,,
-InterUpVisible,LEFT,TOP,WIDTH,HEIGHT
-graphics/farmer_base.png,0,310,20,31
-graphics/farmer_base.png,20,310,20,31
-graphics/farmer_base.png,40,310,20,31
-graphics/farmer_base.png,60,310,20,31
-graphics/farmer_base.png,80,310,20,31
+Texture Id,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,465,20,31
+graphics/farmer_base.png,20,465,20,31
+graphics/farmer_base.png,40,465,20,31
+graphics/farmer_base.png,60,465,20,31
+graphics/farmer_base.png,80,465,20,31
+graphics/farmer_base.png,100,465,20,31
+graphics/farmer_base.png,120,465,20,31
+graphics/farmer_base.png,140,465,20,31

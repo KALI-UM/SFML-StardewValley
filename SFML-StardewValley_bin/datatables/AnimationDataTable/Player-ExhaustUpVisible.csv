@@ -1,5 +1,5 @@
 ID,FPS,LOOPTYPE,,
-ExhaustSideVisible,10,0,,
+ExhaustUpVisible,10,0,,
 ,,,,
 InterUpVisible,LEFT,TOP,WIDTH,HEIGHT
 graphics/farmer_base.png,0,372,20,31

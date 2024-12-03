@@ -2,13 +2,7 @@
 #include "Animator.h"
 
 
-void Animator::AddClip(const AnimationClip& newClip)
-{
-	if (clip.find(newClip.id) == clip.end())
-	{
-		clip.insert({ newClip.id, newClip });
-	}
-}
+
 
 void Animator::AddEvent(const std::string& id, int frame, std::function<void()> action)
 {

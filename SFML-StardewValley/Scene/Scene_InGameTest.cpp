@@ -11,7 +11,7 @@
 #include "Player.h"
 #include "Animator.h"
 #include "PlayerStatusUi.h"
-#include "Item/Hoe.h"
+#include "Item/Item.h"
 
 
 Scene_InGameTest::Scene_InGameTest()
@@ -48,15 +48,15 @@ bool Scene_InGameTest::Initialize()
 
 	m_Player = AddGameObject(3, new Player("Player"));
 	m_PlayerStatusUi = AddGameObject(m_UILayerIndex, new PlayerStatusUi());
-	m_TestItem = AddGameObject(3, new Hoe());
+	m_TestItem = AddGameObject(3, new Tool("Hoe"));
 
     return false;
 }
 
 void Scene_InGameTest::Enter()
 {
-	m_Player->GetHoe(m_TestItem);
-	m_TestItem->GetPlayer(m_Player);
+	m_Player->GetTool(dynamic_cast<Tool*>(m_TestItem));
+	dynamic_cast<Tool*>(m_TestItem)->GetPlayer(m_Player);
 }
 
 void Scene_InGameTest::Update(float dt)
