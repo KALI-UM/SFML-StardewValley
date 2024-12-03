@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "TileObject.h"
 #include "DTile.h"
+#include "TexCoordTable.h"
 
 TileObject::TileObject()
 {
@@ -14,59 +15,41 @@ bool TileObject::Initialize()
 {
 	m_TileSprite = new DTile();
 	SetDrawableObj(m_TileSprite, false);
+
 	return true;
 }
 
-ColliderType TileObject::GetColliderType(const CellIndex& currIndex) const
+void TileObject::LoadTileObject()
 {
-	CellIndex localIndex = currIndex - m_TLIndex;
-	return m_TLOffsets[localIndex.y][localIndex.x];
-}
+	
+	std::list<sf::IntRect> tileTexrects;
+	std::list<CellIndex> tileIndices;
 
-void TileObject::OnColliderEnter(const CellIndex& currIndex)
-{
-	CellIndex localIndex = currIndex - m_TLIndex;
-
-	switch (m_TLOffsets[localIndex.y][localIndex.x])
+	for (int j = 0; j < m_Data->tileTypeMap.size(); j++)
 	{
-	case ColliderType::Block:
-		break;
-	case ColliderType::Trigger:
-		OnTriggerEnter(localIndex);
-		break;
-	case ColliderType::None:
-		break;
+		for (int i = 0; i < m_Data->tileTypeMap[j].size(); i++)
+		{
+			const TileObjectData::UnitData& currUnit = m_Data->tileTypeMap[j][i];
+			m_TileTypes.push_back({ currUnit.offset, currUnit.type });
+			
+			if (currUnit.offset == CellIndex(0, 0))
+			{
+				m_TLOffset = CellIndex(-i, -j);
+			}
+
+			const auto& currTexRes = TEXRESTABLE_MGR->GetTileTexRes(currUnit.texid);
+			tileTexrects.push_back(currTexRes.texcoord);
+			tileIndices.push_back({ i,j });
+		}
 	}
+
+	m_TileSprite->SetTextureRect(tileTexrects, tileIndices);
 }
 
-void TileObject::OnColliderStay(const CellIndex& currIndex)
+const TileType& TileObject::GetTileType(const CellIndex& tileIndex) const
 {
-	CellIndex localIndex = currIndex - m_TLIndex;
-
-	switch (m_TLOffsets[localIndex.y][localIndex.x])
-	{
-	case ColliderType::Block:
-		break;
-	case ColliderType::Trigger:
-		OnTriggerStay(localIndex);
-		break;
-	case ColliderType::None:
-		break;
-	}
+	CellIndex localIndex = tileIndex - (m_TileIndex + m_TLOffset);
+	return m_Data->tileTypeMap[localIndex.y][localIndex.x].type;
 }
 
-void TileObject::OnColliderExit(const CellIndex& currIndex)
-{
-	CellIndex localIndex = currIndex - m_TLIndex;
 
-	switch (m_TLOffsets[localIndex.y][localIndex.x])
-	{
-	case ColliderType::Block:
-		break;
-	case ColliderType::Trigger:
-		OnTriggerExit(localIndex);
-		break;
-	case ColliderType::None:
-		break;
-	}
-}

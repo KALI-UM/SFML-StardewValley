@@ -1,6 +1,6 @@
 #pragma once
 
-class TileMapSystem;
+class TileObjectSystem;
 class TileModel;
 class TileController;
 class TileView;
@@ -28,9 +28,8 @@ public:
 
 
 protected:
-	TileMapSystem* m_TileMapSystem;
+	TileObjectSystem* m_TileObjectSystem;
 	TileModel* m_TileModel;
-	TileController* m_TileController;
 	TileView* m_TileView;
 	TileGrid* m_TileGrid;
 

@@ -1,7 +1,7 @@
 #pragma once
 
 typedef sf::Vector2i CellIndex;
-typedef sf::Vector2u LOT;
+typedef sf::Vector2u UNITxUNIT;
 typedef std::string TEXID;
 typedef std::string FILEPATH;
 typedef sf::IntRect TEXRECT;
@@ -10,7 +10,7 @@ struct TexRes
 {
     TEXID id;
     FILEPATH filepath;
-    LOT lotSize;
+    UNITxUNIT uuSize;
     CellIndex index;
     TEXRECT texcoord;
     std::vector<std::vector<TEXID>> children;

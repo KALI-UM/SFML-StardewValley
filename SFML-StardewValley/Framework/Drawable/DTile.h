@@ -14,7 +14,7 @@ public:
 	sf::VertexArray m_Vertices;
 	sf::Color m_Color;
 	const sf::Texture* m_Texture;
-	sf::Vector2u m_LotSize;		//NxM 타일
+	sf::Vector2u m_UnitxUnit;		//NxM 타일
 
 	void setTexture(const sf::Texture& tex);
 	const sf::Texture* getTexture() const;
@@ -39,12 +39,12 @@ public:
 	DTile(DTile&& other);
 	virtual ~DTile();
 
-	const sf::Vector2u& GetLot()const { return m_Tile.m_LotSize; };
+	const sf::Vector2u& GetUnitxUnit()const { return m_Tile.m_UnitxUnit; };
 
 	void SetTexture(sf::Texture* tex);
 	void SetTexture(const std::string& filepath);
 	void SetTextureRect(const sf::IntRect& rect);
-	void SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& lot);
+	void SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& uu);
 	void SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
 
 	sf::Vector2u GetTextureSize()const;
@@ -66,7 +66,6 @@ private:
 	float			m_Unit = 16;
 	TileShapeType	m_ShapeType;
 	sfTile			m_Tile;
-
 
 };
 

@@ -1,17 +1,26 @@
 #pragma once
 
 typedef sf::Vector2i CellIndex;
-typedef sf::Vector2u LOT;
+typedef sf::Vector2u UNITxUNIT;
 typedef std::string TEXID;
 typedef std::string FILEPATH;
 typedef sf::IntRect TEXRECT;
-typedef std::string EventID;
 
-//타일뷰 레이어
-enum class TileViewLayer
+//타일 레이어
+enum class TileLayer
 {
-	Terrain,		//Terrain, water, 
-	Back,			//and basic features (like permanent paths).
+	Terrain,
+	WaterEffect,
+	Back,
+
+	Object,
+	Max,
+};
+
+//오브젝트 레이어
+enum class TileObjLayer
+{
+	Back,			//Terrain, water, and basic features (like permanent paths).
 	Buildings,		//Placeholders for buildings (like the farmhouse). Any tiles placed on this layer will act like a wall unless the tile property has a "Passable" "T".
 	Paths,			//Flooring, paths, grass, and debris (like stones, weeds, and stumps from the 'paths' tilesheet) which can be removed by the player.
 	Front,			//Objects that are drawn on top of things behind them, like most trees. These objects will be drawn on top of the player if the player is North of them but behind the player if the player is south of them.
@@ -19,46 +28,50 @@ enum class TileViewLayer
 	Max,
 };
 
-enum class ColliderType
+enum class TileEditorLayer
 {
-	Block,
-	Trigger,
-	None,
-};
-
-//충돌 레이어
-enum class TileCollLayer
-{
-	Back,
-	Object,
+	Layer0,
+	Layer1,
+	Layer2,
+	Layer3,
 	Max,
 };
 
-struct TileViewInfo
+enum class TileType
 {
-	CellIndex		index;
-	CellIndex		ower;
-	TEXID			id;
-	LOT	lotSize = {1,1};
+	Ground,			//그외 땅(마을, Floor 등...)
+	Soil,			//경작가능땅
+
+	Water,			//물
+	Wall,			//벽(울타리 등, 물 외 못가는 곳은 전부 wall)
+
+	None,			//공중에 떠있는 구간? 뭐라해야함 여튼 상관없는 구간
 };
 
 class TileObject;
-struct TileCollInfo
+struct TileInfo
 {
-	CellIndex				index;
+	CellIndex		index;
 
-	ColliderType			colliderType;
-	std::list <TileObject*> owners;
+	TileObject*		owner = nullptr;
+	TEXID			id;									
 };
 
 class Tile
 {
 public:
-	static std::string CollisionTypeToString(ColliderType type);
-	static ColliderType StringToCollisionType(const std::string& str);
-	static std::string TileViewLayerToString(TileViewLayer layer);
-	static TileViewLayer StringToTileViewLayer(const std::string str);
+	//static std::string CollisionTypeToString(TileType type);
+	//static TileType StringToCollisionType(const std::string& str);
+
+	static std::string TileObjLayerToString(const TileObjLayer& layer);
+	static TileObjLayer StringToTileObjLayer(const std::string& str);
+
+	static std::string TileTypeToString(const TileType& type);
+	static TileType StringToTileType(const std::string& str);
+
+	static TileLayer TileObjLayerToTileLayer(const TileObjLayer& layer);
+	static std::string TileLayerToString(const TileLayer& layer);
+	static TileLayer StringToTileLayer(const std::string& str);
 
 	static const CellIndex d[8];
-
 };

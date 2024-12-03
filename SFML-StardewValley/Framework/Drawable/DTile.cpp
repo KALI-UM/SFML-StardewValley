@@ -140,23 +140,23 @@ void DTile::SetTextureRect(const sf::IntRect& rect)
 {
 	m_ShapeType = TileShapeType::Single;
 	m_Tile.m_Vertices.resize(4);
-	m_Tile.m_LotSize = { 0,0 };
+	m_Tile.m_UnitxUnit = { 0,0 };
 	SetVerticesPositionByTileIndex(0, { 0,0 });
 	SetVerticesTexCoordByIntRect(0, rect);
 }
 
-void DTile::SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& lot)
+void DTile::SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& uu)
 {
-	m_Tile.m_Vertices.resize(4 * (int)lot.x * (int)lot.y);
-	m_Tile.m_LotSize = { 0,0 };
+	m_Tile.m_Vertices.resize(4 * (int)uu.x * (int)uu.y);
+	m_Tile.m_UnitxUnit = { 0,0 };
 
-	for (int loty = 0; loty < (int)lot.y; loty++)
+	for (int uuy = 0; uuy < (int)uu.y; uuy++)
 	{
-		for (int lotx = 0; lotx < (int)lot.x; lotx++)
+		for (int uux = 0; uux < (int)uu.x; uux++)
 		{
-			SetVerticesPositionByTileIndex(lotx + loty * (int)lot.x, { lotx,loty });
-			SetVerticesTexCoordByIntRect(lotx + loty * (int)lot.x,
-				sf::IntRect(rect.left + rect.width / (int)lot.x * lotx, rect.top + rect.height / (int)lot.y * loty, rect.width / (int)lot.x, rect.top + rect.height / (int)lot.y));
+			SetVerticesPositionByTileIndex(uux + uuy * (int)uu.x, { uux,uuy });
+			SetVerticesTexCoordByIntRect(uux + uuy * (int)uu.x,
+				sf::IntRect(rect.left + rect.width / (int)uu.x * uux, rect.top + rect.height / (int)uu.y * uuy, rect.width / (int)uu.x, rect.top + rect.height / (int)uu.y));
 		}
 	}
 }
@@ -170,7 +170,7 @@ void DTile::SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<
 	}
 
 	m_Tile.m_Vertices.resize(rects.size() * 4);
-	m_Tile.m_LotSize = { 0,0 };
+	m_Tile.m_UnitxUnit = { 0,0 };
 	auto rectit = rects.begin();
 	auto tileit = tiles.begin();
 	for (int i = 0; i < rects.size(); i++)
@@ -239,8 +239,8 @@ void DTile::SetOutlineColor(int r, int g, int b, int a)
 
 void DTile::SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex)
 {
-	m_Tile.m_LotSize.x = std::max(m_Tile.m_LotSize.x, (unsigned int)tileIndex.x + 1);
-	m_Tile.m_LotSize.y = std::max(m_Tile.m_LotSize.y, (unsigned int)tileIndex.y + 1);
+	m_Tile.m_UnitxUnit.x = std::max(m_Tile.m_UnitxUnit.x, (unsigned int)tileIndex.x + 1);
+	m_Tile.m_UnitxUnit.y = std::max(m_Tile.m_UnitxUnit.y, (unsigned int)tileIndex.y + 1);
 
 	m_Tile.m_Vertices[quadIndex * 4].position = sf::Vector2f(0, 0) + tileIndex.To<float>();
 	m_Tile.m_Vertices[quadIndex * 4 + 1].position = sf::Vector2f(1, 0) + tileIndex.To<float>();

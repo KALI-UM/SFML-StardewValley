@@ -2,11 +2,10 @@
 #include "TileModel.h"
 #include "TileView.h"
 
-TileModel::TileModel(const sf::Vector2u& cellCnt, const sf::Vector2f& cellSize)
-	:m_CellCount(cellCnt), m_CellSize(cellSize)
+TileModel::TileModel(int layermax, const sf::Vector2u& cellCnt, const sf::Vector2f& cellSize)
+	:m_LayerCnt(layermax), m_CellCount(cellCnt), m_CellSize(cellSize)
 {
-	m_TileViewInfos.resize((int)TileViewLayer::Max);
-	m_TileCollInfos.resize((int)TileCollLayer::Max);
+	m_TileInfos.resize(m_LayerCnt);
 }
 
 TileModel::~TileModel()
@@ -15,14 +14,9 @@ TileModel::~TileModel()
 
 bool TileModel::Initialize()
 {
-	for (int layer = 0; layer < (int)TileViewLayer::Max; layer++)
+	for (int layer = 0; layer < m_LayerCnt; layer++)
 	{
-		InitializeTileViewInfoLayer((TileViewLayer)layer);
-	}
-
-	for (int layer = 0; layer < (int)TileCollLayer::Max; layer++)
-	{
-		InitializeTileCollInfoLayer((TileCollLayer)layer);
+		InitializeTileInfos(layer);
 	}
 
 	return true;
@@ -37,118 +31,98 @@ void TileModel::Update(float dt)
 
 }
 
-const TileViewInfo& TileModel::GetTileViewInfo(const TileViewLayer& layer, const CellIndex& tileIndex) const
+void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
-	return m_TileViewInfos[(int)layer][tileIndex.y][tileIndex.x];
+	TileLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
+	m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
+
+
+	RequestUpdateTile((int)tilelayer, tileIndex);
 }
 
-const TileCollInfo& TileModel::GetTileCollInfo(const TileCollLayer& layer, const CellIndex& tileIndex) const
-{
-	return m_TileCollInfos[(int)layer][tileIndex.y][tileIndex.x];
-}
-
-void TileModel::SetTiles(const std::list<CellIndex>& tiles, const TileViewLayer& layer, const TEXID& id)
+void TileModel::SetTiles(int layer, const std::list<CellIndex>& tiles, const TEXID& id)
 {
 	for (auto& currIndex : tiles)
 	{
-		SetTile(currIndex, layer, id);
+		SetTile(layer, currIndex, id);
 	}
 }
 
-void TileModel::SetTile(const CellIndex& tileIndex, const TileViewLayer& layer, const TEXID& id, bool isTrueTile)
+void TileModel::SetTile(int layer, const CellIndex& tileIndex, const TEXID& id, bool isTrueTile)
 {
-	m_TileViewInfos[(int)layer][tileIndex.y][tileIndex.x].id = id;
+	m_TileInfos[(int)layer][tileIndex.y][tileIndex.x].id = id;
 	RequestUpdateTile(layer, tileIndex);
 }
 
-void TileModel::SetCollisions(const std::list<CellIndex>& tiles, const TileCollLayer& layer, ColliderType type)
-{
-	for (auto& currIndex : tiles)
-	{
-		SetCollision(currIndex, layer, type);
-	}
-}
-
-void TileModel::SetCollision(const CellIndex& tileIndex, const TileCollLayer& layer, ColliderType type)
-{
-	m_TileCollInfos[(int)layer][tileIndex.y][tileIndex.x].colliderType = type;
-}
-
-void TileModel::CollisionTypeMode(const TileCollLayer& layer, ColliderType type)
-{
-	for (int j = 0; j < m_CellCount.y; j++)
-	{
-		for (int i = 0; i < m_CellCount.x; i++)
-		{
-			auto& currTileInfo = m_TileCollInfos[(int)layer][j][i];
-
-			if (type == ColliderType::Block && currTileInfo.colliderType == ColliderType::Block)
-				RequestColorizeTile(sf::Color(255, 100, 100), { i,j });
-			else if(type != ColliderType::Block && currTileInfo.colliderType != ColliderType::Block)
-				RequestColorizeTile(sf::Color(100, 100, 255), { i,j });
-		}
-	}
-}
-
-
 bool TileModel::IsValidTileIndex(const CellIndex& tileIndex) const
 {
-	return tileIndex.x > 0 && tileIndex.x < (int)m_CellCount.x - 1 && tileIndex.y > 0 && tileIndex.y < (int)m_CellCount.y - 1;
+	return tileIndex.x >= 0 && tileIndex.x < (int)m_CellCount.x && tileIndex.y >= 0 && tileIndex.y < (int)m_CellCount.y;
 }
 
-void TileModel::InitializeTileViewInfoLayer(const TileViewLayer& layer)
+const TileInfo& TileModel::GetTileInfo(int layer, const CellIndex& tileIndex) const
 {
-	m_TileViewInfos[(int)layer] = std::vector<std::vector<TileViewInfo>>(m_CellCount.y, std::vector<TileViewInfo>(m_CellCount.x));
+	return m_TileInfos[layer][tileIndex.y][tileIndex.x];
+}
+
+const TileInfo& TileModel::GetTileInfo(const TileLayer& layer, const CellIndex& tileIndex) const
+{
+	return m_TileInfos[(int)layer][tileIndex.y][tileIndex.x];
+}
+
+const TileInfo& TileModel::GetTileInfo(const TileObjLayer& layer, const CellIndex& tileIndex) const
+{
+	return GetTileInfo(Tile::TileObjLayerToTileLayer(layer), tileIndex);
+}
+
+void TileModel::InitializeTileInfos(int layer)
+{
+	m_TileInfos[layer] = std::vector<std::vector<TileInfo>>(m_CellCount.y, std::vector<TileInfo>(m_CellCount.x));
 	for (int j = 0; j < m_CellCount.y; j++)
 	{
 		for (int i = 0; i < m_CellCount.x; i++)
 		{
-			auto& currTileInfo = m_TileViewInfos[(int)layer][j][i];
+			auto& currTileInfo = m_TileInfos[layer][j][i];
 			currTileInfo.index = { i,j };
-			currTileInfo.ower = currTileInfo.index;
 			currTileInfo.id = "";
 		}
 	}
 }
 
-void TileModel::InitializeTileCollInfoLayer(const TileCollLayer& layer)
-{
-	m_TileCollInfos[(int)layer] = std::vector<std::vector<TileCollInfo>>(m_CellCount.y, std::vector<TileCollInfo>(m_CellCount.x));
-	for (int j = 0; j < m_CellCount.y; j++)
-	{
-		for (int i = 0; i < m_CellCount.x; i++)
-		{
-			auto& currTileInfo = m_TileCollInfos[(int)layer][j][i];
-			currTileInfo.index = { i,j };
-			//currTileInfo.owner = currTileInfo.index;
-			currTileInfo.colliderType = ColliderType::None;
-		}
-	}
-}
+//bool TileModel::IsPossibleToPass(const CellIndex& tileIndex)
+//{
+//	bool passable = true;
+//	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+//	{
+//		passable &= TileType::Block != m_TileCollInfos[layer][tileIndex.y][tileIndex.x].colliderType;
+//	}
+//	return passable;
+//}
 
-bool TileModel::IsPossibleToPass(const CellIndex& tileIndex)
-{
-	bool passable = true;
-	for (int layer = 0; layer < (int)TileCollLayer::Max; layer++)
-	{
-		passable &= ColliderType::Block != m_TileCollInfos[layer][tileIndex.y][tileIndex.x].colliderType;
-	}
-	return passable;
-}
-
-bool TileModel::IsPossibleToSetTile(const CellIndex& tileIndex, const TileViewLayer& layer, const TEXID& id)
+bool TileModel::IsPossibleToSetTile(const CellIndex& tileIndex, int layer, const TEXID& id)
 {
 	return IsValidTileIndex(tileIndex);
 }
 
-void TileModel::RequestUpdateTile(const TileViewLayer& layer, const CellIndex& tileIndex)
+void TileModel::RequestUpdateTile(int layer, const CellIndex& tileIndex)
 {
+#ifdef DEBUG
 	if (m_WhenNeedsToUpdateTileFunc)
+#endif // DEBUG
 		m_WhenNeedsToUpdateTileFunc(layer, tileIndex);
+#ifdef DEBUG
+	else
+		std::cout << "TileModel::RequestUpdateTile-Fail" << std::endl;
+#endif // DEBUG
 }
 
-void TileModel::RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex)
-{
-	if (m_WhenNeedsToColorizeTileFunc)
-		m_WhenNeedsToColorizeTileFunc(color, tileIndex);
-}
+//void TileModel::RequestUpdateTileObject(const TileLayer& layer, const CellIndex& tileIndex)
+//{
+//#ifdef DEBUG
+//	if (m_WhenNeedsToUpdateTileObjFunc)
+//#endif // DEBUG
+//		m_WhenNeedsToUpdateTileObjFunc(layer, tileIndex);
+//#ifdef DEBUG
+//	else
+//		std::cout << "TileModel::RequestUpdateTileObject-Fail" << std::endl;
+//#endif // DEBUG
+//}

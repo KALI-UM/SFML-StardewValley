@@ -12,7 +12,7 @@ enum class ControlStatus
 	None,
 	Place,
 	Destroy,
-	Collision,
+	TileType,
 };
 
 class TileController
@@ -54,9 +54,9 @@ public:
 	void Set1x1Tile(const CellIndex& tileIndex, bool checkPossible = true);
 	void SetLineIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible = true);
 	void SetRangeIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible = true);
-	void SetNXMTiles(const sf::Vector2u& lot, const CellIndex& centerIndex, bool checkPossible = true);
+	void SetNXMTiles(const sf::Vector2u& uu, const CellIndex& centerIndex, bool checkPossible = true);
 
-	void PushToSelectingTiles(const CellIndex& tileIndex, const LOT& lot = {1,1});
+	void PushToSelectingTiles(const CellIndex& tileIndex, const UNITxUNIT& uu = {1,1});
 protected:
 	ControlStatus	m_CurrStatus = ControlStatus::Place;
 
@@ -71,6 +71,6 @@ protected:
 	int				m_ButtonTileX = 0;
 	int				m_ButtonTileY = 0;
 public:
-	ColliderType	m_CurrCollType;
+	TileType		m_CurrTileType;
 };
 

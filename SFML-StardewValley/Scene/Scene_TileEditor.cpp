@@ -27,14 +27,10 @@ bool Scene_TileEditor::Initialize()
 	SetLayerViewIndex(3, 0);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel({ 80,64 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel(2, { 80,64 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
-	m_TileView->SetTileLayerView(TileViewLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Back, AddGameObject(0, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Buildings, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Paths, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Front, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::AlwaysFront, AddGameObject(2, new TileViewChild(m_TileView)));
+	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer0, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer1, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileMapSystem = AddGameObject(m_UILayerIndex, new TileMapSystem(m_TileModel));
 	m_TileController = AddGameObject(m_UILayerIndex, new TileController(m_TileMapSystem, m_TileModel, m_TileView, 0));
 
@@ -46,10 +42,12 @@ bool Scene_TileEditor::Initialize()
 
 	m_MiniMap = AddGameObject(m_UILayerIndex, new SpriteObject());
 
-	for (int i = 0; i < (int)TileViewLayer::Max; i++)
-		m_Layers.push_back(Tile::TileViewLayerToString((TileViewLayer)i));
+	for (int i = 0; i < (int)TileLayer::Max; i++)
+		m_Layers.push_back(Tile::TileLayerToString((TileLayer)i));
 
-	
+	for (int i = 0; i < (int)TileType::None; i++)
+		m_Types.push_back(Tile::TileTypeToString((TileType)i));
+
 	return false;
 }
 
@@ -60,12 +58,12 @@ void Scene_TileEditor::Enter()
 
 	m_TileController->SetControlStatus(ControlStatus::Place);
 
-	m_MiniMapTexture.create(16*80, 16*64);
+	m_MiniMapTexture.create(16 * 80, 16 * 64);
 	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
-	
+
 	m_MiniMap->setScale(0.3f, -0.3f);
-	m_MiniMap->setPosition(10, 1000);
-	
+	m_MiniMap->setPosition(300, 300);
+
 	m_ButtonBar->setScale(2, 2);
 }
 
@@ -83,7 +81,7 @@ void Scene_TileEditor::PostRender()
 void Scene_TileEditor::ShowSceneImgui()
 {
 	ViewLayerImgui();
-	CollLayerImgui();
+	TileTypeImgui();
 }
 
 void Scene_TileEditor::ViewLayerImgui()
@@ -107,7 +105,7 @@ void Scene_TileEditor::ViewLayerImgui()
 			bool isSelected = (currIndex == i);
 			if (ImGui::Selectable(m_Layers[i].c_str(), isSelected)) {
 				currIndex = i; // 선택 변경
-				m_TileMapSystem->SetCurrTileLayer((TileViewLayer)i);
+				m_TileMapSystem->SetCurrTileLayer((TileEditorLayer)i);
 			}
 
 			// 선택된 항목 강조 표시
@@ -120,45 +118,30 @@ void Scene_TileEditor::ViewLayerImgui()
 
 	if (ImGui::Button("Save"))
 	{
-		m_TileMapSystem->SaveTileViewLayerFile((TileViewLayer)currIndex);
+		m_TileMapSystem->SaveTileViewRawFile((TileEditorLayer)currIndex);
 	}
 
-	static bool visiblelayer[(int)TileViewLayer::Max] = { true, true,true,true,true,true };
+	static bool visiblelayer[2] = { true, true };
 	if (ImGui::Checkbox(m_Layers[0].c_str(), &visiblelayer[0]))
 	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)0, visiblelayer[0]);
+		m_TileView->SetTileViewVisible(0, visiblelayer[0]);
 	}
 	if (ImGui::Checkbox(m_Layers[1].c_str(), &visiblelayer[1]))
 	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)1, visiblelayer[1]);
+		m_TileView->SetTileViewVisible(1, visiblelayer[1]);
 	}
-	if (ImGui::Checkbox(m_Layers[2].c_str(), &visiblelayer[2]))
-	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)2, visiblelayer[2]);
-	}
-	if (ImGui::Checkbox(m_Layers[3].c_str(), &visiblelayer[3]))
-	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)3, visiblelayer[3]);
-	}
-	if (ImGui::Checkbox(m_Layers[4].c_str(), &visiblelayer[4]))
-	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)4, visiblelayer[4]);
-	}
-	if (ImGui::Checkbox(m_Layers[5].c_str(), &visiblelayer[5]))
-	{
-		m_TileView->SetTileLayerVisible((TileViewLayer)5, visiblelayer[5]);
-	}
+
 	ImGui::End();
 }
 
-void Scene_TileEditor::CollLayerImgui()
+void Scene_TileEditor::TileTypeImgui()
 {
 	static int currIndex = 0;
-	ImGui::Begin("Collision Layer Window");
+	ImGui::Begin("TileType Layer Window");
 	if (ImGui::Button("Place"))
 	{
-		m_TileController->SetControlStatus(ControlStatus::Collision);
-		m_TileController->m_CurrCollType = (ColliderType)currIndex;
+		m_TileController->SetControlStatus(ControlStatus::TileType);
+		m_TileController->m_CurrTileType = (TileType)currIndex;
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("BackToTileView"))
@@ -166,14 +149,13 @@ void Scene_TileEditor::CollLayerImgui()
 		m_TileController->SetControlStatus(ControlStatus::Place);
 	}
 
-	static std::vector<std::string> collisionType = {"passable", "block"};
-	if (ImGui::BeginCombo("Collision Type", collisionType[currIndex].c_str()))
+	if (ImGui::BeginCombo("Collision Type", m_Types[currIndex].c_str()))
 	{
-		for (int i = 0; i < collisionType.size(); i++) {
+		for (int i = 0; i < m_Types.size(); i++) {
 			bool isSelected = (currIndex == i);
-			if (ImGui::Selectable(collisionType[i].c_str(), isSelected)) {
+			if (ImGui::Selectable(m_Types[i].c_str(), isSelected)) {
 				currIndex = i; // 선택 변경
-				m_TileController->m_CurrCollType = (ColliderType)currIndex;
+				m_TileController->m_CurrTileType = (TileType)currIndex;
 			}
 
 			// 선택된 항목 강조 표시
@@ -185,7 +167,7 @@ void Scene_TileEditor::CollLayerImgui()
 	}
 	if (ImGui::Button("Save"))
 	{
-		m_TileMapSystem->SaveTileCollisionLayerFile();
+		m_TileMapSystem->SaveTileTypeFile();
 	}
 
 	ImGui::End();

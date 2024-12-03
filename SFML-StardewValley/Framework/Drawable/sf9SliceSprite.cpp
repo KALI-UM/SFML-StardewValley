@@ -46,7 +46,7 @@ void sf9SliceSprite::setSize(const sf::Vector2f& size)
 	if (size.x < m_CornerSize * 2 || size.y < m_CornerSize * 2)return;
 
 	m_Size = size;
-	sf::FloatRect lot = { 0,0, m_CornerSize, m_CornerSize };
+	sf::FloatRect unitxunit = { 0,0, m_CornerSize, m_CornerSize };
 
 	m_Vertices[0].position = { 0,						0 };
 	m_Vertices[1].position = { m_CornerSize,			0 };

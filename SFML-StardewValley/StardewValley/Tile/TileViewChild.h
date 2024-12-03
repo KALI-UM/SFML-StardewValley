@@ -3,15 +3,22 @@
 
 class TileView;
 class DTile;
+enum class TileViewType
+{
+	Raw,						//texid로 childview에서 직접 그린다
+	Object,						//다른 곳에서 그려준다. 투명화 등을 처리하기 위해 들고있어준다
+};
+
 class TileViewChild
 	:public GameObject
 {
 	friend class TileView;
 protected:
-	TileView* mcv_View;
-	TileViewLayer m_Layer;
+	TileView*				mcv_View;
+	int						m_TileViewIndex;
+	const TileViewType		m_TileViewType;
 public:
-	TileViewChild(TileView* view);
+	TileViewChild(TileView* view, TileViewType type);
 	~TileViewChild();
 
 	bool Initialize() override;
@@ -24,8 +31,14 @@ public:
 	void Release() override;
 
 	void ColorizeTile(const sf::Color& color, const CellIndex& tileIndex);
-
 	//void NeedPriorityUpdate() { m_NeedPriorityUpdate = true; };
+
+protected:
+	void InitializeRaw();
+	void InitializeTileObject();
+	void ResetRaw();
+	void ResetTileObject();
+
 private:
 	std::queue<CellIndex> m_ColorizedTiles;
 	void ResetColorizedTile();

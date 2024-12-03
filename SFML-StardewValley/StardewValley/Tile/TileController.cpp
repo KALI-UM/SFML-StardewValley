@@ -19,8 +19,9 @@ TileController::~TileController()
 bool TileController::Initialize()
 {
 	if (!mcv_Model || !mcv_View)return false;
-
-	return false;
+	m_TileMapSystem->SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, mcv_View, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1, 1)));
+	
+	return true;
 }
 
 void TileController::Reset()
@@ -51,7 +52,7 @@ void TileController::Update(float dt)
 		case ControlStatus::Destroy:
 			UpdateDestroy(dt);
 			break;
-		case ControlStatus::Collision:
+		case ControlStatus::TileType:
 			UpdateCollision(dt);
 			break;
 		}
@@ -120,7 +121,7 @@ void TileController::UpdatePlace(float dt)
 
 	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
 	{
-		m_TileMapSystem->BuildTilesById(m_SelectingTiles, m_ButtonBar->GetCurrButtonTile()->GetLot(), m_ButtonBar->GetCurrTexIds());
+		m_TileMapSystem->BuildTilesById(m_SelectingTiles, m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_ButtonBar->GetCurrTexIds());
 		m_SelectingTiles.clear();
 		return;
 	}
@@ -128,7 +129,7 @@ void TileController::UpdatePlace(float dt)
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
 	{
 		m_DragStartTile = m_MouseOverlaidTile;
-		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetLot(), m_DragStartTile);
+		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_DragStartTile);
 	}
 	else if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left) && m_DragStartTile != m_MouseOverlaidTile)
 	{
@@ -139,7 +140,7 @@ void TileController::UpdatePlace(float dt)
 	}
 	else
 	{
-		mcv_View->ColorizeAllTile(ColorPalette::Gray, m_MouseOverlaidTile, m_ButtonBar->GetCurrButtonTile()->GetLot());
+		mcv_View->ColorizeAllTile(ColorPalette::Gray, m_MouseOverlaidTile, m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit());
 	}
 
 }
@@ -156,7 +157,7 @@ void TileController::UpdateDestroy(float dt)
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
 	{
 		m_DragStartTile = m_MouseOverlaidTile;
-		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetLot(), m_DragStartTile);
+		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_DragStartTile);
 	}
 	else if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left) && m_DragStartTile != m_MouseOverlaidTile)
 	{
@@ -169,11 +170,11 @@ void TileController::UpdateDestroy(float dt)
 
 void TileController::UpdateCollision(float dt)
 {
-	mcv_Model->CollisionTypeMode(TileCollLayer::Back, m_CurrCollType);
+	m_TileMapSystem->SetTileTypeMode(m_CurrTileType);
 
 	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
 	{
-		mcv_Model->SetCollisions(m_SelectingTiles, TileCollLayer::Back, m_CurrCollType);
+		m_TileMapSystem->SetTilesType(m_SelectingTiles, m_CurrTileType);
 		m_SelectingTiles.clear();
 		return;
 	}
@@ -181,7 +182,7 @@ void TileController::UpdateCollision(float dt)
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
 	{
 		m_DragStartTile = m_MouseOverlaidTile;
-		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetLot(), m_DragStartTile);
+		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_DragStartTile);
 	}
 	else if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left) && m_DragStartTile != m_MouseOverlaidTile)
 	{
@@ -219,7 +220,7 @@ void TileController::Set1x1Tile(const CellIndex& tileIndex, bool checkPossible)
 	m_SelectingTiles.clear();
 	if (checkPossible)
 	{
-		if (!mcv_Model->IsPossibleToSetTile(tileIndex, m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
+		if (!mcv_Model->IsPossibleToSetTile(tileIndex, (int)m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
 			return;
 	}
 	PushToSelectingTiles(tileIndex);
@@ -252,7 +253,7 @@ void TileController::SetLineIntersectedTiles(const CellIndex& startIndex, const 
 	{
 		if (checkPossible)
 		{
-			if (!mcv_Model->IsPossibleToSetTile(currIndex, m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
+			if (!mcv_Model->IsPossibleToSetTile(currIndex, (int)m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
 				return;
 		}
 
@@ -288,7 +289,7 @@ void TileController::SetLineIntersectedTiles(const CellIndex& startIndex, const 
 void TileController::SetRangeIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible)
 {
 	m_SelectingTiles.clear();
-	sf::Vector2i offset = (m_CurrStatus == ControlStatus::Place ? sf::Vector2i(m_ButtonBar->GetCurrButtonTile()->GetLot()) : sf::Vector2i(1, 1));
+	sf::Vector2i offset = (m_CurrStatus == ControlStatus::Place ? sf::Vector2i(m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit()) : sf::Vector2i(1, 1));
 
 	for (int j = std::min(startIndex.y, endIndex.y); j <= std::max(startIndex.y, endIndex.y); j += offset.y)
 	{
@@ -297,54 +298,54 @@ void TileController::SetRangeIntersectedTiles(const CellIndex& startIndex, const
 			CellIndex currIndex = { i,j };
 			if (checkPossible)
 			{
-				if (!mcv_Model->IsPossibleToSetTile(currIndex, m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
+				if (!mcv_Model->IsPossibleToSetTile(currIndex, (int)m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
 					continue;
 			}
-			PushToSelectingTiles(currIndex, m_CurrStatus == ControlStatus::Place ? m_ButtonBar->GetCurrButtonTile()->GetLot() : sf::Vector2u(1, 1));
+			PushToSelectingTiles(currIndex, m_CurrStatus == ControlStatus::Place ? m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit() : sf::Vector2u(1, 1));
 		}
 	}
 }
 
-void TileController::SetNXMTiles(const sf::Vector2u& lot, const CellIndex& centerIndex, bool checkPossible)
+void TileController::SetNXMTiles(const sf::Vector2u& uu, const CellIndex& centerIndex, bool checkPossible)
 {
 	m_SelectingTiles.clear();
 
 	CellIndex startIndex;
-	if (lot == sf::Vector2u(1, 1))
+	if (uu == sf::Vector2u(1, 1))
 	{
 		Set1x1Tile(centerIndex, checkPossible);
 		return;
 	}
-	else if (lot == sf::Vector2u(2, 2))
+	else if (uu == sf::Vector2u(2, 2))
 	{
 		startIndex = centerIndex + sf::Vector2i(-1, 0);
 	}
-	else if (lot == sf::Vector2u(3, 3))
+	else if (uu == sf::Vector2u(3, 3))
 	{
 		startIndex = centerIndex + sf::Vector2i(-1, -1);
 	}
-	else if (lot == sf::Vector2u(4, 4))
+	else if (uu == sf::Vector2u(4, 4))
 	{
 		startIndex = centerIndex + sf::Vector2i(-2, -1);
 	}
 
-	for (int j = startIndex.y; j < startIndex.y + (int)lot.y; j++)
+	for (int j = startIndex.y; j < startIndex.y + (int)uu.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + (int)lot.x; i++)
+		for (int i = startIndex.x; i < startIndex.x + (int)uu.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			if (checkPossible)
 			{
-				if (!mcv_Model->IsPossibleToSetTile(currIndex, m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
+				if (!mcv_Model->IsPossibleToSetTile(currIndex, (int)m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
 					return;
 			}
 
 		}
 	}
 
-	for (int j = startIndex.y; j < startIndex.y + (int)lot.y; j++)
+	for (int j = startIndex.y; j < startIndex.y + (int)uu.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + (int)lot.x; i++)
+		for (int i = startIndex.x; i < startIndex.x + (int)uu.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			PushToSelectingTiles(currIndex);
@@ -352,8 +353,8 @@ void TileController::SetNXMTiles(const sf::Vector2u& lot, const CellIndex& cente
 	}
 }
 
-void TileController::PushToSelectingTiles(const CellIndex& tileIndex, const LOT& lot)
+void TileController::PushToSelectingTiles(const CellIndex& tileIndex, const UNITxUNIT& uu)
 {
 	m_SelectingTiles.push_back(tileIndex);
-	mcv_View->ColorizeAllTile(ColorPalette::Gray, tileIndex, lot);
+	mcv_View->ColorizeAllTile(ColorPalette::Gray, tileIndex, uu);
 }

@@ -1,5 +1,5 @@
 unit,16,version,1,,,,
-id,filename,lot,index,left,top,width,height
+id,filename,unitxunit,index,left,top,width,height
 Tools.png#Tool0,Tools.png,21x1,"0,0",0,0,336,16
 Tools.png#Tool0_X0Y0,Tools.png,1x1,"0,0",0,0,16,16
 Tools.png#Tool0_X1Y0,Tools.png,1x1,"1,0",16,0,16,16

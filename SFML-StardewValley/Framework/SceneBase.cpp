@@ -328,7 +328,6 @@ void SceneBase::PushLayerToDrawQueNoCulling(int layerIndex)
 
 				DrawableObject* dobj = gobj->GetDrawableObj(i);
 				GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
-
 			}
 		}
 	}

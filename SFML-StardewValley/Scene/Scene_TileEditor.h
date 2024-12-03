@@ -24,7 +24,7 @@ public:
 
 	void ShowSceneImgui() override;
 	void ViewLayerImgui();
-	void CollLayerImgui();
+	void TileTypeImgui();
 
 protected:
 	TileGrid*			m_TileGrid;
@@ -40,6 +40,7 @@ protected:
 	MouseCursor*		m_Cursor;
 
 	std::vector<std::string> m_Layers;
+	std::vector<std::string> m_Types;
 
 };
 

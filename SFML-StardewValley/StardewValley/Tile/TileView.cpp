@@ -1,18 +1,18 @@
 #include "pch.h"
 #include "TileView.h"
+#include "TexCoordTable.h"
 #include "TileModel.h"
 #include "TileViewChild.h"
 #include "TileGrid.h"
 #include "DTile.h"
-#include "TexCoordTable.h"
+#include "TileObject.h"
 
 TileView::TileView(TileModel* model)
 	:mcv_Model(model)
 {
-	mcv_Model->SetTileUpdateFunc(std::bind(&TileView::PushToSpriteUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
-	mcv_Model->SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, this, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1,1)));
-	//mcv_Model->SetTempEffectTileUpdateFunc(std::bind(&TileView::PushToTempEffectUpdateQue, this, std::placeholders::_1));
-	m_LayerViews.resize((int)TileViewLayer::Max);
+	mcv_Model->SetTileUpdateFunc(std::bind(&TileView::PushToViewUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
+	//mcv_Model->SetTileObjUpdateFunc(std::bind(&TileView::PushToTileObjectUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
+	m_TileViewChildren.resize((int)TileObjLayer::Max);
 }
 
 TileView::~TileView()
@@ -50,11 +50,11 @@ void TileView::Release()
 {
 }
 
-void TileView::SetTileLayerView(const TileViewLayer& layer, TileViewChild* child)
+void TileView::SetTileViewIndex(int layer, TileViewChild* child)
 {
 	GameObject::SetChildObj((GameObject*)child);
-	m_LayerViews[(int)layer] = child;
-	child->m_Layer = layer;
+	m_TileViewChildren[layer] = child;
+	child->m_TileViewIndex = layer;
 }
 
 void TileView::SetTileGrid(TileGrid* grid)
@@ -69,16 +69,16 @@ void TileView::SetGridTextSize(float zoom)
 	m_TileGrid->SetTextSize(zoom);
 }
 
-void TileView::SetTileLayerVisible(const TileViewLayer& layer, bool visible)
+void TileView::SetTileViewVisible(int layer, bool visible)
 {
-	m_LayerViews[(int)layer]->SetIsVisible(visible);
+	m_TileViewChildren[layer]->SetIsVisible(visible);
 }
 
 void TileView::SetTileTransform(const sf::Vector2f& zero, const sf::Transform& trans)
 {
 	m_TileTransform = trans;
 	setPosition(zero);
-	for (auto& layer : m_LayerViews)
+	for (auto& layer : m_TileViewChildren)
 	{
 		if (layer)
 			layer->SetTileTransform(trans);
@@ -109,29 +109,29 @@ CellIndex TileView::GetTileCoordinatedIndex(const sf::Vector2f& pos, bool isTile
 //}
 
 
-void TileView::ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const CellIndex& tileIndex)
+void TileView::ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const CellIndex& tileIndex)
 {
 	if (!mcv_Model->IsValidTileIndex(tileIndex))
 		return;
 
-	m_LayerViews[(int)layer]->ColorizeTile(color, tileIndex);
+	m_TileViewChildren[(int)layer]->ColorizeTile(color, tileIndex);
 }
 
-void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const LOT& lot)
+void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const UNITxUNIT& uu)
 {
-	for (int layer = 0; layer < (int)TileViewLayer::Max; layer++)
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
 	{
-		for (int loty = 0; loty < (int)lot.y; loty++)
+		for (int uuy = 0; uuy < (int)uu.y; uuy++)
 		{
-			for (int lotx = 0; lotx < (int)lot.x; lotx++)
+			for (int uux = 0; uux < (int)uu.x; uux++)
 			{
-				ColorizeTile(color, (TileViewLayer)layer, tileIndex+sf::Vector2i(lotx, loty));
+				ColorizeTile(color, (TileObjLayer)layer, tileIndex+sf::Vector2i(uux, uuy));
 			}
 		}
 	}
 }
 
-void TileView::ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const std::list<CellIndex>& tiles)
+void TileView::ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const std::list<CellIndex>& tiles)
 {
 	for (auto it = tiles.begin(); it != tiles.end(); it++)
 	{
@@ -141,30 +141,59 @@ void TileView::ColorizeTile(const sf::Color& color, const TileViewLayer& layer, 
 
 void TileView::ColorizeAllTiles(const sf::Color& color, const std::list<CellIndex>& tiles)
 {
-	for (int layer = 0; layer < (int)TileViewLayer::Max; layer++)
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
 	{
-		ColorizeTile(color, (TileViewLayer)layer, tiles);
+		ColorizeTile(color, (TileObjLayer)layer, tiles);
 	}
 }
 
-void TileView::PushToSpriteUpdateQue(const TileViewLayer& depth, const CellIndex& tileIndex)
+void TileView::PushToViewUpdateQue(int layer, const CellIndex& tileIndex)
 {
-	m_SpriteUpdateQueue.push({ depth, tileIndex });
+	if (m_TileViewChildren[layer]->m_TileViewType == TileViewType::Raw)
+		PushToSpriteUpdateQue(layer, tileIndex);
+	else
+		PushToTileObjectUpdateQue(layer, tileIndex);
+}
+
+void TileView::PushToSpriteUpdateQue(int layer, const CellIndex& tileIndex)
+{
+	m_SpriteUpdateQueue.push({ layer, tileIndex });
+}
+
+void TileView::PushToTileObjectUpdateQue(int layer, const CellIndex& tileIndex)
+{
+	m_TileObjUpdateQueue.push({ layer, tileIndex });
 }
 
 void TileView::UpdateTileSprite()
 {
 	while (!m_SpriteUpdateQueue.empty())
 	{
-		TileViewLayer& currlayer = m_SpriteUpdateQueue.front().first;
+		int currlayer = m_SpriteUpdateQueue.front().first;
 		sf::Vector2i& currIndex = m_SpriteUpdateQueue.front().second;
-		auto& currTile = m_LayerViews[(int)currlayer]->m_TileDrawable[currIndex.y][currIndex.x];
-		auto& currTileInfo = mcv_Model->GetTileViewInfo(currlayer, currIndex);
+		auto& currTile = m_TileViewChildren[(int)currlayer]->m_TileDrawable[currIndex.y][currIndex.x];
+		auto& currTileInfo = mcv_Model->GetTileInfo(currlayer, currIndex);
 		auto& currTexRes = TEXRESTABLE_MGR->GetTileTexRes(currTileInfo.id);
 
 		currTile->SetTexture(currTexRes.filepath);
 		currTile->SetTextureRect(currTexRes.texcoord);
 		currTile->SetOrigin(OriginType::BC, m_TileOffset);
 		m_SpriteUpdateQueue.pop();
+	}
+}
+
+void TileView::UpdateTileObject()
+{
+	while (!m_TileObjUpdateQueue.empty())
+	{
+		int currlayer = m_TileObjUpdateQueue.front().first;
+		sf::Vector2i& currIndex = m_TileObjUpdateQueue.front().second;
+		auto& currTileInfo = mcv_Model->GetTileInfo(currlayer, currIndex);
+		if (currTileInfo.owner)
+			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = currTileInfo.owner->GetDTile();
+		else
+			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = nullptr;
+		
+		m_TileObjUpdateQueue.pop();
 	}
 }

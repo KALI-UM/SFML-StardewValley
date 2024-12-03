@@ -2,6 +2,25 @@
 #include "Tile/Tile.h"
 
 class DTile;
+
+typedef std::string TILEOBJID;
+typedef std::string SubType;
+struct TileObjectData
+{
+	TILEOBJID	id;
+	UNITxUNIT	uuSize;
+
+	struct UnitData
+	{
+		CellIndex	offset;
+		TEXID		texid;
+		TileType	type;
+		SubType		subtype;
+	};
+
+	std::vector<std::vector<UnitData>> tileTypeMap;
+};
+
 class TileObject :
 	public GameObject
 {
@@ -11,22 +30,17 @@ public:
 
 	bool Initialize() override;
 
+	void LoadTileObject();
 
-	DTile* GetObjectTile(const CellIndex& tileIndex) { return m_TileSprite; };
-	ColliderType GetColliderType(const CellIndex& currIndex) const;
-
-	void OnColliderEnter(const CellIndex& currIndex);
-	void OnColliderStay(const CellIndex& currIndex);
-	void OnColliderExit(const CellIndex& currIndex);
-
-	virtual void OnTriggerEnter(const CellIndex& localIndex) {};
-	virtual void OnTriggerStay(const CellIndex& localIndex) {};
-	virtual void OnTriggerExit(const CellIndex& localIndex) {};
+	DTile* GetDTile() const { return m_TileSprite; }
+	const TileType& GetTileType(const CellIndex& tileIndex)const;
+	const std::list<std::pair<CellIndex, TileType>>& GetTileTypes() const { return m_TileTypes; }
+	std::list<std::pair<CellIndex, TileType>>	m_TileTypes;
 
 protected:
-	CellIndex									m_TileIndex;
-	CellIndex									m_TLIndex;
-	std::vector <std::vector<ColliderType>>		m_TLOffsets;
+	TileObjectData*											m_Data;
+	CellIndex												m_TileIndex;
+	CellIndex												m_TLOffset;
 
 	DTile* m_TileSprite;
 };

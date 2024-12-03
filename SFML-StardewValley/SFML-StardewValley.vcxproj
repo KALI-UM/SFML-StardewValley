@@ -212,6 +212,7 @@
     <ClCompile Include="TexCoordTable.cpp" />
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -281,6 +282,7 @@
     <ClInclude Include="TexCoordTable.h" />
     <ClInclude Include="StardewValley\Item\Tool.h" />
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
+    <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
     <ClInclude Include="TileObject_Tree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

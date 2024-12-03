@@ -5,12 +5,13 @@ class TileModel;
 class TileViewChild;
 class TileGrid;
 class DTile;
+
 class TileView :
 	public GameObject
 {
 protected:
 	TileModel* mcv_Model;
-	std::vector<TileViewChild*> m_LayerViews;
+	std::vector<TileViewChild*> m_TileViewChildren;
 public:
 	const TileModel* const GetModel()const { return mcv_Model; }
 	const sf::Vector2f m_TileOffset = { 0,0 };
@@ -25,10 +26,10 @@ public:
 	//void FixeUpdate(float dt) override;
 	void PostRender();
 	void Release() override;
-	void SetTileLayerView(const TileViewLayer& layer, TileViewChild* child);
+	void SetTileViewIndex(int layer, TileViewChild* child);
 	void SetTileGrid(TileGrid* grid);
 	void SetGridTextSize(float zoom);
-	void SetTileLayerVisible(const TileViewLayer& layer, bool visible);
+	void SetTileViewVisible(int layer, bool visible);
 
 	void			SetTileTransform(const sf::Vector2f& zero, const sf::Transform& trans);
 	sf::Transform	GetTileTransform() const { return m_TileTransform; }
@@ -38,18 +39,22 @@ public:
 	//sf::Vector2f	GetTileCoordinatedCenterPosByTileIndex(const CellIndex& tileIndex);
 	//int				GetDrawableIndexByTileIndex(const CellIndex& tileIndex) const;
 
-	void ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const CellIndex& tileIndex);
-	void ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const LOT& lot = {1,1});
-	void ColorizeTile(const sf::Color& color, const TileViewLayer& layer, const std::list<CellIndex>& tiles);
+	void ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const CellIndex& tileIndex);
+	void ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const UNITxUNIT& uu = {1,1});
+	void ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const std::list<CellIndex>& tiles);
 	void ColorizeAllTiles(const sf::Color& color, const std::list<CellIndex>& tiles);
 
 protected:
 	sf::Transform	m_TileTransform;
 	TileGrid*		m_TileGrid;
-	void PushToSpriteUpdateQue(const TileViewLayer& depth, const CellIndex& tileIndex);
-	std::queue<std::pair<TileViewLayer, CellIndex>> m_SpriteUpdateQueue;
 
+	void PushToViewUpdateQue(int layer, const CellIndex& tileIndex);
+	void PushToSpriteUpdateQue(int layer, const CellIndex& tileIndex);
+	std::queue<std::pair<int, CellIndex>> m_SpriteUpdateQueue;
+	void PushToTileObjectUpdateQue(int layer, const CellIndex& tileIndex);
+	std::queue<std::pair<int, CellIndex>> m_TileObjUpdateQueue;
 
 	void UpdateTileSprite();
+	void UpdateTileObject();
 };
 

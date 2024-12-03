@@ -61,6 +61,7 @@
     <ClCompile Include="Scene\Scene_InGameTest.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
+    <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -130,5 +131,6 @@
     <ClInclude Include="Scene\Scene_InGameTest.h" />
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
     <ClInclude Include="TileObject_Tree.h" />
+    <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
   </ItemGroup>
 </Project>

@@ -1,11 +1,10 @@
 #include "pch.h"
 #include "Scene_InGameTest.h"
 
-#include "Tile/TileMapSystem.h"
+#include "Tile/TileObjectSystem.h"
 #include "Tile/TileModel.h"
 #include "Tile/TileView.h"
 #include "Tile/TileViewChild.h"
-#include "Tile/TileController.h"
 #include "Tile/TileGrid.h"
 
 #include "Player.h"
@@ -31,17 +30,14 @@ bool Scene_InGameTest::Initialize()
 	SetLayerViewIndex(3, 1);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel({ 80,64 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel((unsigned int)TileLayer::Max, {80,64}, {16,16}));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
-	m_TileView->SetTileLayerView(TileViewLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Back, AddGameObject(0, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Buildings, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Paths, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::Front, AddGameObject(1, new TileViewChild(m_TileView)));
-	m_TileView->SetTileLayerView(TileViewLayer::AlwaysFront, AddGameObject(2, new TileViewChild(m_TileView)));
-	m_TileMapSystem = AddGameObject(m_UILayerIndex, new TileMapSystem(m_TileModel));
-	m_TileController = AddGameObject(m_UILayerIndex, new TileController(m_TileMapSystem, m_TileModel, m_TileView, 0));
-	m_TileController->SetControlStatus(ControlStatus::None);
+	m_TileView->SetTileViewIndex((int)TileLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)TileLayer::WaterEffect, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)TileLayer::Back, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)TileLayer::Object, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel));
+
 	m_TileGrid = AddGameObject(2, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
 	m_TileGrid->SetIsVisible(false);

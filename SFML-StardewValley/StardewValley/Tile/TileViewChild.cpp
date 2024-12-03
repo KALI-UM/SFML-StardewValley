@@ -5,8 +5,8 @@
 #include "TexCoordTable.h"
 #include "DTile.h"
 
-TileViewChild::TileViewChild(TileView* view)
-	:mcv_View(view)
+TileViewChild::TileViewChild(TileView* view, TileViewType type)
+	:mcv_View(view), m_TileViewType(type)
 {
 }
 
@@ -17,20 +17,18 @@ TileViewChild::~TileViewChild()
 bool TileViewChild::Initialize()
 {
 	if (!mcv_View)return false;
-
 	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
-
 	m_TileDrawable = std::vector<std::vector<DTile*>>(cellCount.y, std::vector<DTile*>(cellCount.x));
-	for (int j = 0; j < (int)cellCount.y; j++)
+	
+	switch (m_TileViewType)
 	{
-		for (int i = 0; i < (int)cellCount.x; i++)
-		{
-			DTile* tileSprite = new DTile();
-			tileSprite->setLocalPosition({ (i+0.5f)*cellSize.x, (j+1.0f) * cellSize.y });
-			SetDrawableObj(tileSprite);
-			m_TileDrawable[j][i] = tileSprite;
-		}
+	case TileViewType::Raw:
+		InitializeRaw();
+		break;
+	case TileViewType::Object:
+		InitializeTileObject();
+		break;
 	}
 
 	return true;
@@ -38,22 +36,14 @@ bool TileViewChild::Initialize()
 
 void TileViewChild::Reset()
 {
-	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
-	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
-
-	for (int j = 0; j < (int)cellCount.y; j++)
+	switch (m_TileViewType)
 	{
-		for (int i = 0; i < (int)cellCount.x; i++)
-		{
-			auto& tileSprite = m_TileDrawable[j][i];
-			const auto& tileInfo = mcv_View->GetModel()->GetTileViewInfo(m_Layer, { i,j });
-			const auto& texres = TEXRESTABLE_MGR->GetTileTexRes(tileInfo.id);
-
-			tileSprite->SetTexture(texres.filepath);
-			tileSprite->SetTextureRect(texres.texcoord);
-			tileSprite->SetDebugDraw(false);
-			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
-		}
+	case TileViewType::Raw:
+		ResetRaw();
+		break;
+	case TileViewType::Object:
+		ResetTileObject();
+		break;
 	}
 }
 
@@ -85,6 +75,52 @@ void TileViewChild::ColorizeTile(const sf::Color& color, const CellIndex& tileIn
 	auto tile = m_TileDrawable[tileIndex.y][tileIndex.x];
 	tile->SetFillColor(color);
 	m_ColorizedTiles.push(tileIndex);
+}
+
+void TileViewChild::InitializeRaw()
+{
+	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
+	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
+	for (int j = 0; j < (int)cellCount.y; j++)
+	{
+		for (int i = 0; i < (int)cellCount.x; i++)
+		{
+			DTile* tileSprite = new DTile();
+			tileSprite->setLocalPosition({ (i + 0.5f) * cellSize.x, (j + 1.0f) * cellSize.y });
+			SetDrawableObj(tileSprite);
+			m_TileDrawable[j][i] = tileSprite;
+		}
+	}
+}
+
+void TileViewChild::InitializeTileObject()
+{
+
+}
+
+void TileViewChild::ResetRaw()
+{
+	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
+	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
+
+	for (int j = 0; j < (int)cellCount.y; j++)
+	{
+		for (int i = 0; i < (int)cellCount.x; i++)
+		{
+			auto& tileSprite = m_TileDrawable[j][i];
+			const auto& tileInfo = mcv_View->GetModel()->GetTileInfo(m_TileViewIndex, { i,j });
+			const auto& texres = TEXRESTABLE_MGR->GetTileTexRes(tileInfo.id);
+
+			tileSprite->SetTexture(texres.filepath);
+			tileSprite->SetTextureRect(texres.texcoord);
+			tileSprite->SetDebugDraw(false);
+			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
+		}
+	}
+}
+
+void TileViewChild::ResetTileObject()
+{
 }
 
 void TileViewChild::ResetColorizedTile()

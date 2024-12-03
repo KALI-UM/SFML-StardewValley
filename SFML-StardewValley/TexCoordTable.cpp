@@ -28,14 +28,14 @@ bool TexCoordTable::Load()
 			continue;
 		}
 		curr.filepath = m_TileFilePath + doc.GetCell<std::string>("filename", j);
-		curr.lotSize = Get2Number(doc.GetCell<std::string>("lot", j), "x").To<unsigned int>();
+		curr.uuSize = Get2Number(doc.GetCell<std::string>("unitxunit", j), "x").To<unsigned int>();
 		curr.index = Get2Number(doc.GetCell<std::string>("index", j), ",");
 		curr.texcoord.left = doc.GetCell<int>("left", j);
 		curr.texcoord.top = doc.GetCell<int>("top", j);
 		curr.texcoord.width = doc.GetCell<int>("width", j);
 		curr.texcoord.height = doc.GetCell<int>("height", j);
-		if (curr.lotSize != sf::Vector2u(1, 1))
-			curr.children = std::vector<std::vector<TEXID>>(curr.lotSize.y, std::vector<std::string>(curr.lotSize.x));
+		if (curr.uuSize != sf::Vector2u(1, 1))
+			curr.children = std::vector<std::vector<TEXID>>(curr.uuSize.y, std::vector<std::string>(curr.uuSize.x));
 		m_TileTexCoord.insert({ curr.id , curr });
 	}
 
