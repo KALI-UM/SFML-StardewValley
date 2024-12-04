@@ -1,0 +1,9 @@
+id,fps,looptype,,
+PickaxeSide,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/PickaxeSide.png,0,0,48,33
+graphics/PickaxeSide.png,48,0,48,33
+graphics/PickaxeSide.png,96,0,48,33
+graphics/PickaxeSide.png,144,0,48,33
+graphics/PickaxeSide.png,192,0,48,33

@@ -1,6 +1,5 @@
 #include "pch.h"
 #include "Scene_InGameTest.h"
-#include "Scene_TileEditor.h"
 
 GameManager::GameManager()
 	:m_MainWindow(nullptr)
@@ -16,8 +15,8 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	Scene_InGameTest* lobby = new Scene_InGameTest();
 	SCENE_MGR->PushScene(lobby);
 	SCENE_MGR->SetCurrentScene(lobby->GetName());
-	Scene_TileEditor* editor = new Scene_TileEditor();
-	SCENE_MGR->PushScene(editor);
+	//Scene_TileEditor* editor = new Scene_TileEditor();
+	//SCENE_MGR->PushScene(editor);
 
 	lobby->RESET();
 	lobby->ENTER();
@@ -35,8 +34,11 @@ void GameManager::UpdateEvent(const sf::Event& ev)
 	//기본적으로 기본 0번뷰와 ui뷰만 수정한다
 	if (ev.type == sf::Event::Resized)
 	{
-		SetViewSize(0, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
-		SetViewSize(SCENE_MGR->GetCurrentScene()->m_UIViewIndex, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
+		for (int i = 0; i < m_Views.size(); i++)
+		{
+			SetViewSize(i, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
+			//SetViewSize(SCENE_MGR->GetCurrentScene()->m_UIViewIndex, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
+		}
 	}
 }
 

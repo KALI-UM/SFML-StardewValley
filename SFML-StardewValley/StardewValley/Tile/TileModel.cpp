@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "TileModel.h"
 #include "TileView.h"
+#include "Tile/TileObject.h"
 
 TileModel::TileModel(int layermax, const sf::Vector2u& cellCnt, const sf::Vector2f& cellSize)
 	:m_LayerCnt(layermax), m_CellCount(cellCnt), m_CellSize(cellSize)
@@ -36,6 +37,11 @@ void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIn
 	TileLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
 	m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
 
+	for (auto& curr : tileObj->GetTileTypes())
+	{
+		CellIndex index = curr.first + tileIndex;
+		m_TileInfos[(int)tilelayer][index.y][index.x].owner = tileObj;
+	}
 
 	RequestUpdateTile((int)tilelayer, tileIndex);
 }

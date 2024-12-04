@@ -1,0 +1,9 @@
+id,fps,looptype,,
+AxeSide,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/AxeSide.png,0,0,48,33
+graphics/AxeSide.png,48,0,48,33
+graphics/AxeSide.png,96,0,48,33
+graphics/AxeSide.png,144,0,48,33
+graphics/AxeSide.png,192,0,48,33

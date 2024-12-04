@@ -1,0 +1,9 @@
+id,fps,looptype,,
+HoeSide,15,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/HoeSide.png,0,0,47,32
+graphics/HoeSide.png,47,0,47,32
+graphics/HoeSide.png,94,0,47,32
+graphics/HoeSide.png,141,0,47,32
+graphics/HoeSide.png,188,0,47,32

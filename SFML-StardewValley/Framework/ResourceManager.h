@@ -1,10 +1,12 @@
 #pragma once
+#include "AnimationClip.h"
 
 template<typename T>
 class ResourceManager :
 	public Singleton<ResourceManager<T>>
 {
 	friend Singleton<ResourceManager<T>>;	//부모생성자에서 생성을 못해주기 때문에 프랜드 선언
+
 public:
 	ResourceManager(const ResourceManager&) = delete;
 	ResourceManager(ResourceManager<T>&&) = delete;
@@ -15,6 +17,7 @@ protected:
 	virtual ~ResourceManager() = default;
 
 	static std::unordered_map<std::string, T*> m_Resources;
+	std::map<std::string, std::tuple<AnimationClip*, bool>> mapAnimationClip;
 
 public:
 	bool LoadByFilepath(const std::string& filepath)
@@ -23,6 +26,19 @@ public:
 		{
 			T* newRes = GetByFilepath(filepath);
 			return newRes;
+		}
+		return false;
+	}
+
+	bool LoadByFilepath(const std::string& filepath, const std::string& id)
+	{
+		if (m_Resources.find(filepath) == m_Resources.end())
+		{
+			if (m_Resources.find(id) == m_Resources.end())
+			{
+				T* newRes = GetByFilepath(filepath, id);
+				return newRes;
+			}
 		}
 		return false;
 	}
@@ -101,6 +117,42 @@ public:
 		}
 	}
 
+	T* GetByFilepath(const std::string& filepath, const std::string& id) //실패시 nullptr반환
+	{
+		if (!IsValidPath(filepath))
+		{
+			return nullptr;
+		}
+
+		auto it = m_Resources.find(filepath);
+		if (it == m_Resources.end())
+		{
+			it = m_Resources.find(id);
+				if (it != m_Resources.end())
+					return it->second;
+
+			T* newRes = new T();
+			std::cout << "RESOURCE LOADING::\"" << filepath << "\"		...	";
+			if (newRes->loadFromFile(filepath))
+			{
+				std::cout << "Success\n";
+				m_Resources[id] = newRes;
+				return newRes;
+			}
+			else
+			{
+				std::cout << "Fail\n";
+				delete newRes;
+				return nullptr;
+			}
+		}
+		else
+		{
+			return it->second;
+		}
+	}
+
+
 	bool IsValidPath(const std::string& filepath)
 	{
 		if (filepath.compare("") == 0)
@@ -110,6 +162,17 @@ public:
 		}
 		return true;
 	}
+
+	T* GetAnimationClip(const std::string& id)
+	{
+		auto it = mapAnimationClip.find(id);
+		if (it != mapAnimationClip.end())
+		{
+			return get<0>(it->second);
+		}
+		return nullptr;
+	}
+
 };
 
 template<typename T>

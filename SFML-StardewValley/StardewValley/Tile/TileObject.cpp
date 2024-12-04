@@ -40,7 +40,7 @@ void TileObject::LoadTileObject()
 		for (int i = 0; i < m_Data->tileTypeMap[j].size(); i++)
 		{
 			const TileObjData::UnitData& currUnit = m_Data->tileTypeMap[j][i];
-			m_TileTypes.push_back({ m_Data->originIndex - sf::Vector2i(i,j), currUnit.type});
+			m_TileTypes.push_back({ m_Data->originIndex + sf::Vector2i(i,j), currUnit.type});
 			
 			m_TileSprite->SetTexture(currUnit.texres->filepath);
 			tileTexrects.push_back(currUnit.texres->texcoord);

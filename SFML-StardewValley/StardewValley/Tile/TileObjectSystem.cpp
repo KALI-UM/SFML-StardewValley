@@ -21,6 +21,7 @@ bool TileObjectSystem::Initialize()
 
 	SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, mcv_View, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1, 1)));
 
+
 	return true;
 }
 
@@ -87,7 +88,7 @@ bool TileObjectSystem::IsPossibleToSetTileObject(const TileObjLayer& layer, cons
 	return result;
 }
 
-bool TileObjectSystem::IsPossibleToPass(const CellIndex& tileIndex)
+bool TileObjectSystem::IsPossibleToPass(const CellIndex& tileIndex) const
 {
 	if (!mcv_Model->IsValidTileIndex(tileIndex))
 		return false;
@@ -114,6 +115,10 @@ void TileObjectSystem::ColorizePassableTile()
 			{
 				RequestColorizeTile(ColorPalette::Blue, { i,j });
 			}
+			else
+			{
+				int k = 0;
+			}
 		}
 	}
 }
@@ -121,6 +126,7 @@ void TileObjectSystem::ColorizePassableTile()
 void TileObjectSystem::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
 	m_TileObjects[(int)layer].push_back(tileObj);
+
 	mcv_Model->SetTileObject(layer, tileIndex, tileObj);
 }
 

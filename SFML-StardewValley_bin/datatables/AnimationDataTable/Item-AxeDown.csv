@@ -1,0 +1,9 @@
+id,fps,looptype,,
+AxeDown,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/AxeDown.png,0,0,22,40
+graphics/AxeDown.png,22,0,22,40
+graphics/AxeDown.png,44,0,22,40
+graphics/AxeDown.png,66,0,22,40
+graphics/AxeDown.png,88,0,22,40

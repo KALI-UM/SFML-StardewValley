@@ -38,11 +38,7 @@ void TileController::Update(float dt)
 	if (m_MousePrevTile != m_MouseOverlaidTile)
 		m_PrevTile = m_MousePrevTile;
 
-	std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
-	//if (mcv_Model->IsValidTileIndex(m_MouseOverlaidTile))
-	//{
-	//	std::cout << Tile::TileTypeToString(mcv_Model->GetTileInfo(TileLayer::Back, m_MouseOverlaidTile).owner->GetTileTypeByTileIndex(m_MouseOverlaidTile));
-	//}
+	//std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
 
 	if (m_ButtonBar&&!m_ButtonBar->GetHasFocus())
 	{

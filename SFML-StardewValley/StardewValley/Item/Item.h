@@ -8,7 +8,7 @@ enum class ItemType
 {
 	Tool,
 	Foraging,   //채집
-	Crop,		//작물
+	Crop,       //작물
 	Other,
 };
 
@@ -36,7 +36,7 @@ protected:
 public:
 	~Item() {};
 
-	const ITEMID	m_ItemId;
+	const ITEMID	m_ItemId = "";
 	const ItemType	m_ItemType;
 	const StackType	m_StackType;
 
@@ -46,7 +46,7 @@ public:
 	virtual void Use(Player* const player) = 0;				//use함수를 자식 아이템들이 재정의해서 사용할 것입니다.
 
 protected:
-	NAME		m_ItemName = "";
+	NAME		m_ItemName;
 	int			m_Count = 1;
 
 	TEXID		m_IconTexId;

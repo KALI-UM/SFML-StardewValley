@@ -1,6 +1,8 @@
 #pragma once
 #include "Tile/Tile.h"
 
+class Tool;
+enum class ItemType;
 class TileObjectSystem;
 class Player : public GameObject
 {
@@ -18,6 +20,7 @@ public:
 		interaction,
 		wateringAction,
 		staminaExhausted,
+		Attack,
 	};
 	enum class IsVisibleItem {
 		visibleItem,
@@ -43,13 +46,14 @@ protected:
 
 	float value = 0.f;
 
-	Hoe* hoe;
+	Tool* tool;
 
 	std::map<std::string, AnimationClip> temp;
 	std::vector<ClipInfo> clipInfos;
 
 	Animator animator;
-    
+	ItemType itemtype;
+	
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
 
@@ -82,10 +86,14 @@ public:
 	Player::Direction GetDirection();
 
 	Player::IsVisibleItem GetIsVisibleItem();
-	
-	void GetHoe(Hoe* hoe);
+
+	void GetTool(Tool* tool);
+
 	void SetAction(Action newAction);
 	void SetTileSystem(TileObjectSystem* const sys) { m_TileSystem = sys; };
+
+	void GetItemType(ItemType type);
+
 protected:
 	Direction m_CurrDir;
 	Action m_CurrAction = Action::idle;

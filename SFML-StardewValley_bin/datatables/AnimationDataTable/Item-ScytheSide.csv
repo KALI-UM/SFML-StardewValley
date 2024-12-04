@@ -1,0 +1,10 @@
+id,fps,looptype,,
+ScytheSide,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/scytheSide.png,0,0,48,50
+graphics/scytheSide.png,48,0,48,50
+graphics/scytheSide.png,96,0,48,50
+graphics/scytheSide.png,144,0,48,50
+graphics/scytheSide.png,192,0,48,50
+graphics/scytheSide.png,240,0,48,50

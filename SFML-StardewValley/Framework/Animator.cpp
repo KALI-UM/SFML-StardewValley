@@ -1,6 +1,9 @@
 #include "pch.h"
 #include "Animator.h"
 
+
+
+
 void Animator::AddEvent(const std::string& id, int frame, std::function<void()> action)
 {
 	auto key = std::pair<std::string, int>(id, frame);
@@ -68,8 +71,8 @@ void Animator::Update(float dt)
 
 void Animator::Play(const std::string& clipId, bool clearQueue)
 {
-	//Play(ANI_CLIP_MGR->GetByFilepath(clipId), clearQueue);
-	Play(&m_PlayerAniClip->find(clipId)->second, clearQueue);
+	Play(ANI_CLIP_MGR->GetByFilepath(clipId), clearQueue);
+	//Play(&m_PlayerAniClip->find(clipId)->second, clearQueue);
 }
 
 void Animator::Play(AnimationClip* clip, bool clearQueue)

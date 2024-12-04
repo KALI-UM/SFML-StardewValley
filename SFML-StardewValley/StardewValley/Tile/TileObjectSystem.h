@@ -27,7 +27,7 @@ public:
 	TileType	GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
 
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
-	bool IsPossibleToPass(const CellIndex& tileIndex);
+	bool IsPossibleToPass(const CellIndex& tileIndex) const;
 
 	void ColorizePassableTile();
 
