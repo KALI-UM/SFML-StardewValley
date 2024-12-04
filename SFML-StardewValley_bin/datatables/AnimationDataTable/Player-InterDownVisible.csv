@@ -1,0 +1,10 @@
+ID,FPS,LOOPTYPE,,
+InterDownVisible,18,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/farmer_base.png,0,97,20,31
+graphics/farmer_base.png,20,97,20,31
+graphics/farmer_base.png,40,97,20,31
+graphics/farmer_base.png,60,97,20,31
+graphics/farmer_base.png,80,97,20,31
+graphics/farmer_base.png,100,97,20,31

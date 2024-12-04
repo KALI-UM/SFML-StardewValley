@@ -1,0 +1,9 @@
+id,fps,looptype,,
+PickaxeUp,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/PickaxeUp.png,0,0,14,25
+graphics/PickaxeUp.png,14,0,14,25
+graphics/PickaxeUp.png,28,0,14,25
+graphics/PickaxeUp.png,42,0,14,25
+graphics/PickaxeUp.png,56,0,14,25

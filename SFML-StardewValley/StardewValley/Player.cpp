@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Player.h"
-
+#include "Item/Tool.h"
 
 Player::Player(const std::string& name)
 	:GameObject(name)
@@ -15,19 +15,20 @@ bool Player::Initialize()
 {
 	AnimationClips();
 	animator.SetPlayerAniClip(&temp);
-	
+
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
 	body->setScale({ 2.f, 2.f });
 	body->SetPriorityType(DrawPriorityType::Custom, 1);
+	
 	return true;
 
 }
 
 void Player::Reset()
 {
-	animator.Play(&temp["IdleDowninVisible"]);
+	animator.Play("datatables/AnimationDataTable/Player-IdleDowninVisible.csv");
 }
 
 void Player::Update(float dt)
@@ -48,7 +49,7 @@ void Player::Update(float dt)
 		break;
 	}
 
-	
+
 	if (direction.x != 0.f || direction.y != 0.f)
 	{
 		auto min = std::min_element(clipInfos.begin(), clipInfos.end(),
@@ -77,6 +78,7 @@ void Player::Update(float dt)
 
 	if (animator.GetCurrentClipId() != clipId)
 	{
+		std::cout << clipId << std::endl;
 		animator.Play(&temp[clipId], true);
 	}
 }
@@ -92,8 +94,11 @@ void Player::UpdateIdle(float dt)
 	{
 		SetAction(Action::move);
 	}
-	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
+	/*if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::interaction);
+	}*/
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left) ) {
+		SetAction(Action::Attack);
 	}
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::E)) {
 		SetAction(Action::wateringAction);
@@ -165,299 +170,19 @@ void Player::Release()
 
 void Player::AnimationClips()
 {
-	std::string textureId = "graphics/farmer_base.png";
-	body = new DSprite(textureId);
+
+	body = new DSprite();
 	SetDrawableObj(body);
 
-
-	int width = 20;
-	int height = 31;
-
+	rapidcsv::Document doc("datatables/AnimationDataTable/PlayerAnimationFileList.csv", rapidcsv::LabelParams(-1, -1));
+	std::vector<std::string> animationfilepath = doc.GetColumn<std::string>(0);
+	AnimationClip clip;
+	for (auto& curr : animationfilepath)
 	{
-		AnimationClip clip;
-		clip.id = "IdleSideinVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, { 0 , height, width, height } });
-		temp.insert({ "IdleSideinVisible", clip });
+		ANI_CLIP_MGR->LoadByFilepath(curr, clip.GetIdFromFilepath(curr));
+		clip.loadFromFile(curr);
+		temp.insert({ clip.GetIdFromFilepath(curr),  clip });
 	}
-	{
-		AnimationClip clip;
-		clip.id = "IdleDowninVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, { 0, 0, width, height } });
-		temp.insert({ "IdleDowninVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "IdleUpinVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, {0, 2 * height, width, height } });
-		temp.insert({ "IdleUpinVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterSideinVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, { 0 , height, width, height } });
-		temp.insert({ "InterSideinVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterDowninVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, { 0, 0, width, height } });
-		temp.insert({ "InterDowninVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterUpinVisible";
-		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, {0, 2 * height, width, height } });
-		temp.insert({ "InterUpinVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveDowninVisible";
-		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 8; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, 0, width, height } });
-		}
-		temp.insert({ "MoveDowninVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveSideinVisible";
-		clip.fps = 8;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, { i * width, height, width, height } });
-		}
-		temp.insert({ "MoveSideinVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveUpinVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 8; ++i)
-		{
-			clip.frames.push_back({ textureId, { i * width, 2 * height, width, height } });
-		}
-		temp.insert({ "MoveUpinVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterDownVisible";
-		clip.fps = 18;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 3 + 4, width, height } });
-		}
-		temp.insert({ "InterDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterSideVisible";
-		clip.fps = 18;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 4 + 4, width, height } });
-		}
-		temp.insert({ "InterSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "InterUpVisible";
-		clip.fps = 18;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 5 + 4 , width, height } });
-		}
-		temp.insert({ "InterUpVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "AttackDownVisible";
-		clip.fps = 20;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 7; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 6, width, height } });
-		}
-		temp.insert({ "AttackDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "AttackSideVisible";
-		clip.fps = 20;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 7; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 7, width, height } });
-		}
-		temp.insert({ "AttackSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "AttackUpVisible";
-		clip.fps = 20;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 7; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 8, width, height } });
-		}
-		temp.insert({ "AttackUpVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "IdleDownVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, {0, height * 13, width, height } });
-
-		temp.insert({ "IdleDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "IdleSideVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, {0, height * 14, width, height } });
-		temp.insert({ "IdleSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "IdleUpVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		clip.frames.push_back({ textureId, {0, height * 15, width, height } });
-		temp.insert({ "IdleUpVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveDownVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 8; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 13, width, height } });
-		}
-		temp.insert({ "MoveDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveSideVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 14, width, height } });
-		}
-		temp.insert({ "MoveSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "MoveUpVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Loop;
-		for (int i = 0; i < 8; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 15, width, height } });
-		}
-		temp.insert({ "MoveUpVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "WaterDownVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 5; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 10, width, height } });
-		}
-		temp.insert({ "WaterDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "WaterSideVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 5; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 9, width, height } });
-		}
-		temp.insert({ "WaterSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "WaterUpVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 5; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 11, width, height } });
-		}
-		temp.insert({ "WaterUpVisible", clip });
-	} 
-	{
-		AnimationClip clip;
-		clip.id = "ExhaustDownVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
-		}
-		temp.insert({ "ExhaustDownVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "ExhaustSideVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
-		}
-		temp.insert({ "ExhaustSideVisible", clip });
-	}
-	{
-		AnimationClip clip;
-		clip.id = "ExhaustUpVisible";
-		clip.fps = 10;
-		clip.loopType = AnimationLoopTypes::Single;
-		for (int i = 0; i < 6; ++i)
-		{
-			clip.frames.push_back({ textureId, {i * width, height * 12, width, height } });
-		}
-		temp.insert({ "ExhaustUpVisible", clip });
-	}
-
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, Utils::GetNormal({1.f, -1.f}) });
-	clipInfos.push_back({ "IdleUpinVisible", "MoveUpinVisible", false, {0.f, -1.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, Utils::GetNormal({-1.f, -1.f}) });
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, {1.f, 0.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, {-1.f, 0.f} });
-
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", false, Utils::GetNormal({1.f, 1.f}) });
-	clipInfos.push_back({ "IdleDowninVisible", "MoveDowninVisible", false, {0.f, 1.f} });
-	clipInfos.push_back({ "IdleSideinVisible", "MoveSideinVisible", true, Utils::GetNormal({-1.f, 1.f}) });
-
-
 	animator.SetTarget(body);
 
 	animator.AddEvent("InterUpVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
@@ -471,6 +196,10 @@ void Player::AnimationClips()
 	animator.AddEvent("ExhaustDownVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
 	animator.AddEvent("ExhaustSideVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
 	animator.AddEvent("ExhaustUpVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
+
+	animator.AddEvent("AttackDownVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("AttackSideVisible", 5, [&]() {this->m_CurrAction = Action::idle;});
+	animator.AddEvent("AttackUpVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
 }
 
 std::string Player::GetAnimationClipIdByDAI()
@@ -493,6 +222,9 @@ std::string Player::GetAnimationClipIdByDAI()
 		break;
 	case Player::Action::staminaExhausted:
 		id += "Exhaust";
+		break;
+	case Player::Action::Attack:
+		id += "Attack";
 		break;
 	default:
 		break;
@@ -554,10 +286,9 @@ Player::IsVisibleItem Player::GetIsVisibleItem()
 	return m_CurrEquip;
 }
 
-void Player::GetHoe(Hoe* hoe)
+void Player::GetTool(Tool* tool)
 {
-	this->hoe = hoe;
-
+	this->tool = tool;
 }
 
 void Player::SetAction(Action newAction)
@@ -573,7 +304,7 @@ void Player::SetAction(Action newAction)
 	case Action::move:
 		break;
 	case Action::interaction:
-		hoe->Use(this);
+		tool->Use(this);
 		stamina--;
 		break;
 	case Action::wateringAction:
@@ -582,7 +313,18 @@ void Player::SetAction(Action newAction)
 	case Action::staminaExhausted:
 
 		break;
+	case Player::Action::Attack:
+		tool->Use(this);
+		stamina--;
+		break;
 	}
+
 }
+
+void Player::GetItemType(ItemType type)
+{
+	itemtype = type;
+}
+
 
 

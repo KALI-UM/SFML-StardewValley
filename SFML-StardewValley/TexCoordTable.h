@@ -27,7 +27,7 @@ public:
     void Release() override;
 
     const TEXRECT& GetTexIntRect(const TEXID& id) const;
-    const sf::FloatRect& GetTexFloatRect(const TEXID& id) const;
+    sf::FloatRect GetTexFloatRect(const TEXID& id) const;
     const TexRes& GetTileTexRes(const TEXID& id) const;
 
 protected:

@@ -8,7 +8,7 @@ class TileGrid;
 
 class Player;
 class PlayerStatusUi;
-class Hoe;
+class Tool;
 
 class TileObject;
 
@@ -20,13 +20,9 @@ public:
 	~Scene_InGameTest();
 
 	bool Initialize() override;
-	//void Reset() override;
 	void Enter() override;
 	void Update(float dt) override;
-	//void LateUpdate(float dt) override;
-	//void FixedUpdate(float dt) override;
-	void PostRender()override;
-	//void Release() override;
+
 
 
 protected:
@@ -38,7 +34,7 @@ protected:
 	Player* m_Player;
 	Animator m_PlayerAnimator;
 	PlayerStatusUi* m_PlayerStatusUi;
-	Hoe* m_TestItem;
+	Tool* m_TestItem;
 
 
 	TileObject* m_TestTObj;

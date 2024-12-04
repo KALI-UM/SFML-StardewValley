@@ -1,0 +1,10 @@
+id,fps,looptype,,
+ScytheDown,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/scytheDown.png,0,0,42,30
+graphics/scytheDown.png,42,0,42,30
+graphics/scytheDown.png,84,0,42,30
+graphics/scytheDown.png,126,0,42,30
+graphics/scytheDown.png,168,0,42,30
+graphics/scytheDown.png,210,0,42,30

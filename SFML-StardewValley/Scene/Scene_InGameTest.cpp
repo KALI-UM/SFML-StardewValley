@@ -8,15 +8,14 @@
 #include "Tile/TileGrid.h"
 
 #include "Player.h"
-#include "Animator.h"
 #include "PlayerStatusUi.h"
-#include "Item/Hoe.h"
+#include "Item/Tool.h"
 
 #include "Tile/TileObject.h"
 
 
 Scene_InGameTest::Scene_InGameTest()
-    :SceneBase("InGameTest", 4, 2)
+	:SceneBase("InGameTest", 4, 2)
 {
 }
 
@@ -46,7 +45,7 @@ bool Scene_InGameTest::Initialize()
 
 	m_Player = AddGameObject(3, new Player("Player"));
 	m_PlayerStatusUi = AddGameObject(m_UILayerIndex, new PlayerStatusUi());
-	m_TestItem = AddGameObject(3, new Hoe());
+	m_TestItem = AddGameObject(3, new Tool("Scythe"));
 
 	m_TestTObj = AddGameObject(0, new TileObject("Back"));
 
@@ -55,8 +54,10 @@ bool Scene_InGameTest::Initialize()
 
 void Scene_InGameTest::Enter()
 {
-	m_Player->GetHoe(m_TestItem);
-	m_TestItem->GetPlayer(m_Player);
+	m_Player->GetTool(dynamic_cast<Tool*>(m_TestItem));
+	m_Player->GetItemType(dynamic_cast<Tool*>(m_TestItem)->m_ItemType);
+	dynamic_cast<Tool*>(m_TestItem)->GetPlayer(m_Player);
+
 
 	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
 }
@@ -70,6 +71,4 @@ void Scene_InGameTest::Update(float dt)
 	m_PlayerStatusUi->setPosition(sf::Vector2f(GAME_MGR->GetWindow()->getSize().x - 100, GAME_MGR->GetWindow()->getSize().y - 100));
 }
 
-void Scene_InGameTest::PostRender()
-{
-}
+

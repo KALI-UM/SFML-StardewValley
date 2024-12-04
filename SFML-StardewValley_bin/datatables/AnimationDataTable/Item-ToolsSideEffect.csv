@@ -1,0 +1,9 @@
+id,fps,looptype,,
+ToolsSideEffect,10,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/ToolsSideEffect.png,0,0,32,30
+graphics/ToolsSideEffect.png,32,0,32,30
+graphics/ToolsSideEffect.png,64,0,32,30
+graphics/ToolsSideEffect.png,96,0,32,30
+graphics/ToolsSideEffect.png,128,0,32,30

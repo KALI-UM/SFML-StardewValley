@@ -1,0 +1,8 @@
+id,fps,looptype,,
+ToolsDownEffect,10,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/ToolsDownEffect.png,0,0,30,30
+graphics/ToolsDownEffect.png,30,0,30,30
+graphics/ToolsDownEffect.png,60,0,30,30
+graphics/ToolsDownEffect.png,90,0,30,30

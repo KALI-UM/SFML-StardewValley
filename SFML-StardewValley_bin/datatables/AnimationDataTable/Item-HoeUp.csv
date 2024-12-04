@@ -1,0 +1,9 @@
+id,fps,looptype,,
+HoeUp,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/HoeUp.png,0,0,14,15
+graphics/HoeUp.png,14,0,14,15
+graphics/HoeUp.png,28,0,14,15
+graphics/HoeUp.png,42,0,14,15
+graphics/HoeUp.png,56,0,14,15
