@@ -215,8 +215,8 @@
     <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
     <ClCompile Include="TileObjDataTable.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
-    <ClCompile Include="UI.cpp" />
-    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="Framework\CoreGameObject\UIObject.cpp" />
+    <ClCompile Include="Framework\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImguiWindowTab.h" />
@@ -288,8 +288,8 @@
     <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
     <ClInclude Include="TileObjDataTable.h" />
     <ClInclude Include="TileObject_Tree.h" />
-    <ClInclude Include="UI.h" />
-    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="Framework\CoreGameObject\UIObject.h" />
+    <ClInclude Include="Framework\UIManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

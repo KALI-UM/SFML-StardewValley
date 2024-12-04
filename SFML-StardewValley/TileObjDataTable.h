@@ -39,8 +39,8 @@ struct TileObjData
 	struct UnitData
 	{
 		const TexRes*		texres;
-		TileType	type;
-		SubType	subtype;
+		TileType			type;
+		SubType				subtype;
 	};
 
 	std::vector<std::vector<UnitData>> tileTypeMap;

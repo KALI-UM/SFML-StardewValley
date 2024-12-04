@@ -8,10 +8,10 @@ class D9SliceSprite;
 class SubButtonBar;
 class DTile;
 class ButtonBar
-	:public GameObject
+	:public UIObject
 {
 public:
-	ButtonBar(int viewIndex);
+	ButtonBar();
 	~ButtonBar();
 
 	bool Initialize() override;
@@ -22,7 +22,6 @@ public:
 	void SetButtonTex(const CellIndex& bttIndex, const std::string& texId);
 	DTile* const GetCurrButtonTile() const { return m_CurrTile; }
 	const std::list<std::string>& GetCurrTexIds();
-	bool GetHasFocus()const { return m_HasFocus; }
 
 protected:
 	std::string m_BarTexId;
@@ -39,9 +38,6 @@ protected:
 	std::vector<std::vector<sf::IntRect>> m_ButtonTexCoords;
 
 	sf::Vector2f m_PrevMouseDown;
-	int m_ViewIndex = 0;
 
-private:
-	bool			m_HasFocus = false;
 };
 

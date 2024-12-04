@@ -10,5 +10,5 @@
 #include "Framework/DataTable.h"
 #include "Framework/DataTableManager.h"
 
-
+#include "Framework/UIManager.h"
 #include "Framework/ImGuiManager.h"

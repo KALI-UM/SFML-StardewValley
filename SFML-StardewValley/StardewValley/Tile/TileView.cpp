@@ -39,6 +39,7 @@ void TileView::Update(float dt)
 void TileView::LateUpdate(float dt)
 {
 	UpdateTileSprite();
+	UpdateTileObject();
 }
 
 void TileView::PostRender()
@@ -124,7 +125,7 @@ void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileInde
 		{
 			for (int uux = 0; uux < (int)uu.x; uux++)
 			{
-				ColorizeTile(color, layer, tileIndex+sf::Vector2i(uux, uuy));
+				ColorizeTile(color, layer, tileIndex + sf::Vector2i(uux, uuy));
 			}
 		}
 	}
@@ -189,10 +190,13 @@ void TileView::UpdateTileObject()
 		sf::Vector2i& currIndex = m_TileObjUpdateQueue.front().second;
 		auto& currTileInfo = mcv_Model->GetTileInfo(currlayer, currIndex);
 		if (currTileInfo.owner)
+		{
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = currTileInfo.owner->GetDTile();
+			currTileInfo.owner->setPosition({ currIndex.x * mcv_Model->m_CellSize.x, currIndex.y * mcv_Model->m_CellSize.y });
+		}
 		else
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = nullptr;
-		
+
 		m_TileObjUpdateQueue.pop();
 	}
 }

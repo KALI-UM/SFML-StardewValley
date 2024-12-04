@@ -8,6 +8,7 @@
 #include "Tile/TileViewChild.h"
 #include "Tile/TileController.h"
 #include "Tile/ButtonBar.h"
+#include "ImguiWindowTab.h"
 
 
 Scene_TileEditor::Scene_TileEditor()
@@ -27,7 +28,7 @@ bool Scene_TileEditor::Initialize()
 	SetLayerViewIndex(3, 0);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel(1, { 3,6 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel(1, { 100,100 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
 	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer0, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
 	//m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer1, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
@@ -37,8 +38,10 @@ bool Scene_TileEditor::Initialize()
 	m_TileGrid = AddGameObject(3, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
 
-	m_ButtonBar = AddGameObject(m_UILayerIndex, new ButtonBar(m_UIViewIndex));
+	m_ButtonBar = AddUIGameObject(m_UILayerIndex, new ButtonBar());
+	AddUIGameObject(m_UILayerIndex, new ImguiWindowTab());
 	m_TileController->SetButtonBar(m_ButtonBar);
+
 
 	m_MiniMap = AddGameObject(m_UILayerIndex, new SpriteObject());
 
@@ -62,7 +65,7 @@ void Scene_TileEditor::Enter()
 	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
 
 	m_MiniMap->setScale(0.3f, -0.3f);
-	m_MiniMap->setPosition(300, 300);
+	m_MiniMap->setPosition(300, 500);
 
 	m_ButtonBar->setScale(2, 2);
 }
@@ -82,16 +85,28 @@ void Scene_TileEditor::ShowSceneImgui()
 {
 	ImGui::Begin("Obj");
 
-	static std::string objname;
+	static char buff2[1000];
+	ImGui::InputText("Button Texture Id", buff2, IM_ARRAYSIZE(buff2));
+	if (ImGui::Button("Load Button Texture"))
+	{
+		m_TileController->m_ButtonTexid = buff2;
+		m_TileController->SetButtonTile();
+	}
+
 	static char buff1[1000];
 	ImGui::InputText("TOBJID", buff1, IM_ARRAYSIZE(buff1));
 	m_Obj = buff1;
+
+	static int ux = 10;
+	ImGui::InputInt("Unit X", &ux);
+	static int uy = 10;
+	ImGui::InputInt("Unit Y", &uy);
 
 	if (ImGui::Button("Save"))
 	{
 		std::string texfilepath = "datatables/" + m_Obj + "tex.csv";
 		std::string typefilepath = "datatables/" + m_Obj + "type.csv";
-		m_TileMapSystem->SaveAsTileObjData("Back", texfilepath, typefilepath);
+		m_TileMapSystem->SaveAsTileObjData(m_Obj, texfilepath, typefilepath, sf::Vector2u(ux, uy));
 	}
 	ImGui::End();
 
@@ -130,7 +145,8 @@ void Scene_TileEditor::ViewLayerImgui()
 	//	}
 	//	ImGui::EndCombo();
 	//}
-
+	std::string tex = "file : datatables/" + m_Obj + "tex.csv";
+	ImGui::Text(tex.c_str());
 	if (ImGui::Button("Save"))
 	{
 		m_TileMapSystem->SaveTileViewRawFile((TileEditorLayer)currIndex, m_Obj);
@@ -181,6 +197,8 @@ void Scene_TileEditor::TileTypeImgui()
 		ImGui::EndCombo();
 	}
 
+	std::string type = "file : datatables/" + m_Obj + "type.csv";
+	ImGui::Text(type.c_str());
 	if (ImGui::Button("Save"))
 	{
 		m_TileMapSystem->SaveTileTypeFile(m_Obj);

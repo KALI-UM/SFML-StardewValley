@@ -69,6 +69,7 @@ void TileObjDataTable::LoadTileObjFile(TileObjData& data, const std::string& fil
 			data.tileTypeMap[data.tileTypeMap.size()-1].push_back(ud);
 		}
 	}
+	data.uuSize = raw.uuSize;
 }
 
 void TileObjDataTable::LoadTileObjRawFile(TileObjRawData& data, const std::string& filepath)

@@ -17,9 +17,9 @@ TileObject::~TileObject()
 bool TileObject::Initialize()
 {
 	m_TileSprite = new DTile();
-	SetDrawableObj(m_TileSprite, false);
+	SetDrawableObj(m_TileSprite);
 
-	
+
 	return true;
 }
 
@@ -31,7 +31,7 @@ void TileObject::Reset()
 void TileObject::LoadTileObject()
 {
 	m_Data = &TOBJDATATABLE_MGR->GetTileObjectData(m_TOBjId);
-	
+
 	std::list<sf::IntRect> tileTexrects;
 	std::list<CellIndex> tileIndices;
 
@@ -40,8 +40,8 @@ void TileObject::LoadTileObject()
 		for (int i = 0; i < m_Data->tileTypeMap[j].size(); i++)
 		{
 			const TileObjData::UnitData& currUnit = m_Data->tileTypeMap[j][i];
-			m_TileTypes.push_back({ m_Data->originIndex + sf::Vector2i(i,j), currUnit.type});
-			
+			m_TileTypes.push_back({ -m_Data->originIndex + sf::Vector2i(i,j), currUnit.type });
+
 			m_TileSprite->SetTexture(currUnit.texres->filepath);
 			tileTexrects.push_back(currUnit.texres->texcoord);
 			tileIndices.push_back({ i,j });

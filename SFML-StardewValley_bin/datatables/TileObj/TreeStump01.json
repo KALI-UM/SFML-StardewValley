@@ -1,0 +1,27 @@
+{
+    "id": "TreeStump01",
+    "originIndex": {
+        "x": 0,
+        "y": 1
+    },
+    "tileTypeMap": [
+        [
+            {
+                "subtype": "",
+                "texid": "Trees.png#Tree_X2Y6",
+                "type": "Wall"
+            }
+        ], 
+        [
+            {
+                "subtype": "",
+                "texid": "Trees.png#Tree_X2Y7",
+                "type": "Wall"
+            }
+        ]
+    ],
+    "uuSize": {
+        "x": 1,
+        "y": 2
+    }
+}

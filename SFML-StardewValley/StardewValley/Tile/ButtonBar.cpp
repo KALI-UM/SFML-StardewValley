@@ -4,8 +4,7 @@
 #include "DTile.h"
 #include "TexCoordTable.h"
 
-ButtonBar::ButtonBar(int viewIndex)
-	:m_ViewIndex(viewIndex)
+ButtonBar::ButtonBar()
 {
 }
 
@@ -56,7 +55,7 @@ void ButtonBar::Reset()
 
 void ButtonBar::Update(float dt)
 {
-	sf::Vector2f currMousePos = INPUT_MGR->GetMouseViewPos(m_ViewIndex);
+	sf::Vector2f currMousePos = INPUT_MGR->GetMouseViewPos(m_UIViewIndex);
 	m_HasFocus = false;
 	if (m_Bar->GetGlobalBounds().contains(currMousePos))
 	{

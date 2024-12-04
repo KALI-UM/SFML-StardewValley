@@ -21,14 +21,14 @@ bool TileController::Initialize()
 {
 	if (!mcv_Model || !mcv_View)return false;
 	m_TileMapSystem->SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, mcv_View, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1, 1)));
-	
+
 	return true;
 }
 
 void TileController::Reset()
 {
-	if(m_ButtonBar)
-	SetButtonTile(m_ButtonTileX, m_ButtonTileY);
+	if (m_ButtonBar)
+		SetButtonTile(m_ButtonTexid, m_ButtonTileX, m_ButtonTileY);
 }
 
 void TileController::Update(float dt)
@@ -40,7 +40,7 @@ void TileController::Update(float dt)
 
 	//std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
 
-	if (m_ButtonBar&&!m_ButtonBar->GetHasFocus())
+	if (!UI_MGR->GetUIHasFocus())
 	{
 		switch (m_CurrStatus)
 		{
@@ -54,7 +54,7 @@ void TileController::Update(float dt)
 			UpdateDestroy(dt);
 			break;
 		case ControlStatus::TileType:
-			UpdateCollision(dt);
+			UpdateType(dt);
 			break;
 		}
 
@@ -68,19 +68,19 @@ void TileController::Update(float dt)
 		}
 		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Up))
 		{
-			SetButtonTile(m_ButtonTileX, m_ButtonTileY - 1);
+			SetButtonTile(m_ButtonTexid, m_ButtonTileX, m_ButtonTileY - 1);
 		}
 		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Down))
 		{
-			SetButtonTile(m_ButtonTileX, m_ButtonTileY + 1);
+			SetButtonTile(m_ButtonTexid, m_ButtonTileX, m_ButtonTileY + 1);
 		}
 		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Left))
 		{
-			SetButtonTile(m_ButtonTileX - 1, m_ButtonTileY);
+			SetButtonTile(m_ButtonTexid, m_ButtonTileX - 1, m_ButtonTileY);
 		}
 		if (INPUT_MGR->GetKeyDown(sf::Keyboard::Right))
 		{
-			SetButtonTile(m_ButtonTileX + 1, m_ButtonTileY);
+			SetButtonTile(m_ButtonTexid, m_ButtonTileX + 1, m_ButtonTileY);
 		}
 		if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
 		{
@@ -91,7 +91,7 @@ void TileController::Update(float dt)
 	{
 		UpdateNone(dt);
 	}
-	
+
 }
 
 void TileController::SetControlStatus(ControlStatus status)
@@ -120,10 +120,13 @@ void TileController::UpdatePlace(float dt)
 {
 	if (!mcv_Model->IsValidTileIndex(m_MouseOverlaidTile))return;
 
+	static bool isdraggingnow = false;
 	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
 	{
-		m_TileMapSystem->BuildTilesById(m_SelectingTiles, m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_ButtonBar->GetCurrTexIds());
+		if (isdraggingnow)
+			m_TileMapSystem->BuildTilesById(m_SelectingTiles, m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_ButtonBar->GetCurrTexIds());
 		m_SelectingTiles.clear();
+		isdraggingnow = false;
 		return;
 	}
 
@@ -131,11 +134,15 @@ void TileController::UpdatePlace(float dt)
 	{
 		m_DragStartTile = m_MouseOverlaidTile;
 		SetNXMTiles(m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_DragStartTile);
+
+		/*m_TileMapSystem->BuildTilesById(m_SelectingTiles, m_ButtonBar->GetCurrButtonTile()->GetUnitxUnit(), m_ButtonBar->GetCurrTexIds());
+		m_SelectingTiles.clear();*/
 	}
 	else if (INPUT_MGR->GetMouseDrag(sf::Mouse::Left) && m_DragStartTile != m_MouseOverlaidTile)
 	{
 		if (mcv_Model->IsValidTileIndex(m_DragStartTile) && mcv_Model->IsValidTileIndex(m_MouseOverlaidTile))
 		{
+			isdraggingnow = true;
 			SetRangeIntersectedTiles(m_DragStartTile, m_MouseOverlaidTile);
 		}
 	}
@@ -169,7 +176,7 @@ void TileController::UpdateDestroy(float dt)
 	}
 }
 
-void TileController::UpdateCollision(float dt)
+void TileController::UpdateType(float dt)
 {
 	m_TileMapSystem->SetTileTypeMode(m_CurrTileType);
 
@@ -199,13 +206,25 @@ void TileController::UpdateDrag(float dt)
 
 }
 
-void TileController::SetButtonTile(int x, int y)
+void TileController::SetButtonTile()
 {
-	m_ButtonTileX = Utils::Clamp(x, 0, 41 - 8);
-	m_ButtonTileY = Utils::Clamp(y, 0, 80 - 10);
+	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(m_ButtonTexid);
 
-	std::string buttonid = "OutdoorsSpring.png#Spring";
-	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(buttonid);
+	for (int j = 0; j < 10; j++)
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			m_ButtonBar->SetButtonTex({ i,j }, tileres.children[m_ButtonTileY + j][m_ButtonTileX + i]);
+		}
+	}
+}
+
+void TileController::SetButtonTile(const std::string& texid, int x, int y)
+{
+	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(texid);
+
+	m_ButtonTileX = Utils::Clamp(x, 0, (int)tileres.children[0].size() - 8);
+	m_ButtonTileY = Utils::Clamp(y, 0, (int)tileres.children.size() - 10);
 
 	for (int j = 0; j < 10; j++)
 	{
@@ -307,32 +326,18 @@ void TileController::SetRangeIntersectedTiles(const CellIndex& startIndex, const
 	}
 }
 
-void TileController::SetNXMTiles(const sf::Vector2u& uu, const CellIndex& centerIndex, bool checkPossible)
+void TileController::SetNXMTiles(const sf::Vector2u& uu, const CellIndex& mouseIndex, bool checkPossible)
 {
 	m_SelectingTiles.clear();
-
-	CellIndex startIndex;
 	if (uu == sf::Vector2u(1, 1))
 	{
-		Set1x1Tile(centerIndex, checkPossible);
+		Set1x1Tile(mouseIndex, checkPossible);
 		return;
 	}
-	else if (uu == sf::Vector2u(2, 2))
-	{
-		startIndex = centerIndex + sf::Vector2i(-1, 0);
-	}
-	else if (uu == sf::Vector2u(3, 3))
-	{
-		startIndex = centerIndex + sf::Vector2i(-1, -1);
-	}
-	else if (uu == sf::Vector2u(4, 4))
-	{
-		startIndex = centerIndex + sf::Vector2i(-2, -1);
-	}
 
-	for (int j = startIndex.y; j < startIndex.y + (int)uu.y; j++)
+	for (int j = mouseIndex.y; j < mouseIndex.y + (int)uu.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + (int)uu.x; i++)
+		for (int i = mouseIndex.x; i < mouseIndex.x + (int)uu.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			if (checkPossible)
@@ -340,13 +345,12 @@ void TileController::SetNXMTiles(const sf::Vector2u& uu, const CellIndex& center
 				if (!mcv_Model->IsPossibleToSetTile(currIndex, (int)m_TileMapSystem->GetCurrTileLayer(), m_TileMapSystem->GetCurrId()))
 					return;
 			}
-
 		}
 	}
 
-	for (int j = startIndex.y; j < startIndex.y + (int)uu.y; j++)
+	for (int j = mouseIndex.y; j < mouseIndex.y + (int)uu.y; j++)
 	{
-		for (int i = startIndex.x; i < startIndex.x + (int)uu.x; i++)
+		for (int i = mouseIndex.x; i < mouseIndex.x + (int)uu.x; i++)
 		{
 			CellIndex currIndex = { i,j };
 			PushToSelectingTiles(currIndex);

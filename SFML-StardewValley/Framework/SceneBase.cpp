@@ -56,6 +56,8 @@ void SceneBase::ENTER()
 {
 	ImGuiManager::SetShowDemo(false);
 	GAME_MGR->ResizeViews(m_ViewCnt);
+	RegisterUIObject();
+	UI_MGR->Enter();
 	FRAMEWORK->SetBackColor(ColorPalette::Black);
 	for (int i = 0; i < m_ViewCnt; i++)
 	{
@@ -67,7 +69,9 @@ void SceneBase::ENTER()
 
 void SceneBase::UPDATE(float dt)
 {
+	UI_MGR->Update(dt);
 	RegisterGameObject();
+	RegisterUIObject();
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
@@ -140,6 +144,7 @@ void SceneBase::POSTRENDER()
 void SceneBase::EXIT()
 {
 	FRAMEWORK->SetTimeScale(1);
+	UI_MGR->Exit();
 	SOUND_MGR->StopAllSfx();
 	SOUND_MGR->StopBgm();
 	Exit();
@@ -419,4 +424,18 @@ void SceneBase::RemoveGameObject()
 
 		m_WantsToRemove.pop();
 	}
+}
+
+void SceneBase::RegisterUIObject()
+{
+	while (!m_WantsToAddUI.empty())
+	{
+		UIObject* target = m_WantsToAddUI.front();
+		m_WantsToAddUI.pop();
+		UI_MGR->RegisterUI(target);
+	}
+}
+
+void SceneBase::RemoveUIObject()
+{
 }

@@ -27,7 +27,7 @@ public:
 	void SaveTileTypeFile();
 	void SaveTileTypeFile(const std::string& filename);
 
-	void SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath);
+	void SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath, sf::Vector2u uusize);
 
 	void BuildTilesById(const std::list<CellIndex> tiles, const UNITxUNIT& uu, const std::list <TEXID>& ids);
 	void BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id);

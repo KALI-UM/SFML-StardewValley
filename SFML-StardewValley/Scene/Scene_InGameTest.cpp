@@ -48,6 +48,7 @@ bool Scene_InGameTest::Initialize()
 	m_TestItem = AddGameObject(3, new Tool("Scythe"));
 
 	m_TestTObj = AddGameObject(0, new TileObject("Back"));
+	m_TestTObj2 = AddGameObject(0, new TileObject("TreeStump01"));
 
     return false;
 }
@@ -60,6 +61,7 @@ void Scene_InGameTest::Enter()
 
 
 	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
+	m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 10,10 }, m_TestTObj2);
 	m_Player->SetTileSystem(m_TileObjectSystem);
 
 	GAME_MGR->SetViewZoom(0, 0.5f);

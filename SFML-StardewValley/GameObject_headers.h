@@ -4,5 +4,6 @@
 #include "Framework/CoreGameObject/SpriteObject.h"
 #include "Framework/CoreGameObject/EffectObject.h"
 
+#include "Framework/CoreGameObject/UIObject.h"
 #include "Framework/CoreGameObject/MouseCursor.h"
 //#include "Framework/CoreGameObject/ButtonObject.h"

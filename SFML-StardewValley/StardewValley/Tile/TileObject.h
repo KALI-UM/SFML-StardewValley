@@ -18,6 +18,7 @@ public:
 	void LoadTileObject();
 
 	DTile* GetDTile() const { return m_TileSprite; }
+	void SetTileIndex(const CellIndex& tileIndex) { m_TileIndex = tileIndex; }
 	const TileType& GetTileTypeByTileIndex(const CellIndex& tileIndex)const;
 	bool IsPassableTileByTileIndex(const CellIndex& tileIndex)const;
 

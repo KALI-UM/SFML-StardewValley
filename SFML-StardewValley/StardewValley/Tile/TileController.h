@@ -48,9 +48,10 @@ public:
 	void UpdatePlace(float dt);
 	void UpdateDrag(float dt);
 	void UpdateDestroy(float dt);
-	void UpdateCollision(float dt);
+	void UpdateType(float dt);
 
-	void SetButtonTile(int x, int y);
+	void SetButtonTile();
+	void SetButtonTile(const std::string& texid, int x, int y);
 	void Set1x1Tile(const CellIndex& tileIndex, bool checkPossible = true);
 	void SetLineIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible = true);
 	void SetRangeIntersectedTiles(const CellIndex& startIndex, const CellIndex& endIndex, bool checkPossible = true);
@@ -72,5 +73,6 @@ protected:
 	int				m_ButtonTileY = 0;
 public:
 	TileType		m_CurrTileType;
+	std::string		m_ButtonTexid = "OutdoorsSpring.png#Spring";
 };
 

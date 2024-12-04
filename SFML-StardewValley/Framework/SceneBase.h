@@ -1,6 +1,7 @@
 #pragma once
 
 class GameObject;
+class UIObject;
 class SceneBase
 {
 public:
@@ -64,9 +65,18 @@ public:
 	}
 
 	template <typename T>
+	T* AddUIGameObject(int layerIndex, T* gameObject)
+	{
+		UIObject* ui = dynamic_cast<UIObject*>(gameObject);
+		if (ui)
+			m_WantsToAddUI.push(ui);
+		return AddGameObject(layerIndex, gameObject);
+	}
+
+	template <typename T>
 	T* FindGameObject(int layerIndex, const std::string& name)
 	{
-		if(name=="")
+		if (name == "")
 			return nullptr;
 		auto layerit = GetGameObjectsLayerIter(layerIndex);
 		for (auto& currgobj : layerit)
@@ -96,6 +106,8 @@ private:
 	std::list<LayerInfo>						m_GameObjects;
 	std::queue<GameObjectInfo>					m_WantsToAdd;
 	std::queue<GameObjectInfo>					m_WantsToRemove;
+	std::queue<UIObject*>						m_WantsToAddUI;
+	std::queue<UIObject*>						m_WantsToRemoveUI;
 
 	std::vector<GameObject*>& GetGameObjectsLayerIter(int index);
 	std::vector<std::list<LayerInfo>::iterator> m_LayerIndex;
@@ -107,5 +119,8 @@ private:
 
 	void RegisterGameObject();
 	void RemoveGameObject();
+
+	void RegisterUIObject();
+	void RemoveUIObject();
 };
 

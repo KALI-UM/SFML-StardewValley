@@ -15,6 +15,8 @@ TileMapSystem::~TileMapSystem()
 
 bool TileMapSystem::Initialize()
 {
+	m_TileTypeInfos = std::vector<std::vector<TileType>>(mcv_Model->m_CellCount.y, std::vector<TileType>(mcv_Model->m_CellCount.x, TileType::None));
+
 	//for (int layer = 0; layer < mcv_Model->m_LayerCnt; layer++)
 	//{
 	//	LoadTileViewRawFile((TileEditorLayer)layer);
@@ -128,12 +130,14 @@ void TileMapSystem::SaveTileTypeFile(const std::string& filename)
 
 }
 
-void TileMapSystem::SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath)
+void TileMapSystem::SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath, sf::Vector2u uusize)
 {
 	rapidcsv::Document texdoc(texfilepath, rapidcsv::LabelParams(-1, -1));
 	rapidcsv::Document typedoc(typefilepath, rapidcsv::LabelParams(-1, -1));
 	int cellxcnt = std::min(texdoc.GetColumnCount(), typedoc.GetColumnCount());
-	int cellycnt = std::min(texdoc.GetRowCount(), typedoc.GetColumnCount());
+	int cellycnt = std::min(texdoc.GetRowCount(), typedoc.GetRowCount());
+	cellxcnt = std::min(cellxcnt, (int)uusize.x);
+	cellycnt = std::min(cellycnt, (int)uusize.y);
 
 	TileObjRawData tobj;
 	tobj.id = tileObjId;
