@@ -57,7 +57,7 @@ void Tool::Use(Player* const player)
 				sprite->SetPriorityType(DrawPriorityType::Custom, 2);
 				effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
 				if (m_ItemId == "Scythe") {
-					sprite->setPosition(player->getPosition().x + 10.f, player->getPosition().y + 25.f);
+					sprite->setPosition(player->getPosition().x -10.f, player->getPosition().y + 25.f);
 					effectSprite->SetIsVisible(false);
 				}
 			}
