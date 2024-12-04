@@ -1,6 +1,7 @@
 #pragma once
-#include "Item/Hoe.h"
 
+class Tool;
+enum class ItemType;
 class Player : public GameObject
 {
 
@@ -17,6 +18,7 @@ public:
 		interaction,
 		wateringAction,
 		staminaExhausted,
+		Attack,
 	};
 	enum class IsVisibleItem {
 		visibleItem,
@@ -48,7 +50,8 @@ protected:
 	std::vector<ClipInfo> clipInfos;
 
 	Animator animator;
-    
+	ItemType itemtype;
+	
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
 
@@ -85,6 +88,8 @@ public:
 	void GetTool(Tool* tool);
 
 	void SetAction(Action newAction);
+
+	void GetItemType(ItemType type);
 
 protected:
 	Direction m_CurrDir;

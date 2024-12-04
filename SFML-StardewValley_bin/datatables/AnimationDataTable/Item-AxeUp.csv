@@ -1,0 +1,9 @@
+id,fps,looptype,,
+AxeUp,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/AxeUp.png,0,0,14,16
+graphics/AxeUp.png,14,0,14,16
+graphics/AxeUp.png,28,0,14,16
+graphics/AxeUp.png,42,0,14,16
+graphics/AxeUp.png,56,0,14,16

@@ -1,0 +1,9 @@
+id,fps,looptype,,
+PickaxeDown,20,0,,
+,,,,
+TEXTURE ID,LEFT,TOP,WIDTH,HEIGHT
+graphics/PickaxeDown.png,0,0,21,41
+graphics/PickaxeDown.png,21,0,21,41
+graphics/PickaxeDown.png,42,0,21,41
+graphics/PickaxeDown.png,63,0,21,41
+graphics/PickaxeDown.png,84,0,21,41

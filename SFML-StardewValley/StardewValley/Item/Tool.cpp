@@ -32,12 +32,15 @@ void Tool::Use(Player* const player)
 				sprite->SetIsVisible(true);
 				effectSprite->SetIsVisible(true);
 				sprite->setPosition(player->getPosition().x, player->getPosition().y - 45.f);
-				effectSprite->setPosition(player->getPosition().x, player->getPosition().y - 45.f);
+				effectSprite->setPosition(player->getPosition().x, player->getPosition().y - 40.f);
 				animator.Play(&temp[m_ItemId+"Up"], true);
 				effectAnimator.Play(&temp["ToolsUpEffect"], true);
 				sprite->SetPriorityType(DrawPriorityType::Custom, -1);
 				effectSprite->SetPriorityType(DrawPriorityType::Custom, 0);
-
+				if (m_ItemId == "Scythe") {
+					sprite->setPosition(player->getPosition().x +18.f, player->getPosition().y - 12.f);
+					effectSprite->SetIsVisible(false);
+				}
 			}
 		}
 		if (player->GetDirection() == Player::Direction::left && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
@@ -53,6 +56,10 @@ void Tool::Use(Player* const player)
 				effectAnimator.Play(&temp["ToolsSideEffect"], true);
 				sprite->SetPriorityType(DrawPriorityType::Custom, 2);
 				effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
+				if (m_ItemId == "Scythe") {
+					sprite->setPosition(player->getPosition().x + 10.f, player->getPosition().y + 25.f);
+					effectSprite->SetIsVisible(false);
+				}
 			}
 		}
 		if (player->GetDirection() == Player::Direction::right && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
@@ -68,6 +75,10 @@ void Tool::Use(Player* const player)
 				effectAnimator.Play(&temp["ToolsSideEffect"], true);
 				sprite->SetPriorityType(DrawPriorityType::Custom, 2);
 				effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
+				if (m_ItemId == "Scythe") {
+					sprite->setPosition(player->getPosition().x + 10.f, player->getPosition().y + 25.f);
+					effectSprite->SetIsVisible(false);
+				}
 			}
 		}
 		if (player->GetDirection() == Player::Direction::down && player->GetIsVisibleItem() == Player::IsVisibleItem::visibleItem) {
@@ -82,7 +93,10 @@ void Tool::Use(Player* const player)
 				effectSprite->setPosition(player->getPosition().x + 10.f, player->getPosition().y - 7.f);
 				effectSprite->SetPriorityType(DrawPriorityType::Custom, 3);
 				sprite->SetPriorityType(DrawPriorityType::Custom, 2);
-
+				if (m_ItemId == "Scythe") {
+					sprite->setPosition(player->getPosition().x +10.f, player->getPosition().y+ 25.f);
+					effectSprite->SetIsVisible(false);
+				}
 			}
 		}
 	
@@ -100,12 +114,15 @@ void Tool::AnimationClips()
 		clip.loadFromFile(curr);
 		temp.insert({ clip.GetIdFromFilepath(curr),  clip });
 
-		animator.AddEvent(clip.GetIdFromFilepath(curr), 4, [&]() {sprite->SetIsVisible(false); });
-		effectAnimator.AddEvent(clip.GetIdFromFilepath(curr), 4, [&]() {effectSprite->SetIsVisible(false); });
+		animator.AddEvent(clip.GetIdFromFilepath(curr), 6, [&]() {sprite->SetIsVisible(false); });
+		effectAnimator.AddEvent(clip.GetIdFromFilepath(curr), 6, [&]() {effectSprite->SetIsVisible(false); });
 	}
 	animator.SetTarget(sprite);
 	effectAnimator.SetTarget(effectSprite);
 
+	animator.AddEvent("ScytheUp", 5, [&]() {sprite->SetIsVisible(false); });
+	animator.AddEvent("ScytheSide", 5, [&]() {sprite->SetIsVisible(false); });
+	animator.AddEvent("ScytheDown", 5, [&]() {sprite->SetIsVisible(false); });
 	effectAnimator.AddEvent("ToolsDownEffect", 3, [&]() {effectSprite->SetIsVisible(false); });
 }
 

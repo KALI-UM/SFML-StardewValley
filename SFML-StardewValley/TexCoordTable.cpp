@@ -71,7 +71,7 @@ const sf::IntRect& TexCoordTable::GetTexIntRect(const TEXID& id) const
 		return it->second.texcoord;
 }
 
-const sf::FloatRect& TexCoordTable::GetTexFloatRect(const TEXID& id) const
+sf::FloatRect TexCoordTable::GetTexFloatRect(const TEXID& id) const
 {
 	return sf::FloatRect(GetTexIntRect(id));
 }

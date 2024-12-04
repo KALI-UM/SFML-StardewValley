@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "Player.h"
+#include "Item/Tool.h"
 
 Player::Player(const std::string& name)
 	:GameObject(name)
@@ -93,8 +94,11 @@ void Player::UpdateIdle(float dt)
 	{
 		SetAction(Action::move);
 	}
-	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
+	/*if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::interaction);
+	}*/
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left) ) {
+		SetAction(Action::Attack);
 	}
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::E)) {
 		SetAction(Action::wateringAction);
@@ -192,6 +196,10 @@ void Player::AnimationClips()
 	animator.AddEvent("ExhaustDownVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
 	animator.AddEvent("ExhaustSideVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
 	animator.AddEvent("ExhaustUpVisible", 5, [&]() {this->m_CurrAction = Action::idle, stamina = 20; });
+
+	animator.AddEvent("AttackDownVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
+	animator.AddEvent("AttackSideVisible", 5, [&]() {this->m_CurrAction = Action::idle;});
+	animator.AddEvent("AttackUpVisible", 5, [&]() {this->m_CurrAction = Action::idle; });
 }
 
 std::string Player::GetAnimationClipIdByDAI()
@@ -214,6 +222,9 @@ std::string Player::GetAnimationClipIdByDAI()
 		break;
 	case Player::Action::staminaExhausted:
 		id += "Exhaust";
+		break;
+	case Player::Action::Attack:
+		id += "Attack";
 		break;
 	default:
 		break;
@@ -278,7 +289,6 @@ Player::IsVisibleItem Player::GetIsVisibleItem()
 void Player::GetTool(Tool* tool)
 {
 	this->tool = tool;
-
 }
 
 void Player::SetAction(Action newAction)
@@ -303,7 +313,17 @@ void Player::SetAction(Action newAction)
 	case Action::staminaExhausted:
 
 		break;
+	case Player::Action::Attack:
+		tool->Use(this);
+		stamina--;
+		break;
 	}
+
+}
+
+void Player::GetItemType(ItemType type)
+{
+	itemtype = type;
 }
 
 
