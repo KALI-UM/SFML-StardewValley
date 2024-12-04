@@ -59,6 +59,7 @@ void Scene_InGameTest::Enter()
 	m_TestItem->GetPlayer(m_Player);
 
 	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
+	m_Player->SetTileSystem(m_TileObjectSystem);
 }
 
 void Scene_InGameTest::Update(float dt)

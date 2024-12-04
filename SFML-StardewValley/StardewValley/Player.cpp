@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "Player.h"
-
+#include "Tile/TileObjectSystem.h"
 
 Player::Player(const std::string& name)
 	:GameObject(name)
@@ -15,7 +15,7 @@ bool Player::Initialize()
 {
 	AnimationClips();
 	animator.SetPlayerAniClip(&temp);
-	
+
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
@@ -32,6 +32,8 @@ void Player::Reset()
 
 void Player::Update(float dt)
 {
+	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(getPosition());
+	std::cout << m_PlayerTileIndex.x << "," << m_PlayerTileIndex.y << std::endl;
 	animator.Update(dt);
 	Staminagauge();
 
@@ -48,7 +50,7 @@ void Player::Update(float dt)
 		break;
 	}
 
-	
+
 	if (direction.x != 0.f || direction.y != 0.f)
 	{
 		auto min = std::min_element(clipInfos.begin(), clipInfos.end(),
@@ -410,7 +412,7 @@ void Player::AnimationClips()
 			clip.frames.push_back({ textureId, {i * width, height * 11, width, height } });
 		}
 		temp.insert({ "WaterUpVisible", clip });
-	} 
+	}
 	{
 		AnimationClip clip;
 		clip.id = "ExhaustDownVisible";

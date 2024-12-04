@@ -22,6 +22,10 @@ public:
 	void LoadTileLayerRawFile();
 	void LoadTileLayerObjectFile();
 
+	CellIndex GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const;
+	TileObject* GetTileObjectByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
+	TileType	GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
+
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
 	bool IsPossibleToPass(const CellIndex& tileIndex);
 

@@ -1,6 +1,7 @@
 #pragma once
-#include "Item/Hoe.h"
+#include "Tile/Tile.h"
 
+class TileObjectSystem;
 class Player : public GameObject
 {
 
@@ -84,10 +85,13 @@ public:
 	
 	void GetHoe(Hoe* hoe);
 	void SetAction(Action newAction);
-
+	void SetTileSystem(TileObjectSystem* const sys) { m_TileSystem = sys; };
 protected:
 	Direction m_CurrDir;
 	Action m_CurrAction = Action::idle;
 	IsVisibleItem m_CurrEquip;
+
+	CellIndex m_PlayerTileIndex;
+	const TileObjectSystem*  m_TileSystem;
 };
 

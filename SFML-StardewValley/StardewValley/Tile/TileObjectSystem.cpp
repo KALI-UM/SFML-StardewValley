@@ -56,6 +56,29 @@ void TileObjectSystem::LoadTileLayerObjectFile()
 {
 }
 
+CellIndex TileObjectSystem::GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const
+{
+	return mcv_View->GetTileCoordinatedIndex(pos);
+}
+
+TileObject* TileObjectSystem::GetTileObjectByTileIndex(TileLayer layer, const CellIndex& tileIndex)const
+{
+	return mcv_Model->GetTileInfo(layer, tileIndex).owner;
+}
+
+TileType TileObjectSystem::GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex)const
+{
+	TileObject* tobj = GetTileObjectByTileIndex(layer, tileIndex);
+	if (tobj)
+	{
+		return tobj->GetTileTypeByTileIndex(tileIndex);
+	}
+	else
+	{
+		return TileType::None;
+	}
+}
+
 bool TileObjectSystem::IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex)
 {
 	bool result = true;
