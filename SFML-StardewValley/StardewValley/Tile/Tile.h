@@ -5,6 +5,7 @@ typedef sf::Vector2u UNITxUNIT;
 typedef std::string TEXID;
 typedef std::string FILEPATH;
 typedef sf::IntRect TEXRECT;
+typedef std::string TOBJID;
 
 //타일 레이어
 enum class TileLayer

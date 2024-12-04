@@ -4,6 +4,13 @@ class SceneBase;
 class SceneManager
 	:public Singleton <SceneManager>
 {
+	friend class Singleton<SceneManager>;
+protected:
+	SceneManager() = default;
+	virtual ~SceneManager() = default;
+
+	SceneManager(const SceneManager& other) = delete;
+	SceneManager& operator=(const SceneManager& other) = delete;
 public:
 	bool Initialize();
 	void Reset();

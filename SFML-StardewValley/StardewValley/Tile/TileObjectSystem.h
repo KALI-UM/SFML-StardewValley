@@ -2,6 +2,7 @@
 
 #include "Tile/Tile.h"
 class TileModel;
+class TileView;
 
 //게임용 오브젝트 시스템
 class TileObjectSystem :
@@ -9,8 +10,9 @@ class TileObjectSystem :
 {
 protected:
 	TileModel* mcv_Model;
+	TileView*	mcv_View;
 public:
-	TileObjectSystem(TileModel* model);
+	TileObjectSystem(TileModel* model, TileView* view);
 	~TileObjectSystem();
 
 	bool Initialize() override;
@@ -21,13 +23,21 @@ public:
 	void LoadTileLayerObjectFile();
 
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
-	void IsPossibleToPass();
+	bool IsPossibleToPass(const CellIndex& tileIndex);
+
+	void ColorizePassableTile();
+
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 
+
 protected:
 	std::vector<std::list<TileObject*>>						m_TileObjects;
 
+
+	void SetTileColorizeFunc(std::function<void(const sf::Color& color, const CellIndex&)> func) { m_WhenNeedsToColorizeTileFunc = func; };
+	void RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex);
+	std::function<void(const sf::Color& color, const CellIndex&)> m_WhenNeedsToColorizeTileFunc;
 };
 

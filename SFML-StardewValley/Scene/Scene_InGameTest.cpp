@@ -12,6 +12,8 @@
 #include "PlayerStatusUi.h"
 #include "Item/Hoe.h"
 
+#include "Tile/TileObject.h"
+
 
 Scene_InGameTest::Scene_InGameTest()
     :SceneBase("InGameTest", 4, 2)
@@ -34,9 +36,9 @@ bool Scene_InGameTest::Initialize()
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
 	m_TileView->SetTileViewIndex((int)TileLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileView->SetTileViewIndex((int)TileLayer::WaterEffect, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Back, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)TileLayer::Back, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)TileLayer::Object, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel));
+	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
 	m_TileGrid = AddGameObject(2, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
@@ -46,6 +48,8 @@ bool Scene_InGameTest::Initialize()
 	m_PlayerStatusUi = AddGameObject(m_UILayerIndex, new PlayerStatusUi());
 	m_TestItem = AddGameObject(3, new Hoe());
 
+	m_TestTObj = AddGameObject(0, new TileObject("Back"));
+
     return false;
 }
 
@@ -53,6 +57,8 @@ void Scene_InGameTest::Enter()
 {
 	m_Player->GetHoe(m_TestItem);
 	m_TestItem->GetPlayer(m_Player);
+
+	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
 }
 
 void Scene_InGameTest::Update(float dt)

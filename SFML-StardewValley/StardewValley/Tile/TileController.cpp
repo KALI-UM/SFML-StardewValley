@@ -6,6 +6,7 @@
 #include "Tile/ButtonBar.h"
 #include "TexCoordTable.h"
 #include "DTile.h"
+#include "TileObject.h"
 
 TileController::TileController(TileMapSystem* sys, TileModel* model, TileView* view, int viewIndex)
 	:m_TileMapSystem(sys), mcv_Model(model), mcv_View(view), m_ViewIndex(viewIndex)
@@ -38,6 +39,10 @@ void TileController::Update(float dt)
 		m_PrevTile = m_MousePrevTile;
 
 	std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
+	//if (mcv_Model->IsValidTileIndex(m_MouseOverlaidTile))
+	//{
+	//	std::cout << Tile::TileTypeToString(mcv_Model->GetTileInfo(TileLayer::Back, m_MouseOverlaidTile).owner->GetTileTypeByTileIndex(m_MouseOverlaidTile));
+	//}
 
 	if (m_ButtonBar&&!m_ButtonBar->GetHasFocus())
 	{

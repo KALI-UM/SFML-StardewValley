@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "TileMapSystem.h"
 #include "TileModel.h"
+#include "TileObjDataTable.h"
 
 TileMapSystem::TileMapSystem(TileModel* model)
 	:mcv_Model(model)
@@ -14,11 +15,11 @@ TileMapSystem::~TileMapSystem()
 
 bool TileMapSystem::Initialize()
 {
-	for (int layer = 0; layer < mcv_Model->m_LayerCnt; layer++)
-	{
-		LoadTileViewRawFile((TileEditorLayer)layer);
-	}
-	LoadTileTypeFile();
+	//for (int layer = 0; layer < mcv_Model->m_LayerCnt; layer++)
+	//{
+	//	LoadTileViewRawFile((TileEditorLayer)layer);
+	//}
+	//LoadTileTypeFile();
 	return true;
 }
 
@@ -47,6 +48,21 @@ void TileMapSystem::LoadTileViewRawFile(TileEditorLayer layer)
 			BuildTilesById({ i,j }, strings);
 		}
 	}
+}
+
+void TileMapSystem::SaveTileViewRawFile(TileEditorLayer layer, const std::string& filename)
+{
+	rapidcsv::Document doc("", rapidcsv::LabelParams(-1, -1));
+	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
+	{
+		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
+		{
+			const TileInfo& currInfo = mcv_Model->GetTileInfo((int)layer, { i,j });
+			std::string strings = currInfo.id;
+			doc.SetCell(i, j, strings);
+		}
+	}
+	doc.Save("datatables/" + filename + "tex.csv");
 }
 
 void TileMapSystem::SaveTileViewRawFile(TileEditorLayer layer)
@@ -95,6 +111,49 @@ void TileMapSystem::SaveTileTypeFile()
 		}
 	}
 	doc.Save("datatables/tileTypeInfo_layer" + std::to_string((int)0) + ".csv");
+}
+
+void TileMapSystem::SaveTileTypeFile(const std::string& filename)
+{
+	rapidcsv::Document doc("", rapidcsv::LabelParams(-1, -1));
+	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
+	{
+		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
+		{
+			std::string strings = Tile::TileTypeToString(m_TileTypeInfos[j][i]);
+			doc.SetCell(i, j, strings);
+		}
+	}
+	doc.Save("datatables/" + filename + "type.csv");
+
+}
+
+void TileMapSystem::SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath)
+{
+	rapidcsv::Document texdoc(texfilepath, rapidcsv::LabelParams(-1, -1));
+	rapidcsv::Document typedoc(typefilepath, rapidcsv::LabelParams(-1, -1));
+	int cellxcnt = std::min(texdoc.GetColumnCount(), typedoc.GetColumnCount());
+	int cellycnt = std::min(texdoc.GetRowCount(), typedoc.GetColumnCount());
+
+	TileObjRawData tobj;
+	tobj.id = tileObjId;
+	tobj.originIndex = { 0,0 };
+	tobj.uuSize = { (unsigned int)cellxcnt, (unsigned int)cellycnt };
+	tobj.tileTypeMap = std::vector<std::vector<TileObjRawData::UnitData>>(cellycnt, std::vector<TileObjRawData::UnitData>(cellxcnt));
+	for(int j = 0; j < cellycnt; j++)
+	{
+		for (int i = 0; i < cellxcnt; i++)
+		{
+			TileObjRawData::UnitData& currunit = tobj.tileTypeMap[j][i];
+			currunit.texid = texdoc.GetCell<std::string>(i, j);
+			currunit.type = typedoc.GetCell<std::string>(i, j);	
+		}
+	}
+
+	json tobjfile = tobj;
+	std::ofstream f("datatables/TileObj/"+ tileObjId+".json");
+	f << tobjfile.dump(4) << std::endl;
+	f.close();
 }
 
 void TileMapSystem::BuildTilesById(const std::list<CellIndex> tiles, const UNITxUNIT& uu, const std::list<TEXID>& ids)

@@ -1,46 +1,33 @@
 #pragma once
 #include "Tile/Tile.h"
+#include <imgui.h>
 
 class DTile;
 
-typedef std::string TILEOBJID;
-typedef std::string SubType;
-struct TileObjectData
-{
-	TILEOBJID	id;
-	UNITxUNIT	uuSize;
 
-	struct UnitData
-	{
-		CellIndex	offset;
-		TEXID		texid;
-		TileType	type;
-		SubType		subtype;
-	};
-
-	std::vector<std::vector<UnitData>> tileTypeMap;
-};
-
+struct TileObjData;
 class TileObject :
 	public GameObject
 {
 public:
-	TileObject();
+	TileObject(const TOBJID& id);
 	~TileObject();
 
 	bool Initialize() override;
-
+	void Reset() override;
 	void LoadTileObject();
 
 	DTile* GetDTile() const { return m_TileSprite; }
-	const TileType& GetTileType(const CellIndex& tileIndex)const;
+	const TileType& GetTileTypeByTileIndex(const CellIndex& tileIndex)const;
+	bool IsPassableTileByTileIndex(const CellIndex& tileIndex)const;
+
 	const std::list<std::pair<CellIndex, TileType>>& GetTileTypes() const { return m_TileTypes; }
 	std::list<std::pair<CellIndex, TileType>>	m_TileTypes;
 
 protected:
-	TileObjectData*											m_Data;
+	const TOBJID											m_TOBjId;
+	const TileObjData*										m_Data;
 	CellIndex												m_TileIndex;
-	CellIndex												m_TLOffset;
 
 	DTile* m_TileSprite;
 };

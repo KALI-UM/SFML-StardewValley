@@ -21,11 +21,13 @@ public:
 
 	void LoadTileViewRawFile(TileEditorLayer layer);
 	void SaveTileViewRawFile(TileEditorLayer layer);
+	void SaveTileViewRawFile(TileEditorLayer layer, const std::string& filename);
 
 	void LoadTileTypeFile();
 	void SaveTileTypeFile();
+	void SaveTileTypeFile(const std::string& filename);
 
-	void SaveAsObjectData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath);
+	void SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath);
 
 	void BuildTilesById(const std::list<CellIndex> tiles, const UNITxUNIT& uu, const std::list <TEXID>& ids);
 	void BuildTilesById(const std::list<CellIndex> tiles, const TEXID& id);

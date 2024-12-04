@@ -62,6 +62,11 @@
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
+    <ClCompile Include="TileObjDataTable.cpp" />
+    <ClCompile Include="Scene_BackEditor.cpp" />
+    <ClCompile Include="ImguiWindowTab.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -132,5 +137,10 @@
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
     <ClInclude Include="TileObject_Tree.h" />
     <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
+    <ClInclude Include="TileObjDataTable.h" />
+    <ClInclude Include="Scene_BackEditor.h" />
+    <ClInclude Include="ImguiWindowTab.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UIManager.h" />
   </ItemGroup>
 </Project>

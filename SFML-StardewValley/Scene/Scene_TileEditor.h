@@ -39,6 +39,7 @@ protected:
 
 	MouseCursor*		m_Cursor;
 
+	std::string m_Obj;
 	std::vector<std::string> m_Layers;
 	std::vector<std::string> m_Types;
 

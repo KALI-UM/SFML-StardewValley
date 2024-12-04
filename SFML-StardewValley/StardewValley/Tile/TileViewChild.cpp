@@ -20,7 +20,7 @@ bool TileViewChild::Initialize()
 	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
 	m_TileDrawable = std::vector<std::vector<DTile*>>(cellCount.y, std::vector<DTile*>(cellCount.x));
-	
+
 	switch (m_TileViewType)
 	{
 	case TileViewType::Raw:
@@ -73,8 +73,11 @@ void TileViewChild::Release()
 void TileViewChild::ColorizeTile(const sf::Color& color, const CellIndex& tileIndex)
 {
 	auto tile = m_TileDrawable[tileIndex.y][tileIndex.x];
-	tile->SetFillColor(color);
-	m_ColorizedTiles.push(tileIndex);
+	if (tile)
+	{
+		tile->SetFillColor(color);
+		m_ColorizedTiles.push(tileIndex);
+	}
 }
 
 void TileViewChild::InitializeRaw()

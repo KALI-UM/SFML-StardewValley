@@ -2,6 +2,7 @@
 #include "DataTableManager.h"
 #include "TexCoordTable.h"
 #include "ItemDataTable.h"
+#include "TileObjDataTable.h"
 
 DataTableManager::~DataTableManager()
 {
@@ -14,6 +15,7 @@ bool DataTableManager::Initialize()
 	bool result = true;
 	m_DataTables.insert({ DataTable::DataId::TexId, new TexCoordTable() });
 	m_DataTables.insert({ DataTable::DataId::ItemData, new ItemDataTable() });
+	m_DataTables.insert({ DataTable::DataId::TileObjData, new TileObjDataTable() });
 
 	for (auto t : m_DataTables)
 	{

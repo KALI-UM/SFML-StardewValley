@@ -65,7 +65,7 @@ void PlayerStatusUi::Update(float dt)
 	}
     count += dt;
 	ClockHands->setRotation(std::numbers::pi * 1.f * count);
-	std::cout << "(" << ClockHands->getRotation() << ")" << std::endl;
+	//std::cout << "(" << ClockHands->getRotation() << ")" << std::endl;
 }
 
 void PlayerStatusUi::UpdateIdle(float dt)

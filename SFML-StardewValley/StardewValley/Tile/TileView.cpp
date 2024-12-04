@@ -11,8 +11,7 @@ TileView::TileView(TileModel* model)
 	:mcv_Model(model)
 {
 	mcv_Model->SetTileUpdateFunc(std::bind(&TileView::PushToViewUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
-	//mcv_Model->SetTileObjUpdateFunc(std::bind(&TileView::PushToTileObjectUpdateQue, this, std::placeholders::_1, std::placeholders::_2));
-	m_TileViewChildren.resize((int)TileObjLayer::Max);
+	m_TileViewChildren.resize(mcv_Model->m_LayerCnt);
 }
 
 TileView::~TileView()
@@ -109,29 +108,29 @@ CellIndex TileView::GetTileCoordinatedIndex(const sf::Vector2f& pos, bool isTile
 //}
 
 
-void TileView::ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const CellIndex& tileIndex)
+void TileView::ColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex)
 {
 	if (!mcv_Model->IsValidTileIndex(tileIndex))
 		return;
 
-	m_TileViewChildren[(int)layer]->ColorizeTile(color, tileIndex);
+	m_TileViewChildren[layer]->ColorizeTile(color, tileIndex);
 }
 
 void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const UNITxUNIT& uu)
 {
-	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+	for (int layer = 0; layer < mcv_Model->m_LayerCnt; layer++)
 	{
 		for (int uuy = 0; uuy < (int)uu.y; uuy++)
 		{
 			for (int uux = 0; uux < (int)uu.x; uux++)
 			{
-				ColorizeTile(color, (TileObjLayer)layer, tileIndex+sf::Vector2i(uux, uuy));
+				ColorizeTile(color, layer, tileIndex+sf::Vector2i(uux, uuy));
 			}
 		}
 	}
 }
 
-void TileView::ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const std::list<CellIndex>& tiles)
+void TileView::ColorizeTile(const sf::Color& color, int layer, const std::list<CellIndex>& tiles)
 {
 	for (auto it = tiles.begin(); it != tiles.end(); it++)
 	{
@@ -143,7 +142,7 @@ void TileView::ColorizeAllTiles(const sf::Color& color, const std::list<CellInde
 {
 	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
 	{
-		ColorizeTile(color, (TileObjLayer)layer, tiles);
+		ColorizeTile(color, layer, tiles);
 	}
 }
 

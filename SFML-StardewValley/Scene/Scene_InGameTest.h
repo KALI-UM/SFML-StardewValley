@@ -10,6 +10,8 @@ class Player;
 class PlayerStatusUi;
 class Hoe;
 
+class TileObject;
+
 class Scene_InGameTest :
     public SceneBase
 {
@@ -37,5 +39,8 @@ protected:
 	Animator m_PlayerAnimator;
 	PlayerStatusUi* m_PlayerStatusUi;
 	Hoe* m_TestItem;
+
+
+	TileObject* m_TestTObj;
 };
 

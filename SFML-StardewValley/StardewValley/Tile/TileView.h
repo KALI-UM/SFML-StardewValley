@@ -39,9 +39,9 @@ public:
 	//sf::Vector2f	GetTileCoordinatedCenterPosByTileIndex(const CellIndex& tileIndex);
 	//int				GetDrawableIndexByTileIndex(const CellIndex& tileIndex) const;
 
-	void ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const CellIndex& tileIndex);
+	void ColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex);
 	void ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const UNITxUNIT& uu = {1,1});
-	void ColorizeTile(const sf::Color& color, const TileObjLayer& layer, const std::list<CellIndex>& tiles);
+	void ColorizeTile(const sf::Color& color, int layer, const std::list<CellIndex>& tiles);
 	void ColorizeAllTiles(const sf::Color& color, const std::list<CellIndex>& tiles);
 
 protected:
