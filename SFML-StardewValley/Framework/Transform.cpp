@@ -61,7 +61,8 @@ void Transform::SetParent(Transform* parent)
 
 sf::Vector2f Transform::getPosition() const
 {
-	return DecomposePosition(m_GlobalTransform);
+	//DecomposePosition(m_GlobalTransform);
+	return getParentTransform().transformPoint(getLocalPosition());
 }
 
 
@@ -174,7 +175,7 @@ void Transform::scale(const sf::Vector2f& scale)
 	sf::Vector2f globalScale = DecomposeScale(m_GlobalTransform);
 	float globalRotation = DecomposeRotation(m_GlobalTransform, globalScale);
 	m_GlobalTransform = sf::Transform::Identity;
-	m_GlobalTransform.sf::Transform::translate(globalPosition).sf::Transform::rotate(globalRotation).sf::Transform::scale(sf::Vector2f(globalScale.x*scale.x, globalScale.y * scale.y));
+	m_GlobalTransform.sf::Transform::translate(globalPosition).sf::Transform::rotate(globalRotation).sf::Transform::scale(sf::Vector2f(globalScale.x * scale.x, globalScale.y * scale.y));
 	UpdateLocalTransform();
 }
 
@@ -210,10 +211,10 @@ void Transform::UpdateGlobalTransform()
 
 void Transform::UpdateLocalTransform()
 {
-	sf::Transform newLocalTransform = m_GlobalTransform*getParentTransform().getInverse();
-	sf::Vector2f newPosition= DecomposePosition(newLocalTransform);
-	sf::Vector2f newScale=DecomposeScale(newLocalTransform);
-	float newRotation=DecomposeRotation(newLocalTransform, newScale);
+	sf::Transform newLocalTransform = m_GlobalTransform * getParentTransform().getInverse();
+	sf::Vector2f newPosition = DecomposePosition(newLocalTransform) - getOrigin();
+	sf::Vector2f newScale = DecomposeScale(newLocalTransform);
+	float newRotation = DecomposeRotation(newLocalTransform, newScale);
 	m_T->setPosition(newPosition);
 	m_T->setRotation(newRotation);
 	m_T->setScale(newScale);

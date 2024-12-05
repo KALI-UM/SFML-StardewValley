@@ -21,6 +21,7 @@ public:
 	void SetTileIndex(const CellIndex& tileIndex) { m_TileIndex = tileIndex; }
 	const TileType& GetTileTypeByTileIndex(const CellIndex& tileIndex)const;
 	bool IsPassableTileByTileIndex(const CellIndex& tileIndex)const;
+	bool IsInteractiveTileByTileIndex(const CellIndex& tileIndex)const;
 
 	const std::list<std::pair<CellIndex, TileType>>& GetTileTypes() const { return m_TileTypes; }
 	std::list<std::pair<CellIndex, TileType>>	m_TileTypes;

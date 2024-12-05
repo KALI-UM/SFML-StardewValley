@@ -40,7 +40,7 @@ protected:
 	DSprite* item;
 
 	sf::Vector2f direction;
-	float speed = 500.f;
+	float speed = 100.f;
 	int maxStamina = 20;
 	int stamina = maxStamina;
 

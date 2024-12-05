@@ -39,5 +39,8 @@ protected:
 
 	TileObject* m_TestTObj;
 	TileObject* m_TestTObj2;
+	TileObject* m_TestTObj3;
+	TileObject* m_TestTObj4;
+	TileObject* m_TestTObj5;
 };
 

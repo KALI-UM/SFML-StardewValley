@@ -74,6 +74,11 @@ void TileView::SetTileViewVisible(int layer, bool visible)
 	m_TileViewChildren[layer]->SetIsVisible(visible);
 }
 
+void TileView::SetTileViewSelfPriority(int layer, bool selfpriority)
+{
+	m_TileViewChildren[layer]->SetIsSelfPriortyView(selfpriority);
+}
+
 void TileView::SetTileTransform(const sf::Vector2f& zero, const sf::Transform& trans)
 {
 	m_TileTransform = trans;
@@ -109,12 +114,12 @@ CellIndex TileView::GetTileCoordinatedIndex(const sf::Vector2f& pos, bool isTile
 //}
 
 
-void TileView::ColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex)
+void TileView::ColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset)
 {
 	if (!mcv_Model->IsValidTileIndex(tileIndex))
 		return;
 
-	m_TileViewChildren[layer]->ColorizeTile(color, tileIndex);
+	m_TileViewChildren[layer]->ColorizeTile(color, tileIndex, needReset);
 }
 
 void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileIndex, const UNITxUNIT& uu)
@@ -131,7 +136,7 @@ void TileView::ColorizeAllTile(const sf::Color& color, const CellIndex& tileInde
 	}
 }
 
-void TileView::ColorizeTile(const sf::Color& color, int layer, const std::list<CellIndex>& tiles)
+void TileView::ColorizeTiles(const sf::Color& color, int layer, const std::list<CellIndex>& tiles)
 {
 	for (auto it = tiles.begin(); it != tiles.end(); it++)
 	{
@@ -143,13 +148,13 @@ void TileView::ColorizeAllTiles(const sf::Color& color, const std::list<CellInde
 {
 	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
 	{
-		ColorizeTile(color, layer, tiles);
+		ColorizeTiles(color, layer, tiles);
 	}
 }
 
 void TileView::PushToViewUpdateQue(int layer, const CellIndex& tileIndex)
 {
-	if (m_TileViewChildren[layer]->m_TileViewType == TileViewType::Raw)
+	if (m_TileViewChildren[layer]->m_TileViewType == TileViewType::TexId)
 		PushToSpriteUpdateQue(layer, tileIndex);
 	else
 		PushToTileObjectUpdateQue(layer, tileIndex);
@@ -177,7 +182,8 @@ void TileView::UpdateTileSprite()
 
 		currTile->SetTexture(currTexRes.filepath);
 		currTile->SetTextureRect(currTexRes.texcoord);
-		currTile->SetOrigin(OriginType::BC, m_TileOffset);
+
+		currTile->SetTileOrigin({0,0});
 		m_SpriteUpdateQueue.pop();
 	}
 }
@@ -192,7 +198,7 @@ void TileView::UpdateTileObject()
 		if (currTileInfo.owner)
 		{
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = currTileInfo.owner->GetDTile();
-			currTileInfo.owner->setPosition({ currIndex.x * mcv_Model->m_CellSize.x, currIndex.y * mcv_Model->m_CellSize.y });
+			currTileInfo.owner->setPosition({ (currIndex.x+0.5f) * mcv_Model->m_CellSize.x, (currIndex.y+1.0f)* mcv_Model->m_CellSize.y });
 		}
 		else
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = nullptr;

@@ -1,11 +1,5 @@
 #pragma once
 
-enum class TileShapeType
-{
-	Single,
-	Multiple,
-};
-
 class sfTile :public sf::Drawable, public sf::Transformable
 {
 public:
@@ -46,10 +40,12 @@ public:
 	void SetTextureRect(const sf::IntRect& rect);
 	void SetTextureRect(const sf::IntRect& rect, const sf::Vector2u& uu);
 	void SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<sf::Vector2i>& tiles);
+	void SetUnitxUnitSize(const sf::Vector2u& uu);
 
 	sf::Vector2u GetTextureSize()const;
-
 	sf::FloatRect GetLocalBounds()const;
+	void SetTileOrigin(const sf::Vector2i& originIndex);
+
 	sf::Color GetColor() const;								//GetFillColor客 悼老		
 	void SetColor(const sf::Color& color);					//SetFillColor客 悼老
 	void SetColor(int r, int g, int b, int a = 255);		//SetFillColor客 悼老
@@ -59,12 +55,14 @@ public:
 	void SetFillColor(int r, int g, int b, int a = 255);
 	void SetOutlineColor(const sf::Color& color);
 	void SetOutlineColor(int r, int g, int b, int a = 255);
+	
+	void SetUnitSize(float unit) { m_Unit = unit; }
+	float GetUnitSize()const { return m_Unit; }
 
 	void SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex);
 	void SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect);
 private:
-	float			m_Unit = 16;
-	TileShapeType	m_ShapeType;
+	float	m_Unit = 16;
 	sfTile			m_Tile;
 
 };

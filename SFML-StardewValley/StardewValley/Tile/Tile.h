@@ -15,6 +15,9 @@ enum class TileLayer
 	Back,
 
 	Object,
+	Debug,
+
+	Light,
 	Max,
 };
 
@@ -40,13 +43,15 @@ enum class TileEditorLayer
 
 enum class TileType
 {
-	Ground,			//그외 땅(마을, Floor 등...)
+	PassableInteractive,
 	Soil,			//경작가능땅
+	Ground,			//그외 땅(마을, Floor 등...)
 
+	ImpassableInteractive,
+	Wall,			//벽(울타리 등, 물 외 못가는 곳)
 	Water,			//물
-	Wall,			//벽(울타리 등, 물 외 못가는 곳은 전부 wall)
 
-	None,			//공중에 떠있는 구간? 뭐라해야함 여튼 상관없는 구간
+	None,			//아무것도 없는 구간
 };
 
 class TileObject;

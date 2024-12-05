@@ -18,6 +18,7 @@ public:
 	bool Initialize() override;
 	void Reset() override;
 	void Update(float dt) override;
+	void PostRender() override;
 
 	void LoadTileLayerRawFile();
 	void LoadTileLayerObjectFile();
@@ -28,9 +29,11 @@ public:
 
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
 	bool IsPossibleToPass(const CellIndex& tileIndex) const;
+	bool IsInteractive(const CellIndex& tileIndex) const;
 
 	void ColorizePassableTile();
-
+	void ColorizeInteractiveTile();
+	void SetLightLayerColor(const sf::Color& color);
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
@@ -40,8 +43,8 @@ protected:
 	std::vector<std::list<TileObject*>>						m_TileObjects;
 
 
-	void SetTileColorizeFunc(std::function<void(const sf::Color& color, const CellIndex&)> func) { m_WhenNeedsToColorizeTileFunc = func; };
-	void RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex);
-	std::function<void(const sf::Color& color, const CellIndex&)> m_WhenNeedsToColorizeTileFunc;
+	void SetTileColorizeFunc(std::function<void(const sf::Color&, int, const CellIndex&, bool)> func) { m_WhenNeedsToColorizeTileFunc = func; };
+	void RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset);
+	std::function<void(const sf::Color& color, int layer, const CellIndex&, bool)> m_WhenNeedsToColorizeTileFunc;
 };
 

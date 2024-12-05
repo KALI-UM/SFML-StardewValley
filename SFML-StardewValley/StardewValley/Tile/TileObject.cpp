@@ -48,6 +48,8 @@ void TileObject::LoadTileObject()
 		}
 	}
 	m_TileSprite->SetTextureRect(tileTexrects, tileIndices);
+	m_TileSprite->SetTileOrigin(m_Data->originIndex);
+	m_TileSprite->SetPriorityType(DrawPriorityType::Y);
 }
 
 const TileType& TileObject::GetTileTypeByTileIndex(const CellIndex& tileIndex) const
@@ -59,7 +61,13 @@ const TileType& TileObject::GetTileTypeByTileIndex(const CellIndex& tileIndex) c
 bool TileObject::IsPassableTileByTileIndex(const CellIndex& tileIndex) const
 {
 	const TileType& type = GetTileTypeByTileIndex(tileIndex);
-	return (type != TileType::Wall && type != TileType::Water);
+	return (type != TileType::ImpassableInteractive && type != TileType::Wall && type != TileType::Water);
+}
+
+bool TileObject::IsInteractiveTileByTileIndex(const CellIndex& tileIndex) const
+{
+	const TileType& type = GetTileTypeByTileIndex(tileIndex);
+	return (type == TileType::ImpassableInteractive || type == TileType::PassableInteractive);
 }
 
 

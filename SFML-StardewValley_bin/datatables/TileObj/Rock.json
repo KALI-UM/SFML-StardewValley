@@ -1,0 +1,20 @@
+{
+    "id": "Rock",
+    "originIndex": {
+        "x": 0,
+        "y": 0
+    },
+    "tileTypeMap": [
+        [
+            {
+                "subtype": "",
+                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X7Y14",
+                "type": "ImpassableInteractive"
+            }
+        ]
+    ],
+    "uuSize": {
+        "x": 1,
+        "y": 1
+    }
+}

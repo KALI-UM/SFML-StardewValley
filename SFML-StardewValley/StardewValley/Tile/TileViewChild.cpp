@@ -26,6 +26,9 @@ bool TileViewChild::Initialize()
 	case TileViewType::Raw:
 		InitializeRaw();
 		break;
+	case TileViewType::TexId:
+		InitializeTexId();
+		break;
 	case TileViewType::Object:
 		InitializeTileObject();
 		break;
@@ -41,6 +44,9 @@ void TileViewChild::Reset()
 	case TileViewType::Raw:
 		ResetRaw();
 		break;
+	case TileViewType::TexId:
+		ResetTexId();
+		break;
 	case TileViewType::Object:
 		ResetTileObject();
 		break;
@@ -53,12 +59,12 @@ void TileViewChild::LateUpdate(float dt)
 
 void TileViewChild::PreRender()
 {
-	//if (m_NeedPriorityUpdate)
-	//{
-	//	//타일은 매 프레임마다 순위경쟁을 하지 않고 벡터에서 순서가 정해진다.
-	//	std::sort(m_Drawables.begin(), m_Drawables.end(),
-	//		[&](const DrawableObject* d1, const DrawableObject* d2) { return TileViewChild::SortTile(d1, d2); });
-	//}
+	if (m_IsSelfPriorityView && m_NeedPriorityUpdate)
+	{
+		//타일은 매 프레임마다 순위경쟁을 하지 않고 벡터에서 순서가 정해진다.
+		std::sort(m_Drawables.begin(), m_Drawables.end(),
+			[&](const DrawableObject* d1, const DrawableObject* d2) { return TileViewChild::SortTile(d1, d2); });
+	}
 }
 
 void TileViewChild::PostRender()
@@ -70,17 +76,40 @@ void TileViewChild::Release()
 {
 }
 
-void TileViewChild::ColorizeTile(const sf::Color& color, const CellIndex& tileIndex)
+void TileViewChild::ColorizeTile(const sf::Color& color, const CellIndex& tileIndex, bool needReset)
 {
 	auto tile = m_TileDrawable[tileIndex.y][tileIndex.x];
 	if (tile)
 	{
 		tile->SetFillColor(color);
-		m_ColorizedTiles.push(tileIndex);
+		if (needReset)
+			m_ColorizedTiles.push(tileIndex);
 	}
 }
 
-void TileViewChild::InitializeRaw()
+void TileViewChild::SetIsSelfPriortyView(bool selfpriority)
+{
+	m_IsSelfPriorityView = selfpriority;
+
+	if (m_IsSelfPriorityView)
+	{
+		const auto& cellCount = mcv_View->GetModel()->m_CellCount;
+		const auto& cellSize = mcv_View->GetModel()->m_CellSize;
+		for (int j = 0; j < (int)cellCount.y; j++)
+		{
+			for (int i = 0; i < (int)cellCount.x; i++)
+			{
+				auto tile = m_TileDrawable[j][i];
+				if (tile)
+					m_TileDrawable[j][i]->SetPriorityType(DrawPriorityType::Custom, j);
+			}
+		}
+
+		NeedPriorityUpdate();
+	}
+}
+
+void TileViewChild::InitializeTexId()
 {
 	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
@@ -89,7 +118,28 @@ void TileViewChild::InitializeRaw()
 		for (int i = 0; i < (int)cellCount.x; i++)
 		{
 			DTile* tileSprite = new DTile();
-			tileSprite->setLocalPosition({ (i + 0.5f) * cellSize.x, (j + 1.0f) * cellSize.y });
+			//일단 cellsize가 정사각형이어서 이렇게했다...
+			tileSprite->SetUnitSize(cellSize.x);
+			tileSprite->setLocalPosition({ (i + 0.5f) * cellSize.x, (j + 1) * cellSize.y });
+			SetDrawableObj(tileSprite);
+			m_TileDrawable[j][i] = tileSprite;
+		}
+	}
+}
+
+void TileViewChild::InitializeRaw()
+{
+	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
+	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
+
+	for (int j = 0; j < (int)cellCount.y; j++)
+	{
+		for (int i = 0; i < (int)cellCount.x; i++)
+		{
+			DTile* tileSprite = new DTile();
+			//일단 cellsize가 정사각형이어서 이렇게했다...
+			tileSprite->SetUnitSize(cellSize.x);
+			tileSprite->setLocalPosition({ (i + 0.5f) * cellSize.x, (j + 1) * cellSize.y });
 			SetDrawableObj(tileSprite);
 			m_TileDrawable[j][i] = tileSprite;
 		}
@@ -101,7 +151,7 @@ void TileViewChild::InitializeTileObject()
 
 }
 
-void TileViewChild::ResetRaw()
+void TileViewChild::ResetTexId()
 {
 	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
 	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
@@ -117,7 +167,24 @@ void TileViewChild::ResetRaw()
 			tileSprite->SetTexture(texres.filepath);
 			tileSprite->SetTextureRect(texres.texcoord);
 			tileSprite->SetDebugDraw(false);
-			tileSprite->SetOrigin(OriginType::BC, mcv_View->m_TileOffset);
+			tileSprite->SetTileOrigin({ 0,0 });
+		}
+	}
+}
+
+void TileViewChild::ResetRaw()
+{
+	const auto& cellCount = mcv_View->GetModel()->m_CellCount;
+	const auto& cellSize = mcv_View->GetModel()->m_CellSize;
+
+	for (int j = 0; j < (int)cellCount.y; j++)
+	{
+		for (int i = 0; i < (int)cellCount.x; i++)
+		{
+			auto& tileSprite = m_TileDrawable[j][i];
+			tileSprite->SetUnitxUnitSize({ 1,1 });
+			tileSprite->SetDebugDraw(false);
+			tileSprite->SetTileOrigin({ 0,0 });
 		}
 	}
 }
@@ -144,8 +211,8 @@ void TileViewChild::SetTileTransform(const sf::Transform& trans)
 	}
 }
 
-//bool TileViewChild::SortTile(const DrawableObject* dobj1, const DrawableObject* dobj2) const
-//{
-//	return dobj1->GetPriorityValue() < dobj2->GetPriorityValue();
-//}
+bool TileViewChild::SortTile(const DrawableObject* dobj1, const DrawableObject* dobj2) const
+{
+	return dobj1->GetPriorityValue() < dobj2->GetPriorityValue();
+}
 

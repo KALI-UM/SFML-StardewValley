@@ -191,13 +191,13 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##tlx"))
 	{
 		m_Rect[0]--;
-		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x);
+		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x+16);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##tlx"))
 	{
 		m_Rect[0]++;
-		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x);
+		m_Rect[0] = Utils::Clamp(m_Rect[0], (float)0, (float)m_TargetSprite->GetTextureSize().x+16);
 	}
 
 	if (ImGui::InputFloat("Y##tl", &m_Rect[1]))
@@ -208,13 +208,13 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##tly"))
 	{
 		m_Rect[1]--;
-		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y);
+		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y+16);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##tly"))
 	{
 		m_Rect[1]++;
-		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y);
+		m_Rect[1] = Utils::Clamp(m_Rect[1], (float)0, (float)m_TargetSprite->GetTextureSize().y+16);
 
 	}
 
@@ -226,14 +226,14 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##width"))
 	{
 		m_Rect[2]--;
-		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x);
+		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x+16);
 
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##width"))
 	{
 		m_Rect[2]++;
-		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x);
+		m_Rect[2] = Utils::Clamp(m_Rect[2], (float)0, (float)m_TargetSprite->GetTextureSize().x+16);
 	}
 
 	if (ImGui::InputFloat("H##height", &m_Rect[3]))
@@ -244,7 +244,7 @@ void Scene_Slice::ShowSceneImgui()
 	if (ImGui::Button("-##height"))
 	{
 		m_Rect[3]--;
-		m_Rect[3] = Utils::Clamp(m_Rect[3], (float)0, (float)m_TargetSprite->GetTextureSize().y);
+		m_Rect[3] = Utils::Clamp(m_Rect[3], (float)0, (float)m_TargetSprite->GetTextureSize().y+16);
 	}
 	ImGui::SameLine();
 	if (ImGui::Button("+##height"))

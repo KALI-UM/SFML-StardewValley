@@ -62,8 +62,8 @@ void D9SliceSprite::SetTexture(const std::string& filepath)
 
 void D9SliceSprite::SetOrigin(OriginType type, const sf::Vector2f& detail)
 {
-	setOrigin(((GetTextureSize().x / 2) * ((int)type % 3)) + detail.x,
-		((GetTextureSize().y / 2) * ((int)type / 3)) + detail.y);
+	setOrigin(((GetGlobalBounds().width / 2) * ((int)type % 3)) + detail.x,
+		((GetGlobalBounds().height / 2) * ((int)type / 3)) + detail.y);
 }
 
 sf::Vector2u D9SliceSprite::GetTextureSize() const

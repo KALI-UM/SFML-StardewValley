@@ -2,29 +2,32 @@
 #include "Tile/Tile.h"
 
 class TileModel;
-
+class TileView;
 //맵배치용 시스템
 class TileMapSystem :
 	public GameObject
 {
 protected:
 	TileModel* mcv_Model;
+	TileView* mcv_View;
 public:
-	TileMapSystem(TileModel* model);
+	TileMapSystem(TileModel* model, TileView* view);
 	~TileMapSystem();
 
 	bool Initialize() override;
 	void Reset() override;
 	void Update(float dt) override;
+	void PostRender() override;
 
-	void SetTileColorizeFunc(std::function<void(const sf::Color& color, const CellIndex&)> func) { m_WhenNeedsToColorizeTileFunc = func; };
 
 	void LoadTileViewRawFile(TileEditorLayer layer);
 	void SaveTileViewRawFile(TileEditorLayer layer);
+	void LoadTileViewRawFile(TileEditorLayer layer, const std::string& filename);
 	void SaveTileViewRawFile(TileEditorLayer layer, const std::string& filename);
 
 	void LoadTileTypeFile();
 	void SaveTileTypeFile();
+	void LoadTileTypeFile(const std::string& filename);
 	void SaveTileTypeFile(const std::string& filename);
 
 	void SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath, sf::Vector2u uusize);
@@ -35,7 +38,7 @@ public:
 
 	void SetTilesType(const std::list<CellIndex>& tiles, TileType type);
 	void SetTileType(const CellIndex& tileIndex, TileType type);
-	void SetTileTypeMode(TileType type);
+	void SetTileTypeMode();
 
 
 protected:
@@ -44,10 +47,9 @@ protected:
 	TileEditorLayer m_CurrLayer = TileEditorLayer::Layer0;
 
 	std::vector<std::vector<TileType>>		m_TileTypeInfos;
-	
-	std::function<void(const sf::Color& color, const CellIndex&)> m_WhenNeedsToColorizeTileFunc;
-	void RequestColorizeTile(const sf::Color& color, const CellIndex& tileIndex);
-
+	void SetTileColorizeFunc(std::function<void(const sf::Color&, int, const CellIndex&, bool)> func) { m_WhenNeedsToColorizeTileFunc = func; };
+	void RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset);
+	std::function<void(const sf::Color& color, int layer, const CellIndex&, bool)> m_WhenNeedsToColorizeTileFunc;
 
 	//std::list<std::pair<CellIndex, TEXID>>				m_PrevTileId;				//되돌리기를 위해 저장한다
 

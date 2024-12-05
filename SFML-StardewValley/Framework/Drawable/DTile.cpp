@@ -138,7 +138,6 @@ void DTile::SetTexture(const std::string& filepath)
 
 void DTile::SetTextureRect(const sf::IntRect& rect)
 {
-	m_ShapeType = TileShapeType::Single;
 	m_Tile.m_Vertices.resize(4);
 	m_Tile.m_UnitxUnit = { 0,0 };
 	SetVerticesPositionByTileIndex(0, { 0,0 });
@@ -182,6 +181,22 @@ void DTile::SetTextureRect(const std::list<sf::IntRect>& rects, const std::list<
 	}
 }
 
+void DTile::SetUnitxUnitSize(const sf::Vector2u& uu)
+{
+	m_IsValid = true;
+	m_Tile.m_Vertices.resize(4 * (int)uu.x * (int)uu.y);
+	m_Tile.m_UnitxUnit = { 0,0 };
+
+	for (int uuy = 0; uuy < (int)uu.y; uuy++)
+	{
+		for (int uux = 0; uux < (int)uu.x; uux++)
+		{
+			SetVerticesPositionByTileIndex(uux + uuy * (int)uu.x, { uux,uuy });
+		}
+	}
+	SetFillColor(sf::Color::White);
+}
+
 sf::Vector2u DTile::GetTextureSize() const
 {
 	return m_Tile.getTexture() ? m_Tile.getTexture()->getSize() : sf::Vector2u(0, 0);
@@ -190,6 +205,11 @@ sf::Vector2u DTile::GetTextureSize() const
 sf::FloatRect DTile::GetLocalBounds() const
 {
 	return m_Tile.getLocalBounds();
+}
+
+void DTile::SetTileOrigin(const sf::Vector2i& originIndex)
+{
+	setOrigin(m_Unit * (originIndex.x + 0.5f), m_Unit * (originIndex.y + 1.0f));
 }
 
 sf::Color DTile::GetColor() const

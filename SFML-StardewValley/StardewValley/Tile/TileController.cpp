@@ -20,8 +20,7 @@ TileController::~TileController()
 bool TileController::Initialize()
 {
 	if (!mcv_Model || !mcv_View)return false;
-	m_TileMapSystem->SetTileColorizeFunc(std::bind(&TileView::ColorizeAllTile, mcv_View, std::placeholders::_1, std::placeholders::_2, sf::Vector2u(1, 1)));
-
+	
 	return true;
 }
 
@@ -178,7 +177,7 @@ void TileController::UpdateDestroy(float dt)
 
 void TileController::UpdateType(float dt)
 {
-	m_TileMapSystem->SetTileTypeMode(m_CurrTileType);
+	m_TileMapSystem->SetTileTypeMode();
 
 	if (INPUT_MGR->GetMouseUp(sf::Mouse::Left))
 	{
@@ -210,9 +209,9 @@ void TileController::SetButtonTile()
 {
 	auto tileres = TEXRESTABLE_MGR->GetTileTexRes(m_ButtonTexid);
 
-	for (int j = 0; j < 10; j++)
+	for (int j = 0; j < std::min(10, (int)tileres.children.size()); j++)
 	{
-		for (int i = 0; i < 8; i++)
+		for (int i = 0; i < std::min(8, (int)tileres.children[j].size()); i++)
 		{
 			m_ButtonBar->SetButtonTex({ i,j }, tileres.children[m_ButtonTileY + j][m_ButtonTileX + i]);
 		}

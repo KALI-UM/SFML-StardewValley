@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "DebugInfo.h"
 
-DebugInfo::DebugInfo(const sf::FloatRect& target, const sf::Transform& transform, sf::Vector2f& pos)
-	: m_Position(pos)
+DebugInfo::DebugInfo(const sf::FloatRect& target, const Transform* transform, sf::Vector2f& pos)
+	: m_Position(pos), m_TargetTransform(transform)
 {
 	m_Rectangle.setFillColor(sf::Color::Transparent);
 	m_Rectangle.setOutlineColor(sf::Color::Green);
@@ -14,7 +14,7 @@ DebugInfo::DebugInfo(const sf::FloatRect& target, const sf::Transform& transform
 	m_X[2].position = { + 4,- 4 };
 	m_X[3].position = { - 4,+ 4 };
 	setXColor(sf::Color::Magenta);
-	Update(target, transform);
+	Update(target);
 }
 
 DebugInfo::~DebugInfo()
@@ -23,19 +23,16 @@ DebugInfo::~DebugInfo()
 
 void DebugInfo::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
-	states.transform = m_RectTransform;
+	states.transform = m_TargetTransform->getTransform();
 	target.draw(m_Rectangle, states);
-	//states.transform = m_XTransform; // getTransform() is defined by sf::Transformable
+	states.transform = m_TargetTransform->getParentTransform();
 	target.draw(m_X, states);
 }
 
-void DebugInfo::Update(const sf::FloatRect& localBound, const sf::Transform& transform)
+void DebugInfo::Update(const sf::FloatRect& localBound)
 {
 	m_Rectangle.setSize(localBound.getSize());
 	m_Rectangle.setPosition(localBound.getPosition());
-	m_RectTransform = transform;
-	//m_XTransform = sf::Transform::Identity;
-	//m_XTransform.translate(m_Position);
 }
 
 void DebugInfo::setColor(const sf::Color& color)

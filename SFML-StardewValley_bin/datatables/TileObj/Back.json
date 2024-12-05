@@ -209,12 +209,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -611,12 +611,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -1013,12 +1013,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -2189,7 +2189,7 @@
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X9Y66",
-                "type": "Wall"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -2591,7 +2591,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Wall"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -2993,7 +2993,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Wall"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -19716,7 +19716,7 @@
             },
             {
                 "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "texid": "OutdoorsSpring.png#Spring_X19Y15",
                 "type": "Wall"
             },
             {
@@ -24144,382 +24144,382 @@
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y17",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y17",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X13Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X14Y16",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Soil"
+                "type": "Ground"
             },
             {
                 "subtype": "",
@@ -24731,12 +24731,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -25133,12 +25133,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
@@ -25535,12 +25535,12 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             },
             {
                 "subtype": "",

@@ -2,3 +2,9 @@ id,filepath
 Back,datatables/TileObj/Back.json
 TreeStump01,datatables/TileObj/TreeStump01.json
 TreeLog01,datatables/TileObj/TreeLog01.json
+FarmHouse,datatables/TileObj/FarmHouse.json
+GreenHouse,datatables/TileObj/GreenHouse.json
+BrokenGreenHouse,datatables/TileObj/BrokenGreenHouse.json
+Rock,datatables/TileObj/Rock.json
+Boulder,datatables/TileObj/Boulder.json
+LargeStump,datatables/TileObj/LargeStump.json

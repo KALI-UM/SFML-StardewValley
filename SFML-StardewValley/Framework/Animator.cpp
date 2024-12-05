@@ -1,9 +1,6 @@
 #include "pch.h"
 #include "Animator.h"
 
-
-
-
 void Animator::AddEvent(const std::string& id, int frame, std::function<void()> action)
 {
 	auto key = std::pair<std::string, int>(id, frame);

@@ -12,7 +12,7 @@
 
 
 Scene_TileEditor::Scene_TileEditor()
-	:SceneBase("TileEditor", 4, 2)
+	:SceneBase("TileEditor", 4, 3)
 {
 }
 
@@ -28,11 +28,12 @@ bool Scene_TileEditor::Initialize()
 	SetLayerViewIndex(3, 0);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel(1, { 100,100 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel(3, { 100,100 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
 	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer0, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
-	//m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer1, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileMapSystem = AddGameObject(m_UILayerIndex, new TileMapSystem(m_TileModel));
+	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer1, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::TexId)));
+	m_TileView->SetTileViewIndex((int)TileEditorLayer::Layer2, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileMapSystem = AddGameObject(m_UILayerIndex, new TileMapSystem(m_TileModel, m_TileView));
 	m_TileController = AddGameObject(m_UILayerIndex, new TileController(m_TileMapSystem, m_TileModel, m_TileView, 0));
 
 	m_TileGrid = AddGameObject(3, new TileGrid());
@@ -48,7 +49,7 @@ bool Scene_TileEditor::Initialize()
 	for (int i = 0; i < (int)TileLayer::Max; i++)
 		m_Layers.push_back(Tile::TileLayerToString((TileLayer)i));
 
-	for (int i = 0; i < (int)TileType::None; i++)
+	for (int i = 0; i <= (int)TileType::None; i++)
 		m_Types.push_back(Tile::TileTypeToString((TileType)i));
 
 	return false;
@@ -57,15 +58,16 @@ bool Scene_TileEditor::Initialize()
 void Scene_TileEditor::Enter()
 {
 	ImGuiManager::SetShowDemo(true);
-	FRAMEWORK->SetBackColor(ColorPalette::White);
+	FRAMEWORK->SetBackColor(ColorPalette::Black);
 
 	m_TileController->SetControlStatus(ControlStatus::Place);
+	m_TileMapSystem->SetCurrTileLayer(TileEditorLayer::Layer1);
 
 	m_MiniMapTexture.create(16 * 80, 16 * 64);
 	m_MiniMap->SetTexture(&m_MiniMapTexture.getTexture());
 
 	m_MiniMap->setScale(0.3f, -0.3f);
-	m_MiniMap->setPosition(300, 500);
+	m_MiniMap->setPosition(0, 1000);
 
 	m_ButtonBar->setScale(2, 2);
 }
@@ -102,10 +104,18 @@ void Scene_TileEditor::ShowSceneImgui()
 	static int uy = 10;
 	ImGui::InputInt("Unit Y", &uy);
 
+	if (ImGui::Button("Load"))
+	{
+		std::string texfilepath = "datatables/TileObj/temp/" + m_Obj + "tex.csv";
+		std::string typefilepath = "datatables/TileObj/temp/" + m_Obj + "type.csv";
+		m_TileMapSystem->LoadTileViewRawFile(TileEditorLayer::Layer1, texfilepath);
+		m_TileMapSystem->LoadTileTypeFile(typefilepath);
+	}
+
 	if (ImGui::Button("Save"))
 	{
-		std::string texfilepath = "datatables/" + m_Obj + "tex.csv";
-		std::string typefilepath = "datatables/" + m_Obj + "type.csv";
+		std::string texfilepath = "datatables/TileObj/temp/" + m_Obj + "tex.csv";
+		std::string typefilepath = "datatables/TileObj/temp/" + m_Obj + "type.csv";
 		m_TileMapSystem->SaveAsTileObjData(m_Obj, texfilepath, typefilepath, sf::Vector2u(ux, uy));
 	}
 	ImGui::End();
@@ -116,7 +126,7 @@ void Scene_TileEditor::ShowSceneImgui()
 
 void Scene_TileEditor::ViewLayerImgui()
 {
-	static int currIndex = 0;
+	static int currIndex = (int)TileEditorLayer::Layer1;
 	ImGui::Begin("View Layer Window");
 
 	if (ImGui::Button("Place"))
@@ -145,8 +155,8 @@ void Scene_TileEditor::ViewLayerImgui()
 	//	}
 	//	ImGui::EndCombo();
 	//}
-	std::string tex = "file : datatables/" + m_Obj + "tex.csv";
-	ImGui::Text(tex.c_str());
+	std::string texfilepath = "datatables/TileObj/temp/" + m_Obj + "tex.csv";
+	ImGui::Text(texfilepath.c_str());
 	if (ImGui::Button("Save"))
 	{
 		m_TileMapSystem->SaveTileViewRawFile((TileEditorLayer)currIndex, m_Obj);
@@ -196,9 +206,8 @@ void Scene_TileEditor::TileTypeImgui()
 		}
 		ImGui::EndCombo();
 	}
-
-	std::string type = "file : datatables/" + m_Obj + "type.csv";
-	ImGui::Text(type.c_str());
+	std::string typefilepath = "datatables/TileObj/temp/" + m_Obj + "type.csv";
+	ImGui::Text(typefilepath.c_str());
 	if (ImGui::Button("Save"))
 	{
 		m_TileMapSystem->SaveTileTypeFile(m_Obj);

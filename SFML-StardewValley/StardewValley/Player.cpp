@@ -20,14 +20,13 @@ bool Player::Initialize()
 	m_CurrDir = Direction::down;
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
-	body->setScale({ 2.f, 2.f });
-	body->SetPriorityType(DrawPriorityType::Custom, 1);
+
+	body->SetPriorityType(DrawPriorityType::Y);
 
 
 	setPosition(150, 150);
 
 	return true;
-
 }
 
 void Player::Reset()
@@ -37,8 +36,9 @@ void Player::Reset()
 
 void Player::Update(float dt)
 {
+
+
 	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, getPosition())));
-	//std::cout << m_PlayerTileIndex.x << "," << m_PlayerTileIndex.y << std::endl;
 
 	animator.Update(dt);
 	Staminagauge();
@@ -142,13 +142,10 @@ void Player::UpdateMove(float dt)
 	CellIndex nextTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, nextpos)));
 	if (m_TileSystem->IsPossibleToPass(nextTileIndex))
 	{
-		std::cout << nextTileIndex.x << "," << nextTileIndex.y << std::endl;
+		//std::cout << nextTileIndex.x << "," << nextTileIndex.y << std::endl;
 		setPosition(nextpos);
 	}
-	else
-	{
-		int k = 0;
-	}
+
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::interaction);
