@@ -21,6 +21,7 @@ public:
 	void PostRender() override;
 
 	void LoadTileLayerRawFile();
+	void LoadTileLayerRawFile(const std::string& terrainfile);
 	void LoadTileLayerObjectFile();
 
 	CellIndex GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const;

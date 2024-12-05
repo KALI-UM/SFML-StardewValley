@@ -18,7 +18,7 @@ bool TileObjectSystem::Initialize()
 	SetTileColorizeFunc(std::bind(&TileView::ColorizeTile, mcv_View, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4));
 
 	m_TileObjects.resize((int)TileObjLayer::Max);
-	LoadTileLayerRawFile();
+	//LoadTileLayerRawFile();
 
 
 	return true;
@@ -43,6 +43,22 @@ void TileObjectSystem::PostRender()
 void TileObjectSystem::LoadTileLayerRawFile()
 {
 	rapidcsv::Document terrdoc("datatables/TileObj/temp/Terraintex.csv", rapidcsv::LabelParams(-1, -1));
+	int cellxcnt = std::min((unsigned int)terrdoc.GetColumnCount(), mcv_Model->m_CellCount.x);
+	int cellycnt = std::min((unsigned int)terrdoc.GetRowCount(), mcv_Model->m_CellCount.y);
+
+	for (int j = 0; j < cellycnt; j++)
+	{
+		for (int i = 0; i < cellxcnt; i++)
+		{
+			std::string texid = terrdoc.GetCell<std::string>(i, j);
+			mcv_Model->SetTile((int)TileLayer::Terrain, { i,j }, texid);
+		}
+	}
+}
+
+void TileObjectSystem::LoadTileLayerRawFile(const std::string& terrainfile)
+{
+	rapidcsv::Document terrdoc(terrainfile, rapidcsv::LabelParams(-1, -1));
 	int cellxcnt = std::min((unsigned int)terrdoc.GetColumnCount(), mcv_Model->m_CellCount.x);
 	int cellycnt = std::min((unsigned int)terrdoc.GetRowCount(), mcv_Model->m_CellCount.y);
 

@@ -50,7 +50,7 @@ bool Scene_InGameTest::Initialize()
 	m_PlayerStatusUi = AddGameObject(m_UILayerIndex, new PlayerStatusUi());
 	m_TestItem = AddGameObject(3, new Tool("Scythe"));
 
-	m_TestTObj = AddGameObject(0, new TileObject("Back"));
+	m_TestTObj = AddGameObject(1, new TileObject("Back"));
 	m_TestTObj2 = AddGameObject(2, new TileObject("TreeStump01"));
 	m_TestTObj3 = AddGameObject(2, new TileObject("FarmHouse"));
 	m_TestTObj4 = AddGameObject(2, new TileObject("GreenHouse"));
@@ -61,6 +61,8 @@ bool Scene_InGameTest::Initialize()
 
 void Scene_InGameTest::Enter()
 {
+	m_TileObjectSystem->LoadTileLayerRawFile("datatables/TileObj/temp/Terraintex.csv");
+
 	m_Player->GetTool(dynamic_cast<Tool*>(m_TestItem));
 	m_Player->GetItemType(dynamic_cast<Tool*>(m_TestItem)->m_ItemType);
 	dynamic_cast<Tool*>(m_TestItem)->GetPlayer(m_Player);

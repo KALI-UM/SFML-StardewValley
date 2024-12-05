@@ -2,7 +2,6 @@
 
 class TileObjectSystem;
 class TileModel;
-class TileController;
 class TileView;
 class TileGrid;
 

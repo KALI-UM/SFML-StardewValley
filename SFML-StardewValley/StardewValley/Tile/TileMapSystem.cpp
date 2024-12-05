@@ -4,6 +4,8 @@
 #include "TileView.h"
 #include "TileObjDataTable.h"
 
+#include <filesystem>
+
 TileMapSystem::TileMapSystem(TileModel* model, TileView* view)
 	:mcv_Model(model), mcv_View(view)
 {
@@ -143,19 +145,22 @@ void TileMapSystem::SaveTileTypeFile()
 
 void TileMapSystem::LoadTileTypeFile(const std::string& filename)
 {
-	rapidcsv::Document doc(filename, rapidcsv::LabelParams(-1, -1));
-
-	int cellxcnt = std::min((unsigned int)doc.GetColumnCount(), mcv_Model->m_CellCount.x);
-	int cellycnt = std::min((unsigned int)doc.GetRowCount(), mcv_Model->m_CellCount.y);
-
-	m_TileTypeInfos = std::vector<std::vector<TileType>>(mcv_Model->m_CellCount.y, std::vector<TileType>(mcv_Model->m_CellCount.x, TileType::None));
-
-	for (int j = 0; j < cellycnt; j++)
+	if (std::filesystem::exists(filename) && std::filesystem::is_regular_file(filename))
 	{
-		for (int i = 0; i < cellxcnt; i++)
+		rapidcsv::Document doc(filename, rapidcsv::LabelParams(-1, -1));
+
+		int cellxcnt = std::min((unsigned int)doc.GetColumnCount(), mcv_Model->m_CellCount.x);
+		int cellycnt = std::min((unsigned int)doc.GetRowCount(), mcv_Model->m_CellCount.y);
+
+		m_TileTypeInfos = std::vector<std::vector<TileType>>(mcv_Model->m_CellCount.y, std::vector<TileType>(mcv_Model->m_CellCount.x, TileType::None));
+
+		for (int j = 0; j < cellycnt; j++)
 		{
-			std::string strings = doc.GetCell<std::string>(i, j);
-			m_TileTypeInfos[j][i] = Tile::StringToTileType(strings);
+			for (int i = 0; i < cellxcnt; i++)
+			{
+				std::string strings = doc.GetCell<std::string>(i, j);
+				m_TileTypeInfos[j][i] = Tile::StringToTileType(strings);
+			}
 		}
 	}
 }

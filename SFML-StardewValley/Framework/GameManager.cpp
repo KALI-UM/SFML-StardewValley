@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Scene_InGameTest.h"
+#include "Scene_InGame.h"
 #include "Scene_TileEditor.h"
+
 
 GameManager::GameManager()
 	:m_MainWindow(nullptr)
@@ -13,7 +15,7 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	bool success = true;
 	success &= DATATABLE_MGR->Initialize();
 	success &= SCENE_MGR->Initialize();
-	Scene_InGameTest* lobby = new Scene_InGameTest();
+	Scene_InGame* lobby = new Scene_InGame();
 	SCENE_MGR->PushScene(lobby);
 	SCENE_MGR->SetCurrentScene(lobby->GetName());
 	Scene_TileEditor* editor = new Scene_TileEditor();
