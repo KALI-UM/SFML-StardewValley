@@ -35,7 +35,6 @@ void TileModel::Update(float dt)
 void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
 	TileLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
-	//m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
 	tileObj->SetTileIndex(tileIndex);
 	for (auto& curr : tileObj->GetTileTypes())
 	{
@@ -45,6 +44,7 @@ void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIn
 			m_TileInfos[(int)tilelayer][index.y][index.x].owner = tileObj;
 		}
 	}
+	m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
 	RequestUpdateTile((int)tilelayer, tileIndex);
 }
 

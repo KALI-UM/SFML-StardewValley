@@ -1,0 +1,758 @@
+{
+  "id": "FarmHouseIndoorFront",
+  "originIndex": {
+    "x": 0,
+    "y": 0
+  },
+  "priorityY": 0,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X9Y0",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X11Y0",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X6Y11",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X7Y11",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X6Y12",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X7Y12",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X1Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X3Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X6Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X7Y5",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y3",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y4",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X24Y93",
+        "type": "None"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 12,
+    "y": 12
+  }
+}

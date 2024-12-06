@@ -3,6 +3,8 @@
 #include "TileModel.h"
 #include "TileView.h"
 #include "TileObject.h"
+#include "Variables.h"
+
 
 TileObjectSystem::TileObjectSystem(TileModel* model, TileView* view)
 	:mcv_Model(model), mcv_View(view)
@@ -29,6 +31,8 @@ void TileObjectSystem::Reset()
 	SetLightLayerColor(sf::Color(0, 0, 0, 0));
 	mcv_View->SetTileViewSelfPriority((int)TileLayer::Terrain, true);
 	mcv_View->SetTileViewSelfPriority((int)TileLayer::WaterEffect, true);
+	mcv_View->SetTileViewSelfPriority((int)TileLayer::Debug, true);
+	mcv_View->SetTileViewSelfPriority((int)TileLayer::Front, true);
 }
 
 void TileObjectSystem::Update(float dt)
@@ -96,6 +100,32 @@ TileType TileObjectSystem::GetTileTypeByTileIndex(TileLayer layer, const CellInd
 	else
 	{
 		return TileType::None;
+	}
+}
+
+const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(const CellIndex& tileIndex) const
+{
+	for (int layer = (int)TileLayer::Front; layer >= (int)TileLayer::Back; layer--)
+	{
+		TileObject* curr = GetTileObjectByTileIndex((TileLayer)layer, tileIndex);
+		if (curr)
+		{
+			return curr->GetTileSubtypeByTileIndex(tileIndex);
+		}
+	}
+	return empty;
+}
+
+const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const
+{
+	TileObject* tobj = GetTileObjectByTileIndex(layer, tileIndex);
+	if (tobj)
+	{
+		return tobj->GetTileSubtypeByTileIndex(tileIndex);
+	}
+	else
+	{
+		return empty;
 	}
 }
 
@@ -193,13 +223,53 @@ void TileObjectSystem::SetLightLayerColor(const sf::Color& color)
 void TileObjectSystem::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
 	m_TileObjects[(int)layer].push_back(tileObj);
+	tileObj->SetIsVisible(true);
 	mcv_Model->SetTileObject(layer, tileIndex, tileObj);
 }
 
 void TileObjectSystem::RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
 	m_TileObjects[(int)layer].remove(tileObj);
+	tileObj->SetIsVisible(false);
 	mcv_Model->SetTileObject(layer, tileIndex, nullptr);
+}
+
+void TileObjectSystem::Interaction(const std::string& subtype)
+{
+	auto it = subtype.find("#");
+	if (it != std::string::npos)
+	{
+		std::cout << "EVENT : " << subtype << std::endl;
+
+		std::string EVENT = subtype.substr(0, it);
+		if (EVENT == "ENTER")
+		{
+			TileObjectSystem::ENTER(subtype.substr(it + 1, subtype.length() - (it + 1)));
+		}
+
+		if (EVENT == "ENDDAY")
+		{
+			TileObjectSystem::ENDDAY();
+		}
+	}
+}
+
+void TileObjectSystem::ENTER(const std::string& scene)
+{
+	auto it = scene.find("#");
+	if (it != std::string::npos)
+	{
+		std::string pos = scene.substr(0, it);
+		int index = pos.find(",");
+		int x = std::stoi(pos.substr(0, index));
+		int y = std::stoi(pos.substr(index + 1, pos.length() - (index + 1)));
+		Variables::m_EnterPoint = { x,y };
+	}
+	SCENE_MGR->ChangeScene("InGame::" + scene.substr(it + 1, scene.length() - (it + 1)));
+}
+
+void TileObjectSystem::ENDDAY()
+{
 }
 
 void TileObjectSystem::RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset)

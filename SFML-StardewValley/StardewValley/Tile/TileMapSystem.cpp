@@ -177,30 +177,51 @@ void TileMapSystem::SaveTileTypeFile(const std::string& filename)
 		}
 	}
 	doc.Save("datatables/TileObj/temp/" + filename + "type.csv");
-
 }
 
 void TileMapSystem::SaveAsTileObjData(const std::string& tileObjId, const std::string& texfilepath, const std::string& typefilepath, sf::Vector2u uusize)
 {
 	rapidcsv::Document texdoc(texfilepath, rapidcsv::LabelParams(-1, -1));
-	rapidcsv::Document typedoc(typefilepath, rapidcsv::LabelParams(-1, -1));
-	int cellxcnt = std::min(texdoc.GetColumnCount(), typedoc.GetColumnCount());
-	int cellycnt = std::min(texdoc.GetRowCount(), typedoc.GetRowCount());
-	cellxcnt = std::min(cellxcnt, (int)uusize.x);
-	cellycnt = std::min(cellycnt, (int)uusize.y);
+
+	int cellxcnt = std::min((int)texdoc.GetColumnCount(), (int)uusize.x);
+	int cellycnt = std::min((int)texdoc.GetRowCount(), (int)uusize.y);
 
 	TileObjRawData tobj;
 	tobj.id = tileObjId;
 	tobj.originIndex = { 0,0 };
-	tobj.uuSize = { (unsigned int)cellxcnt, (unsigned int)cellycnt };
-	tobj.tileTypeMap = std::vector<std::vector<TileObjRawData::UnitData>>(cellycnt, std::vector<TileObjRawData::UnitData>(cellxcnt));
-	for (int j = 0; j < cellycnt; j++)
+
+	bool fileexist = false;
+	if (std::filesystem::exists(typefilepath) && std::filesystem::is_regular_file(typefilepath))
 	{
-		for (int i = 0; i < cellxcnt; i++)
+		fileexist = true;
+		rapidcsv::Document typedoc(typefilepath, rapidcsv::LabelParams(-1, -1));
+		cellxcnt = std::min(cellxcnt, (int)typedoc.GetColumnCount());
+		cellycnt = std::min(cellycnt, (int)typedoc.GetRowCount());
+
+		tobj.uuSize = { (unsigned int)cellxcnt, (unsigned int)cellycnt };
+		tobj.tileTypeMap = std::vector<std::vector<TileObjRawData::UnitData>>(cellycnt, std::vector<TileObjRawData::UnitData>(cellxcnt));
+		for (int j = 0; j < cellycnt; j++)
 		{
-			TileObjRawData::UnitData& currunit = tobj.tileTypeMap[j][i];
-			currunit.texid = texdoc.GetCell<std::string>(i, j);
-			currunit.type = typedoc.GetCell<std::string>(i, j);
+			for (int i = 0; i < cellxcnt; i++)
+			{
+				TileObjRawData::UnitData& currunit = tobj.tileTypeMap[j][i];
+				currunit.texid = texdoc.GetCell<std::string>(i, j);
+				currunit.type = typedoc.GetCell<std::string>(i, j);
+			}
+		}
+	}
+	else
+	{
+		tobj.uuSize = { (unsigned int)cellxcnt, (unsigned int)cellycnt };
+		tobj.tileTypeMap = std::vector<std::vector<TileObjRawData::UnitData>>(cellycnt, std::vector<TileObjRawData::UnitData>(cellxcnt));
+		for (int j = 0; j < cellycnt; j++)
+		{
+			for (int i = 0; i < cellxcnt; i++)
+			{
+				TileObjRawData::UnitData& currunit = tobj.tileTypeMap[j][i];
+				currunit.texid = texdoc.GetCell<std::string>(i, j);
+				//currunit.type = typedoc.GetCell<std::string>(i, j);
+			}
 		}
 	}
 
@@ -291,8 +312,8 @@ void TileMapSystem::SetTileTypeMode()
 				RequestColorizeTile(sf::Color(0, 0, 0, 0), (int)TileEditorLayer::Layer2, { i,j }, true);
 				break;
 			}
+			}
 		}
-	}
 }
 
 void TileMapSystem::RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset)

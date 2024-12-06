@@ -16,7 +16,7 @@ struct TileObjRawData
 	TOBJID	id;
 	UNITxUNIT	uuSize;
 	CellIndex	originIndex;
-
+	int			priorityY;
 	struct UnitData
 	{
 		TEXID		texid;
@@ -26,7 +26,7 @@ struct TileObjRawData
 	};
 
 	std::vector<std::vector<UnitData>> tileTypeMap;
-	NLOHMANN_DEFINE_TYPE_INTRUSIVE(TileObjRawData, id, uuSize, originIndex, tileTypeMap)
+	NLOHMANN_DEFINE_TYPE_INTRUSIVE(TileObjRawData, id, uuSize, originIndex, priorityY, tileTypeMap)
 };
 
 struct TexRes;
@@ -35,7 +35,7 @@ struct TileObjData
 	TOBJID	id;
 	UNITxUNIT	uuSize;
 	CellIndex	originIndex;
-
+	int			priorityY;
 	struct UnitData
 	{
 		const TexRes*		texres;

@@ -27,6 +27,8 @@ public:
 	CellIndex GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const;
 	TileObject* GetTileObjectByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
 	TileType	GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
+	const std::string& GetTileSubtypeByTileIndex(const CellIndex& tileIndex) const;
+	const std::string& GetTileSubtypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
 
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
 	bool IsPossibleToPass(const CellIndex& tileIndex) const;
@@ -39,6 +41,9 @@ public:
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 
+	static void Interaction(const std::string& subtype);
+	static void ENTER(const std::string& scene);
+	static void ENDDAY();
 
 protected:
 	std::vector<std::list<TileObject*>>						m_TileObjects;
@@ -47,5 +52,8 @@ protected:
 	void SetTileColorizeFunc(std::function<void(const sf::Color&, int, const CellIndex&, bool)> func) { m_WhenNeedsToColorizeTileFunc = func; };
 	void RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset);
 	std::function<void(const sf::Color& color, int layer, const CellIndex&, bool)> m_WhenNeedsToColorizeTileFunc;
+
+
+	inline static std::string empty="";
 };
 

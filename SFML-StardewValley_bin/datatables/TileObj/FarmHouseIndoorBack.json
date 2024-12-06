@@ -1,757 +1,758 @@
 {
-    "id": "FarmHouseIndoorBack",
-    "originIndex": {
-        "x": 0,
-        "y": 0
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X9Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X10Y0",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X11Y0",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X1Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X1Y8",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X4Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X1Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X2Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "PassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X3Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X6Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X7Y5",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X0Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X5Y5",
-                "type": "PassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Town Interiors.png#Interior01_X2Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ]
+  "id": "FarmHouseIndoorBack",
+  "originIndex": {
+    "x": 0,
+    "y": 0
+  },
+  "priorityY": 0,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X9Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X10Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X10Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X10Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X10Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X10Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X2Y0",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X11Y0",
+        "type": "Wall"
+      }
     ],
-    "uuSize": {
-        "x": 12,
-        "y": 12
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X1Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X1Y8",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y10",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y10",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y11",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X5Y11",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "PassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "PassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X4Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X0Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Ground"
+      },
+      {
+        "subtype": "ENDDAY#",
+        "texid": "Town Interiors.png#Interior01_X0Y10",
+        "type": "PassableInteractive"
+      },
+      {
+        "subtype": "ENDDAY#",
+        "texid": "Town Interiors.png#Interior01_X1Y10",
+        "type": "PassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "ENTER#20,20#FarmLand",
+        "texid": "",
+        "type": "PassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "Wall"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 12,
+    "y": 12
+  }
 }

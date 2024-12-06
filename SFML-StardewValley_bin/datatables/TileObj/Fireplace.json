@@ -1,0 +1,74 @@
+{
+  "id": "Fireplace",
+  "originIndex": {
+    "x": 0,
+    "y": 0
+  },
+  "priorityY": 0,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X26Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X27Y20",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X26Y21",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X27Y21",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X26Y22",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X27Y22",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X26Y23",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X27Y23",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X26Y24",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Town Interiors.png#Interior01_X27Y24",
+        "type": "Wall"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 2,
+    "y": 5
+  }
+}

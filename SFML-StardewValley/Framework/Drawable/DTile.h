@@ -62,7 +62,7 @@ public:
 	void SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& tileIndex);
 	void SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect);
 private:
-	float	m_Unit = 16;
+	float			m_Unit = 16;
 	sfTile			m_Tile;
 
 };

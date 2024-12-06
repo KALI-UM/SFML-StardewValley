@@ -151,10 +151,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ImguiWindowTab.cpp" />
+    <ClCompile Include="InGameTime.cpp" />
     <ClCompile Include="Scene\Scene_InGameTest.cpp" />
     <ClCompile Include="Scene_BackEditor.cpp" />
     <ClCompile Include="Scene\Scene_FarmHouseIndoor.cpp" />
     <ClCompile Include="Scene\Scene_InGame.cpp" />
+    <ClCompile Include="Scene\Scene_FarmLand.cpp" />
     <ClCompile Include="StardewValley\Item\Seed.cpp" />
     <ClCompile Include="StardewValley\Item\Crop.cpp" />
     <ClCompile Include="Framework\AnimationClip.cpp" />
@@ -215,17 +217,20 @@
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
+    <ClCompile Include="TileHitBox.cpp" />
     <ClCompile Include="TileObjDataTable.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
     <ClCompile Include="Framework\CoreGameObject\UIObject.cpp" />
-    <ClCompile Include="Framework\UIManager.cpp" />
+    <ClCompile Include="Variables.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ImguiWindowTab.h" />
+    <ClInclude Include="InGameTime.h" />
     <ClInclude Include="Scene\Scene_InGameTest.h" />
     <ClInclude Include="Scene_BackEditor.h" />
     <ClInclude Include="Scene\Scene_FarmHouseIndoor.h" />
     <ClInclude Include="Scene\Scene_InGame.h" />
+    <ClInclude Include="Scene\Scene_FarmLand.h" />
     <ClInclude Include="StardewValley\Item\Crop.h" />
     <ClInclude Include="Framework\AnimationClip.h" />
     <ClInclude Include="Framework\Animator.h" />
@@ -290,10 +295,11 @@
     <ClInclude Include="StardewValley\Item\Tool.h" />
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
     <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
+    <ClInclude Include="TileHitBox.h" />
     <ClInclude Include="TileObjDataTable.h" />
     <ClInclude Include="TileObject_Tree.h" />
     <ClInclude Include="Framework\CoreGameObject\UIObject.h" />
-    <ClInclude Include="Framework\UIManager.h" />
+    <ClInclude Include="Variables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

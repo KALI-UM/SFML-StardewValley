@@ -15,8 +15,8 @@ enum class TileLayer
 	Back,
 
 	Object,
+	Front,
 	Debug,
-
 	Light,
 	Max,
 };

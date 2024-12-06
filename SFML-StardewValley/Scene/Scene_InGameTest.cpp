@@ -75,6 +75,7 @@ void Scene_InGameTest::Enter()
 	m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 30,30 }, m_TestTObj5);
 	m_Player->SetTileSystem(m_TileObjectSystem);
 
+
 	GAME_MGR->SetViewZoom(0, 0.5f);
 	GAME_MGR->SetViewZoom(1, 0.5f);
 	GAME_MGR->SetViewZoom(2, 0.5f);

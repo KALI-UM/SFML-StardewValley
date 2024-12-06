@@ -72,7 +72,7 @@ TileLayer Tile::TileObjLayerToTileLayer(const TileObjLayer& layer)
 		break;
 	case TileObjLayer::AlwaysFront:
 	case TileObjLayer::Max:
-		return TileLayer::Max;
+		return TileLayer::Front;
 		break;
 	default:
 		return TileLayer::Object;

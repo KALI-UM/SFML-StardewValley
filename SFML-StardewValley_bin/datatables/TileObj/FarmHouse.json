@@ -1,436 +1,437 @@
 {
-    "id": "FarmHouse",
-    "originIndex": {
-        "x": 4,
-        "y": 8
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y17",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y17",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y17",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y17",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y18",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y18",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y18",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y18",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y18",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y19",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y19",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y20",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y20",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y21",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y21",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y22",
-                "type": "ImpassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y22",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y22",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y23",
-                "type": "ImpassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y23",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y23",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y24",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y24",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y24",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X0Y25",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X1Y25",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X2Y25",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X3Y25",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X4Y25",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X5Y25",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X6Y25",
-                "type": "Ground"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X7Y25",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#FarmHouse_X8Y25",
-                "type": "Wall"
-            }
-        ]
+  "id": "FarmHouse",
+  "originIndex": {
+    "x": 4,
+    "y": 8
+  },
+  "priorityY": 3,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y17",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y17",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y17",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y17",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      }
     ],
-    "uuSize": {
-        "x": 9,
-        "y": 9
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y18",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y18",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y18",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y18",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y18",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y19",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y19",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y20",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y20",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y21",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y21",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "ENTER#3,10#FarmHouseIndoor",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y22",
+        "type": "ImpassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y22",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y22",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "ENTER#3,10#FarmHouseIndoor",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y23",
+        "type": "ImpassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y23",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y23",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y24",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y24",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y24",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X0Y25",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X1Y25",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X2Y25",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X3Y25",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X4Y25",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X5Y25",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X6Y25",
+        "type": "Ground"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X7Y25",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#FarmHouse_X8Y25",
+        "type": "Wall"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 9,
+    "y": 9
+  }
 }

@@ -1,115 +1,116 @@
 {
-    "id": "TreeLog01",
-    "originIndex": {
-        "x": 1,
-        "y": 5
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X0Y0",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y0",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y0",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X0Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y1",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X0Y2",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y2",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y2",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X0Y3",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y3",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y3",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y4",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X1Y5",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            }
-        ]
+  "id": "TreeLog01",
+  "originIndex": {
+    "x": 1,
+    "y": 5
+  },
+  "priorityY": 4,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X0Y0",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y0",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y0",
+        "type": "None"
+      }
     ],
-    "uuSize": {
-        "x": 3,
-        "y": 6
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X0Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y1",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X0Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y2",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y2",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X0Y3",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y3",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y3",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y4",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X1Y5",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 3,
+    "y": 6
+  }
 }

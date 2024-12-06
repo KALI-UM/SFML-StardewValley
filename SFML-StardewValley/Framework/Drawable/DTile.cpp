@@ -275,6 +275,15 @@ void DTile::SetVerticesPositionByTileIndex(int quadIndex, const sf::Vector2i& ti
 
 void DTile::SetVerticesTexCoordByIntRect(int quadIndex, const sf::IntRect& rect)
 {
+	//텍스처의 0,0이 투명이 아니면 어쩌나
+	//if (rect.getSize() == sf::Vector2i(0, 0))
+	//{
+	//	m_Tile.m_Vertices[quadIndex * 4].texCoords = sf::Vector2f(-1,-1);
+	//	m_Tile.m_Vertices[quadIndex * 4 + 1].texCoords = sf::Vector2f(-1, -1);
+	//	m_Tile.m_Vertices[quadIndex * 4 + 2].texCoords = sf::Vector2f(-1, -1);
+	//	m_Tile.m_Vertices[quadIndex * 4 + 3].texCoords = sf::Vector2f(-1, -1);
+	//	return;
+	//}
 	m_Tile.m_Vertices[quadIndex * 4].texCoords = sf::Vector2f(rect.getPosition());
 	m_Tile.m_Vertices[quadIndex * 4 + 1].texCoords = sf::Vector2f(rect.getPosition()) + sf::Vector2f(rect.width, 0);
 	m_Tile.m_Vertices[quadIndex * 4 + 2].texCoords = sf::Vector2f(rect.getPosition()) + sf::Vector2f(rect.width, rect.height);

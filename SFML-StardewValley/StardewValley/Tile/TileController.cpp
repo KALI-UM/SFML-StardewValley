@@ -39,7 +39,7 @@ void TileController::Update(float dt)
 
 	//std::cout << m_MouseOverlaidTile.x << "," << m_MouseOverlaidTile.y << std::endl;
 
-	if (!UI_MGR->GetUIHasFocus())
+	if (!UI_HASFOCUS)
 	{
 		switch (m_CurrStatus)
 		{

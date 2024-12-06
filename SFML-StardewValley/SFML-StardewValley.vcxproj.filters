@@ -64,9 +64,12 @@
     <ClCompile Include="Scene_BackEditor.cpp" />
     <ClCompile Include="ImguiWindowTab.cpp" />
     <ClCompile Include="Framework\CoreGameObject\UIObject.cpp" />
-    <ClCompile Include="Framework\UIManager.cpp" />
     <ClCompile Include="Scene\Scene_FarmHouseIndoor.cpp" />
     <ClCompile Include="Scene\Scene_InGame.cpp" />
+    <ClCompile Include="Scene\Scene_FarmLand.cpp" />
+    <ClCompile Include="InGameTime.cpp" />
+    <ClCompile Include="TileHitBox.cpp" />
+    <ClCompile Include="Variables.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -139,8 +142,11 @@
     <ClInclude Include="Scene_BackEditor.h" />
     <ClInclude Include="ImguiWindowTab.h" />
     <ClInclude Include="Framework\CoreGameObject\UIObject.h" />
-    <ClInclude Include="Framework\UIManager.h" />
     <ClInclude Include="Scene\Scene_FarmHouseIndoor.h" />
     <ClInclude Include="Scene\Scene_InGame.h" />
+    <ClInclude Include="Scene\Scene_FarmLand.h" />
+    <ClInclude Include="InGameTime.h" />
+    <ClInclude Include="TileHitBox.h" />
+    <ClInclude Include="Variables.h" />
   </ItemGroup>
 </Project>

@@ -32,6 +32,7 @@ bool SceneBase::INITIALIZE()
 {
 	bool result = Initialize();
 	RegisterGameObject();
+	RegisterUIObject();
 	for (auto& layer : m_GameObjects)
 		for (auto& gobj : layer.gameObjects)
 		{
@@ -56,8 +57,6 @@ void SceneBase::ENTER()
 {
 	ImGuiManager::SetShowDemo(false);
 	GAME_MGR->ResizeViews(m_ViewCnt);
-	RegisterUIObject();
-	UI_MGR->Enter();
 	FRAMEWORK->SetBackColor(ColorPalette::Black);
 	for (int i = 0; i < m_ViewCnt; i++)
 	{
@@ -69,7 +68,8 @@ void SceneBase::ENTER()
 
 void SceneBase::UPDATE(float dt)
 {
-	UI_MGR->Update(dt);
+	UIUpdate(dt);
+
 	RegisterGameObject();
 	RegisterUIObject();
 	for (auto& layer : m_GameObjects)
@@ -91,6 +91,7 @@ void SceneBase::LATEUPDATE(float dt)
 		}
 	LateUpdate(dt);
 	RemoveGameObject();
+	RemoveUIObject();
 }
 
 void SceneBase::FIXEDUPDATE(float dt)
@@ -144,7 +145,6 @@ void SceneBase::POSTRENDER()
 void SceneBase::EXIT()
 {
 	FRAMEWORK->SetTimeScale(1);
-	UI_MGR->Exit();
 	SOUND_MGR->StopAllSfx();
 	SOUND_MGR->StopBgm();
 	Exit();
@@ -233,6 +233,12 @@ void SceneBase::RenderViewToRenderTexture(int viewindex, sf::RenderTexture& text
 
 void SceneBase::RemoveGameObject(GameObjectInfo gobj)
 {
+	UIObject* isui = dynamic_cast<UIObject*>(gobj.second);
+	if (isui)
+	{
+		m_WantsToRemoveUI.push(isui);
+	}
+
 	m_WantsToRemove.push(gobj);
 }
 
@@ -244,6 +250,24 @@ void SceneBase::RemoveGameObject(int layerIndex, GameObject* gobj)
 std::vector<GameObject*>& SceneBase::GetGameObjectsLayerIter(int index)
 {
 	return m_LayerIndex[index]->gameObjects;
+}
+
+sf::Vector2f SceneBase::GetMouseUIViewPos() const
+{
+	return INPUT_MGR->GetMouseViewPos(m_UIViewIndex);
+}
+
+void SceneBase::UIUpdate(float dt)
+{
+	m_UIHasFocus = false;
+	for (UIObject* ui : m_UIGameObjects)
+	{
+		if (ui->GetHasFocus())
+		{
+			m_UIHasFocus = true;
+			break;
+		}
+	}
 }
 
 void SceneBase::PushToDrawQue()
@@ -432,10 +456,16 @@ void SceneBase::RegisterUIObject()
 	{
 		UIObject* target = m_WantsToAddUI.front();
 		m_WantsToAddUI.pop();
-		UI_MGR->RegisterUI(target);
+		m_UIGameObjects.push_back(target);
 	}
 }
 
 void SceneBase::RemoveUIObject()
 {
+	while (!m_WantsToRemoveUI.empty())
+	{
+		UIObject* target = m_WantsToRemoveUI.front();
+		m_UIGameObjects.remove(target);
+		m_WantsToRemoveUI.pop();
+	}
 }

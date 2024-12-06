@@ -69,7 +69,10 @@ public:
 	{
 		UIObject* ui = dynamic_cast<UIObject*>(gameObject);
 		if (ui)
+		{
 			m_WantsToAddUI.push(ui);
+			ui->m_UIViewIndex = m_UIViewIndex;
+		}
 		return AddGameObject(layerIndex, gameObject);
 	}
 
@@ -106,12 +109,21 @@ private:
 	std::list<LayerInfo>						m_GameObjects;
 	std::queue<GameObjectInfo>					m_WantsToAdd;
 	std::queue<GameObjectInfo>					m_WantsToRemove;
-	std::queue<UIObject*>						m_WantsToAddUI;
-	std::queue<UIObject*>						m_WantsToRemoveUI;
 
 	std::vector<GameObject*>& GetGameObjectsLayerIter(int index);
 	std::vector<std::list<LayerInfo>::iterator> m_LayerIndex;
 
+public:
+	bool GetUIHasFocus() const { return m_UIHasFocus; }
+	sf::Vector2f GetMouseUIViewPos() const;
+
+protected:
+	virtual void UIUpdate(float dt);
+	std::list<UIObject*>						m_UIGameObjects;
+	std::queue<UIObject*>						m_WantsToAddUI;
+	std::queue<UIObject*>						m_WantsToRemoveUI;
+	bool										m_UIHasFocus = false;
+private:
 	void PushToDrawQue();
 	void PushLayerToDrawQueDebugQue(int layerIndex);
 	void PushLayerToDrawQueNoCulling(int layerIndex);
@@ -124,3 +136,4 @@ private:
 	void RemoveUIObject();
 };
 
+#define UI_HASFOCUS (SCENE_MGR->GetCurrentScene()->GetUIHasFocus())

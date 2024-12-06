@@ -21,10 +21,9 @@ bool Player::Initialize()
 	m_CurrAction = Action::idle;
 	m_CurrEquip = IsVisibleItem::invisibleItem;
 
-	body->SetPriorityType(DrawPriorityType::Y);
+	body->SetPriorityType(DrawPriorityType::Custom);
 
 
-	setPosition(150, 150);
 
 	return true;
 }
@@ -37,8 +36,21 @@ void Player::Reset()
 void Player::Update(float dt)
 {
 
-
 	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, getPosition())));
+	if (m_TileSystem->IsInteractive(m_PlayerTileIndex))
+	{
+		TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(TileLayer::Back, m_PlayerTileIndex));
+	}
+
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
+	{
+		CellIndex currMouseTile = m_TileSystem->GetTileCoordinatedTileIndex(INPUT_MGR->GetMouseViewPos(0));
+		if (m_TileSystem->IsInteractive(currMouseTile) && IsPlayerNearbyTile(currMouseTile))
+		{
+			TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(currMouseTile));
+			return;
+		}
+	}
 
 	animator.Update(dt);
 	Staminagauge();
@@ -137,19 +149,51 @@ void Player::UpdateMove(float dt)
 		SetAction(Action::idle);
 	}
 
-	sf::Vector2f nextpos = getPosition() + direction * speed * dt;
 
-	CellIndex nextTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, nextpos)));
-	if (m_TileSystem->IsPossibleToPass(nextTileIndex))
+	if (direction.x > 0)
 	{
-		//std::cout << nextTileIndex.x << "," << nextTileIndex.y << std::endl;
-		setPosition(nextpos);
+		CellIndex next = m_PlayerTileIndex + sf::Vector2i(1, 0);
+		if (!m_TileSystem->IsPossibleToPass(next))
+		{
+			direction.x = 0;
+		}
 	}
+	else if (direction.x < 0)
+	{
+		CellIndex next = m_PlayerTileIndex + sf::Vector2i(-1, 0);
+		if (!m_TileSystem->IsPossibleToPass(next))
+		{
+			direction.x = 0;
+		}
+	}
+	if (direction.y > 0)
+	{
+		CellIndex next = m_PlayerTileIndex + sf::Vector2i(0, 1);
+		if (!m_TileSystem->IsPossibleToPass(next))
+		{
+			direction.y = 0;
+		}
+	}
+	else if (direction.y < 0)
+	{
+		CellIndex next = m_PlayerTileIndex + sf::Vector2i(0, -1);
+		if (!m_TileSystem->IsPossibleToPass(next))
+		{
+			direction.y = 0;
+		}
+	}
+
+	sf::Vector2f nextpos = getPosition() + direction * Utils::Clamp(speed * dt, 0.f, 16.f);
+	//std::cout << nextTileIndex.x << "," << nextTileIndex.y << std::endl;
+	setPosition(nextpos);
+
 
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::interaction);
 	}
+
+	body->SetPriorityType(DrawPriorityType::Custom, getPosition().y - 16.0f);
 }
 
 void Player::UpdateInter(float dt)
@@ -341,6 +385,19 @@ void Player::SetAction(Action newAction)
 void Player::GetItemType(ItemType type)
 {
 	itemtype = type;
+}
+
+bool Player::IsPlayerNearbyTile(const CellIndex& index)
+{
+	for (int i = 0; i < 8; i++)
+	{
+		CellIndex check = m_PlayerTileIndex + Tile::d[i];
+		if (check == index)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 

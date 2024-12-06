@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Scene_InGameTest.h"
 #include "Scene_InGame.h"
+#include "Scene_FarmHouseIndoor.h"
+#include "Scene_FarmLand.h"
 #include "Scene_TileEditor.h"
 
 
@@ -15,14 +17,20 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	bool success = true;
 	success &= DATATABLE_MGR->Initialize();
 	success &= SCENE_MGR->Initialize();
-	Scene_InGame* lobby = new Scene_InGame();
-	SCENE_MGR->PushScene(lobby);
-	SCENE_MGR->SetCurrentScene(lobby->GetName());
+
+	Scene_FarmLand* farmland = new Scene_FarmLand();
+	SCENE_MGR->PushScene(farmland);
+
+	Scene_FarmHouseIndoor* indoor = new Scene_FarmHouseIndoor();
+	SCENE_MGR->PushScene(indoor);
+
 	Scene_TileEditor* editor = new Scene_TileEditor();
 	SCENE_MGR->PushScene(editor);
 
-	lobby->RESET();
-	lobby->ENTER();
+
+	SCENE_MGR->SetCurrentScene(indoor->GetName());
+	indoor->RESET();
+	indoor->ENTER();
 	return success;
 }
 
@@ -34,7 +42,7 @@ void GameManager::Release()
 
 void GameManager::UpdateEvent(const sf::Event& ev)
 {
-	//기본적으로 기본 0번뷰와 ui뷰만 수정한다
+	//기본적으로 기본 0번뷰와 ui뷰만 수정하려고 했는데 다해버린다
 	if (ev.type == sf::Event::Resized)
 	{
 		for (int i = 0; i < m_Views.size(); i++)
@@ -47,6 +55,9 @@ void GameManager::UpdateEvent(const sf::Event& ev)
 
 void GameManager::Update(float dt)
 {
+	SCENE_MGR->Update(dt);
+	SCENE_MGR->PreRender();
+
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F1))
 	{
 		std::cout << "Editor Scene\n";
@@ -54,8 +65,8 @@ void GameManager::Update(float dt)
 	}
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F2))
 	{
-		std::cout << "Test Scene\n";
-		SCENE_MGR->ChangeScene("InGameTest");
+		//std::cout << "Test Scene\n";
+		//SCENE_MGR->ChangeScene("InGameTest");
 	}
 
 	if (INPUT_MGR->GetKeyDown(sf::Keyboard::F5))
@@ -68,9 +79,6 @@ void GameManager::Update(float dt)
 		std::cout << "Play Mode - Normal\n";
 		m_GameMode = GameMode::Normal;
 	}
-
-	SCENE_MGR->Update(dt);
-	SCENE_MGR->PreRender();
 }
 
 void GameManager::Render()

@@ -1,309 +1,310 @@
 {
-    "id": "BrokenGreenHouse",
-    "originIndex": {
-        "x": 3,
-        "y": 7
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y0",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y0",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y0",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y1",
-                "type": "None"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y1",
-                "type": "None"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y2",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y2",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y3",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y3",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y4",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y4",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y5",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y5",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y6",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y6",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y7",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y7",
-                "type": "Wall"
-            }
-        ]
+  "id": "BrokenGreenHouse",
+  "originIndex": {
+    "x": 3,
+    "y": 7
+  },
+  "priorityY": 1,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y0",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y0",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y0",
+        "type": "None"
+      }
     ],
-    "uuSize": {
-        "x": 7,
-        "y": 8
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y1",
+        "type": "None"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y1",
+        "type": "None"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y2",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y2",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y3",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y3",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y4",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y4",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y5",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y5",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y6",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y6",
+        "type": "Wall"
+      }
+    ],
+    [
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X0Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X1Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X2Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X3Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X4Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X5Y7",
+        "type": "Wall"
+      },
+      {
+        "subtype": "",
+        "texid": "Farm Buildings.png#BrokenGreenHouse_X6Y7",
+        "type": "Wall"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 7,
+    "y": 8
+  }
 }

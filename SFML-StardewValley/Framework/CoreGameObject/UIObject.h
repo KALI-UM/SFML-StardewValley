@@ -1,8 +1,9 @@
 #pragma once
+
 class UIObject :
     public GameObject
 {
-    friend class UIManager;
+    friend class SceneBase;
 public:
     UIObject(const std::string& name="");
     ~UIObject();

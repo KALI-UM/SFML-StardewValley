@@ -53,9 +53,11 @@ protected:
 
 	Animator animator;
 	ItemType itemtype;
-	
+
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
+
+
 
 public:
 	Player(const std::string& name);
@@ -68,7 +70,7 @@ public:
 	void UpdateIdle(float dt);
 	void UpdateMove(float dt);
 	void UpdateInter(float dt);
-     
+
 
 	void LateUpdate(float dt);
 	void FixedUpdate(float dt);
@@ -78,7 +80,7 @@ public:
 	void Release();
 
 	void AnimationClips();
-	
+
 	std::string GetAnimationClipIdByDAI();
 
 	float Staminagauge();
@@ -94,12 +96,14 @@ public:
 
 	void GetItemType(ItemType type);
 
+	bool IsPlayerNearbyTile(const CellIndex& index);
 protected:
 	Direction m_CurrDir;
 	Action m_CurrAction = Action::idle;
 	IsVisibleItem m_CurrEquip;
 
 	CellIndex m_PlayerTileIndex;
-	const TileObjectSystem*  m_TileSystem;
+	const TileObjectSystem* m_TileSystem;
+
 };
 

@@ -25,6 +25,7 @@ bool TileObject::Initialize()
 
 void TileObject::Reset()
 {
+	SetIsVisible(false);
 	LoadTileObject();
 }
 
@@ -58,6 +59,12 @@ const TileType& TileObject::GetTileTypeByTileIndex(const CellIndex& tileIndex) c
 	return m_Data->tileTypeMap[localIndex.y][localIndex.x].type;
 }
 
+const std::string& TileObject::GetTileSubtypeByTileIndex(const CellIndex& tileIndex) const
+{
+	CellIndex localIndex = tileIndex - (m_TileIndex - m_Data->originIndex);
+	return m_Data->tileTypeMap[localIndex.y][localIndex.x].subtype;
+}
+
 bool TileObject::IsPassableTileByTileIndex(const CellIndex& tileIndex) const
 {
 	const TileType& type = GetTileTypeByTileIndex(tileIndex);
@@ -69,5 +76,7 @@ bool TileObject::IsInteractiveTileByTileIndex(const CellIndex& tileIndex) const
 	const TileType& type = GetTileTypeByTileIndex(tileIndex);
 	return (type == TileType::ImpassableInteractive || type == TileType::PassableInteractive);
 }
+
+
 
 

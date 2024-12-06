@@ -47,4 +47,3 @@ public:
 #define INPUT_MGR (InputManager::GetInstance())
 #define SCENE_MGR (SceneManager::GetInstance())
 #define SOUND_MGR (SoundManager::GetInstance())
-#define UI_MGR (UIManager::GetInstance())

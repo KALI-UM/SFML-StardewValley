@@ -1,37 +1,38 @@
 {
-    "id": "LargeStump",
-    "originIndex": {
-        "x": 0,
-        "y": 0
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y25",
-                "type": "ImpassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y25",
-                "type": "ImpassableInteractive"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y26",
-                "type": "ImpassableInteractive"
-            },
-            {
-                "subtype": "",
-                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y26",
-                "type": "ImpassableInteractive"
-            }
-        ]
+  "id": "LargeStump",
+  "originIndex": {
+    "x": 0,
+    "y": 0
+  },
+  "priorityY": 0,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y25",
+        "type": "ImpassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y25",
+        "type": "ImpassableInteractive"
+      }
     ],
-    "uuSize": {
-        "x": 2,
-        "y": 2
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y26",
+        "type": "ImpassableInteractive"
+      },
+      {
+        "subtype": "",
+        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y26",
+        "type": "ImpassableInteractive"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 2,
+    "y": 2
+  }
 }

@@ -156,7 +156,7 @@ void TileView::PushToViewUpdateQue(int layer, const CellIndex& tileIndex)
 {
 	if (m_TileViewChildren[layer]->m_TileViewType == TileViewType::TexId)
 		PushToSpriteUpdateQue(layer, tileIndex);
-	else
+	else if (m_TileViewChildren[layer]->m_TileViewType == TileViewType::Object)
 		PushToTileObjectUpdateQue(layer, tileIndex);
 }
 

@@ -70,6 +70,7 @@ void TileObjDataTable::LoadTileObjFile(TileObjData& data, const std::string& fil
 		}
 	}
 	data.uuSize = raw.uuSize;
+	data.priorityY = raw.priorityY;
 }
 
 void TileObjDataTable::LoadTileObjRawFile(TileObjRawData& data, const std::string& filepath)

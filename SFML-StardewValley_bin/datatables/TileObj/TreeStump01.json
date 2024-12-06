@@ -1,27 +1,28 @@
 {
-    "id": "TreeStump01",
-    "originIndex": {
-        "x": 0,
-        "y": 1
-    },
-    "tileTypeMap": [
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y6",
-                "type": "None"
-            }
-        ], 
-        [
-            {
-                "subtype": "",
-                "texid": "Trees.png#Tree_X2Y7",
-                "type": "Wall"
-            }
-        ]
+  "id": "TreeStump01",
+  "originIndex": {
+    "x": 0,
+    "y": 1
+  },
+  "priorityY": 0,
+  "tileTypeMap": [
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y6",
+        "type": "None"
+      }
     ],
-    "uuSize": {
-        "x": 1,
-        "y": 2
-    }
+    [
+      {
+        "subtype": "",
+        "texid": "Trees.png#Tree_X2Y7",
+        "type": "Wall"
+      }
+    ]
+  ],
+  "uuSize": {
+    "x": 1,
+    "y": 2
+  }
 }
