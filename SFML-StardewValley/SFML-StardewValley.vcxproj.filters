@@ -67,15 +67,17 @@
     <ClCompile Include="Scene\Scene_FarmHouseIndoor.cpp" />
     <ClCompile Include="Scene\Scene_InGame.cpp" />
     <ClCompile Include="Scene\Scene_FarmLand.cpp" />
-    <ClCompile Include="InGameTime.cpp" />
+    <ClCompile Include="StardewValley\InGameTime.cpp" />
     <ClCompile Include="Variables.cpp" />
     <ClCompile Include="PlayerInfoUI.cpp" />
-    <ClCompile Include="InventoryUI.cpp" />
-    <ClCompile Include="Inventory.cpp" />
-    <ClCompile Include="ItemGenerator.cpp" />
-    <ClCompile Include="EventUI.cpp" />
-    <ClCompile Include="InGameEvent.cpp" />
-    <ClCompile Include="GameInfoUI.cpp" />
+    <ClCompile Include="StardewValley\InventoryUI.cpp" />
+    <ClCompile Include="StardewValley\Inventory.cpp" />
+    <ClCompile Include="StardewValley\ItemGenerator.cpp" />
+    <ClCompile Include="StardewValley\EventUI.cpp" />
+    <ClCompile Include="StardewValley\InGameEvent.cpp" />
+    <ClCompile Include="StardewValley\GameInfoUI.cpp" />
+    <ClCompile Include="Scene_Tiltle.cpp" />
+    <ClCompile Include="TitleSceneUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -151,14 +153,16 @@
     <ClInclude Include="Scene\Scene_FarmHouseIndoor.h" />
     <ClInclude Include="Scene\Scene_InGame.h" />
     <ClInclude Include="Scene\Scene_FarmLand.h" />
-    <ClInclude Include="InGameTime.h" />
+    <ClInclude Include="StardewValley\InGameTime.h" />
     <ClInclude Include="Variables.h" />
     <ClInclude Include="PlayerInfoUI.h" />
-    <ClInclude Include="InventoryUI.h" />
-    <ClInclude Include="Inventory.h" />
-    <ClInclude Include="ItemGenerator.h" />
-    <ClInclude Include="EventUI.h" />
-    <ClInclude Include="InGameEvent.h" />
-    <ClInclude Include="GameInfoUI.h" />
+    <ClInclude Include="StardewValley\InventoryUI.h" />
+    <ClInclude Include="StardewValley\Inventory.h" />
+    <ClInclude Include="StardewValley\ItemGenerator.h" />
+    <ClInclude Include="StardewValley\EventUI.h" />
+    <ClInclude Include="StardewValley\InGameEvent.h" />
+    <ClInclude Include="StardewValley\GameInfoUI.h" />
+    <ClInclude Include="Scene_Tiltle.h" />
+    <ClInclude Include="TitleSceneUI.h" />
   </ItemGroup>
 </Project>

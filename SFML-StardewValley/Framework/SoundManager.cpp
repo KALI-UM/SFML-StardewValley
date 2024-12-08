@@ -86,6 +86,11 @@ void SoundManager::SetGlobalVolume(float volume)
 	m_Listener.setGlobalVolume(volume);
 }
 
+bool SoundManager::IsBgmPlaying() const
+{
+	return (m_Bgm.getStatus() == sf::SoundSource::Status::Playing);
+}
+
 void SoundManager::PlayBgm(std::string id, bool loop, bool fadeIn, float fadeTime, float startvolume , bool startRandomPos)
 {
 	if (!m_IsSoundDeviceValid)return;

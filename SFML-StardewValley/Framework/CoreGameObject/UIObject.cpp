@@ -14,7 +14,7 @@ void UIObject::SetAspectRatioPosition(const sf::Vector2f& aspect, const sf::Vect
 {
 	m_AspectPositionRatio = aspect;
 	m_AspectPositionOffset = offset;
-	OnWindowResize();
+	//OnWindowResize();
 }
 
 void UIObject::OnWindowResize()

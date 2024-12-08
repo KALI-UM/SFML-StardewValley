@@ -22,7 +22,7 @@ class SoundManager :
 	friend class Singleton<SoundManager>;
 
 protected:
-	bool m_IsSoundDeviceValid = false;					//사운드 장치가 유효한지 확인할 수있는 방법이 없다...ㅜ
+	bool m_IsSoundDeviceValid = true;					//사운드 장치가 유효한지 확인할 수있는 방법이 없다...ㅜ
 protected:
 	SoundManager() = default;
 	virtual ~SoundManager() = default;
@@ -38,7 +38,7 @@ public:
 	void SetGlobalVolume(float volume);
 	float GetGlobalVolume() const { return m_GlobalVolume; }
 
-
+	bool IsBgmPlaying() const;
 	void PlayBgm(std::string id, bool loop = true, bool fadeIn = false, float fadeTime = 0, float startvolume = 0, bool startRandomPos = false);
 	void PlayBgm(sf::SoundBuffer& buffer, bool loop = true, bool fadeIn = false, float fadeTime = 0, float startvolume = 0, bool startRandomPos = false);
 	void StopBgm(bool fadeOut = false, float fadeTime = 0, float endvolume = 0);

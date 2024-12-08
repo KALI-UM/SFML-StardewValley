@@ -1,6 +1,6 @@
 #include "pch.h"
-#include "Scene_InGameTest.h"
-#include "Scene_InGame.h"
+
+#include "Scene_Tiltle.h"
 #include "Scene_FarmHouseIndoor.h"
 #include "Scene_FarmLand.h"
 #include "Scene_TileEditor.h"
@@ -18,6 +18,9 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	success &= DATATABLE_MGR->Initialize();
 	success &= SCENE_MGR->Initialize();
 
+	Scene_Tiltle* title = new Scene_Tiltle();
+	SCENE_MGR->PushScene(title);
+
 	Scene_FarmLand* farmland = new Scene_FarmLand();
 	SCENE_MGR->PushScene(farmland);
 
@@ -28,9 +31,9 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	SCENE_MGR->PushScene(editor);
 
 
-	SCENE_MGR->SetCurrentScene(indoor->GetName());
-	indoor->RESET();
-	indoor->ENTER();
+	SCENE_MGR->SetCurrentScene(title->GetName());
+	title->RESET();
+	title->ENTER();
 	return success;
 }
 

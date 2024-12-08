@@ -14,6 +14,7 @@ public:
 
     void SetTexture(const std::string& filepath);
     void SetTexture(const sf::Texture* tex);
+    DSprite* GetSprite() { return m_Sprite; };
 protected:
     std::string m_TextureId;
     DSprite* m_Sprite;

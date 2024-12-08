@@ -34,6 +34,7 @@ void Scene_FarmHouseIndoor::Enter()
 {
 	Scene_InGame::Enter();
 	m_TileObjectSystem->SetTileObject(TileObjLayer::AlwaysFront, { 0,0 }, m_Front);
+	m_IsPlayerInHouse = true;
 }
 
 void Scene_FarmHouseIndoor::Update(float dt)

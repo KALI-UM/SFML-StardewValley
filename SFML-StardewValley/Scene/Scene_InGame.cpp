@@ -103,7 +103,7 @@ void Scene_InGame::Update(float dt)
 
 void Scene_InGame::Exit()
 {
-	SetPlayMode(InGamePlayMode::Play);
+	SetPlayMode(InGamePlayMode::Stop);
 }
 
 void Scene_InGame::OnWindowResize()
@@ -122,7 +122,15 @@ void Scene_InGame::SetPlayMode(InGamePlayMode mode)
 	{
 	case InGamePlayMode::Play:
 	{
+		m_TileObjectSystem->SetEffectLayerColor(ColorPalette::Black, ColorPalette::Transparent, 1.0f);
 		INGAMETIME->Play();
+		if (!SOUND_MGR->IsBgmPlaying())
+		{
+			if (!m_IsSunset)
+				SOUND_MGR->PlayBgm("sounds/Ambience/spring_day.wav", false, true, 3, 20);
+			else
+				SOUND_MGR->PlayBgm("sounds/Ambience/spring_night.wav", false, true, 3, 20);
+		}
 		m_Player->SetIsActive(true);
 		break;
 	}
@@ -134,9 +142,17 @@ void Scene_InGame::SetPlayMode(InGamePlayMode mode)
 	case InGamePlayMode::PlayCutScene:
 		m_CutSceneTimer = 0;
 		INGAMETIME->Stop();
-		m_TileObjectSystem->SetEffectLayerColor(m_IsSunset? m_SunsetLightColor : ColorPalette::Transparent, ColorPalette::Black, 3.0f);
+		m_TileObjectSystem->SetEffectLayerColor(m_IsSunset ? m_SunsetLightColor : ColorPalette::Transparent, ColorPalette::Black, 3.0f);
 		m_Player->SetIsActive(true);
 		break;
+
+	case InGamePlayMode::PlayChangeScene:
+		m_CutSceneTimer = 0;
+		INGAMETIME->Stop();
+		m_TileObjectSystem->SetEffectLayerColor(m_IsSunset ? m_SunsetLightColor : ColorPalette::Transparent, ColorPalette::Black, 3.0f);
+		m_Player->SetIsActive(true);
+		break;
+
 	case InGamePlayMode::Debug:
 		INGAMETIME->Stop();
 		m_Player->SetIsActive(false);
@@ -146,8 +162,18 @@ void Scene_InGame::SetPlayMode(InGamePlayMode mode)
 
 void Scene_InGame::EndDay()
 {
-	SetPlayMode(InGamePlayMode::PlayCutScene);
-	INGAMETIME->NewDay();
+	SOUND_MGR->StopBgm();
+	if (m_IsPlayerInHouse)
+	{
+		SetPlayMode(InGamePlayMode::PlayCutScene);
+		m_IsSunset = false;
+		INGAMETIME->NewDay();
+	}
+	else
+	{
+		SetPlayMode(InGamePlayMode::PlayChangeScene);
+		INGAMETIME->NewDay();
+	}
 }
 
 
@@ -173,6 +199,9 @@ void Scene_InGame::UpdatePlayMode(float dt)
 	case InGamePlayMode::PlayCutScene:
 		UpdateCutScene(dt);
 		break;
+	case InGamePlayMode::PlayChangeScene:
+		UpdateChangeScene(dt);
+		break;
 	case InGamePlayMode::Debug:
 		UpdateDebug(dt);
 		break;
@@ -181,11 +210,13 @@ void Scene_InGame::UpdatePlayMode(float dt)
 
 void Scene_InGame::UpdatePlay(float dt)
 {
-	if (!m_IsSunset&&INGAMETIME->IsSunsetTimePassed())
+	if (!m_IsSunset && INGAMETIME->IsSunsetTimePassed())
 	{
 		m_TileObjectSystem->SetEffectLayerColor(ColorPalette::Transparent, m_SunsetLightColor, 3.0f);
+		SOUND_MGR->PlayBgm("sounds/Ambience/spring_night.wav", false, true, 3, 20);
 		m_IsSunset = true;
 	}
+
 
 	if (INGAMETIME->GetPassedDayTimeRatio() >= 1.0f)
 	{
@@ -229,8 +260,18 @@ void Scene_InGame::UpdateCutScene(float dt)
 
 	if (m_CutSceneTimer >= 3.0f)
 	{
-		m_TileObjectSystem->SetEffectLayerColor(ColorPalette::Black,ColorPalette::Transparent, 3.0f);
 		SetPlayMode(InGamePlayMode::Play);
+		return;
+	}
+}
+
+void Scene_InGame::UpdateChangeScene(float dt)
+{
+	m_CutSceneTimer += dt;
+
+	if (m_CutSceneTimer >= 3.0f)
+	{
+		INGAMEEVENT->ENTER("3,10#FarmHouseIndoor");
 		return;
 	}
 }

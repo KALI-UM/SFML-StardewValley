@@ -18,6 +18,7 @@ enum class InGamePlayMode
 	Play,
 	Stop,
 	PlayCutScene,
+	PlayChangeScene,
 	Debug,
 };
 
@@ -34,6 +35,8 @@ public:
 	void Exit() override;
 	void OnWindowResize()override;
 
+	bool GetIsSunSet()const { return m_IsSunset; }
+
 	void SetPlayMode(InGamePlayMode mode);
 	InGamePlayMode GetPlayMode() const { return m_CurrPlayMode; }
 	EventUI* GetPopUpUI() { return m_PopUpUI; };
@@ -46,6 +49,7 @@ protected:
 	virtual void UpdatePlay(float dt);
 	virtual void UpdateStop(float dt);
 	virtual void UpdateCutScene(float dt);
+	virtual void UpdateChangeScene(float dt);
 	virtual void UpdateDebug(float dt);
 
 	void DebugInputUpdate(float dt);
@@ -57,6 +61,7 @@ protected:
 	sf::Vector2f		m_MapSize;
 	sf::Color			m_SunsetLightColor = sf::Color(10, 10, 80, 150);
 	bool				m_IsSunset = false;
+	bool				m_IsPlayerInHouse = false;
 
 	TileObjectSystem* m_TileObjectSystem;
 	TileModel* m_TileModel;
