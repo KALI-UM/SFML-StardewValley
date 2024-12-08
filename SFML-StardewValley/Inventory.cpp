@@ -22,6 +22,20 @@ bool Inventory::Initialize()
 	return false;
 }
 
+void Inventory::Update(float dt)
+{
+	for (int numkey = (int)sf::Keyboard::Num1; numkey <= sf::Keyboard::Num9; numkey++)
+	{
+		if (INPUT_MGR->GetKeyDown((sf::Keyboard::Key)numkey))
+		{
+			SetCurrentIndex((sf::Keyboard::Key)numkey- (int)sf::Keyboard::Num1);
+		}
+	}
+
+	if(INPUT_MGR->GetKeyDown(sf::Keyboard::Num0))
+		SetCurrentIndex(9);
+}
+
 bool Inventory::PushItem(const ITEMID& item, int count)
 {
 	const ItemDataRes& itemdata = ITEMDATATABLE_MGR->GetItemDataRes(item);

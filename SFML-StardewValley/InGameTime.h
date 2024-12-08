@@ -10,7 +10,7 @@ struct InGameDate
 
 struct InGameTimeConfig
 {
-	float realTimePerMinute = 0.7f;
+	float realTimePerMinute = 0.02f;
 
 	int hourPerDay = 20;
 
@@ -24,6 +24,7 @@ enum class InGameTimeMode
 	Stop,
 };
 
+class Scene_InGame;
 class InGameTime :
 	public Singleton<InGameTime>
 {
@@ -35,6 +36,7 @@ protected:
 	InGameTime(const InGameTime& other) = delete;
 	InGameTime& operator=(const InGameTime& other) = delete;
 public:
+	void Enter(Scene_InGame* scene);
 	void Set(InGameDate date);
 	void Update(float dt);
 
@@ -60,6 +62,8 @@ private:
 	void UpdateStop(float dt);
 
 	void UpdateInGameDate();
+
+	Scene_InGame* m_CurrInGameScene;
 };
 
 #define INGAMETIME (InGameTime::GetInstance())

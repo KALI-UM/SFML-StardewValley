@@ -2,6 +2,7 @@
 #include "Player.h"
 #include "Item/Tool.h"
 #include "Tile/TileObjectSystem.h"
+#include "InGameEvent.h"
 
 Player::Player(const std::string& name)
 	:GameObject(name)
@@ -35,11 +36,12 @@ void Player::Reset()
 
 void Player::Update(float dt)
 {
+	if (UI_HASFOCUS) return;
 
 	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, getPosition())));
 	if (m_TileSystem->IsInteractive(m_PlayerTileIndex))
 	{
-		TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(ViewLayer::Back, m_PlayerTileIndex));
+		INGAMEEVENT->EVENT(m_TileSystem->GetTileSubtypeByTileIndex(ViewLayer::Back, m_PlayerTileIndex));
 	}
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
@@ -47,7 +49,7 @@ void Player::Update(float dt)
 		CellIndex currMouseTile = m_TileSystem->GetTileCoordinatedTileIndex(INPUT_MGR->GetMouseViewPos(0));
 		if (m_TileSystem->IsInteractive(currMouseTile) && IsPlayerNearbyTile(currMouseTile))
 		{
-			TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(currMouseTile));
+			INGAMEEVENT->EVENT(m_TileSystem->GetTileSubtypeByTileIndex(currMouseTile));
 			return;
 		}
 	}

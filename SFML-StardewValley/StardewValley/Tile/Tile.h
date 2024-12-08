@@ -17,7 +17,7 @@ enum class ViewLayer
 	Object,
 	Front,
 
-	Light,
+	Effect,
 	Debug,
 	Max,
 };

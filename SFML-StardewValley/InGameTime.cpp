@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "InGameTime.h"
 
+void InGameTime::Enter(Scene_InGame* scene)
+{
+	m_CurrInGameScene = scene;
+}
+
 void InGameTime::Set(InGameDate date)
 {
 	m_CurrentTime = date;

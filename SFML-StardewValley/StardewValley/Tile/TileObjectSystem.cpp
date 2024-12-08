@@ -28,7 +28,7 @@ bool TileObjectSystem::Initialize()
 
 void TileObjectSystem::Reset()
 {
-	SetLightLayerColor(sf::Color(0, 0, 0, 0));
+	SetEffectLayerColor(sf::Color(0, 0, 0, 0));
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Terrain, true);
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::WaterEffect, true);
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Debug, true);
@@ -37,6 +37,14 @@ void TileObjectSystem::Reset()
 
 void TileObjectSystem::Update(float dt)
 {
+	if (m_EffectLayerTimer != 0.0f)
+	{
+		m_EffectLayerTimer += dt;
+		SetEffectLayerColor(Utils::Lerp(m_CurrentColor, m_TargetColor, m_EffectLayerTimer / m_EffectLayerEndTime));
+
+		if (m_EffectLayerTimer > m_EffectLayerEndTime)
+			m_EffectLayerTimer = 0.0f;
+	}
 }
 
 void TileObjectSystem::PostRender()
@@ -209,13 +217,21 @@ void TileObjectSystem::ColorizeInteractiveTile()
 	}
 }
 
-void TileObjectSystem::SetLightLayerColor(const sf::Color& color)
+void TileObjectSystem::SetEffectLayerColor(const sf::Color& curr, const sf::Color& tar, float timer)
+{
+	m_EffectLayerEndTime = timer;
+	m_CurrentColor = curr;
+	m_TargetColor = tar;
+	m_EffectLayerTimer = 0.01f;
+}
+
+void TileObjectSystem::SetEffectLayerColor(const sf::Color& color)
 {
 	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
 	{
 		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
 		{
-			RequestColorizeTile(color, (int)ViewLayer::Light, { i,j }, false);
+			RequestColorizeTile(color, (int)ViewLayer::Effect, { i,j }, false);
 		}
 	}
 }
@@ -236,43 +252,7 @@ void TileObjectSystem::RemoveTileObject(const TileObjLayer& layer, const CellInd
 	mcv_Model->SetTileObject(layer, tileIndex, nullptr);
 }
 
-void TileObjectSystem::Interaction(const std::string& subtype)
-{
-	auto it = subtype.find("#");
-	if (it != std::string::npos)
-	{
-		std::cout << "EVENT : " << subtype << std::endl;
 
-		std::string EVENT = subtype.substr(0, it);
-		if (EVENT == "ENTER")
-		{
-			TileObjectSystem::ENTER(subtype.substr(it + 1, subtype.length() - (it + 1)));
-		}
-
-		if (EVENT == "ENDDAY")
-		{
-			TileObjectSystem::ENDDAY();
-		}
-	}
-}
-
-void TileObjectSystem::ENTER(const std::string& scene)
-{
-	auto it = scene.find("#");
-	if (it != std::string::npos)
-	{
-		std::string pos = scene.substr(0, it);
-		int index = pos.find(",");
-		int x = std::stoi(pos.substr(0, index));
-		int y = std::stoi(pos.substr(index + 1, pos.length() - (index + 1)));
-		Variables::m_EnterPoint = { x,y };
-	}
-	SCENE_MGR->ChangeScene("InGame::" + scene.substr(it + 1, scene.length() - (it + 1)));
-}
-
-void TileObjectSystem::ENDDAY()
-{
-}
 
 void TileObjectSystem::RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset)
 {

@@ -25,6 +25,8 @@ bool Scene_FarmHouseIndoor::Initialize()
 	m_Front = AddGameObject(4, new TileObject("FarmHouseIndoorFront"));
 
 	m_TerrainFilepath = "datatables/TileObj/temp/FarmHouseIndoorTerraintex.csv";
+
+	m_SunsetLightColor = ColorPalette::Transparent;
 	return result;
 }
 

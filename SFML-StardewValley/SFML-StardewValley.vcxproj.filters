@@ -73,6 +73,9 @@
     <ClCompile Include="InventoryUI.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="ItemGenerator.cpp" />
+    <ClCompile Include="EventUI.cpp" />
+    <ClCompile Include="InGameEvent.cpp" />
+    <ClCompile Include="GameInfoUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -154,5 +157,8 @@
     <ClInclude Include="InventoryUI.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="ItemGenerator.h" />
+    <ClInclude Include="EventUI.h" />
+    <ClInclude Include="InGameEvent.h" />
+    <ClInclude Include="GameInfoUI.h" />
   </ItemGroup>
 </Project>

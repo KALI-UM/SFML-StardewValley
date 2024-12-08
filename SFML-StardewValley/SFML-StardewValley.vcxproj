@@ -150,7 +150,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EventUI.cpp" />
+    <ClCompile Include="GameInfoUI.cpp" />
     <ClCompile Include="ImguiWindowTab.cpp" />
+    <ClCompile Include="InGameEvent.cpp" />
     <ClCompile Include="InGameTime.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryUI.cpp" />
@@ -227,7 +230,10 @@
     <ClCompile Include="Variables.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EventUI.h" />
+    <ClInclude Include="GameInfoUI.h" />
     <ClInclude Include="ImguiWindowTab.h" />
+    <ClInclude Include="InGameEvent.h" />
     <ClInclude Include="InGameTime.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="InventoryUI.h" />

@@ -106,10 +106,6 @@ void InventoryUI::Reset()
 	SetItemIcon(0, "Tools.png#AxeIcon", 1);
 }
 
-void InventoryUI::LateUpdate(float dt)
-{
-}
-
 void InventoryUI::Release()
 {
 }

@@ -9,7 +9,7 @@ public:
     ~UIObject();
 
     bool GetHasFocus()const { return GetIsActive() && m_HasFocus; }
-    void SetAspectRatioPosition(const sf::Vector2f& aspect, const sf::Vector2f& offset);
+    void SetAspectRatioPosition(const sf::Vector2f& aspect, const sf::Vector2f& offset = {0,0});
     void OnWindowResize();
 protected:
     bool    m_HasFocus = false; 

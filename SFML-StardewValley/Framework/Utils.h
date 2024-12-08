@@ -29,7 +29,7 @@ public:
 	static T Lerp(const T& left, const T& right, float ratio, bool clamp = true)
 	{
 		if (clamp)ratio = Utils::Clamp(ratio, 0.0f, 1.0f);
-		float value = (float)left * (1.0f - ratio) + (float)right * ratio;
+		T value = left * (float)(1.0f - ratio) + right * (float)ratio;
 		return value;
 	}
 
@@ -38,6 +38,13 @@ public:
 	{
 		if (clamp)ratio = Utils::Clamp(ratio, 0.0f, 1.0f);
 		return left * (1.0 - (double)ratio) + right * (double)ratio;
+	}
+
+	template<>
+	static sf::Color Lerp(const sf::Color& left, const sf::Color& right, float ratio, bool clamp)
+	{
+		if (clamp)ratio = Utils::Clamp(ratio, 0.0f, 1.0f);
+		return sf::Color(Utils::Lerp(left.r, right.r, ratio, clamp), Utils::Lerp(left.g, right.g, ratio, clamp), Utils::Lerp(left.b, right.b, ratio, clamp), Utils::Lerp(left.a, right.a, ratio, clamp));
 	}
 
 	static sf::Vector2f Lerp(const sf::Vector2f& left, const sf::Vector2f& right, float ratio, bool clamp = true);

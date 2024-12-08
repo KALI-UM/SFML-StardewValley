@@ -39,7 +39,7 @@ bool Scene_InGameTest::Initialize()
 	m_TileView->SetTileViewIndex((int)ViewLayer::Back, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Object, AddGameObject(2, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileView->SetTileViewIndex((int)ViewLayer::Light, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Effect, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
 	m_TileGrid = AddGameObject(2, new TileGrid());

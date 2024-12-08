@@ -11,6 +11,7 @@ public:
 	~Inventory();
 
 	bool Initialize() override;
+	void Update(float dt) override;
 
 	void SetInventoryUI(InventoryUI* ui) { m_UI = ui; };
 
@@ -28,6 +29,6 @@ protected:
 	int									m_CurrIndex;
 	std::vector<std::pair<Item*, int>>	m_Inventory;
 	int									m_MaxSize = 10;
-	InventoryUI* m_UI;
+	InventoryUI*						m_UI;
 };
 

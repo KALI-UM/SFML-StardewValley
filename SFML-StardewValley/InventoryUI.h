@@ -10,7 +10,6 @@ public:
 
     bool Initialize() override;
     void Reset()override;
-    void LateUpdate(float dt)override;
     void Release()override;
 
     void SetItemIcon(int index, const std::string& icontexId, int count);

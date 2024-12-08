@@ -12971,3 +12971,5 @@ Trees.png#Tree_X29Y79,Trees.png,1x1,"29,79",464,1264,16,16
 "Town Interiors.png#Interior01_X29Y98","Town Interiors.png",1x1,"29,98",464,1568,16,16
 "Town Interiors.png#Interior01_X30Y98","Town Interiors.png",1x1,"30,98",480,1568,16,16
 "Town Interiors.png#Interior01_X31Y98","Town Interiors.png",1x1,"31,98",496,1568,16,16
+Clock.png#ClockUIBody,Clock.png,4x3,"0,0",0,0,72,59
+Clock.png#ClockUIPointer,Clock.png,0x1,"0,0",72,0,7,20

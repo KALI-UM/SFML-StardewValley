@@ -36,14 +36,13 @@ public:
 
 	void ColorizePassableTile();
 	void ColorizeInteractiveTile();
-	void SetLightLayerColor(const sf::Color& color);
+	void SetEffectLayerColor(const sf::Color& curr, const sf::Color& tar, float timer);
+	void SetEffectLayerColor(const sf::Color& color);
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 
-	static void Interaction(const std::string& subtype);
-	static void ENTER(const std::string& scene);
-	static void ENDDAY();
+
 
 protected:
 	std::vector<std::list<TileObject*>>						m_TileObjects;
@@ -55,5 +54,10 @@ protected:
 
 
 	inline static std::string empty="";
+
+	sf::Color	m_CurrentColor;
+	sf::Color	m_TargetColor;
+	float m_EffectLayerTimer = 0.0f;
+	float m_EffectLayerEndTime = 3.0f;
 };
 

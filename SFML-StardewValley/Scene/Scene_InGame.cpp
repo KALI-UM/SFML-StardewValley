@@ -1,7 +1,8 @@
 #include "pch.h"
 #include "Scene_InGame.h"
 #include "InGameTime.h"
-#include "Variables.h"
+#include "InGameEvent.h"
+
 #include "Tile/TileObjectSystem.h"
 #include "Tile/TileModel.h"
 #include "Tile/TileView.h"
@@ -12,7 +13,11 @@
 
 #include "Player.h"
 
+#include "Inventory.h"
 #include "InventoryUI.h"
+
+#include "EventUI.h"
+#include "GameInfoUI.h"
 
 Scene_InGame::Scene_InGame(const std::string& name)
 	:SceneBase("InGame::" + name, (int)TileObjLayer::Max + 5, (int)ViewLayer::Max)
@@ -33,11 +38,11 @@ bool Scene_InGame::Initialize()
 
 	SetLayerViewIndex(5, (int)ViewLayer::Terrain);
 	SetLayerViewIndex(6, (int)ViewLayer::WaterEffect);
-	SetLayerViewIndex(7, (int)ViewLayer::Light);
+	SetLayerViewIndex(7, (int)ViewLayer::Effect);
 	SetLayerViewIndex(8, (int)ViewLayer::Debug);
 	//레이어5 = terrain, 
 	//레이어6 = watereffect
-	//레이어7 = light
+	//레이어7 = effect
 	//레이어8 = debug
 
 
@@ -47,7 +52,7 @@ bool Scene_InGame::Initialize()
 	//Terrain, WaterEffect, Back == 0 (SelfPriority)
 	//Object, Player == 1
 	//Front, Debug == 2 (SelfPriority)
-	//Light == 3
+	//effect == 3
 	m_MapSize = { 16 * 90, 16 * 64 };
 
 	m_TileModel = AddGameObject(0, new TileModel((unsigned int)ViewLayer::Max, { 90,64 }, { 16,16 }));
@@ -57,7 +62,7 @@ bool Scene_InGame::Initialize()
 	m_TileView->SetTileViewIndex((int)ViewLayer::Back, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Object, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Front, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)ViewLayer::Light, AddGameObject(7, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Effect, AddGameObject(7, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(8, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
@@ -66,14 +71,20 @@ bool Scene_InGame::Initialize()
 
 	m_Player = AddGameObject((int)TileObjLayer::Paths, new Player("Player"));
 
+	m_Inventory = AddGameObject(m_UILayerIndex, new Inventory());
 	m_InventoryUI = AddUIGameObject(m_UILayerIndex, new InventoryUI());
+	m_Inventory->SetInventoryUI(m_InventoryUI);
 
+	m_PopUpUI = AddUIGameObject(m_UILayerIndex, new EventUI());
+	m_GameInfoUI = AddUIGameObject(m_UILayerIndex, new GameInfoUI());
 	return true;
 }
 
 void Scene_InGame::Enter()
 {
 	SetPlayMode(InGamePlayMode::Play);
+	INGAMETIME->Enter(this);
+	INGAMEEVENT->Enter(this);
 
 	m_TileObjectSystem->LoadTileLayerRawFile(m_TerrainFilepath);
 	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_Back);
@@ -81,7 +92,7 @@ void Scene_InGame::Enter()
 	m_Player->SetTileSystem(m_TileObjectSystem);
 
 
-	m_Player->setPosition(Variables::m_EnterPoint.To<float>() * 16.0f + sf::Vector2f(8.0f, 8.0f));
+	m_Player->setPosition(InGameEvent::m_EnterPoint.To<float>() * 16.0f + sf::Vector2f(8.0f, 8.0f));
 }
 
 void Scene_InGame::Update(float dt)
@@ -119,11 +130,24 @@ void Scene_InGame::SetPlayMode(InGamePlayMode mode)
 		INGAMETIME->Stop();
 		m_Player->SetIsActive(false);
 		break;
+
+	case InGamePlayMode::PlayCutScene:
+		m_CutSceneTimer = 0;
+		INGAMETIME->Stop();
+		m_TileObjectSystem->SetEffectLayerColor(m_IsSunset? m_SunsetLightColor : ColorPalette::Transparent, ColorPalette::Black, 3.0f);
+		m_Player->SetIsActive(true);
+		break;
 	case InGamePlayMode::Debug:
 		INGAMETIME->Stop();
 		m_Player->SetIsActive(false);
 		break;
 	}
+}
+
+void Scene_InGame::EndDay()
+{
+	SetPlayMode(InGamePlayMode::PlayCutScene);
+	INGAMETIME->NewDay();
 }
 
 
@@ -146,6 +170,9 @@ void Scene_InGame::UpdatePlayMode(float dt)
 	case InGamePlayMode::Stop:
 		UpdateStop(dt);
 		break;
+	case InGamePlayMode::PlayCutScene:
+		UpdateCutScene(dt);
+		break;
 	case InGamePlayMode::Debug:
 		UpdateDebug(dt);
 		break;
@@ -154,6 +181,17 @@ void Scene_InGame::UpdatePlayMode(float dt)
 
 void Scene_InGame::UpdatePlay(float dt)
 {
+	if (!m_IsSunset&&INGAMETIME->IsSunsetTimePassed())
+	{
+		m_TileObjectSystem->SetEffectLayerColor(ColorPalette::Transparent, m_SunsetLightColor, 3.0f);
+		m_IsSunset = true;
+	}
+
+	if (INGAMETIME->GetPassedDayTimeRatio() >= 1.0f)
+	{
+		EndDay();
+	}
+
 	if (m_Player != nullptr)
 	{
 		sf::Vector2f viewsize = GAME_MGR->GetViewSize(0);
@@ -183,6 +221,18 @@ void Scene_InGame::UpdatePlay(float dt)
 
 void Scene_InGame::UpdateStop(float dt)
 {
+}
+
+void Scene_InGame::UpdateCutScene(float dt)
+{
+	m_CutSceneTimer += dt;
+
+	if (m_CutSceneTimer >= 3.0f)
+	{
+		m_TileObjectSystem->SetEffectLayerColor(ColorPalette::Black,ColorPalette::Transparent, 3.0f);
+		SetPlayMode(InGamePlayMode::Play);
+		return;
+	}
 }
 
 void Scene_InGame::UpdateDebug(float dt)
