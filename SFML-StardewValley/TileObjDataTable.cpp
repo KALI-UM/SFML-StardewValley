@@ -29,6 +29,13 @@ bool TileObjDataTable::Load()
 		}
 
 		LoadTileObjFile(curr, doc.GetCell<std::string>("filepath", j));
+		curr.objType = Tile::StringToTileObjLayer(doc.GetCell<std::string>("type", j));
+		if (curr.objType == TileObjLayer::Paths)
+		{
+			curr.need = doc.GetCell<int>("need", j);
+			curr.itemid = doc.GetCell<std::string>("itemid", j);
+		}
+
 		m_TileObjectDatas.insert({ id, curr });
 	}
 

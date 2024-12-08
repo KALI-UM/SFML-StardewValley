@@ -4,6 +4,7 @@
 class Tool;
 enum class ItemType;
 class TileObjectSystem;
+class Inventory;
 class Player : public GameObject
 {
 
@@ -57,7 +58,7 @@ protected:
 	bool isActiveWeapon = false;
 	//std::map<Movement, AnimationState> movementAnimations;
 
-
+	DRectangle* m_GetItemArea;
 
 public:
 	Player(const std::string& name);
@@ -97,6 +98,10 @@ public:
 	void GetItemType(ItemType type);
 
 	bool IsPlayerNearbyTile(const CellIndex& index);
+	void SetInventory(Inventory* inventory);
+	bool GetItem(const std::string& itemId, int count);
+
+	const sf::FloatRect& GetGetItemArea() const { return m_GetItemArea->GetGlobalBounds(); }
 protected:
 	Direction m_CurrDir;
 	Action m_CurrAction = Action::idle;
@@ -104,6 +109,7 @@ protected:
 
 	CellIndex m_PlayerTileIndex;
 	const TileObjectSystem* m_TileSystem;
+	Inventory* m_Inventory;
 
 };
 

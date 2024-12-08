@@ -103,7 +103,7 @@ void InventoryUI::Reset()
 	SetAspectRatioPosition(sf::Vector2f(0.5f, 1.0f), sf::Vector2f(0, -10));
 
 
-	SetItemIcon(0, "Tools.png#AxeIcon", 1);
+	//SetItemIcon(0, "Tools.png#AxeIcon", 1);
 }
 
 void InventoryUI::Release()

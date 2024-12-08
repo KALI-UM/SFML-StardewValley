@@ -6,12 +6,16 @@ class TileView;
 class TileGrid;
 class TileObject;
 
-class Player;
+class InGamePlayer;
 
 class Inventory;
 class InventoryUI;
 class EventUI;
 class GameInfoUI;
+
+class DropItem;
+
+class Tool;
 
 enum class InGamePlayMode
 {
@@ -32,16 +36,18 @@ public:
 	bool Initialize() override;
 	void Enter() override;
 	void Update(float dt) override;
+	void Reset() override;
 	void Exit() override;
 	void OnWindowResize()override;
 
 	bool GetIsSunSet()const { return m_IsSunset; }
-
 	void SetPlayMode(InGamePlayMode mode);
 	InGamePlayMode GetPlayMode() const { return m_CurrPlayMode; }
 	EventUI* GetPopUpUI() { return m_PopUpUI; };
-
 	void EndDay();
+
+	ObjectPool <DropItem> m_DropItems;
+	const InGamePlayer* GetPlayer() const { return m_Player; }
 protected:
 	InGamePlayMode m_CurrPlayMode = InGamePlayMode::Play;
 
@@ -69,15 +75,18 @@ protected:
 	TileGrid* m_TileGrid;
 
 	std::string			m_TerrainFilepath;
-	TileObject* m_Back;
-	TileObject* m_Front;
 
-	Player* m_Player;
+	InGamePlayer* m_Player;
 
 	Inventory* m_Inventory;
 	InventoryUI* m_InventoryUI;
 
 	EventUI* m_PopUpUI;
 	GameInfoUI* m_GameInfoUI;
+
+
+
+	Tool* m_TestItem;
+
 };
 

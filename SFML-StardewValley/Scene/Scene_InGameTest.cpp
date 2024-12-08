@@ -40,7 +40,7 @@ bool Scene_InGameTest::Initialize()
 	m_TileView->SetTileViewIndex((int)ViewLayer::Object, AddGameObject(2, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Effect, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
+	//m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
 	m_TileGrid = AddGameObject(2, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
@@ -50,11 +50,11 @@ bool Scene_InGameTest::Initialize()
 	m_PlayerStatusUi = AddGameObject(m_UILayerIndex, new PlayerStatusUi());
 	m_TestItem = AddGameObject(3, new Tool("Scythe"));
 
-	m_TestTObj = AddGameObject(1, new TileObject("Back"));
-	m_TestTObj2 = AddGameObject(2, new TileObject("TreeStump01"));
-	m_TestTObj3 = AddGameObject(2, new TileObject("FarmHouse"));
-	m_TestTObj4 = AddGameObject(2, new TileObject("GreenHouse"));
-	m_TestTObj5 = AddGameObject(2, new TileObject("Rock"));
+	//m_TestTObj = AddGameObject(1, new TileObject("Back"));
+	//m_TestTObj2 = AddGameObject(2, new TileObject("TreeStump01"));
+	//m_TestTObj3 = AddGameObject(2, new TileObject("FarmHouse"));
+	//m_TestTObj4 = AddGameObject(2, new TileObject("GreenHouse"));
+	//m_TestTObj5 = AddGameObject(2, new TileObject("Rock"));
 
 	return false;
 }
@@ -68,11 +68,11 @@ void Scene_InGameTest::Enter()
 	dynamic_cast<Tool*>(m_TestItem)->GetPlayer(m_Player);
 
 
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 10,10 }, m_TestTObj2);
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, { 20,20 }, m_TestTObj3);
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, { 40,20 }, m_TestTObj4);
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 30,30 }, m_TestTObj5);
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_TestTObj);
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 10,10 }, m_TestTObj2);
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, { 20,20 }, m_TestTObj3);
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, { 40,20 }, m_TestTObj4);
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 30,30 }, m_TestTObj5);
 	m_Player->SetTileSystem(m_TileObjectSystem);
 
 

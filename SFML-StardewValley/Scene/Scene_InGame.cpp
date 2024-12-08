@@ -10,14 +10,18 @@
 #include "Tile/TileGrid.h"
 
 #include "Tile/TileObject.h"
-
-#include "Player.h"
+#include "InGamePlayer.h"
 
 #include "Inventory.h"
 #include "InventoryUI.h"
 
 #include "EventUI.h"
 #include "GameInfoUI.h"
+
+#include "ItemGenerator.h"
+#include "Item/DropItem.h"
+
+#include "Item/Tool.h"
 
 Scene_InGame::Scene_InGame(const std::string& name)
 	:SceneBase("InGame::" + name, (int)TileObjLayer::Max + 5, (int)ViewLayer::Max)
@@ -64,19 +68,23 @@ bool Scene_InGame::Initialize()
 	m_TileView->SetTileViewIndex((int)ViewLayer::Front, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Effect, AddGameObject(7, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(8, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
+	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView, this));
 
 	m_TileGrid = AddGameObject((int)TileObjLayer::Front, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
 
-	m_Player = AddGameObject((int)TileObjLayer::Paths, new Player("Player"));
+	m_Player = AddGameObject((int)TileObjLayer::Paths, new InGamePlayer("Player"));
 
 	m_Inventory = AddGameObject(m_UILayerIndex, new Inventory());
 	m_InventoryUI = AddUIGameObject(m_UILayerIndex, new InventoryUI());
 	m_Inventory->SetInventoryUI(m_InventoryUI);
+	m_Player->SetInventory(m_Inventory);
 
 	m_PopUpUI = AddUIGameObject(m_UILayerIndex, new EventUI());
 	m_GameInfoUI = AddUIGameObject(m_UILayerIndex, new GameInfoUI());
+
+	m_DropItems.Initialize(this, 30, ExpandOption::GetOldUsed, (int)TileObjLayer::Paths);
+
 	return true;
 }
 
@@ -85,25 +93,31 @@ void Scene_InGame::Enter()
 	SetPlayMode(InGamePlayMode::Play);
 	INGAMETIME->Enter(this);
 	INGAMEEVENT->Enter(this);
+	ITEMGENERATOR->Enter(this);
 
 	m_TileObjectSystem->LoadTileLayerRawFile(m_TerrainFilepath);
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, m_Back);
 
 	m_Player->SetTileSystem(m_TileObjectSystem);
-
-
 	m_Player->setPosition(InGameEvent::m_EnterPoint.To<float>() * 16.0f + sf::Vector2f(8.0f, 8.0f));
+
 }
 
 void Scene_InGame::Update(float dt)
 {
 	UpdatePlayMode(dt);
 	INGAMETIME->Update(dt);
+	m_DropItems.Update(dt);
+}
+
+void Scene_InGame::Reset()
+{
+	m_DropItems.Reset();
 }
 
 void Scene_InGame::Exit()
 {
 	SetPlayMode(InGamePlayMode::Stop);
+	//m_DropItems.Exit();
 }
 
 void Scene_InGame::OnWindowResize()

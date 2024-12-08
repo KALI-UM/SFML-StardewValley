@@ -47,6 +47,21 @@ void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIn
 	RequestUpdateTile((int)tilelayer, tileIndex);
 }
 
+void TileModel::RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
+{
+	ViewLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
+	for (auto& curr : tileObj->GetTileTypes())
+	{
+		CellIndex index = tileIndex + curr.first;
+		if (tileObj->GetTileTypeByTileIndex(index) != TileType::None)
+		{
+			m_TileInfos[(int)tilelayer][index.y][index.x].owner = nullptr;
+		}
+	}
+	//m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
+	RequestUpdateTile((int)tilelayer, tileIndex);
+}
+
 void TileModel::SetTiles(int layer, const std::list<CellIndex>& tiles, const TEXID& id)
 {
 	for (auto& currIndex : tiles)

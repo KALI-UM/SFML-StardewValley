@@ -18,7 +18,7 @@ struct ItemDataRes
 	NAME name;
 	ItemType type;
 	TEXID iconTexId;
-	std::vector<TEXID> equipTexId;
+	std::vector<TEXID> equipTexId;	//¾È¾¸
 };
 
 enum class StackType

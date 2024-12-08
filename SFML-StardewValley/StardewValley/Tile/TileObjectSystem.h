@@ -3,7 +3,7 @@
 #include "Tile/Tile.h"
 class TileModel;
 class TileView;
-
+class Scene_InGame;
 //게임용 오브젝트 시스템
 class TileObjectSystem :
     public GameObject
@@ -11,14 +11,16 @@ class TileObjectSystem :
 protected:
 	TileModel*	mcv_Model;
 	TileView*	mcv_View;
+	Scene_InGame* m_CurrInGameScene;
 public:
-	TileObjectSystem(TileModel* model, TileView* view);
+	TileObjectSystem(TileModel* model, TileView* view, Scene_InGame* scene);
 	~TileObjectSystem();
 
 	bool Initialize() override;
 	void Reset() override;
 	void Update(float dt) override;
 	void PostRender() override;
+	void Release();
 
 	void LoadTileLayerRawFile();
 	void LoadTileLayerRawFile(const std::string& terrainfile);
@@ -40,13 +42,12 @@ public:
 	void SetEffectLayerColor(const sf::Color& color);
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
+	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, const std::string& objId);
 	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 
 
-
 protected:
-	std::vector<std::list<TileObject*>>						m_TileObjects;
-
+	std::vector<ObjectPool<TileObject>>	m_TileObjects;
 
 	void SetTileColorizeFunc(std::function<void(const sf::Color&, int, const CellIndex&, bool)> func) { m_WhenNeedsToColorizeTileFunc = func; };
 	void RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset);

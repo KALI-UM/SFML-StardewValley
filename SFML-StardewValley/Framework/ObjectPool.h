@@ -33,6 +33,7 @@ public:
 		{
 			auto obj = new T();
 			obj->InitForObjectPool();
+			obj->ResetForObjectPool();
 			unused.push_back(obj);
 		}
 	}
@@ -84,7 +85,8 @@ public:
 			{
 				auto obj = new T();
 				obj->InitForObjectPool();
-				obj->SetIsValid(true);
+				obj->ResetForObjectPool();
+				obj->SetIsActive(true);
 				used.push_back(obj);
 				m_Scene->AddGameObject(m_LayerIndex, obj);
 				return obj;
@@ -94,8 +96,8 @@ public:
 			{
 				auto obj = used.front();
 				used.pop_front();
-				obj->InitForObjectPool();
-				obj->SetIsValid(true);
+				obj->ResetForObjectPool();
+				obj->SetIsActive(true);
 				used.push_back(obj);
 				return obj;
 			}
@@ -111,7 +113,7 @@ public:
 		auto obj = unused.front();
 		unused.pop_front();
 		used.push_back(obj);
-		obj->SetIsValid(true);
+		obj->SetIsActive(true);
 		m_Scene->AddGameObject(m_LayerIndex, obj);
 		return obj;
 	}
@@ -125,8 +127,8 @@ public:
 			return;
 		}
 		used.erase(find);
-		obj->InitForObjectPool();
-		obj->SetIsValid(false);
+		obj->ResetForObjectPool();
+		obj->SetIsActive(false);
 		unused.push_back(obj);
 		m_Scene->RemoveGameObject(m_LayerIndex, obj);
 	}

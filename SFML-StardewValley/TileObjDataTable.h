@@ -2,6 +2,7 @@
 #include "Tile/Tile.h"
 
 typedef std::string SubType;
+typedef std::string ITEMID;
 
 namespace sf
 {
@@ -44,6 +45,10 @@ struct TileObjData
 	};
 
 	std::vector<std::vector<UnitData>> tileTypeMap;
+
+	TileObjLayer			objType;
+	int						need;
+	ITEMID					itemid;
 };
 
 

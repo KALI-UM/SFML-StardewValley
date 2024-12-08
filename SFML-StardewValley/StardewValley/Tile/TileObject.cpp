@@ -3,10 +3,11 @@
 #include "DTile.h"
 #include "TileObjDataTable.h"
 #include "TexCoordTable.h"
+#include "ItemGenerator.h"
+#include "TileObjectSystem.h"
 
 
-TileObject::TileObject(const TOBJID& id)
-	:m_TOBjId(id)
+TileObject::TileObject()
 {
 }
 
@@ -14,11 +15,25 @@ TileObject::~TileObject()
 {
 }
 
+bool TileObject::IsNeedToReturn()
+{
+	return false;
+}
+
+void TileObject::InitForObjectPool()
+{
+	this->INITIALIZE();
+}
+
+void TileObject::ResetForObjectPool()
+{
+	this->RESET();
+}
+
 bool TileObject::Initialize()
 {
 	m_TileSprite = new DTile();
 	SetDrawableObj(m_TileSprite);
-
 
 	return true;
 }
@@ -26,12 +41,17 @@ bool TileObject::Initialize()
 void TileObject::Reset()
 {
 	SetIsVisible(false);
-	LoadTileObject();
+	m_Data = nullptr;
+	m_TileTypes.clear();
+	//LoadTileObject();
 }
 
-void TileObject::LoadTileObject()
+void TileObject::LoadTileObject(const TOBJID& id)
 {
-	m_Data = &TOBJDATATABLE_MGR->GetTileObjectData(m_TOBjId);
+	m_TObjId = id;
+	m_Data = &TOBJDATATABLE_MGR->GetTileObjectData(m_TObjId);
+	m_HitCount = m_Data->need;
+	if (m_HitCount == 0)m_HitCount = -1;
 
 	std::list<sf::IntRect> tileTexrects;
 	std::list<CellIndex> tileIndices;
@@ -65,6 +85,11 @@ const std::string& TileObject::GetTileSubtypeByTileIndex(const CellIndex& tileIn
 	return m_Data->tileTypeMap[localIndex.y][localIndex.x].subtype;
 }
 
+bool TileObject::IsToolInteractive() const
+{
+	return (m_Data->objType == TileObjLayer::Paths);
+}
+
 bool TileObject::IsPassableTileByTileIndex(const CellIndex& tileIndex) const
 {
 	const TileType& type = GetTileTypeByTileIndex(tileIndex);
@@ -75,6 +100,16 @@ bool TileObject::IsInteractiveTileByTileIndex(const CellIndex& tileIndex) const
 {
 	const TileType& type = GetTileTypeByTileIndex(tileIndex);
 	return (type == TileType::ImpassableInteractive || type == TileType::PassableInteractive);
+}
+
+void TileObject::ToolInteraction()
+{
+	m_HitCount--;
+	if (m_HitCount == 0)
+	{
+		ITEMGENERATOR->DropItemToMap(m_Data->itemid, sf::Vector2f(m_TileIndex.x * 16.0f + 8.0f, m_TileIndex.y * 16.0f + 8.0f));
+		m_TileSystem->RemoveTileObject(m_Data->objType, m_TileIndex, this);
+	}
 }
 
 

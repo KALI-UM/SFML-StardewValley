@@ -12977,4 +12977,29 @@ Title Screen.png#Logo,Title Screen.png,25x11,"0,0",0,0,400,187
 Title Screen.png#bttLoad,Title Screen.png,4x3,"0,0",74,187,74,58
 Title Screen.png#bttNew,Title Screen.png,4x3,"0,0",0,187,74,58
 Title Screen.png#bttCoop,Title Screen.png,4x3,"0,0",148,187,74,58
-Title Screen.png#bttExit,Title Screen.png,4x3,"0,0",222,187,74,58
+Title Screen.png#bttExit,Title Screen.png,4x3,"0,0",148,187,74,58
+farmerbase.png#MoveDown,farmerbase.png,8x1,"0,0",0,0,160,31
+farmerbase.png#MoveDown_X0Y0,farmerbase.png,1x1,"0,0",0,0,20,31
+farmerbase.png#MoveDown_X1Y0,farmerbase.png,1x1,"1,0",20,0,20,31
+farmerbase.png#MoveDown_X2Y0,farmerbase.png,1x1,"2,0",40,0,20,31
+farmerbase.png#MoveDown_X3Y0,farmerbase.png,1x1,"3,0",60,0,20,31
+farmerbase.png#MoveDown_X4Y0,farmerbase.png,1x1,"4,0",80,0,20,31
+farmerbase.png#MoveDown_X5Y0,farmerbase.png,1x1,"5,0",100,0,20,31
+farmerbase.png#MoveDown_X6Y0,farmerbase.png,1x1,"6,0",120,0,20,31
+farmerbase.png#MoveDown_X7Y0,farmerbase.png,1x1,"7,0",140,0,20,31
+farmerbase.png#MoveUp,farmerbase.png,8x1,"0,0",0,62,160,31
+farmerbase.png#MoveUp_X0Y0,farmerbase.png,1x1,"0,0",0,62,20,31
+farmerbase.png#MoveUp_X1Y0,farmerbase.png,1x1,"1,0",20,62,20,31
+farmerbase.png#MoveUp_X2Y0,farmerbase.png,1x1,"2,0",40,62,20,31
+farmerbase.png#MoveUp_X3Y0,farmerbase.png,1x1,"3,0",60,62,20,31
+farmerbase.png#MoveUp_X4Y0,farmerbase.png,1x1,"4,0",80,62,20,31
+farmerbase.png#MoveUp_X5Y0,farmerbase.png,1x1,"5,0",100,62,20,31
+farmerbase.png#MoveUp_X6Y0,farmerbase.png,1x1,"6,0",120,62,20,31
+farmerbase.png#MoveUp_X7Y0,farmerbase.png,1x1,"7,0",140,62,20,31
+farmerbase.png#MoveSide,farmerbase.png,6x1,"0,0",0,31,120,31
+farmerbase.png#MoveSide_X0Y0,farmerbase.png,1x1,"0,0",0,31,20,31
+farmerbase.png#MoveSide_X1Y0,farmerbase.png,1x1,"1,0",20,31,20,31
+farmerbase.png#MoveSide_X2Y0,farmerbase.png,1x1,"2,0",40,31,20,31
+farmerbase.png#MoveSide_X3Y0,farmerbase.png,1x1,"3,0",60,31,20,31
+farmerbase.png#MoveSide_X4Y0,farmerbase.png,1x1,"4,0",80,31,20,31
+farmerbase.png#MoveSide_X5Y0,farmerbase.png,1x1,"5,0",100,31,20,31

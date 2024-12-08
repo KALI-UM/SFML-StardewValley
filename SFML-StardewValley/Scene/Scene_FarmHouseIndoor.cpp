@@ -21,8 +21,6 @@ bool Scene_FarmHouseIndoor::Initialize()
 {
 	bool result = Scene_InGame::Initialize();
 	m_MapSize = { 16 * 12, 16 * 12 };
-	m_Back = AddGameObject(1, new TileObject("FarmHouseIndoorBack"));
-	m_Front = AddGameObject(4, new TileObject("FarmHouseIndoorFront"));
 
 	m_TerrainFilepath = "datatables/TileObj/temp/FarmHouseIndoorTerraintex.csv";
 
@@ -33,7 +31,9 @@ bool Scene_FarmHouseIndoor::Initialize()
 void Scene_FarmHouseIndoor::Enter()
 {
 	Scene_InGame::Enter();
-	m_TileObjectSystem->SetTileObject(TileObjLayer::AlwaysFront, { 0,0 }, m_Front);
+	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, "FarmHouseIndoorBack");
+	m_TileObjectSystem->SetTileObject(TileObjLayer::AlwaysFront, { 0,0 }, "FarmHouseIndoorFront");
+
 	m_IsPlayerInHouse = true;
 }
 

@@ -56,7 +56,6 @@
     <ClCompile Include="StardewValley\Tile\TileViewChild.cpp" />
     <ClCompile Include="TexCoordTable.cpp" />
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
-    <ClCompile Include="Scene\Scene_InGameTest.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
@@ -78,6 +77,9 @@
     <ClCompile Include="StardewValley\GameInfoUI.cpp" />
     <ClCompile Include="Scene_Tiltle.cpp" />
     <ClCompile Include="TitleSceneUI.cpp" />
+    <ClCompile Include="StardewValley\Item\DropItem.cpp" />
+    <ClCompile Include="InGamePlayer.cpp" />
+    <ClCompile Include="StardewValley\Item\Foraging.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -142,7 +144,6 @@
     <ClInclude Include="StardewValley\Tile\TileViewChild.h" />
     <ClInclude Include="TexCoordTable.h" />
     <ClInclude Include="StardewValley\Item\Tool.h" />
-    <ClInclude Include="Scene\Scene_InGameTest.h" />
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
     <ClInclude Include="TileObject_Tree.h" />
     <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
@@ -164,5 +165,8 @@
     <ClInclude Include="StardewValley\GameInfoUI.h" />
     <ClInclude Include="Scene_Tiltle.h" />
     <ClInclude Include="TitleSceneUI.h" />
+    <ClInclude Include="StardewValley\Item\DropItem.h" />
+    <ClInclude Include="InGamePlayer.h" />
+    <ClInclude Include="StardewValley\Item\Foraging.h" />
   </ItemGroup>
 </Project>

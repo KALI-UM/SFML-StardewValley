@@ -16,9 +16,11 @@ Inventory::~Inventory()
 
 bool Inventory::Initialize()
 {
-	ITEMGENERATOR->Initialize();
-
 	m_Inventory.resize(m_MaxSize);
+	for (auto& inven : m_Inventory)
+	{
+		inven = { nullptr, 0 };
+	}
 	return false;
 }
 
@@ -28,11 +30,11 @@ void Inventory::Update(float dt)
 	{
 		if (INPUT_MGR->GetKeyDown((sf::Keyboard::Key)numkey))
 		{
-			SetCurrentIndex((sf::Keyboard::Key)numkey- (int)sf::Keyboard::Num1);
+			SetCurrentIndex((sf::Keyboard::Key)numkey - (int)sf::Keyboard::Num1);
 		}
 	}
 
-	if(INPUT_MGR->GetKeyDown(sf::Keyboard::Num0))
+	if (INPUT_MGR->GetKeyDown(sf::Keyboard::Num0))
 		SetCurrentIndex(9);
 }
 
@@ -50,6 +52,7 @@ bool Inventory::PushItem(const ITEMID& item, int count)
 				if (m_Inventory[i].first->m_ItemId == itemdata.id)
 				{
 					m_Inventory[i].second += count;
+					m_UI->SetItemIcon(i, itemdata.iconTexId, m_Inventory[i].second);
 					return true;
 				}
 			}
@@ -63,6 +66,8 @@ bool Inventory::PushItem(const ITEMID& item, int count)
 	if (lastempty != m_MaxSize)
 	{
 		m_Inventory[lastempty] = { ITEMGENERATOR->GetItem(item), count };
+		m_UI->SetItemIcon(lastempty, itemdata.iconTexId, count);
+
 		return true;
 	}
 	else

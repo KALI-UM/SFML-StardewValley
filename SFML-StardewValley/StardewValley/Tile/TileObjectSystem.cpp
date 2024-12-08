@@ -3,11 +3,12 @@
 #include "TileModel.h"
 #include "TileView.h"
 #include "TileObject.h"
-#include "Variables.h"
+#include "ObjectPool.h"
+#include "Scene_InGame.h"
 
 
-TileObjectSystem::TileObjectSystem(TileModel* model, TileView* view)
-	:mcv_Model(model), mcv_View(view)
+TileObjectSystem::TileObjectSystem(TileModel* model, TileView* view, Scene_InGame* scene)
+	:mcv_Model(model), mcv_View(view), m_CurrInGameScene(scene)
 {
 }
 
@@ -19,9 +20,12 @@ bool TileObjectSystem::Initialize()
 {
 	SetTileColorizeFunc(std::bind(&TileView::ColorizeTile, mcv_View, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3, std::placeholders::_4));
 
-	m_TileObjects.resize((int)TileObjLayer::Max);
 	//LoadTileLayerRawFile();
-
+	m_TileObjects.resize((int)TileObjLayer::Max);
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+	{
+		m_TileObjects[layer].Initialize(dynamic_cast<SceneBase*>(m_CurrInGameScene), 20, ExpandOption::MakeNew, layer);
+	}
 
 	return true;
 }
@@ -33,6 +37,11 @@ void TileObjectSystem::Reset()
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::WaterEffect, true);
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Debug, true);
 	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Front, true);
+
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+	{
+		m_TileObjects[layer].Reset();
+	}
 }
 
 void TileObjectSystem::Update(float dt)
@@ -45,11 +54,24 @@ void TileObjectSystem::Update(float dt)
 		if (m_EffectLayerTimer > m_EffectLayerEndTime)
 			m_EffectLayerTimer = 0.0f;
 	}
+
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+	{
+		m_TileObjects[layer].Update(dt);
+	}
 }
 
 void TileObjectSystem::PostRender()
 {
 	mcv_View->SetTileViewVisible((int)ViewLayer::Debug, false);
+}
+
+void TileObjectSystem::Release()
+{
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
+	{
+		m_TileObjects[layer].Exit();
+	}
 }
 
 void TileObjectSystem::LoadTileLayerRawFile()
@@ -238,21 +260,30 @@ void TileObjectSystem::SetEffectLayerColor(const sf::Color& color)
 
 void TileObjectSystem::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
-	m_TileObjects[(int)layer].push_back(tileObj);
 	tileObj->SetIsVisible(true);
 	tileObj->SetTileIndex(tileIndex);
 	tileObj->setPosition({ (tileIndex.x + 0.5f) * mcv_Model->m_CellSize.x, (tileIndex.y + 1.0f) * mcv_Model->m_CellSize.y });
 	mcv_Model->SetTileObject(layer, tileIndex, tileObj);
 }
 
-void TileObjectSystem::RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
+void TileObjectSystem::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, const std::string& objId)
 {
-	m_TileObjects[(int)layer].remove(tileObj);
-	tileObj->SetIsVisible(false);
-	mcv_Model->SetTileObject(layer, tileIndex, nullptr);
+	TileObject* tobj = m_TileObjects[(int)layer].Take();
+	tobj->LoadTileObject(objId);
+	tobj->SetTileSystem(this);
+
+	tobj->SetIsVisible(true);
+	tobj->SetTileIndex(tileIndex);
+	tobj->setPosition({ (tileIndex.x + 0.5f) * mcv_Model->m_CellSize.x, (tileIndex.y + 1.0f) * mcv_Model->m_CellSize.y });
+	mcv_Model->SetTileObject(layer, tileIndex, tobj);
 }
 
-
+void TileObjectSystem::RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
+{
+	tileObj->SetIsVisible(false);
+	mcv_Model->RemoveTileObject(layer, tileIndex, tileObj);
+	m_TileObjects[(int)layer].Return(tileObj);
+}
 
 void TileObjectSystem::RequestColorizeTile(const sf::Color& color, int layer, const CellIndex& tileIndex, bool needReset)
 {

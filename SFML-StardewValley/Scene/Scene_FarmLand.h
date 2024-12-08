@@ -13,5 +13,5 @@ public:
 	void Update(float dt) override;
 
 protected:
-	TileObject* m_FarmHouse;
+
 };

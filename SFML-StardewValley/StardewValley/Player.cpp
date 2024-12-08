@@ -2,7 +2,9 @@
 #include "Player.h"
 #include "Item/Tool.h"
 #include "Tile/TileObjectSystem.h"
+#include "Inventory.h"
 #include "InGameEvent.h"
+#include "Tile/TileObject.h"
 
 Player::Player(const std::string& name)
 	:GameObject(name)
@@ -24,7 +26,13 @@ bool Player::Initialize()
 
 	body->SetPriorityType(DrawPriorityType::Custom);
 
-
+	m_GetItemArea = new DRectangle(sf::FloatRect(0, 0, 20, 20), ColorPalette::Transparent, 1);
+	m_GetItemArea->SetDebugDraw(false);
+	m_GetItemArea->SetOrigin(OriginType::MC);
+#ifdef _DEBUG
+	m_GetItemArea->SetOutlineColor(ColorPalette::SkyBlue);
+#endif // DEBUG
+	SetDrawableObj(m_GetItemArea);
 
 	return true;
 }
@@ -39,6 +47,20 @@ void Player::Update(float dt)
 	if (UI_HASFOCUS) return;
 
 	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, getPosition())));
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Left))
+	{
+		for (int i = 0; i < 8; i++)
+		{
+			CellIndex check = m_PlayerTileIndex + Tile::d[i];
+			TileObject* obj = m_TileSystem->GetTileObjectByTileIndex(ViewLayer::Object, check);
+			if(obj&& obj->IsToolInteractive())
+			{
+				obj->ToolInteraction();
+			}
+		}
+	}
+	
+	
 	if (m_TileSystem->IsInteractive(m_PlayerTileIndex))
 	{
 		INGAMEEVENT->EVENT(m_TileSystem->GetTileSubtypeByTileIndex(ViewLayer::Back, m_PlayerTileIndex));
@@ -115,9 +137,9 @@ void Player::UpdateIdle(float dt)
 	{
 		SetAction(Action::move);
 	}
-	/*if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
+	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::interaction);
-	}*/
+	}
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Button::Left)) {
 		SetAction(Action::Attack);
 	}
@@ -400,6 +422,17 @@ bool Player::IsPlayerNearbyTile(const CellIndex& index)
 		}
 	}
 	return false;
+}
+
+void Player::SetInventory(Inventory* inventory)
+{
+	SetChildObj(inventory, false);
+	m_Inventory = inventory;
+}
+
+bool Player::GetItem(const std::string& itemId, int count)
+{
+	return m_Inventory->PushItem(itemId, count);
 }
 
 

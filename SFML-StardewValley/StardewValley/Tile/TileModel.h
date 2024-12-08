@@ -35,6 +35,7 @@ public:
 	const TileInfo& GetTileInfo(const TileObjLayer& layer, const CellIndex& tileIndex) const;
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
+	void RemoveTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
 
 	void SetTiles(int layer, const std::list<CellIndex>& tiles, const TEXID& id);
 	void SetTile(int layer, const CellIndex& tileIndex, const TEXID& id, bool isTrueTile = true);
