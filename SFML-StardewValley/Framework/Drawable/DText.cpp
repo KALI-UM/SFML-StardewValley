@@ -73,6 +73,11 @@ DText::~DText()
 {
 }
 
+void DText::SetFont(const std::string& filepath)
+{
+	SetFont(FONT_MGR->GetByFilepath(filepath));
+}
+
 void DText::SetFont(sf::Font* font)
 {
 	if (font)

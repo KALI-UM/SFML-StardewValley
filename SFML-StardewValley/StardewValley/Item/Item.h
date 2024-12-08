@@ -44,10 +44,9 @@ public:
 	bool Initialize();
 
 	virtual void Use(Player* const player) = 0;				//use함수를 자식 아이템들이 재정의해서 사용할 것입니다.
-
+	
 protected:
 	NAME		m_ItemName;
-	int			m_Count = 1;
 
 	TEXID		m_IconTexId;
 	std::vector<TEXID>		m_EquipTexIds;				//방향별 어찌할건지는 추후...
@@ -57,9 +56,11 @@ public:
 
 	static std::string ItemTypeToString(ItemType type);
 	static ItemType StringToItemType(const std::string& str);
+	static StackType GetStackTypeByItemType(ItemType type);
+
+	
 private:
 	void LoadItemData();
 
-	static StackType SetStackTypeByItemType(ItemType type);
 };
 

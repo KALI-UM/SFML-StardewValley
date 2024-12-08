@@ -34,8 +34,7 @@ void TileModel::Update(float dt)
 
 void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj)
 {
-	TileLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
-	tileObj->SetTileIndex(tileIndex);
+	ViewLayer tilelayer = Tile::TileObjLayerToTileLayer(layer);
 	for (auto& curr : tileObj->GetTileTypes())
 	{
 		CellIndex index = tileIndex + curr.first;
@@ -44,7 +43,7 @@ void TileModel::SetTileObject(const TileObjLayer& layer, const CellIndex& tileIn
 			m_TileInfos[(int)tilelayer][index.y][index.x].owner = tileObj;
 		}
 	}
-	m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
+	//m_TileInfos[(int)tilelayer][tileIndex.y][tileIndex.x].owner = tileObj;
 	RequestUpdateTile((int)tilelayer, tileIndex);
 }
 
@@ -72,7 +71,7 @@ const TileInfo& TileModel::GetTileInfo(int layer, const CellIndex& tileIndex) co
 	return m_TileInfos[layer][tileIndex.y][tileIndex.x];
 }
 
-const TileInfo& TileModel::GetTileInfo(const TileLayer& layer, const CellIndex& tileIndex) const
+const TileInfo& TileModel::GetTileInfo(const ViewLayer& layer, const CellIndex& tileIndex) const
 {
 	return m_TileInfos[(int)layer][tileIndex.y][tileIndex.x];
 }
@@ -95,16 +94,6 @@ void TileModel::InitializeTileInfos(int layer)
 		}
 	}
 }
-
-//bool TileModel::IsPossibleToPass(const CellIndex& tileIndex)
-//{
-//	bool passable = true;
-//	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
-//	{
-//		passable &= TileType::Block != m_TileCollInfos[layer][tileIndex.y][tileIndex.x].colliderType;
-//	}
-//	return passable;
-//}
 
 bool TileModel::IsPossibleToSetTile(const CellIndex& tileIndex, int layer, const TEXID& id)
 {

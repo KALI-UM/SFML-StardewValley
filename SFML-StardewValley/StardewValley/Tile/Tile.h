@@ -8,16 +8,17 @@ typedef sf::IntRect TEXRECT;
 typedef std::string TOBJID;
 
 //타일 레이어
-enum class TileLayer
+enum class ViewLayer
 {
 	Terrain,
 	WaterEffect,
+	
 	Back,
-
 	Object,
 	Front,
-	Debug,
+
 	Light,
+	Debug,
 	Max,
 };
 
@@ -75,9 +76,9 @@ public:
 	static std::string TileTypeToString(const TileType& type);
 	static TileType StringToTileType(const std::string& str);
 
-	static TileLayer TileObjLayerToTileLayer(const TileObjLayer& layer);
-	static std::string TileLayerToString(const TileLayer& layer);
-	static TileLayer StringToTileLayer(const std::string& str);
+	static ViewLayer TileObjLayerToTileLayer(const TileObjLayer& layer);
+	static std::string TileLayerToString(const ViewLayer& layer);
+	static ViewLayer StringToTileLayer(const std::string& str);
 
 	static const CellIndex d[8];
 };

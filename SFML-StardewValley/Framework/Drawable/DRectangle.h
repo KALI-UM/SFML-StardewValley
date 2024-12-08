@@ -4,6 +4,7 @@ class DRectangle :
 	public DShape
 {
 public:
+	DRectangle();
 	DRectangle(const sf::Vector2f& position, const sf::Vector2f& widthheight, const sf::Color& line, float thick = 1.0f, const sf::Color& fill = sf::Color::Transparent);
 	DRectangle(const sf::FloatRect& rect, const sf::Color& line, float thick = 1.0f, const sf::Color& fill = sf::Color::Transparent);
 	DRectangle(const sf::Vector2f& position, const sf::Vector2f& widthheight, sf::Texture* tex);

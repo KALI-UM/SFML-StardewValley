@@ -58,42 +58,42 @@ TileType Tile::StringToTileType(const std::string& str)
 	}
 }
 
-TileLayer Tile::TileObjLayerToTileLayer(const TileObjLayer& layer)
+ViewLayer Tile::TileObjLayerToTileLayer(const TileObjLayer& layer)
 {
 	switch (layer)
 	{
 	case TileObjLayer::Back:
-		return TileLayer::Back;
+		return ViewLayer::Back;
 		break;
 	case TileObjLayer::Buildings:
 	case TileObjLayer::Paths:
 	case TileObjLayer::Front:
-		return TileLayer::Object;
+		return ViewLayer::Object;
 		break;
 	case TileObjLayer::AlwaysFront:
 	case TileObjLayer::Max:
-		return TileLayer::Front;
+		return ViewLayer::Front;
 		break;
 	default:
-		return TileLayer::Object;
+		return ViewLayer::Object;
 		break;
 	}
 }
 
-std::string Tile::TileLayerToString(const TileLayer& layer)
+std::string Tile::TileLayerToString(const ViewLayer& layer)
 {
 	return std::string(magic_enum::enum_name(layer).data());
 }
 
-TileLayer Tile::StringToTileLayer(const std::string& str)
+ViewLayer Tile::StringToTileLayer(const std::string& str)
 {
-	auto layer_str = magic_enum::enum_cast<TileLayer>(str);
+	auto layer_str = magic_enum::enum_cast<ViewLayer>(str);
 	if (layer_str.has_value())
 	{
 		return layer_str.value();
 	}
 	else
 	{
-		return TileLayer::Max;
+		return ViewLayer::Max;
 	}
 }

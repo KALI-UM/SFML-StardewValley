@@ -21,6 +21,7 @@ public:
 	void POSTRENDER();
 	void EXIT();
 	void RELEASE();
+	void ONWINDOWRESIZE();
 
 	virtual void ShowSceneImgui() {};
 
@@ -54,7 +55,7 @@ protected:
 	virtual void PostRender();
 	virtual void Exit();
 	virtual void Release();
-
+	virtual void OnWindowResize();
 
 public:
 	template <typename T>

@@ -28,13 +28,23 @@ DShape::~DShape()
 {
 }
 
+void DShape::SetTexture(const std::string& filepath)
+{
+	SetTexture(ResourceManager<sf::Texture>::GetInstance()->GetByFilepath(filepath));
+}
+
 void DShape::SetTexture(sf::Texture* tex)
 {
 	m_Shape->setTexture(tex);
 	if (tex)
 	{
-		SetFillColor(sf::Color::Transparent);
+		SetFillColor(sf::Color::White);
 	}
+}
+
+void DShape::SetTextureRect(const sf::IntRect& rect)
+{
+	m_Shape->setTextureRect(rect);
 }
 
 sf::Vector2u DShape::GetTextureSize() const

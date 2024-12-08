@@ -10,8 +10,11 @@ protected:
 	DShape(DShape&& other);
 	virtual ~DShape();
 public:
+	void SetTexture(const std::string& filepath);
 	void SetTexture(sf::Texture* tex);
+	void SetTextureRect(const sf::IntRect& rect);
 	sf::Vector2u GetTextureSize() const;
+
 
 	sf::Color GetColor() const;								//GetFillColor客 悼老		
 	void SetColor(const sf::Color& color);					//SetFillColor客 悼老

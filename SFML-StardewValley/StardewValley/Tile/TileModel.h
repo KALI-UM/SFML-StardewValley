@@ -31,7 +31,7 @@ public:
 
 	bool IsValidTileIndex(const CellIndex& tileIndex) const;
 	const TileInfo& GetTileInfo(int layer, const CellIndex& tileIndex) const;
-	const TileInfo& GetTileInfo(const TileLayer& layer, const CellIndex& tileIndex) const;
+	const TileInfo& GetTileInfo(const ViewLayer& layer, const CellIndex& tileIndex) const;
 	const TileInfo& GetTileInfo(const TileObjLayer& layer, const CellIndex& tileIndex) const;
 
 	void SetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex, TileObject* tileObj);
@@ -40,7 +40,6 @@ public:
 	void SetTile(int layer, const CellIndex& tileIndex, const TEXID& id, bool isTrueTile = true);
 
 public:
-	//bool IsPossibleToPass(const CellIndex& tileIndex);
 	bool IsPossibleToSetTile(const CellIndex& tileIndex, int layer, const TEXID& id);
 protected:
 	std::vector<std::vector<std::vector<TileInfo>>>			m_TileInfos;

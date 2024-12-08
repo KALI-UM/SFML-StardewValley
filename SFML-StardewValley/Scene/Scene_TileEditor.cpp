@@ -46,8 +46,8 @@ bool Scene_TileEditor::Initialize()
 
 	m_MiniMap = AddGameObject(m_UILayerIndex, new SpriteObject());
 
-	for (int i = 0; i < (int)TileLayer::Max; i++)
-		m_Layers.push_back(Tile::TileLayerToString((TileLayer)i));
+	for (int i = 0; i < (int)ViewLayer::Max; i++)
+		m_Layers.push_back(Tile::TileLayerToString((ViewLayer)i));
 
 	for (int i = 0; i <= (int)TileType::None; i++)
 		m_Types.push_back(Tile::TileTypeToString((TileType)i));

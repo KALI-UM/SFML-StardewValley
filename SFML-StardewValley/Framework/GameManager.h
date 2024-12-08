@@ -61,6 +61,8 @@ public:
 	void RotateView(int index, float rot);
 	void UpdateViewRect();
 
+	const sf::Vector2f& GetViewSize(int index) const;
+
 	void PushDrawableObject_PQ(int viewindex, DrawableObject* dobj);
 	void PushDrawableObject_Q(int viewindex, DrawableObject* dobj);
 	void PushDebugDrawObject(int viewindex, DebugInfo* dobj);

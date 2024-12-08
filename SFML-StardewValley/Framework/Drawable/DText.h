@@ -13,6 +13,7 @@ public:
 	DText(DText&& other);
 	virtual ~DText();
 
+	void SetFont(const std::string& filepath);
 	void SetFont(sf::Font* font);
 	void SetString(const std::string& text);
 	void SetString(const std::wstring& text);

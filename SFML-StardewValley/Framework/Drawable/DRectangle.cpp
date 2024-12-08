@@ -1,6 +1,11 @@
 #include "pch.h"
 #include "DRectangle.h"
 
+DRectangle::DRectangle()
+	:DShape(&m_Rectangle, sf::Color::Transparent, 1, sf::Color::White)
+{
+}
+
 DRectangle::DRectangle(const sf::Vector2f& position, const sf::Vector2f& widthheight, const sf::Color& line, float thick, const sf::Color& fill)
 	:DShape(&m_Rectangle, line, thick, fill)
 {

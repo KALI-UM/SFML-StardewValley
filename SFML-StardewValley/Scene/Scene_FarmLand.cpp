@@ -32,7 +32,7 @@ bool Scene_FarmLand::Initialize()
 void Scene_FarmLand::Enter()
 {
 	Scene_InGame::Enter();
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, { 20,20 }, m_FarmHouse);
+	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, {59,10 }, m_FarmHouse);
 }
 
 void Scene_FarmLand::Update(float dt)

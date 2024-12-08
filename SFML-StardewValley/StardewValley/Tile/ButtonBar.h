@@ -1,6 +1,5 @@
 #pragma once
 
-enum class Action;
 
 typedef sf::Vector2i CellIndex;
 

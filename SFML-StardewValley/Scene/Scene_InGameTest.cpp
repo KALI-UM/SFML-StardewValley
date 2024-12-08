@@ -32,14 +32,14 @@ bool Scene_InGameTest::Initialize()
 	SetLayerViewIndex(4, 2);
 	SetViewNeedPriority(0, false);
 
-	m_TileModel = AddGameObject(0, new TileModel((unsigned int)TileLayer::Max, { 80,64 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel((unsigned int)ViewLayer::Max, { 80,64 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
-	m_TileView->SetTileViewIndex((int)TileLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
-	m_TileView->SetTileViewIndex((int)TileLayer::WaterEffect, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Back, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Object, AddGameObject(2, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Debug, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Light, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::WaterEffect, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Back, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Object, AddGameObject(2, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Light, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
 	m_TileGrid = AddGameObject(2, new TileGrid());

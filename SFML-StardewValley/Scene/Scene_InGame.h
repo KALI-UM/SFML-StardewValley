@@ -8,6 +8,8 @@ class TileObject;
 
 class Player;
 
+class InventoryUI;
+
 enum class InGamePlayMode
 {
 	Play,
@@ -26,6 +28,7 @@ public:
 	void Enter() override;
 	void Update(float dt) override;
 	void Exit() override;
+	void OnWindowResize()override;
 
 	void SetPlayMode(InGamePlayMode mode);
 	InGamePlayMode GetPlayMode() const { return m_CurrPlayMode; }
@@ -43,6 +46,8 @@ private:
 	
 
 protected:
+	sf::Vector2f		m_MapSize;
+
 	TileObjectSystem*	m_TileObjectSystem;
 	TileModel*			m_TileModel;
 	TileView*			m_TileView;
@@ -53,6 +58,8 @@ protected:
 	TileObject*			m_Front;
 
 	Player*				m_Player;
+
+	InventoryUI*		m_InventoryUI;
 	
 };
 

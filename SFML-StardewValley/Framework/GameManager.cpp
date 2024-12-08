@@ -48,8 +48,9 @@ void GameManager::UpdateEvent(const sf::Event& ev)
 		for (int i = 0; i < m_Views.size(); i++)
 		{
 			SetViewSize(i, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
-			//SetViewSize(SCENE_MGR->GetCurrentScene()->m_UIViewIndex, sf::FloatRect(0, 0, (float)ev.size.width, (float)ev.size.height));
 		}
+
+		SCENE_MGR->GetCurrentScene()->ONWINDOWRESIZE();
 	}
 }
 
@@ -250,6 +251,11 @@ void GameManager::UpdateViewRect()
 	{
 		view.viewRect = sf::FloatRect(view.view.getCenter() - view.view.getSize() / 2.0f, view.view.getSize());
 	}
+}
+
+const sf::Vector2f& GameManager::GetViewSize(int index) const
+{
+	return m_Views[index].view.getSize();
 }
 
 void GameManager::PushDrawableObject_PQ(int viewindex, DrawableObject* dobj)

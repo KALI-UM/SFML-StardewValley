@@ -12,8 +12,10 @@
 
 #include "Player.h"
 
+#include "InventoryUI.h"
+
 Scene_InGame::Scene_InGame(const std::string& name)
-	:SceneBase("InGame::" + name, 6, 4)
+	:SceneBase("InGame::" + name, (int)TileObjLayer::Max + 5, (int)ViewLayer::Max)
 {
 }
 
@@ -23,12 +25,22 @@ Scene_InGame::~Scene_InGame()
 
 bool Scene_InGame::Initialize()
 {
-	SetLayerViewIndex(0, 0);
-	SetLayerViewIndex(1, 1);
-	SetLayerViewIndex(2, 1);
-	SetLayerViewIndex(3, 1);
-	SetLayerViewIndex(4, 2);
-	SetLayerViewIndex(5, 3);
+	SetLayerViewIndex((int)TileObjLayer::Back, (int)ViewLayer::Back);
+	SetLayerViewIndex((int)TileObjLayer::Buildings, (int)ViewLayer::Object);
+	SetLayerViewIndex((int)TileObjLayer::Paths, (int)ViewLayer::Object);
+	SetLayerViewIndex((int)TileObjLayer::Front, (int)ViewLayer::Object);
+	SetLayerViewIndex((int)TileObjLayer::AlwaysFront, (int)ViewLayer::Front);
+
+	SetLayerViewIndex(5, (int)ViewLayer::Terrain);
+	SetLayerViewIndex(6, (int)ViewLayer::WaterEffect);
+	SetLayerViewIndex(7, (int)ViewLayer::Light);
+	SetLayerViewIndex(8, (int)ViewLayer::Debug);
+	//레이어5 = terrain, 
+	//레이어6 = watereffect
+	//레이어7 = light
+	//레이어8 = debug
+
+
 
 	SetViewNeedPriority(0, false);
 	SetViewNeedPriority(2, false);
@@ -36,22 +48,25 @@ bool Scene_InGame::Initialize()
 	//Object, Player == 1
 	//Front, Debug == 2 (SelfPriority)
 	//Light == 3
+	m_MapSize = { 16 * 90, 16 * 64 };
 
-	m_TileModel = AddGameObject(0, new TileModel((unsigned int)TileLayer::Max, { 80,64 }, { 16,16 }));
+	m_TileModel = AddGameObject(0, new TileModel((unsigned int)ViewLayer::Max, { 90,64 }, { 16,16 }));
 	m_TileView = AddGameObject(0, new TileView(m_TileModel));
-	m_TileView->SetTileViewIndex((int)TileLayer::Terrain, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
-	m_TileView->SetTileViewIndex((int)TileLayer::WaterEffect, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::TexId)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Back, AddGameObject(1, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Object, AddGameObject(2, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Front, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Object)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Debug, AddGameObject(4, new TileViewChild(m_TileView, TileViewType::Raw)));
-	m_TileView->SetTileViewIndex((int)TileLayer::Light, AddGameObject(5, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Terrain, AddGameObject(5, new TileViewChild(m_TileView, TileViewType::TexId)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::WaterEffect, AddGameObject(6, new TileViewChild(m_TileView, TileViewType::TexId)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Back, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Object, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Front, AddGameObject(0, new TileViewChild(m_TileView, TileViewType::Object)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Light, AddGameObject(7, new TileViewChild(m_TileView, TileViewType::Raw)));
+	m_TileView->SetTileViewIndex((int)ViewLayer::Debug, AddGameObject(8, new TileViewChild(m_TileView, TileViewType::Raw)));
 	m_TileObjectSystem = AddGameObject(m_UILayerIndex, new TileObjectSystem(m_TileModel, m_TileView));
 
-	m_TileGrid = AddGameObject(2, new TileGrid());
+	m_TileGrid = AddGameObject((int)TileObjLayer::Front, new TileGrid());
 	m_TileView->SetTileGrid(m_TileGrid);
 
-	m_Player = AddGameObject(3, new Player("Player"));
+	m_Player = AddGameObject((int)TileObjLayer::Paths, new Player("Player"));
+
+	m_InventoryUI = AddUIGameObject(m_UILayerIndex, new InventoryUI());
 
 	return true;
 }
@@ -66,12 +81,7 @@ void Scene_InGame::Enter()
 	m_Player->SetTileSystem(m_TileObjectSystem);
 
 
-	m_Player->setPosition(Variables::m_EnterPoint.To<float>()*16.0f);
-
-	GAME_MGR->SetViewZoom(0, 0.5f);
-	GAME_MGR->SetViewZoom(1, 0.5f);
-	GAME_MGR->SetViewZoom(2, 0.5f);
-
+	m_Player->setPosition(Variables::m_EnterPoint.To<float>() * 16.0f + sf::Vector2f(8.0f, 8.0f));
 }
 
 void Scene_InGame::Update(float dt)
@@ -83,6 +93,13 @@ void Scene_InGame::Update(float dt)
 void Scene_InGame::Exit()
 {
 	SetPlayMode(InGamePlayMode::Play);
+}
+
+void Scene_InGame::OnWindowResize()
+{
+	for (int layer = 0; layer < (int)ViewLayer::Max; layer++)
+		GAME_MGR->SetViewZoom(layer, 0.25f);
+
 }
 
 void Scene_InGame::SetPlayMode(InGamePlayMode mode)
@@ -139,9 +156,19 @@ void Scene_InGame::UpdatePlay(float dt)
 {
 	if (m_Player != nullptr)
 	{
-		GAME_MGR->SetViewCenter(0, m_Player->getPosition());
-		GAME_MGR->SetViewCenter(1, m_Player->getPosition());
-		GAME_MGR->SetViewCenter(2, m_Player->getPosition());
+		sf::Vector2f viewsize = GAME_MGR->GetViewSize(0);
+
+		sf::Vector2f viewCenter = { Utils::Clamp(m_Player->getPosition().x ,viewsize.x / 2, m_MapSize.x - viewsize.x / 2),
+				Utils::Clamp(m_Player->getPosition().y, viewsize.y / 2, m_TileModel->m_CellCount.y * m_TileModel->m_CellSize.y - viewsize.y / 2) };
+
+		if (viewsize.x >= m_MapSize.x)
+			viewCenter.x = m_MapSize.x / 2;
+
+		if (viewsize.y >= m_MapSize.y)
+			viewCenter.y = m_MapSize.y / 2;
+
+		for (int layer = 0; layer < (int)ViewLayer::Max; layer++)
+			GAME_MGR->SetViewCenter(layer, viewCenter);
 	}
 
 	if (INPUT_MGR->GetKey(sf::Keyboard::Num9))
@@ -182,8 +209,7 @@ void Scene_InGame::DebugInputUpdate(float dt)
 	{
 		sf::Vector2f mousepos = INPUT_MGR->GetMouseViewPos(0);
 
-		GAME_MGR->SetViewCenter(0, mousepos);
-		GAME_MGR->SetViewCenter(1, mousepos);
-		GAME_MGR->SetViewCenter(2, mousepos);
+		for (int layer = 0; layer < (int)ViewLayer::Max; layer++)
+			GAME_MGR->SetViewCenter(layer, mousepos);
 	}
 }

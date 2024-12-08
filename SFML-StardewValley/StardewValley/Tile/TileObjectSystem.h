@@ -9,7 +9,7 @@ class TileObjectSystem :
     public GameObject
 {
 protected:
-	TileModel* mcv_Model;
+	TileModel*	mcv_Model;
 	TileView*	mcv_View;
 public:
 	TileObjectSystem(TileModel* model, TileView* view);
@@ -25,10 +25,10 @@ public:
 	void LoadTileLayerObjectFile();
 
 	CellIndex GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const;
-	TileObject* GetTileObjectByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
-	TileType	GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
+	TileObject* GetTileObjectByTileIndex(ViewLayer layer, const CellIndex& tileIndex) const;
+	TileType	GetTileTypeByTileIndex(ViewLayer layer, const CellIndex& tileIndex) const;
 	const std::string& GetTileSubtypeByTileIndex(const CellIndex& tileIndex) const;
-	const std::string& GetTileSubtypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const;
+	const std::string& GetTileSubtypeByTileIndex(ViewLayer layer, const CellIndex& tileIndex) const;
 
 	bool IsPossibleToSetTileObject(const TileObjLayer& layer, const CellIndex& tileIndex);
 	bool IsPossibleToPass(const CellIndex& tileIndex) const;

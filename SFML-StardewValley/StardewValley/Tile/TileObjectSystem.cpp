@@ -29,10 +29,10 @@ bool TileObjectSystem::Initialize()
 void TileObjectSystem::Reset()
 {
 	SetLightLayerColor(sf::Color(0, 0, 0, 0));
-	mcv_View->SetTileViewSelfPriority((int)TileLayer::Terrain, true);
-	mcv_View->SetTileViewSelfPriority((int)TileLayer::WaterEffect, true);
-	mcv_View->SetTileViewSelfPriority((int)TileLayer::Debug, true);
-	mcv_View->SetTileViewSelfPriority((int)TileLayer::Front, true);
+	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Terrain, true);
+	mcv_View->SetTileViewSelfPriority((int)ViewLayer::WaterEffect, true);
+	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Debug, true);
+	mcv_View->SetTileViewSelfPriority((int)ViewLayer::Front, true);
 }
 
 void TileObjectSystem::Update(float dt)
@@ -41,7 +41,7 @@ void TileObjectSystem::Update(float dt)
 
 void TileObjectSystem::PostRender()
 {
-	mcv_View->SetTileViewVisible((int)TileLayer::Debug, false);
+	mcv_View->SetTileViewVisible((int)ViewLayer::Debug, false);
 }
 
 void TileObjectSystem::LoadTileLayerRawFile()
@@ -55,7 +55,7 @@ void TileObjectSystem::LoadTileLayerRawFile()
 		for (int i = 0; i < cellxcnt; i++)
 		{
 			std::string texid = terrdoc.GetCell<std::string>(i, j);
-			mcv_Model->SetTile((int)TileLayer::Terrain, { i,j }, texid);
+			mcv_Model->SetTile((int)ViewLayer::Terrain, { i,j }, texid);
 		}
 	}
 }
@@ -71,7 +71,7 @@ void TileObjectSystem::LoadTileLayerRawFile(const std::string& terrainfile)
 		for (int i = 0; i < cellxcnt; i++)
 		{
 			std::string texid = terrdoc.GetCell<std::string>(i, j);
-			mcv_Model->SetTile((int)TileLayer::Terrain, { i,j }, texid);
+			mcv_Model->SetTile((int)ViewLayer::Terrain, { i,j }, texid);
 		}
 	}
 }
@@ -85,12 +85,12 @@ CellIndex TileObjectSystem::GetTileCoordinatedTileIndex(const sf::Vector2f& pos)
 	return mcv_View->GetTileCoordinatedIndex(pos);
 }
 
-TileObject* TileObjectSystem::GetTileObjectByTileIndex(TileLayer layer, const CellIndex& tileIndex)const
+TileObject* TileObjectSystem::GetTileObjectByTileIndex(ViewLayer layer, const CellIndex& tileIndex)const
 {
 	return mcv_Model->GetTileInfo(layer, tileIndex).owner;
 }
 
-TileType TileObjectSystem::GetTileTypeByTileIndex(TileLayer layer, const CellIndex& tileIndex)const
+TileType TileObjectSystem::GetTileTypeByTileIndex(ViewLayer layer, const CellIndex& tileIndex)const
 {
 	TileObject* tobj = GetTileObjectByTileIndex(layer, tileIndex);
 	if (tobj)
@@ -105,9 +105,9 @@ TileType TileObjectSystem::GetTileTypeByTileIndex(TileLayer layer, const CellInd
 
 const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(const CellIndex& tileIndex) const
 {
-	for (int layer = (int)TileLayer::Front; layer >= (int)TileLayer::Back; layer--)
+	for (int layer = (int)ViewLayer::Front; layer >= (int)ViewLayer::Back; layer--)
 	{
-		TileObject* curr = GetTileObjectByTileIndex((TileLayer)layer, tileIndex);
+		TileObject* curr = GetTileObjectByTileIndex((ViewLayer)layer, tileIndex);
 		if (curr)
 		{
 			return curr->GetTileSubtypeByTileIndex(tileIndex);
@@ -116,7 +116,7 @@ const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(const CellIndex& 
 	return empty;
 }
 
-const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(TileLayer layer, const CellIndex& tileIndex) const
+const std::string& TileObjectSystem::GetTileSubtypeByTileIndex(ViewLayer layer, const CellIndex& tileIndex) const
 {
 	TileObject* tobj = GetTileObjectByTileIndex(layer, tileIndex);
 	if (tobj)
@@ -173,18 +173,18 @@ bool TileObjectSystem::IsInteractive(const CellIndex& tileIndex) const
 
 void TileObjectSystem::ColorizePassableTile()
 {
-	mcv_View->SetTileViewVisible((int)TileLayer::Debug, true);
+	mcv_View->SetTileViewVisible((int)ViewLayer::Debug, true);
 	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
 	{
 		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
 		{
 			if (IsPossibleToPass({ i,j }))
 			{
-				RequestColorizeTile(sf::Color(0, 0, 255, 100), (int)TileLayer::Debug, { i,j }, true);
+				RequestColorizeTile(sf::Color(0, 0, 255, 100), (int)ViewLayer::Debug, { i,j }, true);
 			}
 			else
 			{
-				RequestColorizeTile(sf::Color(255, 0, 0, 100), (int)TileLayer::Debug, { i,j }, true);
+				RequestColorizeTile(sf::Color(255, 0, 0, 100), (int)ViewLayer::Debug, { i,j }, true);
 			}
 		}
 	}
@@ -192,18 +192,18 @@ void TileObjectSystem::ColorizePassableTile()
 
 void TileObjectSystem::ColorizeInteractiveTile()
 {
-	mcv_View->SetTileViewVisible((int)TileLayer::Debug, true);
+	mcv_View->SetTileViewVisible((int)ViewLayer::Debug, true);
 	for (int j = 0; j < mcv_Model->m_CellCount.y; j++)
 	{
 		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
 		{
 			if (IsInteractive({ i,j }))
 			{
-				RequestColorizeTile(sf::Color(0, 255, 0, 100), (int)TileLayer::Debug, { i,j }, true);
+				RequestColorizeTile(sf::Color(0, 255, 0, 100), (int)ViewLayer::Debug, { i,j }, true);
 			}
 			else
 			{
-				RequestColorizeTile(sf::Color(0, 0, 0, 0), (int)TileLayer::Debug, { i,j }, true);
+				RequestColorizeTile(sf::Color(0, 0, 0, 0), (int)ViewLayer::Debug, { i,j }, true);
 			}
 		}
 	}
@@ -215,7 +215,7 @@ void TileObjectSystem::SetLightLayerColor(const sf::Color& color)
 	{
 		for (int i = 0; i < mcv_Model->m_CellCount.x; i++)
 		{
-			RequestColorizeTile(color, (int)TileLayer::Light, { i,j }, false);
+			RequestColorizeTile(color, (int)ViewLayer::Light, { i,j }, false);
 		}
 	}
 }
@@ -224,6 +224,8 @@ void TileObjectSystem::SetTileObject(const TileObjLayer& layer, const CellIndex&
 {
 	m_TileObjects[(int)layer].push_back(tileObj);
 	tileObj->SetIsVisible(true);
+	tileObj->SetTileIndex(tileIndex);
+	tileObj->setPosition({ (tileIndex.x + 0.5f) * mcv_Model->m_CellSize.x, (tileIndex.y + 1.0f) * mcv_Model->m_CellSize.y });
 	mcv_Model->SetTileObject(layer, tileIndex, tileObj);
 }
 

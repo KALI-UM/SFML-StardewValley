@@ -39,7 +39,7 @@ void Player::Update(float dt)
 	m_PlayerTileIndex = m_TileSystem->GetTileCoordinatedTileIndex(GAME_MGR->GetScreenToViewPos(0, GAME_MGR->GetViewToScreenPos(1, getPosition())));
 	if (m_TileSystem->IsInteractive(m_PlayerTileIndex))
 	{
-		TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(TileLayer::Back, m_PlayerTileIndex));
+		TileObjectSystem::Interaction(m_TileSystem->GetTileSubtypeByTileIndex(ViewLayer::Back, m_PlayerTileIndex));
 	}
 
 	if (INPUT_MGR->GetMouseDown(sf::Mouse::Right))
@@ -193,7 +193,7 @@ void Player::UpdateMove(float dt)
 		SetAction(Action::interaction);
 	}
 
-	body->SetPriorityType(DrawPriorityType::Custom, getPosition().y - 16.0f);
+	body->SetPriorityType(DrawPriorityType::Custom, getPosition().y - 8.0f);
 }
 
 void Player::UpdateInter(float dt)

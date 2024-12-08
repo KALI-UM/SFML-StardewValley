@@ -68,8 +68,11 @@
     <ClCompile Include="Scene\Scene_InGame.cpp" />
     <ClCompile Include="Scene\Scene_FarmLand.cpp" />
     <ClCompile Include="InGameTime.cpp" />
-    <ClCompile Include="TileHitBox.cpp" />
     <ClCompile Include="Variables.cpp" />
+    <ClCompile Include="PlayerInfoUI.cpp" />
+    <ClCompile Include="InventoryUI.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="ItemGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StardewValley\Item\Crop.h" />
@@ -146,7 +149,10 @@
     <ClInclude Include="Scene\Scene_InGame.h" />
     <ClInclude Include="Scene\Scene_FarmLand.h" />
     <ClInclude Include="InGameTime.h" />
-    <ClInclude Include="TileHitBox.h" />
     <ClInclude Include="Variables.h" />
+    <ClInclude Include="PlayerInfoUI.h" />
+    <ClInclude Include="InventoryUI.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="ItemGenerator.h" />
   </ItemGroup>
 </Project>

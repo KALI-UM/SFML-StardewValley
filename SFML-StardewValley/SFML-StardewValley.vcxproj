@@ -152,6 +152,10 @@
   <ItemGroup>
     <ClCompile Include="ImguiWindowTab.cpp" />
     <ClCompile Include="InGameTime.cpp" />
+    <ClCompile Include="Inventory.cpp" />
+    <ClCompile Include="InventoryUI.cpp" />
+    <ClCompile Include="ItemGenerator.cpp" />
+    <ClCompile Include="PlayerInfoUI.cpp" />
     <ClCompile Include="Scene\Scene_InGameTest.cpp" />
     <ClCompile Include="Scene_BackEditor.cpp" />
     <ClCompile Include="Scene\Scene_FarmHouseIndoor.cpp" />
@@ -217,7 +221,6 @@
     <ClCompile Include="StardewValley\Item\Tool.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObject.cpp" />
     <ClCompile Include="StardewValley\Tile\TileObjectSystem.cpp" />
-    <ClCompile Include="TileHitBox.cpp" />
     <ClCompile Include="TileObjDataTable.cpp" />
     <ClCompile Include="TileObject_Tree.cpp" />
     <ClCompile Include="Framework\CoreGameObject\UIObject.cpp" />
@@ -226,6 +229,10 @@
   <ItemGroup>
     <ClInclude Include="ImguiWindowTab.h" />
     <ClInclude Include="InGameTime.h" />
+    <ClInclude Include="Inventory.h" />
+    <ClInclude Include="InventoryUI.h" />
+    <ClInclude Include="ItemGenerator.h" />
+    <ClInclude Include="PlayerInfoUI.h" />
     <ClInclude Include="Scene\Scene_InGameTest.h" />
     <ClInclude Include="Scene_BackEditor.h" />
     <ClInclude Include="Scene\Scene_FarmHouseIndoor.h" />
@@ -295,7 +302,6 @@
     <ClInclude Include="StardewValley\Item\Tool.h" />
     <ClInclude Include="StardewValley\Tile\TileObject.h" />
     <ClInclude Include="StardewValley\Tile\TileObjectSystem.h" />
-    <ClInclude Include="TileHitBox.h" />
     <ClInclude Include="TileObjDataTable.h" />
     <ClInclude Include="TileObject_Tree.h" />
     <ClInclude Include="Framework\CoreGameObject\UIObject.h" />

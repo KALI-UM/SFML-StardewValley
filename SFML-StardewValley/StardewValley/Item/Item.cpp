@@ -4,7 +4,7 @@
 #include "ItemDataTable.h"
 
 Item::Item(const ITEMID& itemId, ItemType type)
-	:m_ItemId(itemId), m_ItemType(type), m_StackType(SetStackTypeByItemType(type))
+	:m_ItemId(itemId), m_ItemType(type), m_StackType(GetStackTypeByItemType(type))
 {
 }
 
@@ -55,7 +55,7 @@ ItemType Item::StringToItemType(const std::string& str)
 	}
 }
 
-StackType Item::SetStackTypeByItemType(ItemType type)
+StackType Item::GetStackTypeByItemType(ItemType type)
 {
 	if (type == ItemType::Tool)
 		return StackType::NoneStackable;

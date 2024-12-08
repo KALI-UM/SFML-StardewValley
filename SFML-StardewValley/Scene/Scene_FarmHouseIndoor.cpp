@@ -20,7 +20,7 @@ Scene_FarmHouseIndoor::~Scene_FarmHouseIndoor()
 bool Scene_FarmHouseIndoor::Initialize()
 {
 	bool result = Scene_InGame::Initialize();
-
+	m_MapSize = { 16 * 12, 16 * 12 };
 	m_Back = AddGameObject(1, new TileObject("FarmHouseIndoorBack"));
 	m_Front = AddGameObject(4, new TileObject("FarmHouseIndoorFront"));
 

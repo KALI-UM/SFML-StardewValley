@@ -198,7 +198,6 @@ void TileView::UpdateTileObject()
 		if (currTileInfo.owner)
 		{
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = currTileInfo.owner->GetDTile();
-			currTileInfo.owner->setPosition({ (currIndex.x+0.5f) * mcv_Model->m_CellSize.x, (currIndex.y+1.0f)* mcv_Model->m_CellSize.y });
 		}
 		else
 			m_TileViewChildren[currlayer]->m_TileDrawable[currIndex.y][currIndex.x] = nullptr;

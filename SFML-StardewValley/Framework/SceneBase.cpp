@@ -57,12 +57,14 @@ void SceneBase::ENTER()
 {
 	ImGuiManager::SetShowDemo(false);
 	GAME_MGR->ResizeViews(m_ViewCnt);
+
 	FRAMEWORK->SetBackColor(ColorPalette::Black);
 	for (int i = 0; i < m_ViewCnt; i++)
 	{
 		GAME_MGR->SetViewNeedPriority(i, m_ViewInfo[i].needPriority);
 	}
 
+	ONWINDOWRESIZE();
 	Enter();
 }
 
@@ -160,6 +162,15 @@ void SceneBase::RELEASE()
 		}
 }
 
+void SceneBase::ONWINDOWRESIZE()
+{
+	for (auto& ui : m_UIGameObjects)
+	{
+		ui->OnWindowResize();
+	}
+	OnWindowResize();
+}
+
 bool SceneBase::Initialize()
 {
 	return true;
@@ -202,6 +213,10 @@ void SceneBase::Exit()
 }
 
 void SceneBase::Release()
+{
+}
+
+void SceneBase::OnWindowResize()
 {
 }
 
@@ -289,7 +304,10 @@ void SceneBase::PushLayerToDrawQueDebugQue(int layerIndex)
 {
 	int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
 	bool needPriority = m_ViewInfo[viewIndex].needPriority;
-
+	sf::FloatRect viewrect = GAME_MGR->GetViewRect(viewIndex);
+	viewrect.width *= 1.2f;
+	viewrect.height *= 1.2f;
+	
 	if (needPriority)
 	{
 		//순위경쟁이 있는 view
@@ -303,7 +321,7 @@ void SceneBase::PushLayerToDrawQueDebugQue(int layerIndex)
 				if (!gobj->GetIsVisible(i)) continue;
 
 				DrawableObject* dobj = gobj->GetDrawableObj(i);
-				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				if (viewrect.intersects(dobj->GetGlobalBounds()))
 				{
 					GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
 					//디버그 객체를 그린다
@@ -326,7 +344,7 @@ void SceneBase::PushLayerToDrawQueDebugQue(int layerIndex)
 				if (!gobj->GetIsVisible(i)) continue;
 
 				DrawableObject* dobj = gobj->GetDrawableObj(i);
-				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				if (viewrect.intersects(dobj->GetGlobalBounds()))
 				{
 					GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
 					//디버그 객체를 그린다
@@ -384,6 +402,9 @@ void SceneBase::PushLayerToDrawQue(int layerIndex)
 {
 	int viewIndex = m_LayerIndex[layerIndex]->viewIndex;
 	bool needPriority = m_ViewInfo[viewIndex].needPriority;
+	sf::FloatRect viewrect = GAME_MGR->GetViewRect(viewIndex);
+	viewrect.width *= 1.2f;
+	viewrect.height *= 1.2f;
 
 	if (needPriority)
 	{
@@ -398,7 +419,7 @@ void SceneBase::PushLayerToDrawQue(int layerIndex)
 				if (!gobj->GetIsVisible(i)) continue;
 
 				DrawableObject* dobj = gobj->GetDrawableObj(i);
-				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				if (viewrect.intersects(dobj->GetGlobalBounds()))
 				{
 					GAME_MGR->PushDrawableObject_PQ(viewIndex, dobj);
 				}
@@ -418,7 +439,7 @@ void SceneBase::PushLayerToDrawQue(int layerIndex)
 				if (!gobj->GetIsVisible(i)) continue;
 
 				DrawableObject* dobj = gobj->GetDrawableObj(i);
-				if (GAME_MGR->GetViewRect(viewIndex).intersects(dobj->GetGlobalBounds()))
+				if (viewrect.intersects(dobj->GetGlobalBounds()))
 				{
 					GAME_MGR->PushDrawableObject_Q(viewIndex, dobj);
 				}

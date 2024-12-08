@@ -90,8 +90,8 @@ void DrawableObject::SetOriginCenter()
 
 void DrawableObject::SetOrigin(OriginType type, const sf::Vector2f& detail)
 {
-	setOrigin(((GetGlobalBounds().width / 2) * ((int)type % 3)) + detail.x,
-		((GetGlobalBounds().height / 2) * ((int)type / 3)) + detail.y);
+	setOrigin(((GetLocalBounds().width / 2) * ((int)type % 3)) + detail.x,
+		((GetLocalBounds().height / 2) * ((int)type / 3)) + detail.y);
 }
 
 sf::Vector2f DrawableObject::GetBoundPointPosition(int index) const
