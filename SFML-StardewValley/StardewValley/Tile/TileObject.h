@@ -21,7 +21,9 @@ public:
 	void SetTileSystem(TileObjectSystem* sys) { m_TileSystem = sys; }
 
 	DTile* GetDTile() const { return m_TileSprite; }
+	const TOBJID& GetTObjId() const { return m_TObjId; }
 	void SetTileIndex(const CellIndex& tileIndex) { m_TileIndex = tileIndex; }
+	const CellIndex& GetTileIndex()const { return m_TileIndex; }
 	const TileType& GetTileTypeByTileIndex(const CellIndex& tileIndex)const;
 	const std::string& GetTileSubtypeByTileIndex(const CellIndex& tileIndex)const;
 

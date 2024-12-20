@@ -21,20 +21,25 @@ bool Scene_FarmLand::Initialize()
 {
 	bool result = Scene_InGame::Initialize();
 
-	m_TerrainFilepath = "datatables/TileObj/temp/Terraintex.csv";
+	//m_TerrainFilepath = "datatables/TileObj/temp/Terraintex.csv";
 	return result;
 }
   
 void Scene_FarmLand::Enter()
 {
 	Scene_InGame::Enter();
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, "Back");
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, {59,10 }, "FarmHouse");
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, {20,15 }, "BrokenGreenHouse");
-	m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 60,20 }, "TreeStump01");
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Back, { 0,0 }, "Back");
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, {59,10 }, "FarmHouse");
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Buildings, {20,15 }, "BrokenGreenHouse");
+	//m_TileObjectSystem->SetTileObject(TileObjLayer::Paths, { 60,20 }, "TreeStump01");
 }
 
 void Scene_FarmLand::Update(float dt)
 {
 	Scene_InGame::Update(dt);
+}
+
+void Scene_FarmLand::Exit()
+{
+	Scene_InGame::Exit();
 }

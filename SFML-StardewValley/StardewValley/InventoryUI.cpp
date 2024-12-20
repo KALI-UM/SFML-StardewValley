@@ -37,6 +37,7 @@ bool InventoryUI::Initialize()
 		SetDrawableObj(m_Item[i]);
 		m_Item[i]->SetPriorityType(DrawPriorityType::Custom, 2);
 		m_Item[i]->SetDebugDraw(false);
+		m_Item[i]->SetFillColor(ColorPalette::Transparent);
 	}
 
 	for (int i = 0; i < 10; i++)
@@ -47,10 +48,19 @@ bool InventoryUI::Initialize()
 		m_Count[i]->SetDebugDraw(false);
 	}
 
+	PlayerReset();	
 	return true;
 }
 
 void InventoryUI::Reset()
+{
+	setScale({ 4, 4 });
+
+	SetCurrentIndex(m_CurrentIndex);
+	SetAspectRatioPosition(sf::Vector2f(0.5f, 1.0f), sf::Vector2f(0, -10));
+}
+
+void InventoryUI::PlayerReset()
 {
 	m_Frame->SetTexture("ui/Menu Elements.png");
 	m_Frame->SetCornerSize(16);
@@ -90,20 +100,14 @@ void InventoryUI::Reset()
 	{
 		m_Count[i]->SetFont("fonts/DOSGothic.ttf");
 		m_Count[i]->SetCharacterSize(15);
-		m_Count[i]->setLocalPosition({ (i - 4.5f) * 16.0f+7.0f,-10.0f });
+		m_Count[i]->setLocalPosition({ (i - 4.5f) * 16.0f + 7.0f,-10.0f });
 		m_Count[i]->setLocalScale({ 0.25f, 0.25f });
 		m_Count[i]->SetColor(ColorPalette::White);
 		m_Count[i]->SetOutlineColor(ColorPalette::Black);
 		m_Count[i]->SetOutlineThickness(3);
+		m_Count[i]->SetOrigin(OriginType::BR);
 	}
 
-	setScale({ 4, 4 });
-
-	SetCurrentIndex(m_CurrentIndex);
-	SetAspectRatioPosition(sf::Vector2f(0.5f, 1.0f), sf::Vector2f(0, -10));
-
-
-	//SetItemIcon(0, "Tools.png#AxeIcon", 1);
 }
 
 void InventoryUI::Release()
@@ -113,6 +117,7 @@ void InventoryUI::Release()
 void InventoryUI::SetItemIcon(int index, const std::string& icontexId, int count)
 {
 	auto& texres = TEXRESTABLE_MGR->GetTileTexRes(icontexId);
+	m_Item[index]->SetFillColor(ColorPalette::White);
 	m_Item[index]->SetTexture(texres.filepath);
 	m_Item[index]->SetTextureRect(texres.texcoord);
 	m_Count[index]->SetString(std::to_string(count));

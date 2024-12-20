@@ -11,6 +11,8 @@ public:
 	~Inventory();
 
 	bool Initialize() override;
+	void Reset() override;
+	void PlayerReset();
 	void Update(float dt) override;
 
 	void SetInventoryUI(InventoryUI* ui) { m_UI = ui; };

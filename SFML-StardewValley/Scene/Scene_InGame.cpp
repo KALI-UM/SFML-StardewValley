@@ -95,11 +95,10 @@ void Scene_InGame::Enter()
 	INGAMEEVENT->Enter(this);
 	ITEMGENERATOR->Enter(this);
 
-	m_TileObjectSystem->LoadTileLayerRawFile(m_TerrainFilepath);
+	Load();
 
 	m_Player->SetTileSystem(m_TileObjectSystem);
 	m_Player->setPosition(InGameEvent::m_EnterPoint.To<float>() * 16.0f + sf::Vector2f(8.0f, 8.0f));
-
 }
 
 void Scene_InGame::Update(float dt)
@@ -118,6 +117,9 @@ void Scene_InGame::Exit()
 {
 	SetPlayMode(InGamePlayMode::Stop);
 	//m_DropItems.Exit();
+	m_SceneFile.tileObjects.clear();
+	m_TileObjectSystem->SaveTileObjects(&m_SceneFile);
+	m_Player->Exit();
 }
 
 void Scene_InGame::OnWindowResize()
@@ -130,7 +132,7 @@ void Scene_InGame::OnWindowResize()
 void Scene_InGame::SetPlayMode(InGamePlayMode mode)
 {
 	m_CurrPlayMode = mode;
-	m_TileGrid->SetIsVisible(true);
+	m_TileGrid->SetIsVisible(false);
 
 	switch (m_CurrPlayMode)
 	{
@@ -317,4 +319,35 @@ void Scene_InGame::DebugInputUpdate(float dt)
 		for (int layer = 0; layer < (int)ViewLayer::Max; layer++)
 			GAME_MGR->SetViewCenter(layer, mousepos);
 	}
+}
+
+void Scene_InGame::Save()
+{
+	m_SceneFile.terrainFile = m_TerrainFilepath;
+	m_SceneFile.tileObjects.clear();
+	m_TileObjectSystem->SaveTileObjects(&m_SceneFile);
+	json scenej = m_SceneFile;
+
+	std::ofstream f("save/" + GetName().substr(8, GetName().length() - 8) + ".json");
+	f << scenej.dump(4) << std::endl;
+	f.close();
+}
+
+void Scene_InGame::Load()
+{
+	if (!m_IsLoaded)
+	{
+		std::ifstream f("save/" + GetName().substr(8, GetName().length() - 8) + ".json");
+		json scenej = json::parse(f);
+		m_SceneFile = scenej.get<SceneRawFile>();
+
+		m_TerrainFilepath = m_SceneFile.terrainFile;
+		m_IsLoaded = true;
+	}
+
+	for (auto& tobj : m_SceneFile.tileObjects)
+	{
+		m_TileObjectSystem->SetTileObject(Tile::StringToTileObjLayer(tobj.layer), tobj.index, tobj.tobjId);
+	}
+	m_TileObjectSystem->LoadTileLayerRawFile(m_TerrainFilepath);
 }

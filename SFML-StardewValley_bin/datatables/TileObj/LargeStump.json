@@ -10,24 +10,24 @@
       {
         "subtype": "",
         "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y25",
-        "type": "ImpassableInteractive"
+        "type": "Wall"
       },
       {
         "subtype": "",
         "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y25",
-        "type": "ImpassableInteractive"
+        "type": "Wall"
       }
     ],
     [
       {
         "subtype": "",
         "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y26",
-        "type": "ImpassableInteractive"
+        "type": "Wall"
       },
       {
         "subtype": "",
         "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y26",
-        "type": "ImpassableInteractive"
+        "type": "Wall"
       }
     ]
   ],

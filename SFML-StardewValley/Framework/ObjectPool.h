@@ -132,4 +132,9 @@ public:
 		unused.push_back(obj);
 		m_Scene->RemoveGameObject(m_LayerIndex, obj);
 	}
+
+	const std::list<T*>& GetUsingObjects()
+	{
+		return used;
+	}
 };

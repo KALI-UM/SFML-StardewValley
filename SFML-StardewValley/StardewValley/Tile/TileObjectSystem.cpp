@@ -74,18 +74,34 @@ void TileObjectSystem::Release()
 	}
 }
 
-void TileObjectSystem::LoadTileLayerRawFile()
-{
-	rapidcsv::Document terrdoc("datatables/TileObj/temp/Terraintex.csv", rapidcsv::LabelParams(-1, -1));
-	int cellxcnt = std::min((unsigned int)terrdoc.GetColumnCount(), mcv_Model->m_CellCount.x);
-	int cellycnt = std::min((unsigned int)terrdoc.GetRowCount(), mcv_Model->m_CellCount.y);
+//void TileObjectSystem::LoadTileLayerRawFile()
+//{
+//	rapidcsv::Document terrdoc("datatables/TileObj/temp/Terraintex.csv", rapidcsv::LabelParams(-1, -1));
+//	int cellxcnt = std::min((unsigned int)terrdoc.GetColumnCount(), mcv_Model->m_CellCount.x);
+//	int cellycnt = std::min((unsigned int)terrdoc.GetRowCount(), mcv_Model->m_CellCount.y);
+//
+//	for (int j = 0; j < cellycnt; j++)
+//	{
+//		for (int i = 0; i < cellxcnt; i++)
+//		{
+//			std::string texid = terrdoc.GetCell<std::string>(i, j);
+//			mcv_Model->SetTile((int)ViewLayer::Terrain, { i,j }, texid);
+//		}
+//	}
+//}
 
-	for (int j = 0; j < cellycnt; j++)
+void TileObjectSystem::SaveTileObjects(SceneRawFile* savedate)
+{
+	for (int layer = 0; layer < (int)TileObjLayer::Max; layer++)
 	{
-		for (int i = 0; i < cellxcnt; i++)
+		const auto& tobjlist = m_TileObjects[layer].GetUsingObjects();
+		for (auto& tobj : tobjlist)
 		{
-			std::string texid = terrdoc.GetCell<std::string>(i, j);
-			mcv_Model->SetTile((int)ViewLayer::Terrain, { i,j }, texid);
+			SceneRawFile::TObjInfo tobjinfo;
+			tobjinfo.layer = Tile::TileObjLayerToString((TileObjLayer)layer);
+			tobjinfo.index = tobj->GetTileIndex();
+			tobjinfo.tobjId = tobj->GetTObjId();
+			savedate->tileObjects.push_back({ tobjinfo });
 		}
 	}
 }
@@ -104,10 +120,6 @@ void TileObjectSystem::LoadTileLayerRawFile(const std::string& terrainfile)
 			mcv_Model->SetTile((int)ViewLayer::Terrain, { i,j }, texid);
 		}
 	}
-}
-
-void TileObjectSystem::LoadTileLayerObjectFile()
-{
 }
 
 CellIndex TileObjectSystem::GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const

@@ -1,6 +1,14 @@
 #include "pch.h"
 #include "DCircle.h"
 
+DCircle::DCircle()
+	:DShape(&m_Circle, sf::Color::Black, 1, sf::Color::Transparent)
+{
+	SetOutlineColor(sf::Color::Black);
+	SetOutlineThickness(1);
+	SetFillColor(sf::Color::Transparent);
+}
+
 DCircle::DCircle(const sf::Vector2f& position, float radius, const sf::Color& line, float thick, const sf::Color& fill, int pointcnt)
 	:DShape(&m_Circle, line, thick, fill)
 {

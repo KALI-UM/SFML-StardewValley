@@ -16,12 +16,21 @@ Inventory::~Inventory()
 
 bool Inventory::Initialize()
 {
-	m_Inventory.resize(m_MaxSize);
+	m_Inventory.resize(m_MaxSize);	
+	return false;
+}
+
+void Inventory::Reset()
+{
+}
+
+void Inventory::PlayerReset()
+{
 	for (auto& inven : m_Inventory)
 	{
 		inven = { nullptr, 0 };
 	}
-	return false;
+	m_UI->PlayerReset();
 }
 
 void Inventory::Update(float dt)

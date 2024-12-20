@@ -23,7 +23,7 @@ public:
 	inline static sf::Vector2i m_EnterPoint = { 3,10 };
 
 protected:
-	Scene_InGame* m_CurrInGameScene;
+	Scene_InGame*				m_CurrInGameScene;
 	static inline float			m_DelayTimer=-1;
 };
 

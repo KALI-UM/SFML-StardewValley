@@ -1,0 +1,29 @@
+{
+    "terrainFile": "datatables/TileObj/temp/FarmHouseIndoorTerraintex.csv",
+    "tileObjects": [
+        {
+            "index": {
+                "x": 0,
+                "y": 0
+            },
+            "layer": "Back",
+            "tobjId": "FarmHouseIndoorBack"
+        },
+        {
+            "index": {
+                "x": 0,
+                "y": 0
+            },
+            "layer": "AlwaysFront",
+            "tobjId": "FarmHouseIndoorFront"
+        },
+        {
+            "index": {
+                "x": 8,
+                "y": 4
+            },
+            "layer": "Back",
+            "tobjId": "FirePlace"
+        }
+    ]
+}

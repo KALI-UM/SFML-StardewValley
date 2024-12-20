@@ -1,38 +1,38 @@
 {
-  "id": "Boulder",
-  "originIndex": {
-    "x": 0,
-    "y": 1
-  },
-  "priorityY": 0,
-  "tileTypeMap": [
-    [
-      {
-        "subtype": "",
-        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y28",
-        "type": "ImpassableInteractive"
-      },
-      {
-        "subtype": "",
-        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y28",
-        "type": "ImpassableInteractive"
-      }
+    "id": "Boulder",
+    "originIndex": {
+        "x": 0,
+        "y": 0
+    },
+    "priorityY": -858993460,
+    "tileTypeMap": [
+        [
+            {
+                "subtype": "",
+                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y28",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y28",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y29",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y29",
+                "type": "Wall"
+            }
+        ]
     ],
-    [
-      {
-        "subtype": "",
-        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X0Y29",
-        "type": "ImpassableInteractive"
-      },
-      {
-        "subtype": "",
-        "texid": "Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png#CropsIcon_X1Y29",
-        "type": "ImpassableInteractive"
-      }
-    ]
-  ],
-  "uuSize": {
-    "x": 2,
-    "y": 2
-  }
+    "uuSize": {
+        "x": 2,
+        "y": 2
+    }
 }

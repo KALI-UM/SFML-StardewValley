@@ -1,0 +1,93 @@
+{
+    "terrainFile": "datatables/TileObj/temp/Terraintex.csv",
+    "tileObjects": [
+        {
+            "index": {
+                "x": 0,
+                "y": 0
+            },
+            "layer": "Back",
+            "tobjId": "Back"
+        },
+        {
+            "index": {
+                "x": 59,
+                "y": 10
+            },
+            "layer": "Buildings",
+            "tobjId": "FarmHouse"
+        },
+        {
+            "index": {
+                "x": 20,
+                "y": 15
+            },
+            "layer": "Buildings",
+            "tobjId": "BrokenGreenHouse"
+        },
+        {
+            "index": {
+                "x": 60,
+                "y": 20
+            },
+            "layer": "Paths",
+            "tobjId": "TreeStump01"
+        },
+        {
+            "index": {
+                "x": 64,
+                "y": 20
+            },
+            "layer": "Paths",
+            "tobjId": "TreeStump01"
+        },
+        {
+            "index": {
+                "x": 62,
+                "y": 21
+            },
+            "layer": "Paths",
+            "tobjId": "TreeStump01"
+        },
+        {
+            "index": {
+                "x": 62,
+                "y": 25
+            },
+            "layer": "Paths",
+            "tobjId": "Boulder"
+        },
+        {
+            "index": {
+                "x": 62,
+                "y": 28
+            },
+            "layer": "Paths",
+            "tobjId": "Boulder"
+        },
+        {
+            "index": {
+                "x": 65,
+                "y": 26
+            },
+            "layer": "Paths",
+            "tobjId": "Rock"
+        },
+        {
+            "index": {
+                "x": 63,
+                "y": 19
+            },
+            "layer": "Paths",
+            "tobjId": "Rock"
+        },
+        {
+            "index": {
+                "x": 60,
+                "y": 23
+            },
+            "layer": "Paths",
+            "tobjId": "LargeStump"
+        }
+    ]
+}

@@ -17,6 +17,26 @@ class DropItem;
 
 class Tool;
 
+namespace sf
+{
+	NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(sf::Vector2i, x, y);
+}
+
+struct SceneRawFile
+{
+	std::string terrainFile;
+	struct TObjInfo
+	{
+		std::string layer;
+		sf::Vector2i index;
+		std::string tobjId;
+		NLOHMANN_DEFINE_TYPE_INTRUSIVE(TObjInfo, layer, index, tobjId);
+	};
+
+	std::vector<TObjInfo> tileObjects;
+	NLOHMANN_DEFINE_TYPE_INTRUSIVE(SceneRawFile, terrainFile, tileObjects);
+};
+
 enum class InGamePlayMode
 {
 	Play,
@@ -59,6 +79,11 @@ protected:
 	virtual void UpdateDebug(float dt);
 
 	void DebugInputUpdate(float dt);
+public:
+	void Save();
+	void Load();
+
+	//virtual void LoadSceneFile() = 0;
 
 private:
 	float m_CutSceneTimer;
@@ -88,5 +113,7 @@ protected:
 
 	Tool* m_TestItem;
 
+	bool m_IsLoaded = false;
+	SceneRawFile m_SceneFile;
 };
 

@@ -7,6 +7,7 @@
 #include "Tile/TileObject.h"
 
 #include "TexCoordTable.h"
+#include "Item/Item.h"
 
 
 InGamePlayer::InGamePlayer(const std::string& name)
@@ -39,6 +40,14 @@ void InGamePlayer::Reset()
 	m_PlayerBody->SetTexture(texres.filepath);
 	m_PlayerBody->SetTextureRect(TEXRESTABLE_MGR->GetTileTexRes(texres.children[0][0]).texcoord);
 	m_PlayerBody->SetOrigin(OriginType::BC);
+
+	m_Satmina = m_PlayerInfo.stamina;
+	m_Inventory->PlayerReset();
+
+	for (auto& item : m_PlayerInfo.inventory)
+	{
+		m_Inventory->PushItem(item.first, item.second);
+	}
 }
 
 void InGamePlayer::Update(float dt)
@@ -79,7 +88,7 @@ void InGamePlayer::Update(float dt)
 	m_Direction.y = INPUT_MGR->GetAxisRaw(Axis::Vertical);
 	Utils::Normailize(m_Direction);
 
-	if(m_Direction.x > 0)
+	if (m_Direction.x > 0)
 	{
 		CellIndex next = m_TileIndex + sf::Vector2i(1, 0);
 		if (!m_TileSystem->IsPossibleToPass(next))
@@ -116,6 +125,19 @@ void InGamePlayer::Update(float dt)
 	//std::cout << nextTileIndex.x << "," << nextTileIndex.y << std::endl;
 	setPosition(nextpos);
 	m_PlayerBody->SetPriorityType(DrawPriorityType::Custom, getPosition().y - 8.0f);
+}
+
+void InGamePlayer::Exit()
+{
+	m_PlayerInfo.stamina = m_Satmina;
+	m_PlayerInfo.inventory.clear();
+	for (int i = 0; i < m_Inventory->GetInventoryMaxSize(); i++)
+	{
+		if (m_Inventory->GetInventoryData(i).first == nullptr)continue;
+
+		m_PlayerInfo.inventory.push_back(
+			{ m_Inventory->GetInventoryData(i).first->m_ItemId, m_Inventory->GetInventoryData(i).second });
+	}
 }
 
 bool InGamePlayer::IsPlayerNearbyTile(const CellIndex& index)

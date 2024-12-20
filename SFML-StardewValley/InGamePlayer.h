@@ -1,11 +1,12 @@
 #pragma once
 #include "Tile/Tile.h"
 
-
-enum class PlayerStatus
+struct PlayerInfo
 {
-
+	int stamina = 20;
+	std::vector<std::pair<std::string, int>> inventory;
 };
+
 class TileObjectSystem;
 class Inventory;
 class InGamePlayer :
@@ -18,6 +19,8 @@ public:
 	bool Initialize();
 	void Reset();
 	void Update(float dt);
+	void Exit();
+
 
 	bool IsPlayerNearbyTile(const CellIndex& index);
 	void SetTileSystem(TileObjectSystem* const sys) { m_TileSystem = sys; };
@@ -36,6 +39,8 @@ protected:
 
 	CellIndex m_TileIndex;
 	const TileObjectSystem* m_TileSystem;
+
+	inline static PlayerInfo m_PlayerInfo;
 };
 
  

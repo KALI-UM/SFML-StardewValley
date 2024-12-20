@@ -57,6 +57,7 @@ void InGameEvent::ENDDAY()
 	EventUI* popupui = m_CurrInGameScene->GetPopUpUI();
 	popupui->SetIsActive(true);
 	popupui->SetEventString(L"오늘은 이만 잠들까요?");
-	popupui->SetOKButtonFunc([=]() {popupui->RESET(); this->m_DelayTimer = FRAMEWORK->GetRealTime(); m_CurrInGameScene->EndDay(); });
+	popupui->SetOKButtonFunc([=]() {popupui->RESET(); this->m_DelayTimer = FRAMEWORK->GetRealTime(); m_CurrInGameScene->EndDay(); m_CurrInGameScene->Save();  });
 	popupui->SetNOButtonFunc([=]() { popupui->RESET(); this->m_DelayTimer= FRAMEWORK->GetRealTime(); });
+
 }

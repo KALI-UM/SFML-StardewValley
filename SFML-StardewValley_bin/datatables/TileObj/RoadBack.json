@@ -1,0 +1,5198 @@
+{
+    "id": "RoadBack",
+    "originIndex": {
+        "x": 0,
+        "y": 0
+    },
+    "priorityY": -858993460,
+    "tileTypeMap": [
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X20Y18",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X20Y19",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X21Y19",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X20Y20",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X21Y20",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X22Y20",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X20Y21",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X21Y21",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X22Y21",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X23Y21",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X7Y37",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X7Y38",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X7Y39",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X7Y40",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y14",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y14",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y14",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y16",
+                "type": "ImpassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y17",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X10Y17",
+                "type": "ImpassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "ENTER#87,14#FarmLand",
+                "texid": "",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "ENTER#87,14#FarmLand",
+                "texid": "",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y14",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y14",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X8Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X9Y15",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ]
+    ],
+    "uuSize": {
+        "x": 32,
+        "y": 32
+    }
+}

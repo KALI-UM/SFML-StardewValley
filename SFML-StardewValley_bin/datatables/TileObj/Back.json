@@ -4,7 +4,7 @@
         "x": 0,
         "y": 0
     },
-    "priorityY": -858993460,
+    "priorityY": 24969723,
     "tileTypeMap": [
         [
             {
@@ -34,7 +34,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -44,7 +54,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -54,7 +74,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -64,7 +94,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -74,7 +114,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -84,7 +134,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -94,7 +154,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -104,87 +174,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y0",
                 "type": "Wall"
             },
             {
@@ -486,7 +486,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -496,7 +506,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -506,7 +526,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -516,7 +546,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -526,7 +566,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -536,7 +586,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -546,7 +606,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -556,87 +626,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y1",
                 "type": "Wall"
             },
             {
@@ -938,7 +938,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -948,7 +958,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -958,7 +978,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -968,7 +998,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -978,7 +1018,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -988,7 +1038,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -998,7 +1058,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -1008,87 +1078,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X15Y2",
                 "type": "Wall"
             },
             {
@@ -1178,7 +1178,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
@@ -1193,7 +1198,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
@@ -1208,7 +1218,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
@@ -1223,7 +1238,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
@@ -1238,32 +1258,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
@@ -1630,7 +1630,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -1645,7 +1650,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -1660,7 +1670,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -1675,7 +1690,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -1690,32 +1710,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -5879,7 +5879,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             }
         ],
         [
@@ -6331,7 +6331,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             }
         ],
         [
@@ -6783,7 +6783,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             }
         ],
         [
@@ -7235,7 +7235,7 @@
             {
                 "subtype": "",
                 "texid": "",
-                "type": "Ground"
+                "type": "PassableInteractive"
             }
         ],
         [
@@ -7687,7 +7687,7 @@
             {
                 "subtype": "",
                 "texid": "OutdoorsSpring.png#Spring_X9Y14",
-                "type": "Ground"
+                "type": "PassableInteractive"
             }
         ],
         [
@@ -9027,17 +9027,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y0",
                 "type": "Wall"
             },
             {
@@ -9479,17 +9479,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y1",
                 "type": "Wall"
             },
             {
@@ -9931,17 +9931,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y2",
                 "type": "Wall"
             },
             {
@@ -10383,17 +10383,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y3",
                 "type": "Wall"
             },
             {
@@ -10835,17 +10835,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y4",
                 "type": "Wall"
             },
             {
@@ -11282,22 +11282,22 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y5",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y5",
                 "type": "Wall"
             },
             {
@@ -11734,12 +11734,12 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -12191,17 +12191,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y0",
                 "type": "Wall"
             },
             {
@@ -12643,17 +12643,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y1",
                 "type": "Wall"
             },
             {
@@ -13095,7 +13095,1815 @@
             },
             {
                 "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y2",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
                 "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X19Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X19Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X19Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y15",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y3",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y5",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X19Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "",
+                "type": "Soil"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X11Y16",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X13Y4",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X14Y4",
                 "type": "Wall"
             },
             {
@@ -13547,17 +15355,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y0",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y0",
                 "type": "Wall"
             },
             {
@@ -13999,17 +15807,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y1",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y1",
                 "type": "Wall"
             },
             {
@@ -14451,17 +16259,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y2",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y2",
                 "type": "Wall"
             },
             {
@@ -14903,17 +16711,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y3",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y3",
                 "type": "Wall"
             },
             {
@@ -15355,921 +17163,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y4",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X19Y16",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X11Y16",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X19Y15",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X11Y15",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y4",
                 "type": "Wall"
             },
             {
@@ -16711,921 +17615,17 @@
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y5",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y5",
                 "type": "Wall"
             },
             {
                 "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X19Y15",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X11Y15",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            }
-        ],
-        [
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X19Y16",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Soil"
-            },
-            {
-                "subtype": "",
-                "texid": "OutdoorsSpring.png#Spring_X11Y16",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
-                "type": "Wall"
-            },
-            {
-                "subtype": "",
-                "texid": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y5",
                 "type": "Wall"
             },
             {

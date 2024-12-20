@@ -1,0 +1,5198 @@
+{
+    "id": "RoadTerrain",
+    "originIndex": {
+        "x": 0,
+        "y": 0
+    },
+    "priorityY": -858993460,
+    "tileTypeMap": [
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y6",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y41",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X6Y42",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y41",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y42",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y43",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y42",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y42",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y6",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "ImpassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X3Y10",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "ImpassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y8",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y7",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X1Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X2Y9",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "PassableInteractive"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X5Y9",
+                "type": "Ground"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X4Y9",
+                "type": "Ground"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ],
+        [
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            },
+            {
+                "subtype": "",
+                "texid": "OutdoorsSpring.png#Spring_X0Y7",
+                "type": "Wall"
+            }
+        ]
+    ],
+    "uuSize": {
+        "x": 32,
+        "y": 32
+    }
+}

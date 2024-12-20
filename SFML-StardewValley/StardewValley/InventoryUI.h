@@ -10,6 +10,7 @@ public:
 
     bool Initialize() override;
     void Reset()override;
+    void PlayerReset();
     void Release()override;
 
     void SetItemIcon(int index, const std::string& icontexId, int count);

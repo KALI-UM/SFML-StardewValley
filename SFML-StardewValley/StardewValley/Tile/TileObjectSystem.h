@@ -4,6 +4,7 @@
 class TileModel;
 class TileView;
 class Scene_InGame;
+struct SceneRawFile;
 //게임용 오브젝트 시스템
 class TileObjectSystem :
     public GameObject
@@ -22,9 +23,8 @@ public:
 	void PostRender() override;
 	void Release();
 
-	void LoadTileLayerRawFile();
+	void SaveTileObjects(SceneRawFile* savedate);
 	void LoadTileLayerRawFile(const std::string& terrainfile);
-	void LoadTileLayerObjectFile();
 
 	CellIndex GetTileCoordinatedTileIndex(const sf::Vector2f& pos) const;
 	TileObject* GetTileObjectByTileIndex(ViewLayer layer, const CellIndex& tileIndex) const;

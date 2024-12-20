@@ -1,0 +1,13 @@
+{
+    "terrainFile": "datatables/TileObj/temp/RoadTerraintex.csv",
+    "tileObjects": [
+        {
+            "index": {
+                "x": 0,
+                "y": 0
+            },
+            "layer": "Back",
+            "tobjId": "RoadBack"
+        }
+    ]
+}

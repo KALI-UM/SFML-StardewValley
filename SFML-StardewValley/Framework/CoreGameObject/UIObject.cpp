@@ -19,7 +19,9 @@ void UIObject::SetAspectRatioPosition(const sf::Vector2f& aspect, const sf::Vect
 
 void UIObject::OnWindowResize()
 {
-	if (GAME_MGR->GetViewCount() == 0) return;
+	if (GAME_MGR->GetViewCount() == 0) 
+		return;
+
 	sf::Vector2f viewSize = GAME_MGR->GetViewSize(SCENE_MGR->GetCurrentScene()->m_UIViewIndex);
 	sf::FloatRect viewRect = GAME_MGR->GetViewRect(SCENE_MGR->GetCurrentScene()->m_UIViewIndex);
 

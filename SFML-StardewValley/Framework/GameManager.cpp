@@ -3,8 +3,8 @@
 #include "Scene_Tiltle.h"
 #include "Scene_FarmHouseIndoor.h"
 #include "Scene_FarmLand.h"
+#include "Scene_Road.h"
 #include "Scene_TileEditor.h"
-
 
 GameManager::GameManager()
 	:m_MainWindow(nullptr)
@@ -24,6 +24,9 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	Scene_FarmLand* farmland = new Scene_FarmLand();
 	SCENE_MGR->PushScene(farmland);
 
+	Scene_Road* road = new Scene_Road();
+	SCENE_MGR->PushScene(road);
+
 	Scene_FarmHouseIndoor* indoor = new Scene_FarmHouseIndoor();
 	SCENE_MGR->PushScene(indoor);
 
@@ -31,9 +34,9 @@ bool GameManager::Initialize(sf::RenderWindow* window)
 	SCENE_MGR->PushScene(editor);
 
 
-	SCENE_MGR->SetCurrentScene(title->GetName());
-	title->RESET();
-	title->ENTER();
+	SCENE_MGR->SetCurrentScene(indoor->GetName());
+	indoor->RESET();
+	indoor->ENTER();
 	return success;
 }
 

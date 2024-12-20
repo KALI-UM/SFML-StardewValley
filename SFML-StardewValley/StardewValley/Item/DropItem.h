@@ -21,6 +21,8 @@ public:
 protected:
 	ITEMID			m_ItemId;
 	DSprite*		m_ItemIcon;
+	DCircle*		m_Shadow;
+
 	const InGamePlayer*	m_Player;
 	bool			m_TaskDone = false;
 

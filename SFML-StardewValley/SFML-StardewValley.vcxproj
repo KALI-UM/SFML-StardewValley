@@ -150,10 +150,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Scene\Scene_Road.cpp" />
     <ClCompile Include="StardewValley\Item\Foraging.cpp" />
     <ClCompile Include="InGamePlayer.cpp" />
     <ClCompile Include="StardewValley\Item\DropItem.cpp" />
-    <ClCompile Include="Scene_Tiltle.cpp" />
+    <ClCompile Include="Scene\Scene_Tiltle.cpp" />
     <ClCompile Include="StardewValley\EventUI.cpp" />
     <ClCompile Include="StardewValley\GameInfoUI.cpp" />
     <ClCompile Include="ImguiWindowTab.cpp" />
@@ -234,10 +235,11 @@
     <ClCompile Include="Variables.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Scene\Scene_Road.h" />
     <ClInclude Include="StardewValley\Item\Foraging.h" />
     <ClInclude Include="InGamePlayer.h" />
     <ClInclude Include="StardewValley\Item\DropItem.h" />
-    <ClInclude Include="Scene_Tiltle.h" />
+    <ClInclude Include="Scene\Scene_Tiltle.h" />
     <ClInclude Include="StardewValley\EventUI.h" />
     <ClInclude Include="StardewValley\GameInfoUI.h" />
     <ClInclude Include="ImguiWindowTab.h" />

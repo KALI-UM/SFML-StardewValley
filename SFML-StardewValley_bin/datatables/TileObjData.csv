@@ -10,3 +10,5 @@ Boulder,datatables/TileObj/Boulder.json,Paths,5,Stone
 LargeStump,datatables/TileObj/LargeStump.json,Paths,10,Wood
 FarmHouseIndoorBack,datatables/TileObj/FarmHouseIndoorBack.json,Back,,
 FarmHouseIndoorFront,datatables/TileObj/FarmHouseIndoorFront.json,AlwaysFront,,
+RoadBack,datatables/TileObj/RoadBack.json,Back,,
+FirePlace,datatables/TileObj/FirePlace.json,Back,,
