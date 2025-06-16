@@ -107,7 +107,11 @@ void sf9SliceSprite::setCornerSize(float size)
 	setSize(m_Size);
 }
 
-void sf9SliceSprite::setAtlas(const sf::FloatRect& TL, const sf::FloatRect& TC, const sf::FloatRect& TR, const sf::FloatRect& ML, const sf::FloatRect& MC, const sf::FloatRect& MR, const sf::FloatRect& BL, const sf::FloatRect& BC, const sf::FloatRect& BR)
+//3x3 그리드로 나뉜 9개 텍스처 조각 각각의 텍스처 좌표를 설정
+void sf9SliceSprite::setAtlas(
+	const sf::FloatRect& TL, const sf::FloatRect& TC, const sf::FloatRect& TR,
+	const sf::FloatRect& ML, const sf::FloatRect& MC, const sf::FloatRect& MR,
+	const sf::FloatRect& BL, const sf::FloatRect& BC, const sf::FloatRect& BR)
 {
 	setAtlasRect(0, 0, TL);
 	setAtlasRect(0, 4, TC);
@@ -129,11 +133,13 @@ void sf9SliceSprite::draw(sf::RenderTarget& target, sf::RenderStates states) con
 	target.draw(m_Vertices, states);
 }
 
+
+//텍스처 조각 각 영역의 텍스처 좌표를 설정
 void sf9SliceSprite::setAtlasRect(int index, int start, const sf::FloatRect& rect)
 {
-	m_Vertices[index * 12 + 0 + start].texCoords = { rect.left,			rect.top };
+	m_Vertices[index * 12 + 0 + start].texCoords = { rect.left,					rect.top };
 	m_Vertices[index * 12 + 1 + start].texCoords = { rect.left + rect.width,	rect.top };
 	m_Vertices[index * 12 + 2 + start].texCoords = { rect.left + rect.width,	rect.top + rect.height };
-	m_Vertices[index * 12 + 3 + start].texCoords = { rect.left,			rect.top + rect.height };
+	m_Vertices[index * 12 + 3 + start].texCoords = { rect.left,					rect.top + rect.height };
 }
 

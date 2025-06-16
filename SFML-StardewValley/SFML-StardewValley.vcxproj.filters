@@ -171,4 +171,7 @@
     <ClInclude Include="StardewValley\Item\Foraging.h" />
     <ClInclude Include="Scene\Scene_Road.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
 </Project>

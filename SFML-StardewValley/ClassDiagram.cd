@@ -1,0 +1,957 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Scene_Road" Collapsed="true">
+    <Position X="0.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQAEAAAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Scene\Scene_Road.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Foraging" Collapsed="true">
+    <Position X="43.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Foraging.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InGamePlayer" Collapsed="true">
+    <Position X="19" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwIAAEAAAIABUKAAAACBAEEAMIAAAAAIAEAAAACAAA=</HashCode>
+      <FileName>InGamePlayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DropItem" Collapsed="true">
+    <Position X="37.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAIABQAQAAAGAQAAAABAACAAAAAABAAggEQ=</HashCode>
+      <FileName>StardewValley\Item\DropItem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_Tiltle" Collapsed="true">
+    <Position X="9.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIgEAAAAAAQAAAAAAAAAAAAAEAAAAAABAIAAAAAA=</HashCode>
+      <FileName>Scene\Scene_Tiltle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventUI" Collapsed="true">
+    <Position X="25.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAABAABQAAAAAAAEAgAAAEAAABAACACBCQBAA=</HashCode>
+      <FileName>StardewValley\EventUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameInfoUI" Collapsed="true">
+    <Position X="30.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAQAAAgAABQAAAQAAAAAAIAAAAAQAAAAAABAAIAA=</HashCode>
+      <FileName>StardewValley\GameInfoUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImguiWindowTab" Collapsed="true">
+    <Position X="34.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImguiWindowTab.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InGameEvent" Collapsed="true">
+    <Position X="17" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAgAAAAAAAAAAQCAAQAgAAEAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>StardewValley\InGameEvent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InGameTime" Collapsed="true">
+    <Position X="1.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADQAACAAAACBhAAAEDAFAgAAgAAEAAAAoAAgChAAAAA=</HashCode>
+      <FileName>StardewValley\InGameTime.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory" Collapsed="true">
+    <Position X="37" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAgAABQBkAAAAEAABEJIAAAAGAAAAIgAAAAA=</HashCode>
+      <FileName>StardewValley\Inventory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryUI" Collapsed="true">
+    <Position X="23.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAABgAAABQAAAAAAAEIAEAAQAAAAAAIAABQQAAA=</HashCode>
+      <FileName>StardewValley\InventoryUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemGenerator" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAEAAAAEEAAAAgAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\ItemGenerator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInfoUI" Collapsed="true">
+    <Position X="28" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAABQAAAAEAAAAAAAAAAAAAAAAAAJAAAAA=</HashCode>
+      <FileName>PlayerInfoUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_BackEditor" Collapsed="true">
+    <Position X="7.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Scene_BackEditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_FarmHouseIndoor" Collapsed="true">
+    <Position X="5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAQABAAACAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Scene\Scene_FarmHouseIndoor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_InGame" Collapsed="true">
+    <Position X="2.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQFiomOgAEIBQEBAAEEQAAByIBEQCAAIJAACwABBCA=</HashCode>
+      <FileName>Scene\Scene_InGame.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_FarmLand" Collapsed="true">
+    <Position X="2.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAAAAAAAQAAAIAAAAAAAAAEAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Scene\Scene_FarmLand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Crop" Collapsed="true">
+    <Position X="46" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAECAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Crop.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Animator" Collapsed="true">
+    <Position X="94" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AATAAgAAwRAABABAAEgBABAAABYAAQIkoAAACAQBAAI=</HashCode>
+      <FileName>Framework\Animator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerStatusUi" Collapsed="true">
+    <Position X="61.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQBAAIAAgAIRQAABAAAIAAEAAAAAEABIABJABACAAA=</HashCode>
+      <FileName>StardewValley\PlayerStatusUi.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seed" Collapsed="true">
+    <Position X="46" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAGAAAAAAEAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>StardewValley\Item\Seed.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemDataTable" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAABBAAAACAAAACgBAAAAA=</HashCode>
+      <FileName>ItemDataTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="46" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAADAAASASAAAAAAAEQAAMIAAEAAAAAAQAAAA=</HashCode>
+      <FileName>StardewValley\Item\Item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scene_TileEditor" Collapsed="true">
+    <Position X="7.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQEChEwAAQAAQAAAAAAAAAIQAAEAAAAAAgARAASIEA=</HashCode>
+      <FileName>Scene\Scene_TileEditor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="55" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BISACAMAJgII5UCUIAQCKIAEAcAAEWCgAQFAARQCABA=</HashCode>
+      <FileName>StardewValley\Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="D9SliceSprite" Collapsed="true">
+    <Position X="82.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAICACIAQAwACAAAACCIAgAEAAEQAA=</HashCode>
+      <FileName>Framework\Drawable\D9SliceSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DGameObject" Collapsed="true">
+    <Position X="84.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DGameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataTable" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAAAAAAAAAAgAAAAAAACACAAAAAABgAABAAAAA=</HashCode>
+      <FileName>Framework\DataTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataTableManager" Collapsed="true">
+    <Position X="19.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQBAAAAAAAAAAAAAAABAABAgABgAAAA=</HashCode>
+      <FileName>Framework\DataTableManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorPalette" Collapsed="true">
+    <Position X="95.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiAGAEREAAgAAhAAABEABBAABAAAAAQAAAAEADABAAA=</HashCode>
+      <FileName>Framework\Drawable\ColorPalette.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DAnimation" Collapsed="true">
+    <Position X="73.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DA1AEBAAAQEAAAAICACAAQAwAChAggCAIEgAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DAnimation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DCircle" Collapsed="true">
+    <Position X="87" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAEAAAAAAACEAAAAAAAgAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Framework\Drawable\DCircle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DebugInfo" Collapsed="true">
+    <Position X="99.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAgACAAAAAAAAIgAAAAQABCEAAAgEAAgAQIAAA=</HashCode>
+      <FileName>Framework\Drawable\DebugInfo.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DLine" Collapsed="true">
+    <Position X="78" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAIAAAAggAAAAACACAAQAQAAAAAACQAAgAAAAAIAA=</HashCode>
+      <FileName>Framework\Drawable\DLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawableObject" Collapsed="true">
+    <Position X="81.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAQHAgAIAQgIAkEICAGIAVAQAAAQAiKQMAgAQAAABQA=</HashCode>
+      <FileName>Framework\Drawable\DrawableObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DRectangle" Collapsed="true">
+    <Position X="89.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAECAAAAAAAAACACQAIAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DRectangle.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DShape" Collapsed="true">
+    <Position X="88.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAQAAAAAAABAAAAACAAQQQACAAEACAIAgAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DShape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DSprite" Collapsed="true">
+    <Position X="91.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAEQAAAAAAAgAgICACAAQAwACAAAACAIAgAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DText" Collapsed="true">
+    <Position X="71.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DAAACAAAAAAABgQACECAAQCQAAAAAACAAAgAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DText.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DThickLine" Collapsed="true">
+    <Position X="75.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAABAgAABABCCACAARAQEACAAACAAAgASAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DThickLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfLine" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACBAAIAAAAAAIAAAAAAAABAAAAACAAgAgIAAA=</HashCode>
+      <FileName>Framework\Drawable\sfLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sf9SliceSprite" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAQACBIAICggAAAIACAAAAAAAAAAwgAAAggoIAAA=</HashCode>
+      <FileName>Framework\Drawable\sf9SliceSprite.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfTile" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAGBAAIAgAAAIIAAAAAAAAAAAAgIAAAgAgIAAA=</HashCode>
+      <FileName>Framework\Drawable\DTile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DTile" Collapsed="true">
+    <Position X="80.25" Y="3.25" Width="1.5" />
+    <InheritanceLine Type="DrawableObject" FixedFromPoint="true">
+      <Path>
+        <Point X="82.25" Y="2.441" />
+        <Point X="82.25" Y="2.875" />
+        <Point X="81" Y="2.875" />
+        <Point X="81" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>KAAAQCAAAAAAAQAAKACAAQiYAiAAIACAIIgAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DTile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Collider" Collapsed="true">
+    <Position X="64" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAAQEAkiAgRAAEAgAABQAIAIAgIA8QAgAAASAAAI=</HashCode>
+      <FileName>Framework\Collider.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Framework" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAEAAQLAAAAQADASAAAAAACKQAAAAAAAQiABAYAAA=</HashCode>
+      <FileName>Framework\Framework.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="21.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBQAAgACAgFKBUAEAEAIIAKCACEAAACAABAJgBDKEAA=</HashCode>
+      <FileName>Framework\GameManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImGuiManager" Collapsed="true">
+    <Position X="94" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAABIAAAAAgAAAAABCAQhAAAAAEAAACAACEBAAAAA=</HashCode>
+      <FileName>Framework\ImGuiManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManager" Collapsed="true">
+    <Position X="3.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQBAgAAAAghAQAAAAAABJTCIAgAAAABAAABACRQAAA=</HashCode>
+      <FileName>Framework\InputManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPool&lt;T&gt;" Collapsed="true">
+    <Position X="97.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAABAABUAAAAIAAAAEAAAAAAAAIAFAUAACgAA=</HashCode>
+      <FileName>Framework\ObjectPool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPoolable" Collapsed="true">
+    <Position X="40.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAEA=</HashCode>
+      <FileName>Framework\ObjectPoolable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResourceManager&lt;T&gt;" Collapsed="true">
+    <Position X="8" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAABAAAgAGAACAUAAAAAAQAAgAAAIABA=</HashCode>
+      <FileName>Framework\ResourceManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneBase" Collapsed="true">
+    <Position X="5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EI1gUhgEHgBIRUMkAACAKoQOwAAMglAAIABAABiCBgQ=</HashCode>
+      <FileName>Framework\SceneBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SceneManager" Collapsed="true">
+    <Position X="14.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgAIB0EgABAAIEAAQAoAAEAAQAAgABACAgQ=</HashCode>
+      <FileName>Framework\SceneManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACCAAAAABAAAAAEIAAAgAAAAAAA=</HashCode>
+      <FileName>Framework\Singleton.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Transform" Collapsed="true">
+    <Position X="73" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAIMAAAggAnUSAAAAwAAAKTQIgIAICAGjBABAAABA=</HashCode>
+      <FileName>Framework\Transform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Utils" Collapsed="true">
+    <Position X="94" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAg4ABABCBAggQAAAAAAACAACAIAAQDAgsAAAAGABIA=</HashCode>
+      <FileName>Framework\Utils.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonObject" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQKAiAAgAAAhQSEAAgAABCAAAAAAAAAQAAAABgCAAI=</HashCode>
+      <FileName>Framework\CoreGameObject\ButtonObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EffectObject" Collapsed="true">
+    <Position X="34.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQCAAAQACgAhQAAAAAAAQAAACAAAgAAAhEAAAAAAEA=</HashCode>
+      <FileName>Framework\CoreGameObject\EffectObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameObject" Collapsed="true">
+    <Position X="34.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBUBEAAEAwAIBQggEQCAIgCORAAAgFyYEABAABoyAAA=</HashCode>
+      <FileName>Framework\CoreGameObject\GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseCursor" Collapsed="true">
+    <Position X="39.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAYgkAABQAAAABIAGAAAAAKAAAAAAAAABAAgAA=</HashCode>
+      <FileName>Framework\CoreGameObject\MouseCursor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteObject" Collapsed="true">
+    <Position X="50.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAFQAAAAAAAAAgACgACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\CoreGameObject\SpriteObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundManager" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAgAAxAAgYAIQABAAABFACAIAAAACAAgAJIAAEA=</HashCode>
+      <FileName>Framework\SoundManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonBar" Collapsed="true">
+    <Position X="32.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASUGAAAAQQAgBQIAgAAAAICIAAACAAAAAAEAABAAIAA=</HashCode>
+      <FileName>StardewValley\Tile\ButtonBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SubButtonBar" Collapsed="true">
+    <Position X="64" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQGACQAAEAIBQAAgAAIAEABAAAgAAEAAAEAABBAAAA=</HashCode>
+      <FileName>StardewValley\Tile\SubButtonBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tile" Collapsed="true">
+    <Position X="101" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEgAAAAAgAAAAAAAAIAACEAEAAAAAAAAEAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileController" Collapsed="true">
+    <Position X="66.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAyAggAyAQgCBQAAAAAAgEGBKAEAAAIEAFABwgAAaCI=</HashCode>
+      <FileName>StardewValley\Tile\TileController.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileGrid" Collapsed="true">
+    <Position X="68.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIASABAFQAACAAAAAABAAAAAAAQAABAAgAAIEA=</HashCode>
+      <FileName>StardewValley\Tile\TileGrid.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileModel" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBQAAAMAAgEABQAAEAAAQAAAAAsAAgAABABQAAEAAAA=</HashCode>
+      <FileName>StardewValley\Tile\TileModel.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileMapSystem" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiwAIAUAAYhABQAAAAIAEIAAAAgCAQAAAAAEIgACEhA=</HashCode>
+      <FileName>StardewValley\Tile\TileMapSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileView" Collapsed="true">
+    <Position X="16.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAQAQAQQCBCBBQAAIAAAIEAASCARQAEACACCAhECAgM=</HashCode>
+      <FileName>StardewValley\Tile\TileView.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileViewChild" Collapsed="true">
+    <Position X="41.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAABAAAAABQAgAAIAYACAAAAggEAADAAAAlECY2A=</HashCode>
+      <FileName>StardewValley\Tile\TileViewChild.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TexCoordTable" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EIAAgAAAAAECBAAAAAAAAIAABAAAAAAAAAgAIBAAAAA=</HashCode>
+      <FileName>TexCoordTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tool" Collapsed="true">
+    <Position X="48.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAACCIAAAAQAAACEAAAACABAkAACBAQAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Tool.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileObject" Collapsed="true">
+    <Position X="31.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAoAAAAEAIABQCEEIAAASQBIAACAAAAAAEJhQAAAFA=</HashCode>
+      <FileName>StardewValley\Tile\TileObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileObjectSystem" Collapsed="true">
+    <Position X="59.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwAiBQQAEAEBQAAAAAAEIBLoBECIAEAACAAAlECIAI=</HashCode>
+      <FileName>StardewValley\Tile\TileObjectSystem.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileObjDataTable" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAAAAAAAQAAAAAAAAAACBAAAAAAIAAAAAJQAAAA=</HashCode>
+      <FileName>TileObjDataTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TileObject_Tree" Collapsed="true">
+    <Position X="31.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>TileObject_Tree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIObject" Collapsed="true">
+    <Position X="28" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAgAACAAAAAAAAAAAAAAEgQQAAAAAAAAAAAAAEAI=</HashCode>
+      <FileName>Framework\CoreGameObject\UIObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TitleSceneUI" Collapsed="true">
+    <Position X="21.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQEAAAAAAAABQAAAAEAAAQAAAAAAQAQAAABCBAAAAQ=</HashCode>
+      <FileName>TitleSceneUI.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Variables" Collapsed="true">
+    <Position X="95.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Variables.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sf::RenderWindow" Collapsed="true">
+    <Position X="99.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hAAAAAAAAIBAAAgAAAAAAASAAAAAEAAgAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\1998k\OneDrive\문서\SFML-StardewValley\SFML-2.6.1\include\SFML\Graphics\RenderWindow.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sf::Transformable" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAIADgCgGCAAAAQACgDDAAgAAACAAAAAAEAAAA=</HashCode>
+      <FileName>C:\Users\1998k\OneDrive\문서\SFML-StardewValley\SFML-2.6.1\include\SFML\Graphics\Transformable.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="rapidcsv::no_converter" Collapsed="true">
+    <Position X="95.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="rapidcsv::Converter&lt;T&gt;" Collapsed="true">
+    <Position X="97.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="rapidcsv::Document" Collapsed="true">
+    <Position X="101" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QEQHwKACEAAAgAQEECAcBCJBAIAAAAJKg0BCgADSIRE=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="PlayerInfo" Collapsed="true">
+    <Position X="95.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>InGamePlayer.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InGameDate" Collapsed="true">
+    <Position X="95.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAQAAAAAAAAAAAAAAQAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>StardewValley\InGameTime.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InGameTimeConfig" Collapsed="true">
+    <Position X="97.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>StardewValley\InGameTime.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SceneRawFile" Collapsed="true">
+    <Position X="99.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAIAA=</HashCode>
+      <FileName>Scene\Scene_InGame.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AnimationFrame" Collapsed="true">
+    <Position X="99.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Framework\AnimationClip.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AnimationClip" Collapsed="true">
+    <Position X="94" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAABARAQAAAgA=</HashCode>
+      <FileName>Framework\AnimationClip.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AnimationEvent" Collapsed="true">
+    <Position X="95.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAQAAAAAAAAAAAAAAAQAAAgA=</HashCode>
+      <FileName>Framework\Animator.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AnimationEventHash" Collapsed="true">
+    <Position X="97.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\Animator.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ItemDataRes" Collapsed="true">
+    <Position X="99.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAQAgA=</HashCode>
+      <FileName>StardewValley\Item\Item.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PriorityComp" Collapsed="true">
+    <Position X="97.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\GameManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="AxisInfo" Collapsed="true">
+    <Position X="101" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACAAAAIAAAAAEEAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\InputManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SoundData" Collapsed="true">
+    <Position X="94" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAIAAAAAAAAAAABCAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Framework\SoundManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TileInfo" Collapsed="true">
+    <Position X="97.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAABAgA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TexRes" Collapsed="true">
+    <Position X="95.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAQAAAAAAAAAAAAAAgAAAAAAAAAFAgA=</HashCode>
+      <FileName>TexCoordTable.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TileObjRawData" Collapsed="true">
+    <Position X="101" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAQAAgAAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TileObjDataTable.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TileObjData" Collapsed="true">
+    <Position X="99.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAIAQAAgAAAAAABAAAAAAAAAAAAAAAAACAAgA=</HashCode>
+      <FileName>TileObjDataTable.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="rapidcsv::ConverterParams" Collapsed="true">
+    <Position X="94" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQCAAAAABAAAAAAAAAAQAAAAAAAACAA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="rapidcsv::LabelParams" Collapsed="true">
+    <Position X="101" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="rapidcsv::SeparatorParams" Collapsed="true">
+    <Position X="101" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAQAIBgAAAgAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="rapidcsv::LineReaderParams" Collapsed="true">
+    <Position X="94" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Framework\rapidcsv.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="ITEMID" Collapsed="true">
+    <Position X="97.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Inventory.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TEXID" Collapsed="true">
+    <Position X="94" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\DropItem.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NAME" Collapsed="true">
+    <Position X="99.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Item.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CellIndex" Collapsed="true">
+    <Position X="94" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\ButtonBar.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="UNITxUNIT" Collapsed="true">
+    <Position X="99.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="FILEPATH" Collapsed="true">
+    <Position X="95.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TEXRECT" Collapsed="true">
+    <Position X="95.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TOBJID" Collapsed="true">
+    <Position X="97.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SubType" Collapsed="true">
+    <Position X="101" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TileObjDataTable.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="InGameTimeMode" Collapsed="true">
+    <Position X="94" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\InGameTime.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="InfoTab" Collapsed="true">
+    <Position X="99.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>PlayerInfoUI.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="InGamePlayMode" Collapsed="true">
+    <Position X="101" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAIEAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>Scene\Scene_InGame.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AnimationLoopTypes" Collapsed="true">
+    <Position X="94" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\AnimationClip.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemType" Collapsed="true">
+    <Position X="95.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAASAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Item.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="StackType" Collapsed="true">
+    <Position X="99.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>StardewValley\Item\Item.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DataType" Collapsed="true">
+    <Position X="101" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAgAAAAAAAAAAAAAAQAAAACAEAAAA=</HashCode>
+      <FileName>Framework\Drawable\DrawableObject.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OriginType" Collapsed="true">
+    <Position X="97.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQ4AAAAAAIMAAAAAAAAABBgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\Drawable\DrawableObject.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DrawPriorityType" Collapsed="true">
+    <Position X="94" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Framework\Drawable\DrawableObject.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CollisionDetectionMode" Collapsed="true">
+    <Position X="97.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAASA=</HashCode>
+      <FileName>Framework\Collider.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameMode" Collapsed="true">
+    <Position X="97.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAQAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\GameManager.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Axis" Collapsed="true">
+    <Position X="95.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\InputManager.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ExpandOption" Collapsed="true">
+    <Position X="95.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAIAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Framework\ObjectPool.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ViewLayer" Collapsed="true">
+    <Position X="99.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAAEAAAABgAAIAgAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TileObjLayer" Collapsed="true">
+    <Position X="94" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAGBAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TileEditorLayer" Collapsed="true">
+    <Position X="101" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TileType" Collapsed="true">
+    <Position X="95.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAQAAAgAAQAACAAAAEAEAA=</HashCode>
+      <FileName>StardewValley\Tile\Tile.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ControlStatus" Collapsed="true">
+    <Position X="99.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAABAAAAAAEAAAAEAAAA=</HashCode>
+      <FileName>StardewValley\Tile\TileController.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TileViewType" Collapsed="true">
+    <Position X="97.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>StardewValley\Tile\TileViewChild.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

@@ -211,10 +211,14 @@ void Transform::UpdateGlobalTransform()
 
 void Transform::UpdateLocalTransform()
 {
-	sf::Transform newLocalTransform = m_GlobalTransform * getParentTransform().getInverse();
-	sf::Vector2f newPosition = DecomposePosition(newLocalTransform) - getOrigin();
-	sf::Vector2f newScale = DecomposeScale(newLocalTransform);
-	float newRotation = DecomposeRotation(newLocalTransform, newScale);
+	sf::Transform newLocalTransform 
+		= m_GlobalTransform * getParentTransform().getInverse();
+	sf::Vector2f newPosition 
+		= DecomposePosition(newLocalTransform) - getOrigin();
+	sf::Vector2f newScale 
+		= DecomposeScale(newLocalTransform);
+	float newRotation 
+		= DecomposeRotation(newLocalTransform, newScale);
 	m_T->setPosition(newPosition);
 	m_T->setRotation(newRotation);
 	m_T->setScale(newScale);
