@@ -14,16 +14,16 @@
 ## 🛠️ 주요 구현 요소
 <table>
   <tr>
-    <td align="center"><strong>계층 트랜스폼</strong></td>
-    <td align="center"><strong>9-슬라이싱 스프라이트</strong></td>
+    <td align="center"><strong>계층 트랜스폼, 9-슬라이싱 스프라이트</strong></td>
     <td align="center"><strong>아틀라스 텍스처 추출 툴</strong></td>
   </tr>
   <tr>
-    <td><img src="./Screenshot/스타듀밸리캡처.jpg"/></td>
-    <td><img src="./ScreenShot/스타듀밸리캡처2.jpg"/></td>
-    <td><img src="./ScreenShot/아틀라스텍스처툴.jpg"/></td>
+    <td><img src="./Screenshot/스타듀밸리캡처.jpg"/> <img src="./Screenshot/스타듀밸리캡처2.jpg"/></td>
+    <td><img src="./Screenshot/아틀라스텍스처툴.jpg" width="500"/> <img src="./Screenshot/텍스처좌표CSV.png" width="500"/></td>
   </tr>
 </table>
 
 - SFML 프레임워크 제작
+- CSV 파일 파싱
+- ImGui를 활용한 아틀라스 텍스처 좌표 지정 툴 제작
 
