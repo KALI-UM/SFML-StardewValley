@@ -19,9 +19,9 @@
     <td align="center"><strong>아틀라스 텍스처 추출 툴</strong></td>
   </tr>
   <tr>
-    <td><img src="./ScreenShot/Road.jpg"/></td>
-    <td><img src="./ScreenShot/City.jpg"/></td>
-    <td><img src="./ScreenShot/City.jpg"/></td>
+    <td><img src="./Screenshot/스타듀밸리캡처.jpg"/></td>
+    <td><img src="./ScreenShot/스타듀밸리캡처2.jpg"/></td>
+    <td><img src="./ScreenShot/아틀라스텍스처툴.jpg"/></td>
   </tr>
 </table>
 
