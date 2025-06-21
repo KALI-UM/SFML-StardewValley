@@ -18,8 +18,8 @@ Stardew Valley를 모작한 프로젝트입니다.
     <td align="center"><strong>아틀라스 텍스처 추출 툴</strong></td>
   </tr>
   <tr>
-    <td><img src="./Screenshot/스타듀밸리캡처.jpg"/> <img src="./Screenshot/스타듀밸리캡처2.jpg"/></td>
-    <td><img src="./Screenshot/아틀라스텍스처툴.jpg" width="500"/> <img src="./Screenshot/텍스처좌표CSV.png" width="500"/></td>
+    <td><img src="./Screenshot/스타듀밸리캡처.jpg" width="400"/> <img src="./Screenshot/스타듀밸리캡처2.jpg" width="400"/></td>
+    <td><img src="./Screenshot/아틀라스텍스처툴.jpg" width="400"/> <img src="./Screenshot/텍스처좌표CSV.png" width="500"/></td>
   </tr>
 </table>
 
